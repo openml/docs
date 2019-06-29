@@ -41,6 +41,6 @@ img[alt=icon] { width: 50px; }
     margin-left:-45px;
   }
   .md-sidebar--secondary {
-    margin-left: 100% important!;
+    margin-left: 100% !important;
   }
 }
