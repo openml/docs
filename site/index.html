@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -31,32 +31,42 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="./">
-      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.6.0">
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
-        <title>OpenML Documentation</title>
+        <title>Get started - OpenML Documentation</title>
       
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application.aa3de92b.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="./assets/stylesheets/application-palette.792431c1.css">
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
-      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="assets/javascripts/modernizr.74668098.js"></script>
     
     
       
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="./css/extra.css">
+      <link rel="stylesheet" href="css/extra.css">
+    
+    
+      
     
     
   </head>
@@ -69,30 +79,13 @@
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
-    viewBox="0 0 416 448" id="github">
-  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
-        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
-        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
-        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
-        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
-        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
-        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
-        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
-        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
-        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
-        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
-        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
-        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
-        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
-        99.5z" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
       <a href="#concepts" tabindex="1" class="md-skip">
         Skip to content
@@ -110,33 +103,32 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                OpenML Documentation
-              </span>
-              <span class="md-header-nav__topic">
+            <span class="md-header-nav__topic">
+              OpenML Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
                 Get started
-              </span>
-            
+              
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
+  <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="search"></label>
+      <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
       </button>
@@ -153,7 +145,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -164,20 +155,18 @@
 
   
 
-
-  <a href="https://github.com/openml/OpenML/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
+<a href="https://github.com/openml/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
           </div>
         </div>
       
@@ -249,12 +238,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    <span class="md-nav__button md-logo">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="." title="OpenML Documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">school</i>
       
-    </span>
+    </a>
     OpenML Documentation
   </label>
   
@@ -264,20 +253,18 @@
 
   
 
-
-  <a href="https://github.com/openml/OpenML/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
+<a href="https://github.com/openml/docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -312,10 +299,10 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         Get started
       </label>
     
@@ -328,7 +315,7 @@
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -434,6 +421,8 @@
   </a>
   
 </li>
+      
+      
       
       
       
@@ -1208,7 +1197,7 @@
   
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -1317,6 +1306,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -1329,7 +1320,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/openml/OpenML/edit/master/docs/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/openml/docs/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <p><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"></p>
@@ -1370,7 +1361,7 @@ elsewhere can be referenced by URL.</p>
 <p>Data consists of columns, also known as features or covariates, each of
 which is either numeric, nominal or a string, and has a unique name. A column
 can also contain any number of missing values.</p>
-<p><img alt="Dataset properties" src="./img/data-ss1.png" /></p>
+<p><img alt="Dataset properties" src="img/data-ss1.png" /></p>
 <p>Most datasets have a "default target attribute" which denotes the column that
 is usually the target, also known as dependent variable, in supervised learning tasks. The default
 target column is denoted by "(target)" in the web interface. Not all datasets
@@ -1405,7 +1396,7 @@ have the same name, they are called "versions" of the same dataset (although
 that is not necessarily true). The version number is assigned according to the order
 of upload. Different versions of a dataset can be accessed through the drop
 down menu at the top right of the dataset page.</p>
-<p><img alt="Dataset properties" src="./img/data_version.png" /></p>
+<p><img alt="Dataset properties" src="img/data_version.png" /></p>
 <h3 id="dataset-status">Dataset status<a class="headerlink" href="#dataset-status" title="Permanent link">&para;</a></h3>
 <p>Each dataset has a status, which can be "active", "deactivated" or
 "in_preparation". When you upload a dataset, it will be marked "in_preparation"
@@ -1427,13 +1418,13 @@ train/test splits, and define what needs to be returned.</p>
 to do, and you can focus on finding the best algorithm. You can run algorithms
 on your own machine(s) and upload the results. OpenML evaluates and organizes
 all solutions online.</p>
-<p><img alt="Tasks" src="./img/task-ss1.png" /></p>
+<p><img alt="Tasks" src="img/task-ss1.png" /></p>
 <p>Tasks are <i>real-time, collaborative</i> data mining challenges (e.g. see
 <a href="https://www.openml.org/t/145677#!people" target="_blank">this one</a>): you can study, discuss and learn from
 all submissions (code has to be shared), while OpenML keeps track of who was
 first.</p>
 
-<p><img alt="Tasks" src="./img/task-ss2.png" /></p>
+<p><img alt="Tasks" src="img/task-ss2.png" /></p>
 <p>More concretely, tasks specify the dataset, the kind of machine learning
 task (i.e. regression), the target attribute (i.e. which column in the dataset
 should be predicted), the number of splits for cross-validated evaluation and
@@ -1446,7 +1437,7 @@ integrated machine learning tools, like Weka, mlr and scikit-learn.</p>
 </div>
 <h2 id="flows">Flows<a class="headerlink" href="#flows" title="Permanent link">&para;</a></h2>
 <p>Flows are algorithms, workflows, or scripts solving tasks. You can upload
-them through the <a href="https://www.openml.org/new/flow" target="_blank">website</a>, or <a href="./APIs">APIs</a>.
+them through the <a href="https://www.openml.org/new/flow" target="_blank">website</a>, or <a href="APIs">APIs</a>.
 Code hosted elsewhere (e.g., GitHub) can be
 referenced by URL, though typically they are generated automatically by machine learning environments.</p>
 <p>Flows contain all the information necessary to apply a particular workflow
@@ -1455,7 +1446,7 @@ you can not run a classification model on a clustering task.</p>
 <p>Every flow gets a dedicated page with all known information (check out <a
 href="https://www.openml.org/f/65" target="_blank">WEKA's RandomForest</a>), including a wiki, hyperparameters,
 evaluations on all tasks, and user discussions.</p>
-<p><img alt="Flow" src="./img/flow-ss1.png" /></p>
+<p><img alt="Flow" src="img/flow-ss1.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each flow specifies requirements and dependencies, and you need to install these locally to execute
@@ -1464,7 +1455,7 @@ a flow on a specific task. We aim to add support for VMs so that flows can be ea
 <h2 id="runs">Runs<a class="headerlink" href="#runs" title="Permanent link">&para;</a></h2>
 <p>Runs are applications of flows to a specific task. They are typically
 submitted automatically by machine learning
-environments (through the OpenML <a href="./APIs">APIs</a>), with the goal of creating a
+environments (through the OpenML <a href="APIs">APIs</a>), with the goal of creating a
 reproducible experiment (though exactly reproducing experiments across machines
 might not be possible because of changes in numeric libraries and operating
 systems).</p>
@@ -1474,7 +1465,7 @@ evaluates the results contained in the run given the provided predictions.</p>
 <p>You can search and compare everyone's runs online, download all results into
 your favorite machine learning environment, and relate evaluations to known
 properties of the data and algorithms.</p>
-<p><img alt="Run" src="./img/run-ss1.png" /></p>
+<p><img alt="Run" src="img/run-ss1.png" /></p>
 <p>OpenML stores and analyzes results in fine detail, up to the level of
 individual instances.</p>
 <p>!!! Want to read more?
@@ -1484,19 +1475,19 @@ individual instances.</p>
 website or the API without creating an account. However, if you want to upload
 datasets or experiments, you need to <a href="https://www.openml.org/register" target="_blank">create an account</a>
 or sign in and <a href="https://www.openml.org/#api" target="_blank">create an API key</a>.
-This key can then be used with any of the <a href="./APIs">OpenML APIs</a>.</p>
+This key can then be used with any of the <a href="APIs">OpenML APIs</a>.</p>
 <h2 id="integrations">Integrations<a class="headerlink" href="#integrations" title="Permanent link">&para;</a></h2>
 <p>OpenML is deeply integrated in several popular machine learning environments. Given a task, these integrations will
 automatically download the data into the environments, allow you to run any
 algorithm/flow, and automatically upload all runs.</p></p>
-<p><img alt="Plugins" src="./img/plugins-ss1.png" /></p>
+<p><img alt="Plugins" src="img/plugins-ss1.png" /></p>
 <h2 id="programming-apis">Programming APIs<a class="headerlink" href="#programming-apis" title="Permanent link">&para;</a></h2>
-<p>If you want to integrate OpenML into your own tools, we offer several <a href="./APIs">Language-specific APIs</a>, so you can easily interact with
+<p>If you want to integrate OpenML into your own tools, we offer several <a href="APIs">Language-specific APIs</a>, so you can easily interact with
 OpenML to list, download and upload datasets, tasks, flows and runs.</p>
 <p>With these APIs you can download a task, run an algorithm, and upload the
 results in just a few lines of code.</p>
-<p>OpenML also offers a <a href="./APIs">REST API</a> which allows you to talk to OpenML directly.</p>
-<p><img alt="R" src="./img/r-ss1.png" /></p>
+<p>OpenML also offers a <a href="APIs">REST API</a> which allows you to talk to OpenML directly.</p>
+<p><img alt="R" src="img/r-ss1.png" /></p>
 <h2 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h2>
 <p>Datasets, tasks, runs and flows can be assigned tags, either via the web
 interface or the API. These tags can be used to search and annotated datasets.
@@ -1516,6 +1507,8 @@ or remove tags on any entity.</p>
               
               
                 
+
+
               
             </article>
           </div>
@@ -1551,13 +1544,11 @@ or remove tags on any entity.</p>
       <div class="md-footer-copyright">
         
         powered by
-        <a href="http://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
-      
-        
       
     </div>
   </div>
@@ -1565,18 +1556,11 @@ or remove tags on any entity.</p>
       
     </div>
     
-      <script src="./assets/javascripts/application.62cfdabc.js"></script>
+      <script src="assets/javascripts/application.245445c6.js"></script>
       
-      <script>app.initialize({version:"0.17.3",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
       
-        <script src="./js/extra.js"></script>
-      
-        <script src="./search/require.js"></script>
-      
-        <script src="./search/search.js"></script>
-      
-    
-    
+        <script src="js/extra.js"></script>
       
     
   </body>

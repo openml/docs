@@ -2,8 +2,7 @@ site_name: OpenML Documentation
 repo_url: https://github.com/openml/docs/
 edit_uri: edit/master/docs/
 theme:
-  name: null
-  custom_dir: 'mkdocs-material/material'
+  name: 'material'
   language: 'en'
   palette:
     primary: indigo
@@ -36,7 +35,7 @@ markdown_extensions:
   - admonition
   - toc:
       permalink: true
-pages:
+nav:
   - Bootcamp:
     - Get started: index.md
     - Integrations:
