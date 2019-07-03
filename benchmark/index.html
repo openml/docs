@@ -1363,7 +1363,7 @@
 <span class="c1"># using the main entity type task, only benchmark suites are returned</span>
 <span class="c1"># each benchmark suite has an ID, some also have an alias. These can be</span>
 <span class="c1"># used to obtain the full details. </span>
-<span class="n">studies</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">list_studies</span><span class="p">(</span><span class="n">main_entity_type</span><span class="o">=</span><span class="s1">&#39;task&#39;</span><span class="p">)</span>
+<span class="n">studies</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">list_suites</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
 </pre></div>
 
 </details>
@@ -1390,7 +1390,7 @@
 <p>In Python, the data is returned as <code>features, targets</code> numpy arrays:</p>
 <details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
 
-<span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_study</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">,</span> <span class="s1">&#39;tasks&#39;</span><span class="p">)</span> <span class="c1"># obtain the benchmark suite</span>
+<span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span> <span class="c1"># obtain the benchmark suite</span>
 
 <span class="k">for</span> <span class="n">task_id</span> <span class="ow">in</span> <span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">:</span>  <span class="c1"># iterate over all tasks</span>
     <span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>  <span class="c1"># download the OpenML task</span>
@@ -1429,7 +1429,7 @@
 <span class="kn">import</span> <span class="nn">sklearn</span>
 
 <span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="s1">&#39;FILL_IN_OPENML_API_KEY&#39;</span>  <span class="c1"># set the OpenML Api Key</span>
-<span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_study</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">,</span><span class="s1">&#39;tasks&#39;</span><span class="p">)</span>  <span class="c1"># obtain the benchmark suite</span>
+<span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span>  <span class="c1"># obtain the benchmark suite</span>
 
 <span class="c1"># build a scikit-learn classifier</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Imputer</span><span class="p">(),</span>
@@ -1483,7 +1483,7 @@ a separate article on reproducible benchmarks. </p>
 <details class="note"><summary>REST (TODO)</summary><p><a href="https://www.openml.org/api/v1/xml/run/list/study/OpenML-CC18">https://www.openml.org/api/v1/xml/run/list/study/OpenML-CC18</a></p>
 <p><a href="https://www.openml.org/api_docs/#!/run/get_run_list_filters">Check out the API docs</a></p>
 </details>
-<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_study</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">,</span> <span class="s1">&#39;tasks&#39;</span><span class="p">)</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span>
 <span class="n">runs</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">list_runs</span><span class="p">(</span><span class="n">task</span><span class="o">=</span><span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 
