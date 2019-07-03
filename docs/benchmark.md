@@ -49,7 +49,7 @@ Via the REST API, the list is returned in XML or JSON
     # using the main entity type task, only benchmark suites are returned
     # each benchmark suite has an ID, some also have an alias. These can be
     # used to obtain the full details. 
-    studies = openml.study.list_studies(main_entity_type='task')
+    studies = openml.study.list_suites(status = 'all')
     ```
 
 ??? note "Java example"
@@ -85,7 +85,7 @@ In Python, the data is returned as `features, targets` numpy arrays:
     ```python
     import openml
     
-    benchmark_suite = openml.study.get_study('OpenML-CC18', 'tasks') # obtain the benchmark suite
+    benchmark_suite = openml.study.get_suite('OpenML-CC18') # obtain the benchmark suite
     
     for task_id in benchmark_suite.tasks:  # iterate over all tasks
         task = openml.tasks.get_task(task_id)  # download the OpenML task
@@ -134,7 +134,7 @@ First, the list of tasks is downloaded as already illustrated above. Next, a spe
     import sklearn
     
     openml.config.apikey = 'FILL_IN_OPENML_API_KEY'  # set the OpenML Api Key
-    benchmark_suite = openml.study.get_study('OpenML-CC18','tasks')  # obtain the benchmark suite
+    benchmark_suite = openml.study.get_suite('OpenML-CC18')  # obtain the benchmark suite
     
     # build a scikit-learn classifier
     clf = sklearn.pipeline.make_pipeline(sklearn.preprocessing.Imputer(),
@@ -195,7 +195,7 @@ a separate article on reproducible benchmarks.
     
 ??? note "Python example"
     ```python
-    benchmark_suite = openml.study.get_study('OpenML-CC18', 'tasks')
+    benchmark_suite = openml.study.get_suite('OpenML-CC18')
     runs = openml.runs.list_runs(task=benchmark_suite.tasks, limit=1000)
     ```
     
