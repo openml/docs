@@ -16,7 +16,7 @@ To use OpenML Benchmark suites, you can use bindings in several programming lang
   
 * [OpenML Java ApiConnector](https://mvnrepository.com/artifact/org.openml/apiconnector) (version `1.0.22` and up).
 * [OpenML Weka](https://search.maven.org/search?q=a:openmlweka) (version `0.9.6` and up). This package adds a Weka Integration.
-* [OpenML Python](https://pypi.org/project/openml/) (version `0.8.0` and up)
+* [OpenML Python](https://pypi.org/project/openml/) (version `0.9.0` and up)
 * [OpenML R](https://cran.r-project.org/web/packages/OpenML/index.html) (version `1.8` and up)
 
 
@@ -36,13 +36,13 @@ Below are walk-through instructions for common use cases, as well as code exampl
 The current list of benchmark suites is explicitly listed on the bottom of this page. The list of all sets of tasks can also be fetched programmatically. This list includes the suite's ID (and optionally an alias), which can be used to fetch further details.
 
 Via the REST API, the list is returned in XML or JSON
-??? note "REST (under development)"
-    [https://www.openml.org/api/v1/xml/study/list/main_entity_type/task](https://www.openml.org/api/v1/xml/study/list/main_entity_type/task)
+??? note "REST"
+    [https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all](https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all)
     
     [Check out the API docs](https://www.openml.org/api_docs/#!/study/get_study_list_filters)
 
   
-??? note "Python example (requires the development version)"
+??? note "Python example"
     ```python
     import openml
     
