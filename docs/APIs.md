@@ -3,39 +3,35 @@ OpenML offers a range of APIs to download and upload OpenML datasets, tasks, run
 ## ![icon](img/rest.png) REST  
 The REST API allows you to talk directly to the OpenML server from any programming environment.
 
-* [REST Tutorial](REST-tutorial)
-* [REST API Reference](REST-API)
+* [REST Tutorial](../REST-tutorial)
+* [REST API Reference](../REST-API)
 
 ## ![icon](img/python.png) Python
 Download datasets into Python scripts, build models using Python machine learning libraries (e.g., <i>scikit-learn</i>), and share the results online, all in a few lines of code.
 
-* [Get started](Python-start)
-* [User Guide](Python-guide)
-* [Examples](Python-examples)
-* [API Reference](Python-API)
-* [Contributing](Python-contributing)
-* [Changelog](Python-changelog)
+* [User Guide](../Python-start)
+* [API Reference](../Python-API)
 * [OpenML-Python Tutorial](https://openml.github.io/openml-tutorial/)
 * [Cheatsheet](https://openml.github.io/openml-tutorial/slides_pdf/OpenML%20Python%20cheat%20sheet.pdf)
 
 ## ![icon](img/R.png) R
 Download datasets into R scripts, build models using R machine learning packages (e.g. <i>mlr</i>), and share the results online, again in a few lines of code.
 
-* [R Tutorial](R-guide)
-* [R API Reference](R-API)
+* [R Tutorial](../R-guide)
+* [R API Reference](../R-API)
 * [Cheatsheet](https://github.com/openml/openml-r/blob/master/vignettes/openml-cheatsheet.pdf)
 * [useR 2017 Tutorial](https://github.com/openml/articles/tree/master/slides/useR2017_tutorial)
 
 ## ![icon](img/java.png) Java
 If you are building machine learning systems in Java, there is also an API for that.
 
-* [Java Tutorial](Java-guide)
+* [Java Tutorial](../Java-guide)
 * [Java API Reference](https://openml.github.io/java/)
 
 ## ![icon](img/c++.png) .NET (C#)
 The .NET library is under development, but already contains most of the functions available.
 
-* [.NET Tutorial](NET-API)
+* [.NET Tutorial](../NET-API)
 * [GitHub repo](https://github.com/openml/openml-dotnet)
 
 
