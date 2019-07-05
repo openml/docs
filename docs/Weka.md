@@ -37,6 +37,9 @@ The Command Line interface is useful for running experiments automatically on a 
 * The following suffix will set some parameters of this classifier:
 > -- -C 0.25 -M 2
 
+## API reference
+Check the [Weka integration Java Docs](https://openml.github.io/openml-weka/) for more details about the possibilities.
+
 ## Issues
 Please report any bugs that you may encounter in the issue tracker: https://github.com/openml/openml-weka
 Or email to j.n.van.rijn@liacs.leidenuniv.nl
