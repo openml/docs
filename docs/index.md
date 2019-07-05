@@ -33,7 +33,7 @@ _Example: <a href="https://www.openml.org/r/6466" target="_blank">Classifying ir
 
 
 ## Data
-You can upload and download datasets through the <a href="https://www.openml.org/new/data" target="_blank">website</a>, or <a href="../API-index">API</a>. Data hosted
+You can upload and download datasets through the <a href="https://www.openml.org/new/data" target="_blank">website</a>, or [APIs](APIs). Data hosted
 elsewhere can be referenced by URL.
 
 Data consists of columns, also known as features or covariates, each of

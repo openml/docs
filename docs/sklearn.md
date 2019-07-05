@@ -1,6 +1,6 @@
 # scikit-learn
 
-OpenML is readily integrated with scikit-learn through the [Python API](Python-guide).
+OpenML is readily integrated with scikit-learn through the [Python API](../Python-guide).
 
 !!! example
     ```python
@@ -21,4 +21,4 @@ Key features:
 * Upload your runs for collaboration or publishing  
 * Query, download and reuse all shared runs  
 
-For many more details and examples, see the [Python tutorial](Python-guide).
+For many more details and examples, see the [Python tutorial](../Python-guide).
