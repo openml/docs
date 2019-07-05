@@ -76,11 +76,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://docs.openml.org/Java-API/</loc>
-     <lastmod>2019-07-05</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://docs.openml.org/Python-start/</loc>
      <lastmod>2019-07-05</lastmod>
      <changefreq>daily</changefreq>
