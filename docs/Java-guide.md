@@ -2,7 +2,7 @@ The Java API allows you connect to OpenML from Java applications.
 
 ## Java Docs
 
-[Read the full Java Docs](../Java-API).
+[Read the full Java Docs](https://openml.github.io/openml-java/).
 
 ## Download
 Stable releases of the Java API are available from [Maven Central](https://search.maven.org/search?q=a:apiconnector)
