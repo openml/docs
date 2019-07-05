@@ -26,7 +26,7 @@ Download datasets into R scripts, build models using R machine learning packages
 If you are building machine learning systems in Java, there is also an API for that.
 
 * [Java Tutorial](../Java-guide)
-* [Java API Reference](https://openml.github.io/java/)
+* [Java API Reference](../Java-API)
 
 ## ![icon](img/c++.png) .NET (C#)
 The .NET library is under development, but already contains most of the functions available.
