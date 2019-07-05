@@ -1,5 +1,6 @@
 site_name: OpenML Documentation
 repo_url: https://github.com/openml/docs/
+site_url: https://docs.openml.org/
 edit_uri: edit/master/docs/
 theme:
   name: 'material'
