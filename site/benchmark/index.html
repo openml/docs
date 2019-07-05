@@ -11,6 +11,8 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://docs.openml.org/benchmark/">
+      
       
       
         <meta name="lang:clipboard.copy" content="Copy to clipboard">
@@ -96,7 +98,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="OpenML Documentation" class="md-header-nav__button md-logo">
+        <a href="https://docs.openml.org/" title="OpenML Documentation" class="md-header-nav__button md-logo">
           
             <i class="md-icon">school</i>
           
@@ -239,7 +241,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="OpenML Documentation" class="md-nav__button md-logo">
+    <a href="https://docs.openml.org/" title="OpenML Documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">school</i>
       
@@ -1341,7 +1343,7 @@
 <ul>
 <li><a href="https://mvnrepository.com/artifact/org.openml/apiconnector">OpenML Java ApiConnector</a> (version <code>1.0.22</code> and up).</li>
 <li><a href="https://search.maven.org/search?q=a:openmlweka">OpenML Weka</a> (version <code>0.9.6</code> and up). This package adds a Weka Integration.</li>
-<li><a href="https://pypi.org/project/openml/">OpenML Python</a> (version <code>0.8.0</code> and up)</li>
+<li><a href="https://pypi.org/project/openml/">OpenML Python</a> (version <code>0.9.0</code> and up)</li>
 <li><a href="https://cran.r-project.org/web/packages/OpenML/index.html">OpenML R</a> (version <code>1.8</code> and up)</li>
 </ul>
 <h2 id="using-openml-benchmark-suites">Using OpenML Benchmark Suites<a class="headerlink" href="#using-openml-benchmark-suites" title="Permanent link">&para;</a></h2>
@@ -1355,15 +1357,15 @@
 </details>
 <h3 id="listing-the-benchmark-suites">Listing the benchmark suites<a class="headerlink" href="#listing-the-benchmark-suites" title="Permanent link">&para;</a></h3>
 <p>The current list of benchmark suites is explicitly listed on the bottom of this page. The list of all sets of tasks can also be fetched programmatically. This list includes the suite's ID (and optionally an alias), which can be used to fetch further details.</p>
-<details class="note"><summary>REST (under development)</summary><p><a href="https://www.openml.org/api/v1/xml/study/list/main_entity_type/task">https://www.openml.org/api/v1/xml/study/list/main_entity_type/task</a></p>
+<details class="note"><summary>REST</summary><p><a href="https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all">https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all</a></p>
 <p><a href="https://www.openml.org/api_docs/#!/study/get_study_list_filters">Check out the API docs</a></p>
 </details>
-<details class="note"><summary>Python example (requires the development version)</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
 
 <span class="c1"># using the main entity type task, only benchmark suites are returned</span>
 <span class="c1"># each benchmark suite has an ID, some also have an alias. These can be</span>
 <span class="c1"># used to obtain the full details. </span>
-<span class="n">studies</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">list_studies</span><span class="p">(</span><span class="n">main_entity_type</span><span class="o">=</span><span class="s1">&#39;task&#39;</span><span class="p">)</span>
+<span class="n">studies</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">list_suites</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
 </pre></div>
 
 </details>
@@ -1390,7 +1392,7 @@
 <p>In Python, the data is returned as <code>features, targets</code> numpy arrays:</p>
 <details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
 
-<span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_study</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">,</span> <span class="s1">&#39;tasks&#39;</span><span class="p">)</span> <span class="c1"># obtain the benchmark suite</span>
+<span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span> <span class="c1"># obtain the benchmark suite</span>
 
 <span class="k">for</span> <span class="n">task_id</span> <span class="ow">in</span> <span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">:</span>  <span class="c1"># iterate over all tasks</span>
     <span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>  <span class="c1"># download the OpenML task</span>
@@ -1429,7 +1431,7 @@
 <span class="kn">import</span> <span class="nn">sklearn</span>
 
 <span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="s1">&#39;FILL_IN_OPENML_API_KEY&#39;</span>  <span class="c1"># set the OpenML Api Key</span>
-<span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_study</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">,</span><span class="s1">&#39;tasks&#39;</span><span class="p">)</span>  <span class="c1"># obtain the benchmark suite</span>
+<span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span>  <span class="c1"># obtain the benchmark suite</span>
 
 <span class="c1"># build a scikit-learn classifier</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Imputer</span><span class="p">(),</span>
@@ -1483,7 +1485,7 @@ a separate article on reproducible benchmarks. </p>
 <details class="note"><summary>REST (TODO)</summary><p><a href="https://www.openml.org/api/v1/xml/run/list/study/OpenML-CC18">https://www.openml.org/api/v1/xml/run/list/study/OpenML-CC18</a></p>
 <p><a href="https://www.openml.org/api_docs/#!/run/get_run_list_filters">Check out the API docs</a></p>
 </details>
-<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_study</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">,</span> <span class="s1">&#39;tasks&#39;</span><span class="p">)</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span>
 <span class="n">runs</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">list_runs</span><span class="p">(</span><span class="n">task</span><span class="o">=</span><span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 </pre></div>
 
