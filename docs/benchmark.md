@@ -66,7 +66,7 @@ Via the REST API, the list is returned in XML or JSON
     
 ??? note "R example"
     ``` 
-    TODO
+    studies = listOMLStudies()
     ```
 
 ### Fetching details
@@ -214,8 +214,9 @@ a separate article on reproducible benchmarks.
     ```
     
 ??? note "R example"
-    ``` 
-    TODO
+    ```r
+    benchmark.suite = getOMLStudy(study = "OpenML-CC18")
+    # TODO waiting for REST API
     ```
 
 ### Creating new benchmark suites
