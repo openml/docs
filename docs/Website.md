@@ -33,6 +33,15 @@ npm run dev
 The app should automatically open at `localhost:8080` and any changes made to
 the code will automatically reload the website.
 
+## Structure
+![OpenML Website structure](../img/structure.png)
+
+The website is built on the following components:  
+* A Flask backend. Written in Python, the backend takes care of all communication with the OpenML server. It builds on top of the OpenML Python API. It also takes care of user authentication and keeps the search engine (ElasticSearch) up to date with the latest information from the server.
+* A React frontend. Written in JavaScript, this takes care of rendering the website. It pulls in information from the search engine, and shows plots rendered by Dash. It also contains forms (e.g. for logging in or uploading new datasets), which will be sent off to the backend for processing.
+* Dash dashboards. Written in Python, Dash is used for writing interactive plots. It pulls in data from the Python API, and renders the plots as React components.
+
+
 ## Flask (backend)
 We use [Flask](http://flask.pocoo.org/) as our web framework. It handles user
 authentication, dataset upload, task creation, and other aspects that require
