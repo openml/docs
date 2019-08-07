@@ -1380,7 +1380,7 @@
 </pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span>TODO
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span>studies = listOMLStudies()
 </pre></div>
 
 </details>
@@ -1502,7 +1502,10 @@ a separate article on reproducible benchmarks. </p>
 </pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span>TODO
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><span class="n">benchmark.suite</span> <span class="o">=</span> <span class="nf">getOMLStudy</span><span class="p">(</span><span class="n">study</span> <span class="o">=</span> <span class="s">&quot;OpenML-CC18&quot;</span><span class="p">)</span>
+<span class="n">run.ids</span> <span class="o">=</span> <span class="nf">extractOMLStudyIds</span><span class="p">(</span><span class="n">benchmark.suite</span><span class="p">,</span> <span class="s">&quot;run.id&quot;</span><span class="p">)</span>
+<span class="n">runs</span> <span class="o">=</span> <span class="nf">rbindlist</span><span class="p">(</span><span class="nf">lapply</span><span class="p">(</span><span class="n">run.ids</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="nf">listOMLRuns</span><span class="p">(</span><span class="n">run.id</span> <span class="o">=</span> <span class="n">id</span><span class="p">)))</span>
+<span class="c1"># TODO waiting for REST API</span>
 </pre></div>
 
 </details>
@@ -1548,7 +1551,10 @@ a separate article on reproducible benchmarks. </p>
 </pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span>TODO
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><span class="c1"># find 250 tasks with 100 and 10000 instances and between 4 and 20 attributes</span>
+<span class="n">tid</span> <span class="o">=</span> <span class="nf">listOMLTasks</span><span class="p">(</span><span class="n">number.of.instances</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">10000</span><span class="p">),</span> <span class="n">number.of.features</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">20</span><span class="p">),</span> <span class="n">limit</span> <span class="o">=</span> <span class="m">250</span><span class="p">)</span>
+<span class="n">study</span> <span class="o">=</span> <span class="nf">makeOMLStudy</span><span class="p">(</span><span class="n">alias</span> <span class="o">=</span> <span class="s">&quot;test_alias&quot;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Test Upload from R&quot;</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="s">&quot;Just testing&quot;</span><span class="p">,</span> <span class="n">task.id</span> <span class="o">=</span> <span class="n">tid</span><span class="o">$</span><span class="n">task.id</span><span class="p">)</span>
+<span class="n">id</span> <span class="o">=</span> <span class="nf">uploadOMLStudy</span><span class="p">(</span><span class="n">study</span><span class="p">)</span>
 </pre></div>
 
 </details>
