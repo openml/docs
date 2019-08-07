@@ -81,8 +81,7 @@ It will find the React app there and load it.
 
 
 ### Handling state
-We manage state through React Context. The state of parent components is automatically inherited by child components.
-
+We manage state through React Hooks. See below for further details.
 Authentication information in stored in the `AuthProvider` component.
 
 ### Styling
