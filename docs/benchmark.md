@@ -66,7 +66,7 @@ Via the REST API, the list is returned in XML or JSON
     
 ??? note "R example"
     ``` 
-    TODO
+    studies = listOMLStudies()
     ```
 
 ### Fetching details
@@ -214,8 +214,11 @@ a separate article on reproducible benchmarks.
     ```
     
 ??? note "R example"
-    ``` 
-    TODO
+    ```r
+    benchmark.suite = getOMLStudy(study = "OpenML-CC18")
+    run.ids = extractOMLStudyIds(benchmark.suite, "run.id")
+    runs = rbindlist(lapply(run.ids, function(id) listOMLRuns(run.id = id)))
+    # TODO waiting for REST API
     ```
 
 ### Creating new benchmark suites
@@ -268,8 +271,11 @@ We have provided [a GitHub repository](https://github.com/openml/benchmark-suite
     ```
     
 ??? note "R example"
-    ``` 
-    TODO
+    ```r
+    # find 250 tasks with 100 and 10000 instances and between 4 and 20 attributes
+    tid = listOMLTasks(number.of.instances = c(100, 10000), number.of.features = c(4, 20), limit = 250)
+    study = makeOMLStudy(alias = "test_alias", name = "Test Upload from R", description = "Just testing", task.id = tid$task.id)
+    id = uploadOMLStudy(study)
     ```
 
 ### Updating a benchmark suite
