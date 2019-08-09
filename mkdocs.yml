@@ -71,23 +71,27 @@ nav:
     - '.NET (C#)':
         - Tutorial: NET-API.md
   - Developers:
-    - Welcome: developers.md
-    - 'Editing Documentation': OpenML-Docs.md
-    - 'Local Installation': Local-Installation.md
-    - 'API development':
-        - 'Client API Standards': Client-API-Standards.md
-        - 'Server API Development': API-rules.md
+    - 'Welcome': developers.md
+    - 'Documenting': OpenML-Docs.md
+    - 'Website':
+        - 'Getting started': Website.md
+        - 'Flask backend': Flask.md
+        - 'React frontend': React.md
+        - 'Dash visualizations': Dash.md
+    - 'Backend (API)':
+        - 'Local Installation': Local-Installation.md
+        - 'Code structure': WebApp-(PHP).md
+        - 'API Development': API-rules.md
         - 'User Authentication': API-Authentication-and-User-types.md
-    - 'Data handling':
+        - 'URL Mapping': URL-Mapping.md
+    - 'Evaluation Engine':
+        - 'Java App': Java-App.md
+        - 'Helper functions': Helper-functions.md
+    - 'Client Development': Client-API-Standards.md
+    - 'Datasets':
         - 'Data Formats': Data-Formats.md
         - 'Data Repositories': Data-Repositories.md
         - 'Data collections': Data-collections.md
-    - Backend (PHP):
-        - 'WebApp': WebApp-(PHP).md
-        - 'URL Mapping': URL-Mapping.md
-    - Backend (Java):
-        - 'Java Backend': Java-App.md
-        - 'Helper functions': Helper-functions.md
 extra_css:
         - css/extra.css
 extra_javascript:
