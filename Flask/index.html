@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://docs.openml.org/How-to-contribute/">
+        <link rel="canonical" href="https://docs.openml.org/Flask/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>How to contribute - OpenML Documentation</title>
+        <title>Flask backend - OpenML Documentation</title>
       
     
     
@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#bindings-to-openml-server" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -111,7 +115,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                How to contribute
+                Flask backend
               
             </span>
           
@@ -179,7 +183,9 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -214,7 +220,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../developers/" title="Developers" class="md-tabs__link">
+        <a href="../developers/" title="Developers" class="md-tabs__link md-tabs__link--active">
           Developers
         </a>
       
@@ -773,10 +779,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Developers
@@ -806,11 +814,145 @@
 
 
   <li class="md-nav__item">
-    <a href="../OpenML-Docs/" title="Editing Documentation" class="md-nav__link">
-      Editing Documentation
+    <a href="../OpenML-Docs/" title="Documenting" class="md-nav__link">
+      Documenting
     </a>
   </li>
 
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Website
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        Website
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Website/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Flask backend
+      </label>
+    
+    <a href="./" title="Flask backend" class="md-nav__link md-nav__link--active">
+      Flask backend
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bindings-to-openml-server" title="Bindings to OpenML server" class="md-nav__link">
+    Bindings to OpenML server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bindings-to-frontend" title="Bindings to frontend" class="md-nav__link">
+    Bindings to frontend
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../React/" title="React frontend" class="md-nav__link">
+      React frontend
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dash/" title="Dash visualizations" class="md-nav__link">
+      Dash visualizations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Backend (API)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Backend (API)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
         
           
           
@@ -829,28 +971,9 @@
           
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
-    <label class="md-nav__link" for="nav-3-4">
-      API development
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        API development
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../Client-API-Standards/" title="Client API Standards" class="md-nav__link">
-      Client API Standards
+    <a href="../WebApp-(PHP)/" title="Code structure" class="md-nav__link">
+      Code structure
     </a>
   </li>
 
@@ -861,8 +984,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../API-rules/" title="Server API Development" class="md-nav__link">
-      Server API Development
+    <a href="../API-rules/" title="API Development" class="md-nav__link">
+      API Development
     </a>
   </li>
 
@@ -875,6 +998,18 @@
   <li class="md-nav__item">
     <a href="../API-Authentication-and-User-types/" title="User Authentication" class="md-nav__link">
       User Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../URL-Mapping/" title="URL Mapping" class="md-nav__link">
+      URL Mapping
     </a>
   </li>
 
@@ -894,11 +1029,71 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
     
     <label class="md-nav__link" for="nav-3-5">
-      Data handling
+      Evaluation Engine
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-5">
-        Data handling
+        Evaluation Engine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Java-App/" title="Java App" class="md-nav__link">
+      Java App
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Helper-functions/" title="Helper functions" class="md-nav__link">
+      Helper functions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Client-API-Standards/" title="Client Development" class="md-nav__link">
+      Client Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Datasets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        Datasets
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -944,102 +1139,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
-    
-    <label class="md-nav__link" for="nav-3-6">
-      Backend (PHP)
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-6">
-        Backend (PHP)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../WebApp-(PHP)/" title="WebApp" class="md-nav__link">
-      WebApp
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../URL-Mapping/" title="URL Mapping" class="md-nav__link">
-      URL Mapping
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
-    
-    <label class="md-nav__link" for="nav-3-7">
-      Backend (Java)
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-7">
-        Backend (Java)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Java-App/" title="Java Backend" class="md-nav__link">
-      Java Backend
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Helper-functions/" title="Helper functions" class="md-nav__link">
-      Helper functions
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1052,17 +1151,76 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bindings-to-openml-server" title="Bindings to OpenML server" class="md-nav__link">
+    Bindings to OpenML server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bindings-to-frontend" title="Bindings to frontend" class="md-nav__link">
+    Bindings to frontend
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/openml/docs/edit/master/docs/How-to-contribute.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/openml/docs/edit/master/docs/Flask.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>How to contribute</h1>
+                  <h1>Flask backend</h1>
                 
-                <p>Our contributing guide was moved to <a href="https://github.com/openml/OpenML/blob/master/CONTRIBUTING.md">https://github.com/openml/OpenML/blob/master/CONTRIBUTING.md</a></p>
+                <p>We use <a href="http://flask.pocoo.org/">Flask</a> as our web framework. It handles user
+authentication, dataset upload, task creation, and other aspects that require
+server-side interaction. It is designed to be <em>independent</em> from the OpenML API.
+This means that you can use it to create your own personal frontend for OpenML,
+using the main OpenML server to provide the data. Of course, you can also link
+it to your own <a href="Local-Installation">local OpenML setup</a>.</p>
+<h3 id="bindings-to-openml-server">Bindings to OpenML server<a class="headerlink" href="#bindings-to-openml-server" title="Permanent link">&para;</a></h3>
+<p>You can specify which OpenML server to connect to.
+This is stored in the <code>.env</code> file in the main directory. It is set to the main OpenML server by default:</p>
+<div class="highlight"><pre><span></span>    <span class="n">ELASTICSEARCH_SERVER</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">openml</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">es</span>
+    <span class="n">OPENML_SERVER</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">openml</span><span class="o">.</span><span class="n">org</span>
+</pre></div>
+
+<p>The ElasticSearch server is used to download information about datasets, tasks, flows and runs, as well as to power the frontend search. The OpenML server is used for uploading datasets, tasks, and anything else that requires calls to the OpenML API.</p>
+<h3 id="bindings-to-frontend">Bindings to frontend<a class="headerlink" href="#bindings-to-frontend" title="Permanent link">&para;</a></h3>
+<p>The frontend is generated by <a href="https://reactjs.org/">React</a>. See below for more information. The React app is loaded as a static website. This is done in Flask setup in file <code>server.py</code>.</p>
+<div class="highlight"><pre><span></span>    <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">,</span> <span class="n">static_url_path</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">static_folder</span><span class="o">=</span><span class="s1">&#39;src/client&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>We use webpack to bundle the whole React App into one file <code>bundle.js</code>. This is done by running <code>npm run debug</code>. The settings for this are in <code>webpack.config.js</code>. For instance, it defines that <code>client/app/openml.jsx</code> is the entry file for the web app.</p>
+<div class="highlight"><pre><span></span><span class="n">entry</span><span class="p">:</span> <span class="n">APP_DIR</span> <span class="o">+</span> <span class="s1">&#39;/openml.jsx&#39;</span><span class="p">,</span>
+</pre></div>
+
+<p>It will find the React app there and load it.</p>
                 
                   
                 
@@ -1079,6 +1237,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Website/" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../React/" title="React frontend" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                React frontend
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
