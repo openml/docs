@@ -4,9 +4,9 @@
 
 OpenML is an open source project, <a href="https://github.com/openml">hosted on GitHub</a>. We welcome everybody to help improve OpenML, and make it more useful for everyone.
 
-To integrate your own machine learning tools with OpenML, [check out the available APIs](APIs).
+To integrate your own machine learning tools with OpenML, [check out the available APIs](../APIs).
 
-<span style="color:red">:fa-heart:</span> We always [love to welcome new contributers](Contributing), and will gladly help you in any way possible.
+<span style="color:red">:fa-heart:</span> We always [love to welcome new contributers](../Contributing), and will gladly help you in any way possible.
 
 
 ## GitHub repo's
