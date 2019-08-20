@@ -89,6 +89,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#dash-visualization" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -884,6 +888,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
     <a href="./" title="Dash visualizations" class="md-nav__link md-nav__link--active">
       Dash visualizations
@@ -1113,6 +1119,21 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -1121,9 +1142,50 @@
                   <a href="https://github.com/openml/docs/edit/master/docs/Dash.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Dash visualizations</h1>
-                
-                <p>TODO</p>
+                <h1 id="dash-visualization">Dash visualization<a class="headerlink" href="#dash-visualization" title="Permanent link">&para;</a></h1>
+<p>Dash is a python framework which is suitable for building data visualization dashboards using pure python. Dash is written on top of plotly, react and flask and the graphs are defined using plotly python. The dash application is composed of two major parts :</p>
+<ul>
+<li><code>Layout</code>  - Describes how the dashboard looks like</li>
+<li><code>Callbacks</code>  - Used to update graphs, tables in the layout and makes the dashboard interactive. </li>
+</ul>
+<h1 id="files">Files<a class="headerlink" href="#files" title="Permanent link">&para;</a></h1>
+<p>The dash application is organized as follows:
+- <code>dashapp.py</code>
+    - Creates the dash application
+    - The dash app is embedded in the flask app passed to <code>create_dash_app</code> function
+    - This file need not be modified to create a new plot
+- <code>layouts.py</code>
+    - contains the layout for all the pages
+    - <code>get_layout_from_data</code>- returns layout of data visualization 
+    -  <code>get_layout_from_task</code>- returns layout of taskvisualization 
+    - <code>get_layout_from_flow</code>- returns layout of flow visualization 
+    - <code>get_layout_from_run</code> -  returns layout of run visualization 
+    -  This file needs to be modified to add a new plot (data, task, flow, run)
+- <code>callbacks.py</code>
+    - Registers all the callbacks for the dash application
+    - This file needs to be modified to add a new plot, especially if the plot needs to be interactive</p>
+<h2 id="how-the-dashboard-works">How the dashboard works<a class="headerlink" href="#how-the-dashboard-works" title="Permanent link">&para;</a></h2>
+<p>In this dash application, we need to create the layout of the page dynamically based on the entered URL. 
+For example,  [<a href="http://127.0.0.1:5000/dashboard/data/5">http://127.0.0.1:5000/dashboard/data/5</a>] needs to return the layout for dataset id #5 whereas 
+[<a href="http://127.0.0.1:5000/dashboard/run/5">http://127.0.0.1:5000/dashboard/run/5</a>] needs to return the layout for run id #5.</p>
+<p>Hence , the dash app is  initially created with a dummy <code>app.layout</code> by dashapp.py and 
+the callbacks are registered for the app using <code>register_callbacks</code> function.  </p>
+<ul>
+<li>
+<p><strong>render_layout</strong> is the callback which dynamically renders layout. Once the dash app is running, the first callback which  is fired is <code>render_layout.</code> 
+   This is the main callback invoked when  a URL with a data , task, run or flow ID is entered. 
+   Based on the information in the URL, this method returns the layout. </p>
+</li>
+<li>
+<p>Based on the URL, get_layout_from_data, get_layout_from_task, get_layout_from_flow, get_layout_from_run are called.
+   These functions define the layout of the page - tables, html Divs, tabs, graphs etc.</p>
+</li>
+<li>
+<p>The callbacks corresponding to each component in the layout are invoked to update the components dynamically and
+   make the graphs interactive. For example, <strong>update_scatter_plot</strong> in <code>data_callbacks.py</code> updates the scatter plot
+   component in the data visualization dashboard.  </p>
+</li>
+</ul>
                 
                   
                 
