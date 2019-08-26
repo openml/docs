@@ -2,6 +2,9 @@ version: 2
     
 jobs:
   deploydocs:
+    branches:
+      only:
+        - master
     docker:
       - image: python:3.7
     steps:
@@ -17,7 +20,4 @@ workflows:
   version: 2
   build:
     jobs:
-      - deploydocs:
-          filters:
-            branches:
-              only: master
+      - deploydocs
