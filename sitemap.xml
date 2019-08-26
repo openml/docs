@@ -2,207 +2,207 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://docs.openml.org/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/sklearn/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/mlr/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Weka/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/MOA/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Contributing/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Communication-Channels/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Core-team/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/benchmark/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/altmetrics/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/terms/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/APIs/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/REST-tutorial/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/REST-API/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Java-guide/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Python-start/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Python-guide/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Python-examples/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Python-API/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Python-contributing/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Python-changelog/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/R-guide/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/R-API/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/NET-API/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/developers/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/OpenML-Docs/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Website/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Flask/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/React/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Dash/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Local-Installation/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/WebApp-(PHP)/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/API-rules/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/API-Authentication-and-User-types/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/URL-Mapping/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Java-App/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Helper-functions/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Client-API-Standards/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Data-Formats/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Data-Repositories/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.openml.org/Data-collections/</loc>
-     <lastmod>2019-08-20</lastmod>
+     <lastmod>2019-08-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
