@@ -17,4 +17,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - deploydocs
+      - deploydocs:
+          filters:
+            branches:
+              only: master
