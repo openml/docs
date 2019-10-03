@@ -5,6 +5,7 @@ A collection of sources made by different users
 
   - https://github.com/caesar0301/awesome-public-datasets
   - https://dreamtolearn.com/ryan/1001_datasets
+  - https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research
 
 Machine learning dataset repositories (mostly already in OpenML)
 
