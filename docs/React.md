@@ -3,29 +3,29 @@
 ### App structure
 The structure of the source code looks as follows
 
-App.js
-index.js
-|-- components
-    |-- Sidebar.js
-    |-- Header.js
-    |-- ...
-|-- layouts
-    |-- Clear.js
-    |-- Main.js
-|-- pages
-    |-- auth
-    |-- cover
-    |-- docs
-    |-- search
-|-- routes
-    |-- index.js
-    |-- Routes.js
-|-- themes
+App.js  
+index.js  
+|-- components  
+    |-- Sidebar.js  
+    |-- Header.js  
+    |-- ...  
+|-- layouts  
+    |-- Clear.js  
+    |-- Main.js  
+|-- pages  
+    |-- auth  
+    |-- cover  
+    |-- docs  
+    |-- search  
+|-- routes  
+    |-- index.js  
+    |-- Routes.js  
+|-- themes  
 
 The whole website is designed as a single-page application.
 The top level files bootstrap the app. `index.js` simply renders the top component, and
 `App.js` adds global state using the React Context API. This includes the current theme, user
-authentication, search keywords, and other user input. 
+authentication, search keywords, and other user input.
 
 `Routes.js` loads the correct components based on the current route (URL). The list of
 possible routes is defined in `routes/index.js`.
@@ -41,9 +41,9 @@ is always defined through styled components in the corresponding pages.
 
 ### Handling state
 There are different levels of state management:  
-* Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the `ThemeContext.Provider` in `App.js` and the `ThemeContext.Consumer` in `Sidebar.js`.
-* Lower level components can pass state to their child components via props.
-* Local state changes should, when possible, be defined by React Hooks.
+* Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the `ThemeContext.Provider` in `App.js` and the `ThemeContext.Consumer` in `Sidebar.js`.  
+* Lower level components can pass state to their child components via props.  
+* Local state changes should, when possible, be defined by React Hooks.  
 
 #### Lifecycle Methods
 These are the React lifecycle methods and how we use them. When a component mounts, methods 1,2,4,7 will be called. When it updates, methods 2-6 will be called.  
