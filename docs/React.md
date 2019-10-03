@@ -6,22 +6,22 @@ The structure of the source code looks as follows
 ```
 App.js  
 index.js  
-|-- components  
-    |-- Sidebar.js  
-    |-- Header.js  
-    |-- ...  
-|-- layouts  
-    |-- Clear.js  
-    |-- Main.js  
-|-- pages  
-    |-- auth  
-    |-- cover  
-    |-- docs  
-    |-- search  
-|-- routes  
-    |-- index.js  
-    |-- Routes.js  
-|-- themes  
+components  
+|-- Sidebar.js  
+|-- Header.js  
+|-- ...  
+layouts  
+|-- Clear.js  
+|-- Main.js  
+pages  
+|-- auth  
+|-- cover  
+|-- docs  
+|-- search  
+routes  
+|-- index.js  
+|-- Routes.js  
+themes  
 ```
 
 The whole website is designed as a single-page application.
