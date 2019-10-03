@@ -37,7 +37,7 @@ and a certain page. The specific pages are in the `pages` folder. The `Clear.js`
 headers or sidebars, it is used mainly for user login and registration. Finally, `themes` contains the overall theme styling for the entire website.
 
 ### Styling
-To keep a consistent style and minimize dependencies and complexity, we build on [Material UI](https://material-ui.com/) components and [FontAwesome](https://fontawesome.com) icons. Theming is defined in `themes/index.js` and loaded in as a contect (`ThemeContext`) in `App.js`. More specific styling
+To keep a consistent style and minimize dependencies and complexity, we build on [Material UI](https://material-ui.com/) components and [FontAwesome](https://fontawesome.com) icons. Theming is defined in `themes/index.js` and loaded in as a context (`ThemeContext`) in `App.js`. More specific styling
 is always defined through styled components in the corresponding pages.
 
 

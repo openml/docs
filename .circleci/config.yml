@@ -11,7 +11,7 @@ jobs:
           command: pip install -r requirements.txt
       - run:
           name: Deploy
-          command: mkdocs gh-deploy
+          command: mkdocs gh-deploy -m "Deployment of commit {sha} [ci-skip]"
 
 
 workflows:
