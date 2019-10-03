@@ -24,7 +24,7 @@ routes
 themes  
 ```
 
-The whole website is designed as a single-page application.
+The website is designed as a single-page application.
 The top level files bootstrap the app. `index.js` simply renders the top component, and
 `App.js` adds global state using the React Context API. This includes the current theme, user
 authentication, search keywords, and other user input.
