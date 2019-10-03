@@ -1,121 +1,62 @@
-### React components
+# React App
 
-### Handling state
-We manage state through React Hooks. See below for further details.
-Authentication information in stored in the `AuthProvider` component.
+### App structure
+The structure of the source code looks as follows
+
+App.js
+index.js
+|-- components
+    |-- Sidebar.js
+    |-- Header.js
+    |-- ...
+|-- layouts
+    |-- Clear.js
+    |-- Main.js
+|-- pages
+    |-- auth
+    |-- cover
+    |-- docs
+    |-- search
+|-- routes
+    |-- index.js
+    |-- Routes.js
+|-- themes
+
+The whole website is designed as a single-page application.
+The top level files bootstrap the app. `index.js` simply renders the top component, and
+`App.js` adds global state using the React Context API. This includes the current theme, user
+authentication, search keywords, and other user input. 
+
+`Routes.js` loads the correct components based on the current route (URL). The list of
+possible routes is defined in `routes/index.js`.
+
+There are two top level layouts: `Main` loads the main layout with a `Sidebar`, `Header`,
+and a certain page. The specific pages are in the `pages` folder. The `Clear.js` layout has no
+headers or sidebars, it is used mainly for user login and registration. Finally, `themes` contains the overall theme styling for the entire website.
 
 ### Styling
-To keep a consistent style and minimize dependencies and complexity, we build on [Material UI](https://material-ui.com/). Overall theming is defined in the parent component `openml.jsx`. Additional styling is defined in the subcomponents themselves.
-
-### React Basics
-Here are a few React basics you need to know about when developing the frontend. If you've developed with React before, this will just jog your memory. If you are completely new to React, we recommend 'The Road to learn React' by Robin Wieruch.
-
-#### Components
-React only builds the 'View' layer of a web application, depending on APIs to receive information from a backend. The view is a hierarchy of composable _components_, each isolating all the code for rendering a specific part ('box') of the user interface. This is encapsulated in the `render()` method, which renders the component every time something changes. This method returns JSX syntax, a mix of HTML and javascript that allows easy templating. The curly braces {} tell the JSX parser that it needs to interpret the contents. JSX supports most HTML attributes, although some are renamed. For instance, `className` replaces the standard HTML `class` attribute.
-
-Components are usually defined as subclasses of React.Component. Here we define a simple 'App' component:
-``` javascript
-class App extends Component {
-  render() {
-    const title = "Welcome to OpenML";
-    return (
-    <div className="App">
-      <h1>{title}</h1>
-    </div>
-    );
-  }
-}
-```
-
-Components can have multiple child components, which are instantiated inside the parent's render method:
-Here's a simple example:
-``` javascript
-class App extends Component {
-  render() {
-    return (
-    // This instantiates a component of class TitleBar
-    <TitleBar />
-    <MainComponent />
-    );
-  }
-}
-```
-
-We can replace any HTML element with a React component (and all its children). Often, we will simply replace the whole HTML root:
-``` javascript
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
-```
-
-#### Component state
-React components have internal properties and state that can be accessed though the `props` and `state` data structures. `state` stores the data that you need to render the component. It is mutable (via `setState()`) and can be changed asynchronously. It holds anything that can be changed by the component itself. It should not be accessed by child or parent components (consider it private). `props` contains your component's fixed properties (configuration). It is immutable by the component itself, only by its parent. It is used to pass data (and event handlers) from a parent component to a child component. Every time that `props` or `state` change, the component will re-render.
-
-Here is an example of a simple component that changes its own state through a button click.
-``` javascript
-const titles: {mainTitle: 'OpenML'};
-
-class App extends Component {
-  constructor(props){
-    super(props); // required
-  }
-  // State initialization
-  // Shorthand for this.state = {titles: titles};
-  this.state = {titles};
-
-  // Methods need to be bound to the class to have access to `this`.
-  // Arrow functions are automatically bound
-  changeMainTitle = (name) => {
-    this.setState({titles.mainTitle : name});
-  }
-
-  render(){
-    return (
-      <div classname="App">
-        <h1>{this.state.titles.mainTitle}</h1>
-        <button type="button"
-          //Arrow function passed to onClick event handler
-          onClick={() => this.changeMainTitle("NewOpenML")}
-          > Update
-        </button>
-      </div>
-    );
-  }
-}
-```
-
-Here is an example of component state being passed on to child components via properties.
-Optionally, the `children` prop can be used to pass elements to child components, such as a text string here.
-``` javascript
-class App extends Component {
-  ...
-  render(){
-    return (
-      <div classname="App">
-        // Creates a new TitleBar component with a property `title`
-        <TitleBar
-          title={this.state.titles.mainTitle}
-        > Subtext
-        </TitleBar>
-        <Content />
-      </div>
-    );
-  }
-}
-class TitleBar extends Component {
-  render(){
-    // Unpacking (deconstructing) the properties
-    const {myTitle, children} = this.props;
-    return (
-      <h1>{myTitle}</h1>
-      {children}
-    );
-  }
-}
-```
+To keep a consistent style and minimize dependencies and complexity, we build on [Material UI](https://material-ui.com/) components and [FontAwesome](https://fontawesome.com) icons. Theming is defined in `themes/index.js` and loaded in as a contect (`ThemeContext`) in `App.js`. More specific styling
+is always defined through styled components in the corresponding pages.
 
 
+### Handling state
+There are different levels of state management:  
+* Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the `ThemeContext.Provider` in `App.js` and the `ThemeContext.Consumer` in `Sidebar.js`.
+* Lower level components can pass state to their child components via props.
+* Local state changes should, when possible, be defined by React Hooks.
+
+#### Lifecycle Methods
+These are the React lifecycle methods and how we use them. When a component mounts, methods 1,2,4,7 will be called. When it updates, methods 2-6 will be called.  
+
+1. constructor(): Set the initial state of the components
+2. getDerivedStateFromProps(props, state): Static method, only for changing the local state based on props. It returns the new state.
+3. shouldComponentUpdate(nextProps, nextState): Decides whether a state change requires a re-rendering or not. Used to optimize performance.
+4. render(): Returns the JSX to be rendered. It should NOT change the state.
+5. getSnapshotBeforeUpdate(prevProps,prevState): Used to save 'old' DOM information right before an update. Returns a 'snapshot'.
+6. componentDidUpdate(prevProps,prevState,snapshot): For async requests or other operations right after component update.
+7. componentDidMount(): For async requests (e.g. API calls) right after the component mounted.
+8. componentWillUnMount(): Cleanup before the component is destroyed.
+9. componentDidCatch(error,info): For updating the state after an error is thrown.
 
 #### Forms and Events
 React wraps native browser events into _synthetic events_ to handle interactions in a cross-browser compatible way. After being wrapped, they are sent to
@@ -151,5 +92,3 @@ class App extends Component {
   }
 }
 ```
-
-#### Component declarations

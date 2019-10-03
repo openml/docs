@@ -10,13 +10,14 @@ pip install dash
 
 ## Building and running
 
-Build the app by running
+The source code for the OpenML website can be found on [GitHub](https://github.com/openml/openml.org)
+Build the app by going to ``src/client/app` and running
 
 ``` python
 npm run build
 ```
 
-Start app with:
+Start the server with:
 
 ``` python
 python server.py
@@ -26,13 +27,13 @@ You should now see it running in your browser at `localhost:5000`
 
 ## Development
 
-To start the React frontend in developer mode (with hot loading), run:
+To start the React frontend in developer mode, go to ``src/client/app` and run:
 
 ``` python
-npm run dev
+npm run start
 ```
 
-The app should automatically open at `localhost:8080` and any changes made to
+The app should automatically open at `localhost:3000` and any changes made to
 the code will automatically reload the website.
 
 ## Structure
