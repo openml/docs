@@ -1258,24 +1258,26 @@
                 <h1 id="react-app">React App<a class="headerlink" href="#react-app" title="Permanent link">&para;</a></h1>
 <h3 id="app-structure">App structure<a class="headerlink" href="#app-structure" title="Permanent link">&para;</a></h3>
 <p>The structure of the source code looks as follows</p>
-<p>App.js<br />
-index.js<br />
-|-- components<br />
-    |-- Sidebar.js<br />
-    |-- Header.js<br />
-    |-- ...<br />
-|-- layouts<br />
-    |-- Clear.js<br />
-    |-- Main.js<br />
-|-- pages<br />
-    |-- auth<br />
-    |-- cover<br />
-    |-- docs<br />
-    |-- search<br />
-|-- routes<br />
-    |-- index.js<br />
-    |-- Routes.js<br />
-|-- themes  </p>
+<div class="highlight"><pre><span></span>App.js  
+index.js  
+|-- components  
+    |-- Sidebar.js  
+    |-- Header.js  
+    |-- ...  
+|-- layouts  
+    |-- Clear.js  
+    |-- Main.js  
+|-- pages  
+    |-- auth  
+    |-- cover  
+    |-- docs  
+    |-- search  
+|-- routes  
+    |-- index.js  
+    |-- Routes.js  
+|-- themes  
+</pre></div>
+
 <p>The whole website is designed as a single-page application.
 The top level files bootstrap the app. <code>index.js</code> simply renders the top component, and
 <code>App.js</code> adds global state using the React Context API. This includes the current theme, user
