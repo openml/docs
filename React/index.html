@@ -1258,28 +1258,28 @@
                 <h1 id="react-app">React App<a class="headerlink" href="#react-app" title="Permanent link">&para;</a></h1>
 <h3 id="app-structure">App structure<a class="headerlink" href="#app-structure" title="Permanent link">&para;</a></h3>
 <p>The structure of the source code looks as follows</p>
-<p>App.js
-index.js
-|-- components
-    |-- Sidebar.js
-    |-- Header.js
-    |-- ...
-|-- layouts
-    |-- Clear.js
-    |-- Main.js
-|-- pages
-    |-- auth
-    |-- cover
-    |-- docs
-    |-- search
-|-- routes
-    |-- index.js
-    |-- Routes.js
-|-- themes</p>
+<p>App.js<br />
+index.js<br />
+|-- components<br />
+    |-- Sidebar.js<br />
+    |-- Header.js<br />
+    |-- ...<br />
+|-- layouts<br />
+    |-- Clear.js<br />
+    |-- Main.js<br />
+|-- pages<br />
+    |-- auth<br />
+    |-- cover<br />
+    |-- docs<br />
+    |-- search<br />
+|-- routes<br />
+    |-- index.js<br />
+    |-- Routes.js<br />
+|-- themes  </p>
 <p>The whole website is designed as a single-page application.
 The top level files bootstrap the app. <code>index.js</code> simply renders the top component, and
 <code>App.js</code> adds global state using the React Context API. This includes the current theme, user
-authentication, search keywords, and other user input. </p>
+authentication, search keywords, and other user input.</p>
 <p><code>Routes.js</code> loads the correct components based on the current route (URL). The list of
 possible routes is defined in <code>routes/index.js</code>.</p>
 <p>There are two top level layouts: <code>Main</code> loads the main layout with a <code>Sidebar</code>, <code>Header</code>,
@@ -1290,9 +1290,9 @@ headers or sidebars, it is used mainly for user login and registration. Finally,
 is always defined through styled components in the corresponding pages.</p>
 <h3 id="handling-state">Handling state<a class="headerlink" href="#handling-state" title="Permanent link">&para;</a></h3>
 <p>There are different levels of state management:<br />
-* Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the <code>ThemeContext.Provider</code> in <code>App.js</code> and the <code>ThemeContext.Consumer</code> in <code>Sidebar.js</code>.
-* Lower level components can pass state to their child components via props.
-* Local state changes should, when possible, be defined by React Hooks.</p>
+* Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the <code>ThemeContext.Provider</code> in <code>App.js</code> and the <code>ThemeContext.Consumer</code> in <code>Sidebar.js</code>.<br />
+* Lower level components can pass state to their child components via props.<br />
+* Local state changes should, when possible, be defined by React Hooks.  </p>
 <h4 id="lifecycle-methods">Lifecycle Methods<a class="headerlink" href="#lifecycle-methods" title="Permanent link">&para;</a></h4>
 <p>These are the React lifecycle methods and how we use them. When a component mounts, methods 1,2,4,7 will be called. When it updates, methods 2-6 will be called.  </p>
 <ol>
