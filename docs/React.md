@@ -3,6 +3,7 @@
 ### App structure
 The structure of the source code looks as follows
 
+```
 App.js  
 index.js  
 |-- components  
@@ -21,6 +22,7 @@ index.js
     |-- index.js  
     |-- Routes.js  
 |-- themes  
+```
 
 The whole website is designed as a single-page application.
 The top level files bootstrap the app. `index.js` simply renders the top component, and
