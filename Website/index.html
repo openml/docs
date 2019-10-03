@@ -1235,21 +1235,22 @@
 </pre></div></li>
 </ul>
 <h2 id="building-and-running">Building and running<a class="headerlink" href="#building-and-running" title="Permanent link">&para;</a></h2>
-<p>Build the app by running</p>
+<p>The source code for the OpenML website can be found on <a href="https://github.com/openml/openml.org">GitHub</a>
+Build the app by going to <code>`src/client/app</code> and running</p>
 <div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
 </pre></div>
 
-<p>Start app with:</p>
+<p>Start the server with:</p>
 <div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">server</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 
 <p>You should now see it running in your browser at <code>localhost:5000</code></p>
 <h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">&para;</a></h2>
-<p>To start the React frontend in developer mode (with hot loading), run:</p>
-<div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">dev</span>
+<p>To start the React frontend in developer mode, go to <code>`src/client/app</code> and run:</p>
+<div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">start</span>
 </pre></div>
 
-<p>The app should automatically open at <code>localhost:8080</code> and any changes made to
+<p>The app should automatically open at <code>localhost:3000</code> and any changes made to
 the code will automatically reload the website.</p>
 <h2 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h2>
 <p><img src="../img/structure.png" alt="OpenML Website structure" width="500"/></p>
