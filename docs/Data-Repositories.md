@@ -25,6 +25,7 @@ Time series data:
 
 Deep learning datasets (mostly image data)
 
+  - https://www.tensorflow.org/datasets/catalog/overview
   - http://deeplearning.net/datasets/
   - https://deeplearning4j.org/opendata
   - http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html
