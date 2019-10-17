@@ -1123,6 +1123,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    Tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#flow" class="md-nav__link">
     FLow
   </a>
@@ -1197,6 +1204,8 @@
 <li>description: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.data.upload">XSD schema</a>.</li>
 <li>dataset: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the data (optional, if not set, there should be an URL in the description, pointing to this file). </li>
 </ul>
+<h2 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h2>
+<p>TODO.</p>
 <h2 id="flow">FLow<a class="headerlink" href="#flow" title="Permanent link">&para;</a></h2>
 <p>Flows are uploaded through the function <a href="https://www.openml.org/api_docs#!/flow/post_flow">post flow</a>. The following file is needed:</p>
 <ul>
@@ -1216,18 +1225,20 @@
 <li>repeat NUMERIC</li>
 <li>fold NUMERIC</li>
 <li>row_id NUMERIC</li>
-<li>confidence.{$classname}: various columns, describing the confidence per class</li>
-<li>prediction</li>
-<li>correct (optional)</li>
+<li>confidence.{$classname}: optional. various columns, describing the confidence per class. The values of these columns should add to 1 (precision 1e-6). </li>
+<li>(proposal) decision_function.{$classname}: optional. various columns, describing decision function per class. </li>
+<li>prediction {$classname}
+Runs that have a different set of columns will be rejected.</li>
 </ul>
 <h3 id="trace">Trace<a class="headerlink" href="#trace" title="Permanent link">&para;</a></h3>
 <ul>
 <li>repeat numeric</li>
 <li>fold numeric</li>
 <li>iteration numeric</li>
-<li>setup_string string</li>
+<li>setup_string string, contains hyperparameters and settings of the optimizee (should be json parsable)</li>
 <li>evaluation numeric</li>
-<li>selected {false,true}</li>
+<li>selected {false,true}
+(open question) what is in the same fold/repeat combination the same config is ran multiple times with same evaluation?</li>
 </ul>
                 
                   
