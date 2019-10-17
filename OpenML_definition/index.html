@@ -1361,32 +1361,38 @@
 <h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
 <p>Data is uploaded through the function <a href="https://www.openml.org/api_docs#!/data/post_data">post data</a>. The following files are needed:</p>
 <ul>
-<li>description: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.data.upload">XSD schema</a>.</li>
-<li>dataset: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the data (optional, if not set, there should be an URL in the description, pointing to this file). </li>
+<li><code>description</code>: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.data.upload">XSD schema</a>.</li>
+<li><code>dataset</code>: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the data (optional, if not set, there should be an URL in the description, pointing to this file). 
+Uploading any other files will result in an error. </li>
 </ul>
 <h2 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h2>
 <p>Tasks are uploaded through the function <a href="https://www.openml.org/api_docs#!/task/post_task">post task</a>. The following files are needed:</p>
 <ul>
-<li>description: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.task.upload">XSD schema</a>.</li>
+<li><code>description</code>: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.task.upload">XSD schema</a>.
+Uploading any other files will result in an error. </li>
 </ul>
 <p>The task file should contain several input fields. These are a name and value combination of fields that are marked to be relevant by the task type definition. There are several task type definitions, e.g.:
 * <a href="https://www.openml.org/api/v1/tasktype/1">Supervised Classification</a>
 * <a href="https://www.openml.org/api/v1/tasktype/2">Supervised Regression</a>
 * <a href="https://www.openml.org/api/v1/tasktype/3">Learning Curve</a>
 * <a href="https://www.openml.org/api/v1/tasktype/4">Data Stream Classification</a>
-Note that the task types themselves are flexible content (ideally users can contribute task types) and therefore the documents are not part of the OpenML definition. The task types define which input fields should be set, when creating a task. </p>
+Note that the task types themselves are flexible content (ideally users can contribute task types) and therefore the documents are not part of the OpenML definition. The task types define which input fields should be set, when creating a task.</p>
+<p>Duplicate tasks (i.e., same value for <code>task_type_id</code> and all <code>input</code> fields equal) will be rejected. </p>
 <p>When creating a task, the API checks for all of the input fields whether the input is legitimate. (Todo: describe the checks and what they depend on). </p>
 <h2 id="flow">FLow<a class="headerlink" href="#flow" title="Permanent link">&para;</a></h2>
 <p>Flows are uploaded through the function <a href="https://www.openml.org/api_docs#!/flow/post_flow">post flow</a>. The following file is needed:</p>
 <ul>
-<li>description: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.implementation.upload">XSD schema</a>.</li>
+<li><code>description</code>: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.implementation.upload">XSD schema</a>.
+Uploading any other files will result in an error. </li>
 </ul>
+<p>Duplicate flows (i.e., same values for <code>name</code> and <code>external_version</code>) will be rejected.</p>
 <h2 id="runs">Runs<a class="headerlink" href="#runs" title="Permanent link">&para;</a></h2>
 <p>Runs are uploaded through the function <a href="https://www.openml.org/api_docs#!/run/post_run">post run</a>. The following files are needed:</p>
 <ul>
-<li>description: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.run.upload">XSD schema</a>.</li>
-<li>predictions: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the predictions (optional, depending on the task).</li>
-<li>trace: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the run trace (optional, depending on the flow).</li>
+<li><code>description</code>: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.run.upload">XSD schema</a>.</li>
+<li><code>predictions</code>: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the predictions (optional, depending on the task).</li>
+<li><code>trace</code>: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the run trace (optional, depending on the flow).
+Uploading any other files will result in an error. </li>
 </ul>
 <h3 id="predictions">Predictions<a class="headerlink" href="#predictions" title="Permanent link">&para;</a></h3>
 <p>The contents of the prediction file depends on the task type. </p>
@@ -1408,7 +1414,8 @@ Runs that have a different set of columns will be rejected.</li>
 <li>setup_string string, contains hyperparameters and settings of the optimizee (should be json parsable)</li>
 <li>evaluation numeric</li>
 <li>selected {false,true}
-(open question) what is in the same fold/repeat combination the same config is ran multiple times with same evaluation?</li>
+(open question) what is in the same fold/repeat combination the same config is ran multiple times with same evaluation?
+Traces that have a different set of columns will be rejected.</li>
 </ul>
 <h2 id="data-features">Data Features<a class="headerlink" href="#data-features" title="Permanent link">&para;</a></h2>
 <p>Data features are uploaded by the Java Evaluation Engine and will be documented later.</p>
