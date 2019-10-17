@@ -131,6 +131,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://docs.openml.org/OpenML_definition/</loc>
+     <lastmod>2019-10-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://docs.openml.org/Website/</loc>
      <lastmod>2019-10-17</lastmod>
      <changefreq>daily</changefreq>
