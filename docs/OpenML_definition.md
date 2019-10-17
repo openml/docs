@@ -14,7 +14,7 @@ TODO.
 
 Flows are uploaded through the function [post flow](https://www.openml.org/api_docs#!/flow/post_flow). The following file is needed:
 
-* description: An XML adhiring to the [XSD schema](https://www.openml.org/api_new/v1/xsd/openml.flow.upload).
+* description: An XML adhiring to the [XSD schema](https://www.openml.org/api_new/v1/xsd/openml.implementation.upload).
 
 ## Runs
 
