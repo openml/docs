@@ -73,6 +73,7 @@ nav:
   - Developers:
     - 'Welcome': developers.md
     - 'Documenting': OpenML-Docs.md
+    - 'OpenML Definition': OpenML_definition.md
     - 'Website':
         - 'Getting started': Website.md
         - 'Flask backend': Flask.md
