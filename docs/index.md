@@ -24,13 +24,14 @@ supervised tasks, this also specifies the target column in the data.
 _Example: <a href="https://www.openml.org/t/59" target="_blank">Classifying different iris species</a> from other attributes and evaluate using 10-fold cross-validation._
 
 **<span style="color:blue">:fa-cogs: Flows</span>**  
-A flow identifies a particular machine learning algorithm from a particular library or framework such as Weka, mlr or scikit-learn.  
+A flow identifies a particular machine learning algorithm from a particular library or framework such as Weka, mlr or scikit-learn. It should at least contain a name, details about the workbench and its version and a list of settable hyperparameters. Ideally, the appropriate workbench can deserialize it again (the algorithm, not the model). 
 _Example: <a href="https://www.openml.org/f/65" target="_blank">WEKA's RandomForest</a>_
 
 **<span style="color:red">:fa-star: Runs</span>**  
 A run is a particular flow, that is algorithm, with a particular parameter setting, applied to a particular task.  
 _Example: <a href="https://www.openml.org/r/6466" target="_blank">Classifying irises with WEKA's RandomForest</a>_
 
+How to add instances of Data, Flows, Tasks and Runs is defined in [the OpenML definition](OpenML_definition).
 
 ## Data
 You can upload and download datasets through the <a href="https://www.openml.org/new/data" target="_blank">website</a>, or [APIs](APIs). Data hosted
