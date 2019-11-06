@@ -1412,11 +1412,12 @@ A task consists of a dataset, together with a machine learning task to perform, 
 supervised tasks, this also specifies the target column in the data.<br />
 <em>Example: <a href="https://www.openml.org/t/59" target="_blank">Classifying different iris species</a> from other attributes and evaluate using 10-fold cross-validation.</em></p>
 <p><strong><span style="color:blue"><i class="fa fa-cogs"></i> Flows</span></strong><br />
-A flow identifies a particular machine learning algorithm from a particular library or framework such as Weka, mlr or scikit-learn.<br />
+A flow identifies a particular machine learning algorithm from a particular library or framework such as Weka, mlr or scikit-learn. It should at least contain a name, details about the workbench and its version and a list of settable hyperparameters. Ideally, the appropriate workbench can deserialize it again (the algorithm, not the model). 
 <em>Example: <a href="https://www.openml.org/f/65" target="_blank">WEKA's RandomForest</a></em></p>
 <p><strong><span style="color:red"><i class="fa fa-star"></i> Runs</span></strong><br />
 A run is a particular flow, that is algorithm, with a particular parameter setting, applied to a particular task.<br />
 <em>Example: <a href="https://www.openml.org/r/6466" target="_blank">Classifying irises with WEKA's RandomForest</a></em></p>
+<p>How to add instances of Data, Flows, Tasks and Runs is defined in <a href="OpenML_definition">the OpenML definition</a>.</p>
 <h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
 <p>You can upload and download datasets through the <a href="https://www.openml.org/new/data" target="_blank">website</a>, or <a href="APIs">APIs</a>. Data hosted
 elsewhere can be referenced by URL.</p>
