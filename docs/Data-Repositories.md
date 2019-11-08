@@ -18,6 +18,11 @@ Machine learning dataset repositories (mostly already in OpenML)
   - DataBrewer: https://github.com/rmax/databrewer
   - liac-arff: https://github.com/renatopp/arff-datasets
 
+APIs (mostly defunct):
+  - databrewer (Python): https://pypi.org/project/databrewer/
+  - PyDataset (Python): https://github.com/iamaziz/PyDataset (wrapper for Rdatasets?)
+  - RDatasets (R): https://github.com/vincentarelbundock/Rdatasets
+  
 Time series data:
 
   - UCR: http://timeseriesclassification.com/
@@ -34,7 +39,7 @@ Extreme classification:
 
   - http://manikvarma.org/downloads/XC/XMLRepository.html
 
-MLData (will merge with OpenML in 2017)
+MLData (down)
 
   - http://mldata.org/
 
