@@ -8,14 +8,14 @@ pip install flask
 pip install dash
 ```
 
-## Building and running
-
-The source code for the OpenML website can be found on [GitHub](https://github.com/openml/openml.org)
+Download or clone the source code for the OpenML website from [GitHub](https://github.com/openml/openml.org)
 Install the necessary components by running this in the home folder (with the `package.json` file):
 
 ``` python
 npm install
 ```
+
+## Building and running
 
 Do a production build of the frontend by going to `server/src/client/app` and running
 
