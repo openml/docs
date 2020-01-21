@@ -8,8 +8,8 @@ pip install flask
 pip install dash
 ```
 
-Download or clone the source code for the OpenML website from [GitHub](https://github.com/openml/openml.org)
-Install the necessary components by running this in the home folder (with the `package.json` file):
+Download or clone the source code for the OpenML website from [GitHub](https://github.com/openml/openml.org).
+Then, go into that folder and install the necessary components by running this in the home folder (with the `package.json` file):
 
 ``` python
 npm install
