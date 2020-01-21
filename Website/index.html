@@ -1257,11 +1257,14 @@ Then, go into that folder and install the necessary components by running this i
 </pre></div>
 
 <p>Start the server by going back to the home directory and running:</p>
+<div class="highlight"><pre><span></span><span class="n">flask</span> <span class="n">run</span>
+</pre></div>
+
+<p>You should now see the app running in your browser at <code>localhost:5000</code></p>
+<p>Note: If you run the app using HTTPS, add the SSL context or use 'adhoc' to use on-the-fly certificates</p>
 <div class="highlight"><pre><span></span><span class="n">flask</span> <span class="n">run</span> <span class="o">--</span><span class="n">cert</span><span class="o">=</span><span class="s1">&#39;adhoc&#39;</span>
 </pre></div>
 
-<p>If you have an SSL certificate, replace 'adhoc' with the path to your certificate.
-You should now see the app running in your browser at <code>localhost:5000</code></p>
 <h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">&para;</a></h2>
 <p>To start the React frontend in developer mode, follow the installation steps above, go to <code>server/src/client/app</code> and run:</p>
 <div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">start</span>
