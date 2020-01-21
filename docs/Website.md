@@ -26,11 +26,17 @@ npm run build
 Start the server by going back to the home directory and running:
 
 ``` python
+flask run
+```
+
+You should now see the app running in your browser at `localhost:5000`
+
+Note: If you run the app using HTTPS, add the SSL context or use 'adhoc' to use on-the-fly certificates
+
+``` python
 flask run --cert='adhoc'
 ```
 
-If you have an SSL certificate, replace 'adhoc' with the path to your certificate.
-You should now see the app running in your browser at `localhost:5000`
 
 ## Development
 
