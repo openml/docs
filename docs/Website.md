@@ -1,16 +1,15 @@
 ## Installation
 The OpenML website runs on [Flask](http://flask.pocoo.org/), [React](https://reactjs.org/), and [Dash](https://dash.plot.ly/). You need to install these first.
 
-* If you haven't already, [install a recent version of NPM (6 or higher)](https://nodejs.org/en/download/).
-* Install Flask and Dash
+* Download or clone the source code for the OpenML website from [GitHub](https://github.com/openml/openml.org).
+Then, go into that folder (it should have the `requirements.txt` and `package.json` files).
+
+* Install Flask, Dash, and dependencies using [PIP](https://pip.pypa.io/en/stable/installing/)
 ``` python
-pip install flask
-pip install dash
+pip install -r requirements.txt
 ```
 
-Download or clone the source code for the OpenML website from [GitHub](https://github.com/openml/openml.org).
-Then, go into that folder and install the necessary components by running this in the home folder (with the `package.json` file):
-
+* Install React and dependencies using [NPM (6 or higher)](https://nodejs.org/en/download/).
 ``` python
 npm install
 ```
