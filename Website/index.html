@@ -1248,29 +1248,34 @@
 </ul>
 <h2 id="building-and-running">Building and running<a class="headerlink" href="#building-and-running" title="Permanent link">&para;</a></h2>
 <p>The source code for the OpenML website can be found on <a href="https://github.com/openml/openml.org">GitHub</a>
-Build the app by going to <code>src/client/app</code> and running</p>
+Install the necessary components by running this in the home folder (with the <code>package.json</code> file):</p>
+<div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
+</pre></div>
+
+<p>Do a production build of the frontend by going to <code>server/src/client/app</code> and running</p>
 <div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
 </pre></div>
 
-<p>Start the server with:</p>
-<div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">server</span><span class="o">.</span><span class="n">py</span>
+<p>Start the server by going back to the home directory and running:</p>
+<div class="highlight"><pre><span></span><span class="n">flask</span> <span class="n">run</span> <span class="o">--</span><span class="n">cert</span><span class="o">=</span><span class="s1">&#39;adhoc&#39;</span>
 </pre></div>
 
-<p>You should now see it running in your browser at <code>localhost:5000</code></p>
+<p>If you have an SSL certificate, replace 'adhoc' with the path to your certificate.
+You should now see the app running in your browser at <code>localhost:5000</code></p>
 <h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">&para;</a></h2>
-<p>To start the React frontend in developer mode, go to <code>src/client/app</code> and run:</p>
+<p>To start the React frontend in developer mode, follow the installation steps above, go to <code>server/src/client/app</code> and run:</p>
 <div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">start</span>
 </pre></div>
 
 <p>The app should automatically open at <code>localhost:3000</code> and any changes made to
-the code will automatically reload the website.</p>
+the code will automatically reload the website (hot loading).</p>
 <h2 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h2>
 <p><img src="../img/structure.png" alt="OpenML Website structure" width="500"/></p>
 <p>The website is built on the following components:  </p>
 <ul>
-<li>A <a href="../Flask">Flask backend</a>. Written in Python, the backend takes care of all communication with the OpenML server. It builds on top of the OpenML Python API. It also takes care of user authentication and keeps the search engine (ElasticSearch) up to date with the latest information from the server.</li>
-<li>A <a href="../React">React frontend</a>. Written in JavaScript, this takes care of rendering the website. It pulls in information from the search engine, and shows plots rendered by Dash. It also contains forms (e.g. for logging in or uploading new datasets), which will be sent off to the backend for processing.</li>
-<li><a href="../Dash">Dash dashboards</a>. Written in Python, Dash is used for writing interactive plots. It pulls in data from the Python API, and renders the plots as React components.</li>
+<li>A <a href="../Flask">Flask backend</a>. Written in Python, the backend takes care of all communication with the OpenML server. It builds on top of the OpenML Python API. It also takes care of user authentication and keeps the search engine (ElasticSearch) up to date with the latest information from the server. Files are located in the <code>server</code> folder.</li>
+<li>A <a href="../React">React frontend</a>. Written in JavaScript, this takes care of rendering the website. It pulls in information from the search engine, and shows plots rendered by Dash. It also contains forms (e.g. for logging in or uploading new datasets), which will be sent off to the backend for processing. Files are located in <code>server/src/client/app</code>.</li>
+<li><a href="../Dash">Dash dashboards</a>. Written in Python, Dash is used for writing interactive plots. It pulls in data from the Python API, and renders the plots as React components. Files are located in <code>server/src/dashboard</code>.</li>
 </ul>
                 
                   

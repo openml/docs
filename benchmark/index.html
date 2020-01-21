@@ -1429,14 +1429,14 @@
 </pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">listBenchmarksuites</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="o">();</span>
-    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
-    <span class="n">filters</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;status&quot;</span><span class="o">,</span> <span class="s">&quot;all&quot;</span><span class="o">);</span>
-    <span class="n">filters</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;main_entity_type&quot;</span><span class="o">,</span> <span class="s">&quot;task&quot;</span><span class="o">);</span>
-    <span class="n">filters</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;limit&quot;</span><span class="o">,</span> <span class="s">&quot;20&quot;</span><span class="o">);</span>
-    <span class="n">StudyList</span> <span class="n">list</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">studyList</span><span class="o">(</span><span class="n">filters</span><span class="o">);</span>
-<span class="o">}</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">listBenchmarksuites</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+    <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">();</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;all&quot;</span><span class="p">);</span>
+    <span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;main_entity_type&quot;</span><span class="p">,</span> <span class="s">&quot;task&quot;</span><span class="p">);</span>
+    <span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span> <span class="s">&quot;20&quot;</span><span class="p">);</span>
+    <span class="n">StudyList</span> <span class="n">list</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyList</span><span class="p">(</span><span class="n">filters</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 
 </details>
@@ -1460,15 +1460,15 @@
 </pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadDatasets</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="o">();</span>
-    <span class="n">Study</span> <span class="n">benchmarksuite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">studyGet</span><span class="o">(</span><span class="s">&quot;OpenML-CC18&quot;</span><span class="o">,</span> <span class="s">&quot;tasks&quot;</span><span class="o">);</span>
-    <span class="k">for</span> <span class="o">(</span><span class="n">Integer</span> <span class="n">taskId</span> <span class="o">:</span> <span class="n">benchmarksuite</span><span class="o">.</span><span class="na">getTasks</span><span class="o">())</span> <span class="o">{</span> <span class="c1">// iterate over all tasks</span>
-        <span class="n">Task</span> <span class="n">t</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">taskGet</span><span class="o">(</span><span class="n">taskId</span><span class="o">);</span> <span class="c1">// download the OpenML task</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadDatasets</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+    <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">();</span>
+    <span class="n">Study</span> <span class="n">benchmarksuite</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML-CC18&quot;</span><span class="p">,</span> <span class="s">&quot;tasks&quot;</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">Integer</span> <span class="n">taskId</span> <span class="p">:</span> <span class="n">benchmarksuite</span><span class="p">.</span><span class="na">getTasks</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// iterate over all tasks</span>
+        <span class="n">Task</span> <span class="n">t</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">taskGet</span><span class="p">(</span><span class="n">taskId</span><span class="p">);</span> <span class="c1">// download the OpenML task</span>
         <span class="c1">// note that InstanceHelper is part of the OpenML-weka package</span>
-        <span class="n">Instances</span> <span class="n">d</span> <span class="o">=</span> <span class="n">InstancesHelper</span><span class="o">.</span><span class="na">getDatasetFromTask</span><span class="o">(</span><span class="n">openml</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span> <span class="c1">// obtain the dataset</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+        <span class="n">Instances</span> <span class="n">d</span> <span class="o">=</span> <span class="n">InstancesHelper</span><span class="p">.</span><span class="na">getDatasetFromTask</span><span class="p">(</span><span class="n">openml</span><span class="p">,</span> <span class="n">t</span><span class="p">);</span> <span class="c1">// obtain the dataset</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 </details>
@@ -1502,25 +1502,25 @@
     <span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>  <span class="c1"># download the OpenML task</span>
     <span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">task</span><span class="p">)</span>  <span class="c1"># run the classifier on the task</span>
     <span class="n">score</span> <span class="o">=</span> <span class="n">run</span><span class="o">.</span><span class="n">get_metric_score</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">)</span>  <span class="c1"># print accuracy score</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Data set: </span><span class="si">%s</span><span class="s1">; Accuracy: </span><span class="si">%0.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data set: </span><span class="si">%s</span><span class="s1">; Accuracy: </span><span class="si">%0.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
     <span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>  <span class="c1"># publish the experiment on OpenML (optional, requires internet and an API key)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;URL for run: </span><span class="si">%s</span><span class="s1">/run/</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">server</span><span class="p">,</span><span class="n">run</span><span class="o">.</span><span class="n">run_id</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;URL for run: </span><span class="si">%s</span><span class="s1">/run/</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">server</span><span class="p">,</span><span class="n">run</span><span class="o">.</span><span class="n">run_id</span><span class="p">))</span>
 </pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">runTasksAndUpload</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-  <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="o">();</span>
-  <span class="n">openml</span><span class="o">.</span><span class="na">setApiKey</span><span class="o">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="o">);</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">runTasksAndUpload</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+  <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">();</span>
+  <span class="n">openml</span><span class="p">.</span><span class="na">setApiKey</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
   <span class="c1">// obtain the benchmark suite</span>
-  <span class="n">Study</span> <span class="n">benchmarksuite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">studyGet</span><span class="o">(</span><span class="s">&quot;OpenML-CC18&quot;</span><span class="o">,</span> <span class="s">&quot;tasks&quot;</span><span class="o">);</span>
-  <span class="n">Classifier</span> <span class="n">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">REPTree</span><span class="o">();</span> <span class="c1">// build a Weka classifier</span>
-  <span class="k">for</span> <span class="o">(</span><span class="n">Integer</span> <span class="n">taskId</span> <span class="o">:</span> <span class="n">benchmarksuite</span><span class="o">.</span><span class="na">getTasks</span><span class="o">())</span> <span class="o">{</span> <span class="c1">// iterate over all tasks</span>
-    <span class="n">Task</span> <span class="n">t</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">taskGet</span><span class="o">(</span><span class="n">taskId</span><span class="o">);</span> <span class="c1">// download the OpenML task</span>
-    <span class="n">Instances</span> <span class="n">d</span> <span class="o">=</span> <span class="n">InstancesHelper</span><span class="o">.</span><span class="na">getDatasetFromTask</span><span class="o">(</span><span class="n">openml</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span> <span class="c1">// obtain the dataset</span>
-    <span class="kt">int</span> <span class="n">runId</span> <span class="o">=</span> <span class="n">RunOpenmlJob</span><span class="o">.</span><span class="na">executeTask</span><span class="o">(</span><span class="n">openml</span><span class="o">,</span> <span class="k">new</span> <span class="n">WekaConfig</span><span class="o">(),</span> <span class="n">taskId</span><span class="o">,</span> <span class="n">tree</span><span class="o">);</span>
-    <span class="n">Run</span> <span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">runGet</span><span class="o">(</span><span class="n">runId</span><span class="o">);</span>   <span class="c1">// retrieve the uploaded run</span>
-  <span class="o">}</span>
-<span class="o">}</span>
+  <span class="n">Study</span> <span class="n">benchmarksuite</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML-CC18&quot;</span><span class="p">,</span> <span class="s">&quot;tasks&quot;</span><span class="p">);</span>
+  <span class="n">Classifier</span> <span class="n">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">REPTree</span><span class="p">();</span> <span class="c1">// build a Weka classifier</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">Integer</span> <span class="n">taskId</span> <span class="p">:</span> <span class="n">benchmarksuite</span><span class="p">.</span><span class="na">getTasks</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// iterate over all tasks</span>
+    <span class="n">Task</span> <span class="n">t</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">taskGet</span><span class="p">(</span><span class="n">taskId</span><span class="p">);</span> <span class="c1">// download the OpenML task</span>
+    <span class="n">Instances</span> <span class="n">d</span> <span class="o">=</span> <span class="n">InstancesHelper</span><span class="p">.</span><span class="na">getDatasetFromTask</span><span class="p">(</span><span class="n">openml</span><span class="p">,</span> <span class="n">t</span><span class="p">);</span> <span class="c1">// obtain the dataset</span>
+    <span class="kt">int</span> <span class="n">runId</span> <span class="o">=</span> <span class="n">RunOpenmlJob</span><span class="p">.</span><span class="na">executeTask</span><span class="p">(</span><span class="n">openml</span><span class="p">,</span> <span class="k">new</span> <span class="n">WekaConfig</span><span class="p">(),</span> <span class="n">taskId</span><span class="p">,</span> <span class="n">tree</span><span class="p">);</span>
+    <span class="n">Run</span> <span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">runGet</span><span class="p">(</span><span class="n">runId</span><span class="p">);</span>   <span class="c1">// retrieve the uploaded run</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 </details>
@@ -1550,15 +1550,15 @@ a separate article on reproducible benchmarks. </p>
 </pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadResultsBenchmarkSuite</span><span class="o">()</span>  <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="n">Study</span> <span class="n">benchmarkSuite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">studyGet</span><span class="o">(</span><span class="s">&quot;OpenML100&quot;</span><span class="o">,</span> <span class="s">&quot;tasks&quot;</span><span class="o">);</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadResultsBenchmarkSuite</span><span class="p">()</span>  <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+    <span class="n">Study</span> <span class="n">benchmarkSuite</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML100&quot;</span><span class="p">,</span> <span class="s">&quot;tasks&quot;</span><span class="p">);</span>
 
-    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">filters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;();</span>
-    <span class="n">filters</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;task&quot;</span><span class="o">,</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">benchmarkSuite</span><span class="o">.</span><span class="na">getTasks</span><span class="o">()));</span>
-    <span class="n">RunList</span> <span class="n">rl</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">runList</span><span class="o">(</span><span class="n">filters</span><span class="o">,</span> <span class="mi">200</span><span class="o">,</span> <span class="kc">null</span><span class="o">);</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">filters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+    <span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;task&quot;</span><span class="p">,</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">benchmarkSuite</span><span class="p">.</span><span class="na">getTasks</span><span class="p">()));</span>
+    <span class="n">RunList</span> <span class="n">rl</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">runList</span><span class="p">(</span><span class="n">filters</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
 
-    <span class="n">assertTrue</span><span class="o">(</span><span class="n">rl</span><span class="o">.</span><span class="na">getRuns</span><span class="o">().</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">);</span> 
-<span class="o">}</span>
+    <span class="n">assertTrue</span><span class="p">(</span><span class="n">rl</span><span class="p">.</span><span class="na">getRuns</span><span class="p">().</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span> 
+<span class="p">}</span>
 </pre></div>
 
 </details>
@@ -1586,7 +1586,7 @@ a separate article on reproducible benchmarks. </p>
 <span class="c1"># the arguments are the alias, name, description, and list of task_ids, respectively.</span>
 <span class="n">study</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">create_benchmark_suite</span><span class="p">(</span> 
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MidSize Suite&quot;</span><span class="p">,</span> 
-    <span class="n">alias</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">alias</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;illustrating how to create a benchmark suite&quot;</span><span class="p">,</span> 
     <span class="n">task_ids</span><span class="o">=</span><span class="n">task_ids</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1594,20 +1594,20 @@ a separate article on reproducible benchmarks. </p>
 </pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">createBenchmarkSuite</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="o">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="o">);</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">createBenchmarkSuite</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+    <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
     <span class="c1">// find 250 tasks that we are interested in, e.g., the tasks that have between</span>
     <span class="c1">// 100 and 10000 instances and between 4 and 20 attributes</span>
-    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filtersOrig</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
-    <span class="n">filtersOrig</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;number_instances&quot;</span><span class="o">,</span> <span class="s">&quot;100..10000&quot;</span><span class="o">);</span>
-    <span class="n">filtersOrig</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;number_features&quot;</span><span class="o">,</span> <span class="s">&quot;4..20&quot;</span><span class="o">);</span>
-    <span class="n">filtersOrig</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;limit&quot;</span><span class="o">,</span> <span class="s">&quot;250&quot;</span><span class="o">);</span>
-    <span class="n">Tasks</span> <span class="n">tasksOrig</span> <span class="o">=</span> <span class="n">client_write_test</span><span class="o">.</span><span class="na">taskList</span><span class="o">(</span><span class="n">filtersOrig</span><span class="o">);</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filtersOrig</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;number_instances&quot;</span><span class="p">,</span> <span class="s">&quot;100..10000&quot;</span><span class="p">);</span>
+    <span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;number_features&quot;</span><span class="p">,</span> <span class="s">&quot;4..20&quot;</span><span class="p">);</span>
+    <span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span> <span class="s">&quot;250&quot;</span><span class="p">);</span>
+    <span class="n">Tasks</span> <span class="n">tasksOrig</span> <span class="o">=</span> <span class="n">client_write_test</span><span class="p">.</span><span class="na">taskList</span><span class="p">(</span><span class="n">filtersOrig</span><span class="p">);</span>
 
     <span class="c1">// create the study</span>
-    <span class="n">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Study</span><span class="o">(</span><span class="kc">null</span><span class="o">,</span> <span class="s">&quot;test&quot;</span><span class="o">,</span> <span class="s">&quot;test&quot;</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="n">tasksOrig</span><span class="o">.</span><span class="na">getTaskIds</span><span class="o">(),</span> <span class="kc">null</span><span class="o">);</span>
-    <span class="kt">int</span> <span class="n">studyId</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">studyUpload</span><span class="o">(</span><span class="n">study</span><span class="o">);</span>
-<span class="o">}</span>
+    <span class="n">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Study</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="n">tasksOrig</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">(),</span> <span class="kc">null</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">studyId</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyUpload</span><span class="p">(</span><span class="n">study</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 
 </details>
@@ -1634,7 +1634,7 @@ a separate article on reproducible benchmarks. </p>
 <span class="c1"># create the benchmark suite</span>
 <span class="n">study</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">create_benchmark_suite</span><span class="p">(</span> 
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MidSize Suite&quot;</span><span class="p">,</span> 
-    <span class="n">alias</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">alias</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;illustrating how to create a benchmark suite&quot;</span><span class="p">,</span> 
     <span class="n">task_ids</span><span class="o">=</span><span class="n">task_ids</span><span class="p">,</span>
 <span class="p">)</span>
@@ -1659,34 +1659,34 @@ a separate article on reproducible benchmarks. </p>
 </pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">attachDetachStudy</span><span class="o">()</span>  <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-    <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="o">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="o">);</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">attachDetachStudy</span><span class="p">()</span>  <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+    <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
     <span class="c1">// find 250 tasks that we are interested in, e.g., the tasks that have between</span>
     <span class="c1">// 100 and 10000 instances and between 4 and 20 attributes</span>
-    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filtersOrig</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
-    <span class="n">filtersOrig</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;number_instances&quot;</span><span class="o">,</span> <span class="s">&quot;100..10000&quot;</span><span class="o">);</span>
-    <span class="n">filtersOrig</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;number_features&quot;</span><span class="o">,</span> <span class="s">&quot;4..20&quot;</span><span class="o">);</span>
-    <span class="n">filtersOrig</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;limit&quot;</span><span class="o">,</span> <span class="s">&quot;250&quot;</span><span class="o">);</span>
-    <span class="n">Tasks</span> <span class="n">tasksOrig</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">taskList</span><span class="o">(</span><span class="n">filtersOrig</span><span class="o">);</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filtersOrig</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;number_instances&quot;</span><span class="p">,</span> <span class="s">&quot;100..10000&quot;</span><span class="p">);</span>
+    <span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;number_features&quot;</span><span class="p">,</span> <span class="s">&quot;4..20&quot;</span><span class="p">);</span>
+    <span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span> <span class="s">&quot;250&quot;</span><span class="p">);</span>
+    <span class="n">Tasks</span> <span class="n">tasksOrig</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">taskList</span><span class="p">(</span><span class="n">filtersOrig</span><span class="p">);</span>
 
     <span class="c1">// create the study</span>
-    <span class="n">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Study</span><span class="o">(</span><span class="kc">null</span><span class="o">,</span> <span class="s">&quot;test&quot;</span><span class="o">,</span> <span class="s">&quot;test&quot;</span><span class="o">,</span> <span class="kc">null</span><span class="o">,</span> <span class="n">tasksOrig</span><span class="o">.</span><span class="na">getTaskIds</span><span class="o">(),</span> <span class="kc">null</span><span class="o">);</span>
-    <span class="kt">int</span> <span class="n">studyId</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">studyUpload</span><span class="o">(</span><span class="n">study</span><span class="o">);</span>
+    <span class="n">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Study</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="n">tasksOrig</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">(),</span> <span class="kc">null</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">studyId</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyUpload</span><span class="p">(</span><span class="n">study</span><span class="p">);</span>
 
     <span class="c1">// until the benchmark suite is activated, we can also add some more tasks. Search for the letter dataset:</span>
-    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filtersAdd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
-    <span class="n">filtersAdd</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;data_name&quot;</span><span class="o">,</span> <span class="s">&quot;letter&quot;</span><span class="o">);</span>
-    <span class="n">filtersAdd</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;limit&quot;</span><span class="o">,</span> <span class="s">&quot;1&quot;</span><span class="o">);</span>
-    <span class="n">Tasks</span> <span class="n">tasksAdd</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">taskList</span><span class="o">(</span><span class="n">filtersAdd</span><span class="o">);</span>
-    <span class="n">openml</span><span class="o">.</span><span class="na">studyAttach</span><span class="o">(</span><span class="n">studyId</span><span class="o">,</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">tasksAdd</span><span class="o">.</span><span class="na">getTaskIds</span><span class="o">()));</span>
+    <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filtersAdd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">filtersAdd</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;data_name&quot;</span><span class="p">,</span> <span class="s">&quot;letter&quot;</span><span class="p">);</span>
+    <span class="n">filtersAdd</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span> <span class="s">&quot;1&quot;</span><span class="p">);</span>
+    <span class="n">Tasks</span> <span class="n">tasksAdd</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">taskList</span><span class="p">(</span><span class="n">filtersAdd</span><span class="p">);</span>
+    <span class="n">openml</span><span class="p">.</span><span class="na">studyAttach</span><span class="p">(</span><span class="n">studyId</span><span class="p">,</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">tasksAdd</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">()));</span>
 
     <span class="c1">// or even remove these again</span>
-    <span class="n">openml</span><span class="o">.</span><span class="na">studyDetach</span><span class="o">(</span><span class="n">studyId</span><span class="o">,</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">tasksAdd</span><span class="o">.</span><span class="na">getTaskIds</span><span class="o">()));</span>
+    <span class="n">openml</span><span class="p">.</span><span class="na">studyDetach</span><span class="p">(</span><span class="n">studyId</span><span class="p">,</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">tasksAdd</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">()));</span>
 
     <span class="c1">// download the study</span>
-    <span class="n">Study</span> <span class="n">studyDownloaded</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="na">studyGet</span><span class="o">(</span><span class="n">studyId</span><span class="o">);</span>
-    <span class="n">assertArrayEquals</span><span class="o">(</span><span class="n">tasksOrig</span><span class="o">.</span><span class="na">getTaskIds</span><span class="o">(),</span> <span class="n">studyDownloaded</span><span class="o">.</span><span class="na">getTasks</span><span class="o">());</span>
-<span class="o">}</span>
+    <span class="n">Study</span> <span class="n">studyDownloaded</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="n">studyId</span><span class="p">);</span>
+    <span class="n">assertArrayEquals</span><span class="p">(</span><span class="n">tasksOrig</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">(),</span> <span class="n">studyDownloaded</span><span class="p">.</span><span class="na">getTasks</span><span class="p">());</span>
+<span class="p">}</span>
 </pre></div>
 
 </details>
