@@ -1240,17 +1240,21 @@
                 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>The OpenML website runs on <a href="http://flask.pocoo.org/">Flask</a>, <a href="https://reactjs.org/">React</a>, and <a href="https://dash.plot.ly/">Dash</a>. You need to install these first.</p>
 <ul>
-<li>If you haven't already, <a href="https://nodejs.org/en/download/">install a recent version of NPM (6 or higher)</a>.</li>
-<li>Install Flask and Dash
-<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">flask</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">dash</span>
-</pre></div></li>
-</ul>
+<li>
 <p>Download or clone the source code for the OpenML website from <a href="https://github.com/openml/openml.org">GitHub</a>.
-Then, go into that folder and install the necessary components by running this in the home folder (with the <code>package.json</code> file):</p>
+Then, go into that folder (it should have the <code>requirements.txt</code> and <code>package.json</code> files).</p>
+</li>
+<li>
+<p>Install Flask, Dash, and dependencies using <a href="https://pip.pypa.io/en/stable/installing/">PIP</a>
+<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div></p>
+</li>
+<li>
+<p>Install React and dependencies using <a href="https://nodejs.org/en/download/">NPM (6 or higher)</a>.
 <div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
-</pre></div>
-
+</pre></div></p>
+</li>
+</ul>
 <h2 id="building-and-running">Building and running<a class="headerlink" href="#building-and-running" title="Permanent link">&para;</a></h2>
 <p>Do a production build of the frontend by going to <code>server/src/client/app</code> and running</p>
 <div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
