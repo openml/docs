@@ -21,7 +21,7 @@ Do a production build of the frontend by going to `server/src/client/app` and ru
 ``` python
 npm install
 ```
-to install the necessary react components, and then build a production version of the website:
+to install the react build scripts, and then build a production version of the website:
 
 ``` python
 npm run build
