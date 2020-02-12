@@ -1257,10 +1257,10 @@ Check these docs to see what is possible in terms of styling.</p>
 <div class="admonition deployment">
 <p class="admonition-title">Deployment</p>
 <p>To deploy the documentation manually, you need to have MkDocs and MkDocs-Material installed:
-<div class="highlight"><pre><span></span>pip install mkdocs
+<div class="highlight"><pre><span></span><code>pip install mkdocs
 pip install mkdocs-material
 pip install fontawesome_markdown
-</pre></div>
+</code></pre></div>
 To deploy the documentation locally, run <code>mkdocs serve</code> in the top directory (with the <code>mkdocs.yml</code> file). Any changes made after that will be hot-loaded.</p>
 <p>The documentation will be auto-deployed with every push or merge with the master branch of <code>https://www.github.com/openml/docs/</code>. In the background, a CI job
 will run <code>mkdocs gh-deploy</code>, which will build the HTML files and push them to the gh-pages branch of openml/docs. <code>https://docs.openml.org</code> is just a reverse proxy for <code>https://openml.github.io/docs/</code>.</p>

@@ -1158,7 +1158,7 @@
 <p>OpenML is readily integrated with scikit-learn through the <a href="../Python-guide">Python API</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">ensemble</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">ensemble</span>
 <span class="kn">from</span> <span class="nn">openml</span> <span class="kn">import</span> <span class="n">tasks</span><span class="p">,</span> <span class="n">flows</span><span class="p">,</span> <span class="n">Runs</span>
 
 <span class="n">task</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="mi">3954</span><span class="p">)</span>
@@ -1166,7 +1166,7 @@
 <span class="n">flow</span> <span class="o">=</span> <span class="n">flows</span><span class="o">.</span><span class="n">sklearn_to_flow</span><span class="p">(</span><span class="n">clf</span><span class="p">)</span>
 <span class="n">run</span> <span class="o">=</span> <span class="n">runs</span><span class="o">.</span><span class="n">run_flow_on_task</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">flow</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 
 </div>
 <p>Key features:  </p>

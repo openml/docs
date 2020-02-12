@@ -1289,7 +1289,7 @@ Or just a XAMP (Mac), LAMP (Linux) or WAMP (Windows) package, which conveniently
 <p>If you want to run your own (separate) OpenML instance, and store your own data, you'll also want to build your own search indices to show all data on the website. The OpenML website is based on the ElasticSearch stack. To install it, follow the instructions here: <a href="http://knowm.org/how-to-set-up-the-elk-stack-elasticsearch-logstash-and-kibana/">http://knowm.org/how-to-set-up-the-elk-stack-elasticsearch-logstash-and-kibana/</a></p>
 <h3 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h3>
 <p>This script wipes all OpenML server data and rebuilds the database and search index. Replace 'openmldir' with the directory where you want OpenML to store files.</p>
-<div class="highlight"><pre><span></span># delete data from server
+<div class="highlight"><pre><span></span><code># delete data from server
 sudo rm -rf /openmldir/*
 mkdir /openmldir/log
 
@@ -1326,7 +1326,7 @@ sudo php index.php cron build_es_indices
 
 sudo chown apache:apache /openmldir/log
 sudo chown apache:apache /openmldir/log/*
-</pre></div>
+</code></pre></div>
                 
                   
                 

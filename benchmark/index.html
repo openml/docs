@@ -1420,16 +1420,16 @@
 <details class="note"><summary>REST</summary><p><a href="https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all">https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all</a></p>
 <p><a href="https://www.openml.org/api_docs/#!/study/get_study_list_filters">Check out the API docs</a></p>
 </details>
-<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">openml</span>
 
 <span class="c1"># using the main entity type task, only benchmark suites are returned</span>
 <span class="c1"># each benchmark suite has an ID, some also have an alias. These can be</span>
 <span class="c1"># used to obtain the full details. </span>
 <span class="n">studies</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">list_suites</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">listBenchmarksuites</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">listBenchmarksuites</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
     <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">();</span>
     <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">filters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
     <span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span> <span class="s">&quot;all&quot;</span><span class="p">);</span>
@@ -1437,11 +1437,11 @@
     <span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span> <span class="s">&quot;20&quot;</span><span class="p">);</span>
     <span class="n">StudyList</span> <span class="n">list</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyList</span><span class="p">(</span><span class="n">filters</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span>studies = listOMLStudies()
-</pre></div>
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><code>studies = listOMLStudies()
+</code></pre></div>
 
 </details>
 <h3 id="fetching-details">Fetching details<a class="headerlink" href="#fetching-details" title="Permanent link">&para;</a></h3>
@@ -1450,17 +1450,17 @@
 <p><a href="https://www.openml.org/api_docs/#!/study/get_study_id">Check out the API docs</a></p>
 </details>
 <p>In Python, the data is returned as <code>features, targets</code> numpy arrays:</p>
-<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">openml</span>
 
 <span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span> <span class="c1"># obtain the benchmark suite</span>
 
 <span class="k">for</span> <span class="n">task_id</span> <span class="ow">in</span> <span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">:</span>  <span class="c1"># iterate over all tasks</span>
     <span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>  <span class="c1"># download the OpenML task</span>
     <span class="n">features</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">get_X_and_y</span><span class="p">()</span>  <span class="c1"># get the data</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadDatasets</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadDatasets</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
     <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">();</span>
     <span class="n">Study</span> <span class="n">benchmarksuite</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML-CC18&quot;</span><span class="p">,</span> <span class="s">&quot;tasks&quot;</span><span class="p">);</span>
     <span class="k">for</span> <span class="p">(</span><span class="n">Integer</span> <span class="n">taskId</span> <span class="p">:</span> <span class="n">benchmarksuite</span><span class="p">.</span><span class="na">getTasks</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// iterate over all tasks</span>
@@ -1469,15 +1469,15 @@
         <span class="n">Instances</span> <span class="n">d</span> <span class="o">=</span> <span class="n">InstancesHelper</span><span class="p">.</span><span class="na">getDatasetFromTask</span><span class="p">(</span><span class="n">openml</span><span class="p">,</span> <span class="n">t</span><span class="p">);</span> <span class="c1">// obtain the dataset</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">OpenML</span><span class="p">)</span>
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">OpenML</span><span class="p">)</span>
 <span class="n">task.ids</span> <span class="o">=</span> <span class="nf">getOMLStudy</span><span class="p">(</span><span class="s">&#39;OpenML-CC18&#39;</span><span class="p">)</span><span class="o">$</span><span class="n">tasks</span><span class="o">$</span><span class="n">task.id</span> <span class="c1"># obtain the list of suggested tasks</span>
 <span class="nf">for </span><span class="p">(</span><span class="n">task.id</span> <span class="n">in</span> <span class="n">task.ids</span><span class="p">)</span> <span class="p">{</span> <span class="c1"># iterate over all tasks</span>
   <span class="n">task</span> <span class="o">=</span> <span class="nf">getOMLTask</span><span class="p">(</span><span class="n">task.id</span><span class="p">)</span> <span class="c1"># download single OML task</span>
   <span class="n">data</span> <span class="o">=</span> <span class="nf">as.data.frame</span><span class="p">(</span><span class="n">task</span><span class="p">)</span> <span class="c1"># obtain raw data set</span>
-</pre></div>
+</code></pre></div>
 
 </details>
 <h3 id="running-and-sharing-benchmarks">Running and sharing benchmarks<a class="headerlink" href="#running-and-sharing-benchmarks" title="Permanent link">&para;</a></h3>
@@ -1487,7 +1487,7 @@
 <a href="https://www.openml.org/api_docs/#!/study/post_study_id_attach">Attaching a new run to a benchmark_study</a><br />
 <a href="https://www.openml.org/api_docs/#!/study/post_study_id_detach">Detaching a run from benchmark_study</a>  </p>
 </details>
-<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">openml</span>
 <span class="kn">import</span> <span class="nn">sklearn</span>
 
 <span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="s1">&#39;FILL_IN_OPENML_API_KEY&#39;</span>  <span class="c1"># set the OpenML Api Key</span>
@@ -1505,10 +1505,10 @@
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data set: </span><span class="si">%s</span><span class="s1">; Accuracy: </span><span class="si">%0.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
     <span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>  <span class="c1"># publish the experiment on OpenML (optional, requires internet and an API key)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;URL for run: </span><span class="si">%s</span><span class="s1">/run/</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">server</span><span class="p">,</span><span class="n">run</span><span class="o">.</span><span class="n">run_id</span><span class="p">))</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">runTasksAndUpload</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">runTasksAndUpload</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
   <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">();</span>
   <span class="n">openml</span><span class="p">.</span><span class="na">setApiKey</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
   <span class="c1">// obtain the benchmark suite</span>
@@ -1521,10 +1521,10 @@
     <span class="n">Run</span> <span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">runGet</span><span class="p">(</span><span class="n">runId</span><span class="p">);</span>   <span class="c1">// retrieve the uploaded run</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">OpenML</span><span class="p">)</span>
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">OpenML</span><span class="p">)</span>
 <span class="nf">setOMLConfig</span><span class="p">(</span><span class="n">apikey</span> <span class="o">=</span> <span class="s">&#39;FILL_IN_OPENML_API_KEY&#39;</span><span class="p">)</span>
 <span class="n">lrn</span> <span class="o">=</span> <span class="nf">makeLearner</span><span class="p">(</span><span class="s">&#39;classif.rpart&#39;</span><span class="p">)</span> <span class="c1"># construct a simple CART classifier</span>
 <span class="n">task.ids</span> <span class="o">=</span> <span class="nf">getOMLStudy</span><span class="p">(</span><span class="s">&#39;OpenML-CC18&#39;</span><span class="p">)</span><span class="o">$</span><span class="n">tasks</span><span class="o">$</span><span class="n">task.id</span> <span class="c1"># obtain the list of suggested tasks</span>
@@ -1534,7 +1534,7 @@
   <span class="n">run</span> <span class="o">=</span> <span class="nf">runTaskMlr</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="n">learner</span> <span class="o">=</span> <span class="n">lrn</span><span class="p">)</span> <span class="c1"># run constructed learner</span>
   <span class="n">upload</span> <span class="o">=</span> <span class="nf">uploadOMLRun</span><span class="p">(</span><span class="n">run</span><span class="p">)</span> <span class="c1"># upload and tag the run</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 </details>
 <h3 id="retrieving-runs-on-a-benchmarking-suites">Retrieving runs on a benchmarking suites:<a class="headerlink" href="#retrieving-runs-on-a-benchmarking-suites" title="Permanent link">&para;</a></h3>
@@ -1545,12 +1545,12 @@ a separate article on reproducible benchmarks. </p>
 <details class="note"><summary>REST (TODO)</summary><p><a href="https://www.openml.org/api/v1/xml/run/list/study/OpenML-CC18">https://www.openml.org/api/v1/xml/run/list/study/OpenML-CC18</a></p>
 <p><a href="https://www.openml.org/api_docs/#!/run/get_run_list_filters">Check out the API docs</a></p>
 </details>
-<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><code><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span>
 <span class="n">runs</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">list_runs</span><span class="p">(</span><span class="n">task</span><span class="o">=</span><span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadResultsBenchmarkSuite</span><span class="p">()</span>  <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadResultsBenchmarkSuite</span><span class="p">()</span>  <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
     <span class="n">Study</span> <span class="n">benchmarkSuite</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML100&quot;</span><span class="p">,</span> <span class="s">&quot;tasks&quot;</span><span class="p">);</span>
 
     <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span> <span class="n">filters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
@@ -1559,14 +1559,14 @@ a separate article on reproducible benchmarks. </p>
 
     <span class="n">assertTrue</span><span class="p">(</span><span class="n">rl</span><span class="p">.</span><span class="na">getRuns</span><span class="p">().</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span> 
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><span class="n">benchmark.suite</span> <span class="o">=</span> <span class="nf">getOMLStudy</span><span class="p">(</span><span class="n">study</span> <span class="o">=</span> <span class="s">&quot;OpenML-CC18&quot;</span><span class="p">)</span>
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><code><span class="n">benchmark.suite</span> <span class="o">=</span> <span class="nf">getOMLStudy</span><span class="p">(</span><span class="n">study</span> <span class="o">=</span> <span class="s">&quot;OpenML-CC18&quot;</span><span class="p">)</span>
 <span class="n">run.ids</span> <span class="o">=</span> <span class="nf">extractOMLStudyIds</span><span class="p">(</span><span class="n">benchmark.suite</span><span class="p">,</span> <span class="s">&quot;run.id&quot;</span><span class="p">)</span>
 <span class="n">runs</span> <span class="o">=</span> <span class="nf">rbindlist</span><span class="p">(</span><span class="nf">lapply</span><span class="p">(</span><span class="n">run.ids</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="nf">listOMLRuns</span><span class="p">(</span><span class="n">run.id</span> <span class="o">=</span> <span class="n">id</span><span class="p">)))</span>
 <span class="c1"># TODO waiting for REST API</span>
-</pre></div>
+</code></pre></div>
 
 </details>
 <h3 id="creating-new-benchmark-suites">Creating new benchmark suites<a class="headerlink" href="#creating-new-benchmark-suites" title="Permanent link">&para;</a></h3>
@@ -1575,7 +1575,7 @@ a separate article on reproducible benchmarks. </p>
 <details class="note"><summary>REST</summary><p>Requires POST requests:<br />
 <a href="https://www.openml.org/api_docs/#!/study/post_study">Creating a benchmark suite</a>  </p>
 </details>
-<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">openml</span>
 
 <span class="c1"># find 250 tasks that we are interested in, e.g., the tasks that have between</span>
 <span class="c1"># 100 and 10000 instances and between 4 and 20 attributes</span>
@@ -1591,10 +1591,10 @@ a separate article on reproducible benchmarks. </p>
     <span class="n">task_ids</span><span class="o">=</span><span class="n">task_ids</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">study_id</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">createBenchmarkSuite</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">createBenchmarkSuite</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
     <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
     <span class="c1">// find 250 tasks that we are interested in, e.g., the tasks that have between</span>
     <span class="c1">// 100 and 10000 instances and between 4 and 20 attributes</span>
@@ -1608,14 +1608,14 @@ a separate article on reproducible benchmarks. </p>
     <span class="n">Study</span> <span class="n">study</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Study</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="n">tasksOrig</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">(),</span> <span class="kc">null</span><span class="p">);</span>
     <span class="kt">int</span> <span class="n">studyId</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyUpload</span><span class="p">(</span><span class="n">study</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><span class="c1"># find 250 tasks with 100 and 10000 instances and between 4 and 20 attributes</span>
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><code><span class="c1"># find 250 tasks with 100 and 10000 instances and between 4 and 20 attributes</span>
 <span class="n">tid</span> <span class="o">=</span> <span class="nf">listOMLTasks</span><span class="p">(</span><span class="n">number.of.instances</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">10000</span><span class="p">),</span> <span class="n">number.of.features</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">20</span><span class="p">),</span> <span class="n">limit</span> <span class="o">=</span> <span class="m">250</span><span class="p">)</span>
 <span class="n">study</span> <span class="o">=</span> <span class="nf">makeOMLStudy</span><span class="p">(</span><span class="n">alias</span> <span class="o">=</span> <span class="s">&quot;test_alias&quot;</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Test Upload from R&quot;</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="s">&quot;Just testing&quot;</span><span class="p">,</span> <span class="n">task.id</span> <span class="o">=</span> <span class="n">tid</span><span class="o">$</span><span class="n">task.id</span><span class="p">)</span>
 <span class="n">id</span> <span class="o">=</span> <span class="nf">uploadOMLStudy</span><span class="p">(</span><span class="n">study</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 </details>
 <h3 id="updating-a-benchmark-suite">Updating a benchmark suite<a class="headerlink" href="#updating-a-benchmark-suite" title="Permanent link">&para;</a></h3>
@@ -1624,7 +1624,7 @@ a separate article on reproducible benchmarks. </p>
 <a href="https://www.openml.org/api_docs/#!/study/post_study_id_attach">Attaching a new task</a><br />
 <a href="https://www.openml.org/api_docs/#!/study/post_study_id_detach">Detaching a task</a>  </p>
 </details>
-<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
+<details class="note"><summary>Python example</summary><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">openml</span>
 
 <span class="c1"># find 250 tasks that we are interested in, e.g., the tasks that have between</span>
 <span class="c1"># 100 and 10000 instances and between 4 and 20 attributes</span>
@@ -1656,10 +1656,10 @@ a separate article on reproducible benchmarks. </p>
 
 <span class="k">assert</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">tasks</span> <span class="o">==</span> <span class="n">study_prime</span><span class="o">.</span><span class="n">tasks</span><span class="p">)</span>
 <span class="k">assert</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">study_prime</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">attachDetachStudy</span><span class="p">()</span>  <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+<details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">attachDetachStudy</span><span class="p">()</span>  <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
     <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
     <span class="c1">// find 250 tasks that we are interested in, e.g., the tasks that have between</span>
     <span class="c1">// 100 and 10000 instances and between 4 and 20 attributes</span>
@@ -1687,11 +1687,11 @@ a separate article on reproducible benchmarks. </p>
     <span class="n">Study</span> <span class="n">studyDownloaded</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="n">studyId</span><span class="p">);</span>
     <span class="n">assertArrayEquals</span><span class="p">(</span><span class="n">tasksOrig</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">(),</span> <span class="n">studyDownloaded</span><span class="p">.</span><span class="na">getTasks</span><span class="p">());</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 </details>
-<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span>TODO
-</pre></div>
+<details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><code>TODO
+</code></pre></div>
 
 </details>
 <h2 id="further-code-examples-and-use-cases">Further code examples and use cases<a class="headerlink" href="#further-code-examples-and-use-cases" title="Permanent link">&para;</a></h2>

@@ -1270,7 +1270,7 @@
                 <h1 id="react-app">React App<a class="headerlink" href="#react-app" title="Permanent link">&para;</a></h1>
 <h3 id="app-structure">App structure<a class="headerlink" href="#app-structure" title="Permanent link">&para;</a></h3>
 <p>The structure of the source code looks as follows</p>
-<div class="highlight"><pre><span></span>App.js  
+<div class="highlight"><pre><span></span><code>App.js  
 index.js  
 components  
 |-- Sidebar.js  
@@ -1288,7 +1288,7 @@ routes
 |-- index.js  
 |-- Routes.js  
 themes  
-</pre></div>
+</code></pre></div>
 
 <p>The website is designed as a single-page application.
 The top level files bootstrap the app. <code>index.js</code> simply renders the top component, and
@@ -1326,7 +1326,7 @@ all event handlers, usually defined as callbacks. Note: for performance reasons,
 <p>HTML forms are different than other DOM elements because they keep their own state in plain HTML. To make sure that we can control the state
 we need to set the input field's <code>value</code> to a component state value.</p>
 <p>Here's an example of using an input field to change the title displayed in the component.
-<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">titles</span><span class="o">:</span> <span class="p">{</span><span class="nx">mainTitle</span><span class="o">:</span> <span class="s1">&#39;OpenML&#39;</span><span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">titles</span><span class="o">:</span> <span class="p">{</span><span class="nx">mainTitle</span><span class="o">:</span> <span class="s1">&#39;OpenML&#39;</span><span class="p">};</span>
 
 <span class="kr">class</span> <span class="nx">App</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="nx">titles</span><span class="p">};</span>
@@ -1350,7 +1350,7 @@ we need to set the input field's <code>value</code> to a component state value.<
     <span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></p>
+</code></pre></div></p>
                 
                   
                 
