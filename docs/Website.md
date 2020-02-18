@@ -3,6 +3,10 @@ The OpenML website runs on [Flask](http://flask.pocoo.org/), [React](https://rea
 
 * Download or clone the source code for the OpenML website from [GitHub](https://github.com/openml/openml.org).
 Then, go into that folder (it should have the `requirements.txt` and `package.json` files).
+``` python
+git clone https://github.com/openml/openml.org.git
+cd openml.org
+```
 
 * Install Flask, Dash, and dependencies using [PIP](https://pip.pypa.io/en/stable/installing/)
 ``` python
