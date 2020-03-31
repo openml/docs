@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#bindings-to-openml-server" tabindex="1" class="md-skip">
+      <a href="#design" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -894,6 +894,34 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-extensions" class="md-nav__link">
+    Registering Extensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-app" class="md-nav__link">
+    Configuring App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bindings-to-openml-server" class="md-nav__link">
     Bindings to OpenML server
   </a>
@@ -1175,6 +1203,34 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registering-extensions" class="md-nav__link">
+    Registering Extensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-app" class="md-nav__link">
+    Configuring App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bindings-to-openml-server" class="md-nav__link">
     Bindings to OpenML server
   </a>
@@ -1215,6 +1271,36 @@ server-side interaction. It is designed to be <em>independent</em> from the Open
 This means that you can use it to create your own personal frontend for OpenML,
 using the main OpenML server to provide the data. Of course, you can also link
 it to your own <a href="Local-Installation">local OpenML setup</a>.</p>
+<h3 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h3>
+<p>Out flask app follows <a href="https://flask.palletsprojects.com/en/1.1.x/patterns/appfactories/">Application factories design pattern</a>.
+A new app instance can be created by:
+<div class="highlight"><pre><span></span><code>    <span class="kn">from</span> <span class="nn">autoapp</span> <span class="kn">import</span> <span class="n">create_app</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">create_app</span><span class="p">(</span><span class="n">config_object</span><span class="p">)</span>
+</code></pre></div></p>
+<p>The backend is designed in a modular fashion with flask <a href="https://flask.palletsprojects.com/en/1.0.x/blueprints/">Blueprints</a>. Currently
+the flask app consist of two blueprints public and user:
+* Public blueprint: contains routes which do not require user authentication or authorization. like signup and forgot password.
+* User blueprint: Contains routes which require user authentication like login, changes in profile and fetching API key.</p>
+<p>New blueprints can be registered in server/app.py with register_blueprints function:
+<div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">register_blueprints</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+        <span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">new_blueprint</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
+<p>Flask backend uses <a href="https://jwt.io/">JSON web tokens</a> for all the user handling tasks. <a href="https://flask-jwt-extended.readthedocs.io/en/stable/">Flask JWT extended</a> library is used to bind JWT with flask app.
+Current Mechanism:
+1. User logs in.
+2. JWT token is assigned to user and sent with every request to frontend.
+3. All the user information can only be accessed with a JWT token like edit profile and API-key.
+4. The JWT token is stored in local memory of the browser.
+5. The token get expired after 2 hours or get blacklisted after logout.</p>
+<p>JWT is registered as an extension in extension.py
+All the user password hash are saved in Argon2 format with the new backend.</p>
+<h3 id="registering-extensions">Registering Extensions<a class="headerlink" href="#registering-extensions" title="Permanent link">&para;</a></h3>
+<p>To register a new extension to flask backend extension has to be added in server/extensions.py and initialised in server/app.py.
+Current extensions are : flask_argon2, flask_bcrypt, flask_jwt_extended and flask_sqlalchemy.</p>
+<h3 id="configuring-app">Configuring App<a class="headerlink" href="#configuring-app" title="Permanent link">&para;</a></h3>
+<p>Configuration variables like secret keys, Database URI and extension configurations are specified in 
+server/config.py with Config object, which is supplied to flask app during creation.</p>
 <h3 id="bindings-to-openml-server">Bindings to OpenML server<a class="headerlink" href="#bindings-to-openml-server" title="Permanent link">&para;</a></h3>
 <p>You can specify which OpenML server to connect to.
 This is stored in the <code>.env</code> file in the main directory. It is set to the main OpenML server by default:</p>
