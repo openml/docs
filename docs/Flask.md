@@ -15,10 +15,11 @@ A new app instance can be created by:
 
 The backend is designed in a modular fashion with flask [Blueprints](https://flask.palletsprojects.com/en/1.0.x/blueprints/). Currently
 the flask app consist of two blueprints public and user:
-* Public blueprint: contains routes which do not require user authentication or authorization. like signup and forgot password.
-* User blueprint: Contains routes which require user authentication like login, changes in profile and fetching API key.
+<ul><li>Public blueprint: contains routes which do not require user authentication or authorization. like signup and forgot password.</li>
+<li>User blueprint: Contains routes which require user authentication like login, changes in profile and fetching API key.</li></ul>
 
-New blueprints can be registered in server/app.py with register_blueprints function:
+<p>New blueprints can be registered in `server/app.py` with register_blueprints function:</p>
+
 ``` python
     def register_blueprints(app):
         app.register_blueprint(new_blueprint)
@@ -27,23 +28,24 @@ New blueprints can be registered in server/app.py with register_blueprints funct
 
 ### Security
 Flask backend uses [JSON web tokens](https://jwt.io/) for all the user handling tasks. [Flask JWT extended](https://flask-jwt-extended.readthedocs.io/en/stable/) library is used to bind JWT with flask app.
-Current Mechanism:
-1. User logs in.
-2. JWT token is assigned to user and sent with every request to frontend.
-3. All the user information can only be accessed with a JWT token like edit profile and API-key.
-4. The JWT token is stored in local memory of the browser.
-5. The token get expired after 2 hours or get blacklisted after logout.
-
-JWT is registered as an extension in extension.py
-All the user password hash are saved in Argon2 format with the new backend.
+Current Mechanism is :
+<ol>
+<li> User logs in.</li>
+<li> JWT token is assigned to user and sent with every request to frontend.</li>
+<li> All the user information can only be accessed with a JWT token like edit profile and API-key.</li>
+<li> The JWT token is stored in local memory of the browser.</li>
+<li> The token get expired after 2 hours or get blacklisted after logout.</li>
+</ol>
+<p>JWT is registered as an extension in `server/extensions.py`.
+All the user password hash are saved in Argon2 format with the new backend.</p>
 
 ### Registering Extensions
-To register a new extension to flask backend extension has to be added in server/extensions.py and initialised in server/app.py.
+To register a new extension to flask backend extension has to be added in `server/extensions.py` and initialised in server/app.py.
 Current extensions are : flask_argon2, flask_bcrypt, flask_jwt_extended and flask_sqlalchemy.
 
 ### Configuring App
 Configuration variables like secret keys, Database URI and extension configurations are specified in 
-server/config.py with Config object, which is supplied to flask app during creation.
+`server/config.py` with Config object, which is supplied to flask app during initialisation.
  
 ### Bindings to OpenML server
 You can specify which OpenML server to connect to.
