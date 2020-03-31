@@ -13,9 +13,9 @@ A new app instance can be created by:
     app = create_app(config_object)
 ```
 
-The backend is designed in a modular fashion with flask [Blueprints](https://flask.palletsprojects.com/en/1.0.x/blueprints/). Currently
-the flask app consist of two blueprints public and user:
-<ul><li>Public blueprint: contains routes which do not require user authentication or authorization. like signup and forgot password.</li>
+The backend is designed in a modular fashion with flask [Blueprints](https://flask.palletsprojects.com/en/1.0.x/blueprints/). Currently,
+the flask app consists of two blueprints public and user:
+<ul><li>Public blueprint: contains routes that do not require user authentication or authorization. like signup and forgot password.</li>
 <li>User blueprint: Contains routes which require user authentication like login, changes in profile and fetching API key.</li></ul>
 
 <p>New blueprints can be registered in `server/app.py` with register_blueprints function:</p>
@@ -27,7 +27,7 @@ the flask app consist of two blueprints public and user:
 
 
 ### Security
-Flask backend uses [JSON web tokens](https://jwt.io/) for all the user handling tasks. [Flask JWT extended](https://flask-jwt-extended.readthedocs.io/en/stable/) library is used to bind JWT with flask app.
+Flask backend uses [JSON web tokens](https://jwt.io/) for all the user handling tasks. [Flask JWT extended](https://flask-jwt-extended.readthedocs.io/en/stable/) library is used to bind JWT with the flask app.
 Current Mechanism is :
 <ol>
 <li> User logs in.</li>
@@ -40,12 +40,12 @@ Current Mechanism is :
 All the user password hash are saved in Argon2 format with the new backend.</p>
 
 ### Registering Extensions
-To register a new extension to flask backend extension has to be added in `server/extensions.py` and initialised in server/app.py.
+To register a new extension to flask backend extension has to be added in `server/extensions.py` and initialized in server/app.py.
 Current extensions are : flask_argon2, flask_bcrypt, flask_jwt_extended and flask_sqlalchemy.
 
 ### Configuring App
 Configuration variables like secret keys, Database URI and extension configurations are specified in 
-`server/config.py` with Config object, which is supplied to flask app during initialisation.
+`server/config.py` with Config object, which is supplied to the flask app during initialization.
  
 ### Bindings to OpenML server
 You can specify which OpenML server to connect to.
