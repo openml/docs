@@ -1271,10 +1271,14 @@ to install the react build scripts, and then build a production version of the w
 </code></pre></div>
 
 <p>You should now see the app running in your browser at <code>localhost:5000</code></p>
-<p>Note: If you run the app using HTTPS, add the SSL context or use 'adhoc' to use on-the-fly certificates</p>
+<p>Note: If you run the app using HTTPS, add the SSL context or use 'adhoc' to use on-the-fly certificates or you can specify your own certificates.</p>
 <div class="highlight"><pre><span></span><code><span class="n">flask</span> <span class="n">run</span> <span class="o">--</span><span class="n">cert</span><span class="o">=</span><span class="s1">&#39;adhoc&#39;</span>
 </code></pre></div>
 
+<p>As flask server is not suitable for production we recommend you to use some other server if you want to deploy
+your openml installation in production. We currently use gunicorn for production server. You can install the gunicorn server and run it:
+<div class="highlight"><pre><span></span><code>gunicorn --certfile cert.pem --keyfile key.pem -b localhost:5000 autoapp:app
+</code></pre></div></p>
 <h2 id="development">Development<a class="headerlink" href="#development" title="Permanent link">&para;</a></h2>
 <p>To start the React frontend in developer mode, follow the installation steps above, go to <code>server/src/client/app</code> and run:</p>
 <div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">run</span> <span class="n">start</span>

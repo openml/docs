@@ -922,6 +922,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#creating-a-new-route" class="md-nav__link">
+    Creating a new route
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bindings-to-openml-server" class="md-nav__link">
     Bindings to OpenML server
   </a>
@@ -1231,6 +1238,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#creating-a-new-route" class="md-nav__link">
+    Creating a new route
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bindings-to-openml-server" class="md-nav__link">
     Bindings to OpenML server
   </a>
@@ -1305,6 +1319,8 @@ Current extensions are : flask_argon2, flask_bcrypt, flask_jwt_extended and flas
 <h3 id="configuring-app">Configuring App<a class="headerlink" href="#configuring-app" title="Permanent link">&para;</a></h3>
 <p>Configuration variables like secret keys, Database URI and extension configurations are specified in 
 <code>server/config.py</code> with Config object, which is supplied to the flask app during initialization.</p>
+<h3 id="creating-a-new-route">Creating a new route<a class="headerlink" href="#creating-a-new-route" title="Permanent link">&para;</a></h3>
+<p>To create a new route in backend you can add the route in <code>server/public/views.py</code> or <code>server/user/views.py</code> (if it requires user authorisation or JWT usage in any way).  </p>
 <h3 id="bindings-to-openml-server">Bindings to OpenML server<a class="headerlink" href="#bindings-to-openml-server" title="Permanent link">&para;</a></h3>
 <p>You can specify which OpenML server to connect to.
 This is stored in the <code>.env</code> file in the main directory. It is set to the main OpenML server by default:</p>
