@@ -46,6 +46,9 @@ Current extensions are : flask_argon2, flask_bcrypt, flask_jwt_extended and flas
 ### Configuring App
 Configuration variables like secret keys, Database URI and extension configurations are specified in 
 `server/config.py` with Config object, which is supplied to the flask app during initialization.
+
+### Creating a new route
+To create a new route in backend you can add the route in `server/public/views.py` or `server/user/views.py` (if it requires user authorisation or JWT usage in any way).  
  
 ### Bindings to OpenML server
 You can specify which OpenML server to connect to.

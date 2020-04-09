@@ -39,12 +39,17 @@ flask run
 
 You should now see the app running in your browser at `localhost:5000`
 
-Note: If you run the app using HTTPS, add the SSL context or use 'adhoc' to use on-the-fly certificates
+Note: If you run the app using HTTPS, add the SSL context or use 'adhoc' to use on-the-fly certificates or you can specify your own certificates.
 
 ``` python
 flask run --cert='adhoc'
 ```
 
+As flask server is not suitable for production we recommend you to use some other server if you want to deploy
+your openml installation in production. We currently use gunicorn for production server. You can install the gunicorn server and run it:
+```
+gunicorn --certfile cert.pem --keyfile key.pem -b localhost:5000 autoapp:app
+``` 
 
 ## Development
 
