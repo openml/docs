@@ -1712,7 +1712,6 @@ a separate article on reproducible benchmarks. </p>
 <li>the number of observations are between 500 and 100000 to focus on medium-sized datasets, that are not too small and not too big,</li>
 <li>the number of features does not exceed 5000 features to keep the runtime of algorithms low,</li>
 <li>the target attribute has at least two classes</li>
-<li>have classes with less than 20 observations</li>
 <li>the ratio of the minority class and the majority class is above 0.05, to eliminate highly imbalanced datasets which require special treatment for both algorithms and evaluation measures.</li>
 </ul>
 <p>We excluded datasets which:</p>
@@ -1720,6 +1719,7 @@ a separate article on reproducible benchmarks. </p>
 <li>are artificially generated (not to confuse with simulated)</li>
 <li>cannot be randomized via a 10-fold cross-validation due to grouped samples or because they are time series or data streams</li>
 <li>are a subset of a larger dataset</li>
+<li>have classes with less than 20 observations</li>
 <li>have no source or reference available</li>
 <li>can be perfectly classified by a single attribute or a decision stump</li>
 <li>allow a decision tree to achieve 100% accuracy on a 10-fold cross-validation task</li>
