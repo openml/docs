@@ -384,7 +384,6 @@ The suite is defined as the set of all verified OpenML datasets that satisfy the
 * the number of observations are between 500 and 100000 to focus on medium-sized datasets, that are not too small and not too big,
 * the number of features does not exceed 5000 features to keep the runtime of algorithms low,
 * the target attribute has at least two classes
-* have classes with less than 20 observations
 * the ratio of the minority class and the majority class is above 0.05, to eliminate highly imbalanced datasets which require special treatment for both algorithms and evaluation measures.
 
 We excluded datasets which:
@@ -392,6 +391,7 @@ We excluded datasets which:
 * are artificially generated (not to confuse with simulated)
 * cannot be randomized via a 10-fold cross-validation due to grouped samples or because they are time series or data streams
 * are a subset of a larger dataset
+* have classes with less than 20 observations
 * have no source or reference available
 * can be perfectly classified by a single attribute or a decision stump
 * allow a decision tree to achieve 100% accuracy on a 10-fold cross-validation task
