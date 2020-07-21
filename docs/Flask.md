@@ -26,6 +26,18 @@ the flask app consists of two blueprints public and user:
 ```
 
 
+### Database setup
+If you want o setup a local user database similar to OpenML then follow these steps:
+<ol>
+<li>Install MySQL</li>
+<li>Create a new database 'openml'</li>
+<li>Set current database to 'openml' via use method</li>
+<li>Download users.sql file from openml.org github repo and add it in the openml db via "mysql -u root -p openml < users.sql"</li>
+<li>Edit the database path in `server/extensions.py` and `server/config.py`</li>
+</ol>
+Note: Remember to add passwords and socket extension address(if any) in both in `server/extensions.py` and `server/config.py` 
+
+
 ### Security
 Flask backend uses [JSON web tokens](https://jwt.io/) for all the user handling tasks. [Flask JWT extended](https://flask-jwt-extended.readthedocs.io/en/stable/) library is used to bind JWT with the flask app.
 Current Mechanism is :
