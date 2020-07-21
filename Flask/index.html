@@ -901,6 +901,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#database-setup" class="md-nav__link">
+    Database setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#security" class="md-nav__link">
     Security
   </a>
@@ -1224,6 +1231,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#database-setup" class="md-nav__link">
+    Database setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#security" class="md-nav__link">
     Security
   </a>
@@ -1315,6 +1329,16 @@ the flask app consists of two blueprints public and user:
         <span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">new_blueprint</span><span class="p">)</span>
 </code></pre></div>
 
+<h3 id="database-setup">Database setup<a class="headerlink" href="#database-setup" title="Permanent link">&para;</a></h3>
+<p>If you want o setup a local user database similar to OpenML then follow these steps:
+<ol>
+<li>Install MySQL</li>
+<li>Create a new database 'openml'</li>
+<li>Set current database to 'openml' via use method</li>
+<li>Download users.sql file from openml.org github repo and add it in the openml db via "mysql -u root -p openml &lt; users.sql"</li>
+<li>Edit the database path in <code>server/extensions.py</code> and <code>server/config.py</code></li>
+</ol>
+Note: Remember to add passwords and socket extension address(if any) in both in <code>server/extensions.py</code> and <code>server/config.py</code> </p>
 <h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
 <p>Flask backend uses <a href="https://jwt.io/">JSON web tokens</a> for all the user handling tasks. <a href="https://flask-jwt-extended.readthedocs.io/en/stable/">Flask JWT extended</a> library is used to bind JWT with the flask app.
 Current Mechanism is :
