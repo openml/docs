@@ -19,6 +19,9 @@ Machine learning dataset repositories (mostly already in OpenML)
   - Rdatasets: http://vincentarelbundock.github.io/Rdatasets/datasets.html
   - DataBrewer: https://github.com/rmax/databrewer
   - liac-arff: https://github.com/renatopp/arff-datasets
+  
+MS Open datasets:
+  - https://azure.microsoft.com/en-us/services/open-datasets/catalog/
 
 APIs (mostly defunct):
   - databrewer (Python): https://pypi.org/project/databrewer/
