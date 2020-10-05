@@ -449,9 +449,9 @@ It excluded datasets which:
 * are variants of other datasets (e.g. binarized regression tasks)
 * include sparse data (e.g., text mining data sets)
 
-#### Citing the OpenML-CC18
+#### Citing the OpenML100
 
-If you have used the OpenML-CC18 in a scientific publication, we would appreciate [citations of core OpenML packages](openml.org/cite) as well as a citation of the following paper:
+If you have used the OpenML100 in a scientific publication, we would appreciate [citations of core OpenML packages](openml.org/cite) as well as a citation of the following paper:
 
 Bischl, Bernd and Casalicchio, Giuseppe and Feurer, Matthias and Hutter, Frank and Lang, Michel and Mantovani, Rafael G. and van Rijn, Jan N. and Vanschoren, Joaquin. OpenML Benchmarking Suites and the OpenML100. [arXiv 1708.0373v1](https://arxiv.org/abs/1708.03731v1) (2017): 1-6
 
