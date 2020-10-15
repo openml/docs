@@ -18,6 +18,9 @@ You can find relevant code in the corresponding GitHub repositories. Please also
 * <a href="https://github.com/openml/r">:fa-github: R API</a> - The OpenML R package
 * <a href="https://github.com/openml/python">:fa-github: Python API</a> - The Python API
 
+## Contributing
+We use<a href="https://github.com/all-contributors/all-contributors-bot"> all contributors bot</a> to add contributors to the repository README.  You can check how to use this <a href="https://allcontributors.org/docs/en/tooling">here</a>. You can contribute in a lot of ways including code, blogs, content, design and talks. You can find the emoji key<a href="https://allcontributors.org/docs/en/emoji-key"> here </a>.   
+
 ## Database snapshots
 Everything uploaded to OpenML is available to the community. The nightly snapshot of the public database contains all experiment runs, evaluations and links to datasets, implementations and result files. In SQL format (gzipped). You can also download the <a href="https://www.openml.org/img/expdbschema2.png">Database schema</a>.
 
