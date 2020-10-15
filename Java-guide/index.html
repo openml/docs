@@ -1768,7 +1768,6 @@ Or, you can check out the developer version from <a href="https://github.com/ope
 <p>To download data, flows, tasks, runs, etc. you need the unique id of that resource. The id is shown on each item's webpage and in the corresponding url. For instance, let's download <a href="d/1">Data set 1</a>. The following returns a DataSetDescription object that contains all information about that data set.</p>
 <div class="highlight"><pre><span></span><code>DataSetDescription data = client.dataGet(1);
 </code></pre></div>
-
 <p>You can also <a href="search">search</a> for the items you need online, and click the icon to get all id's that match a search.</p>
 <h3 id="uploading">Uploading<a class="headerlink" href="#uploading" title="Permanent link">&para;</a></h3>
 <p>To upload data, flows, runs, etc. you need to provide a description of the object. We provide wrapper classes to provide this information, e.g. <code>DataSetDescription</code>, as well as to capture the server response, e.g. <code>UploadDataSet</code>, which always includes the generated id for reference:</p>
@@ -1776,7 +1775,6 @@ Or, you can check out the developer version from <a href="https://github.com/ope
 UploadDataSet result = client.dataUpload( description, datasetFile );
 int data_id = result.getId();
 </code></pre></div>
-
 <p>More details are given in the corresponding functions below. Also see the <a href="docs">Java Docs</a> for all possible inputs and return values.</p>
 <h3 id="data-download">Data download<a class="headerlink" href="#data-download" title="Permanent link">&para;</a></h3>
 <h4 id="datagetint-data_id"><code>dataGet(int data_id)</code><a class="headerlink" href="#datagetint-data_id" title="Permanent link">&para;</a></h4>
@@ -1787,7 +1785,6 @@ String version = data.getVersion();
 String description = data.getDescription();
 String url = data.getUrl();
 </code></pre></div>
-
 <h4 id="datafeaturesint-data_id"><code>dataFeatures(int data_id)</code><a class="headerlink" href="#datafeaturesint-data_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the features of a specified data set.</p>
 <div class="highlight"><pre><span></span><code>DataFeature reponse = client.dataFeatures(1);
@@ -1796,7 +1793,6 @@ String name = features[0].getName();
 String type = features[0].getDataType();
 boolean isTarget = features[0].getIs_target();
 </code></pre></div>
-
 <h4 id="dataqualityint-data_id"><code>dataQuality(int data_id)</code><a class="headerlink" href="#dataqualityint-data_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the qualities (meta-features) of a specified data set.</p>
 <div class="highlight"><pre><span></span><code>    DataQuality response = client.dataQuality(1);
@@ -1804,18 +1800,15 @@ boolean isTarget = features[0].getIs_target();
     String name = qualities[0].getName();
     String value = qualities[0].getValue();
 </code></pre></div>
-
 <h4 id="dataqualityint-data_id-int-start-int-end-int-interval_size"><code>dataQuality(int data_id, int start, int end, int interval_size)</code><a class="headerlink" href="#dataqualityint-data_id-int-start-int-end-int-interval_size" title="Permanent link">&para;</a></h4>
 <p>For data streams. Retrieves the description of the qualities (meta-features) of a specified portion of a data stream.</p>
 <div class="highlight"><pre><span></span><code>    DataQuality qualities = client.dataQuality(1,0,10000,null);
 </code></pre></div>
-
 <h4 id="dataqualitylist"><code>dataQualityList()</code><a class="headerlink" href="#dataqualitylist" title="Permanent link">&para;</a></h4>
 <p>Retrieves a list of all data qualities known to OpenML.</p>
 <div class="highlight"><pre><span></span><code>    DataQualityList response = client.dataQualityList();
     String[] qualities = response.getQualities();
 </code></pre></div>
-
 <h3 id="data-upload">Data upload<a class="headerlink" href="#data-upload" title="Permanent link">&para;</a></h3>
 <h4 id="datauploaddatasetdescription-description-file-dataset"><code>dataUpload(DataSetDescription description, File dataset)</code><a class="headerlink" href="#datauploaddatasetdescription-description-file-dataset" title="Permanent link">&para;</a></h4>
 <p>Uploads a data set file to OpenML given a description. Throws an exception if the upload failed, see <a href="#openml_data_upload">openml.data.upload</a> for error codes.</p>
@@ -1823,7 +1816,6 @@ boolean isTarget = features[0].getIs_target();
     UploadDataSet data = client.dataUpload( dataset, new File(&quot;data/path&quot;));
     int data_id = result.getId();
 </code></pre></div>
-
 <h4 id="datauploaddatasetdescription-description"><code>dataUpload(DataSetDescription description)</code><a class="headerlink" href="#datauploaddatasetdescription-description" title="Permanent link">&para;</a></h4>
 <p>Registers an existing dataset (hosted elsewhere). The description needs to include the url of the data set. Throws an exception if the upload failed, see <a href="#openml_data_upload">openml.data.upload</a> for error codes.</p>
 <div class="highlight"><pre><span></span><code>    DataSetDescription description = new DataSetDescription( &quot;iris&quot;, &quot;The iris dataset&quot;, &quot;arff&quot;, &quot;class&quot;);
@@ -1831,7 +1823,6 @@ boolean isTarget = features[0].getIs_target();
     UploadDataSet data = client.dataUpload( description );
     int data_id = result.getId();
 </code></pre></div>
-
 <h3 id="flow-download">Flow download<a class="headerlink" href="#flow-download" title="Permanent link">&para;</a></h3>
 <h4 id="flowgetint-flow_id"><code>flowGet(int flow_id)</code><a class="headerlink" href="#flowgetint-flow_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the flow/implementation with the given id.</p>
@@ -1843,26 +1834,22 @@ boolean isTarget = features[0].getIs_target();
     String source_url = flow.getSource_url();
     Parameter[] parameters = flow.getParameter();
 </code></pre></div>
-
 <h3 id="flow-management">Flow management<a class="headerlink" href="#flow-management" title="Permanent link">&para;</a></h3>
 <h4 id="flowowned"><code>flowOwned()</code><a class="headerlink" href="#flowowned" title="Permanent link">&para;</a></h4>
 <p>Retrieves an array of id's of all flows/implementations owned by you.</p>
 <div class="highlight"><pre><span></span><code>    ImplementationOwned response = client.flowOwned();
     Integer[] ids = response.getIds();
 </code></pre></div>
-
 <h4 id="flowexistsstring-name-string-version"><code>flowExists(String name, String version)</code><a class="headerlink" href="#flowexistsstring-name-string-version" title="Permanent link">&para;</a></h4>
 <p>Checks whether an implementation with the given name and version is already registered on OpenML.</p>
 <div class="highlight"><pre><span></span><code>    ImplementationExists check = client.flowExists(&quot;weka.j48&quot;, &quot;3.7.12&quot;);
     boolean exists = check.exists();
     int flow_id = check.getId();
 </code></pre></div>
-
 <h4 id="flowdeleteint-id"><code>flowDelete(int id)</code><a class="headerlink" href="#flowdeleteint-id" title="Permanent link">&para;</a></h4>
 <p>Removes the flow with the given id (if you are its owner).</p>
 <div class="highlight"><pre><span></span><code>    ImplementationDelete response = client.openmlImplementationDelete(100);
 </code></pre></div>
-
 <h3 id="flow-upload">Flow upload<a class="headerlink" href="#flow-upload" title="Permanent link">&para;</a></h3>
 <h4 id="flowuploadimplementation-description-file-binary-file-source"><code>flowUpload(Implementation description, File binary, File source)</code><a class="headerlink" href="#flowuploadimplementation-description-file-binary-file-source" title="Permanent link">&para;</a></h4>
 <p>Uploads implementation files (binary and/or source) to OpenML given a description.</p>
@@ -1870,7 +1857,6 @@ boolean isTarget = features[0].getIs_target();
     UploadImplementation response = client.flowUpload( flow, new File(&quot;code.jar&quot;), new File(&quot;source.zip&quot;));
     int flow_id = response.getId();
 </code></pre></div>
-
 <h3 id="task-download">Task download<a class="headerlink" href="#task-download" title="Permanent link">&para;</a></h3>
 <h4 id="taskgetint-task_id"><code>taskGet(int task_id)</code><a class="headerlink" href="#taskgetint-task_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the task with the given id.</p>
@@ -1879,19 +1865,16 @@ boolean isTarget = features[0].getIs_target();
     Input[] inputs = task.getInputs();
     Output[] outputs = task.getOutputs();
 </code></pre></div>
-
 <h4 id="taskevaluationsint-task_id"><code>taskEvaluations(int task_id)</code><a class="headerlink" href="#taskevaluationsint-task_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves all evaluations for the task with the given id.</p>
 <div class="highlight"><pre><span></span><code>    TaskEvaluations response = client.taskEvaluations(1);
     Evaluation[] evaluations = response.getEvaluation();
 </code></pre></div>
-
 <h4 id="taskevaluationsint-task_id-int-start-int-end-int-interval_size"><code>taskEvaluations(int task_id, int start, int end, int interval_size)</code><a class="headerlink" href="#taskevaluationsint-task_id-int-start-int-end-int-interval_size" title="Permanent link">&para;</a></h4>
 <p>For data streams. Retrieves all evaluations for the task over the specified window of the stream.</p>
 <div class="highlight"><pre><span></span><code>    TaskEvaluations response = client.taskEvaluations(1);
     Evaluation[] evaluations = response.getEvaluation();
 </code></pre></div>
-
 <h3 id="run-download">Run download<a class="headerlink" href="#run-download" title="Permanent link">&para;</a></h3>
 <h4 id="rungetint-run_id"><code>runGet(int run_id)</code><a class="headerlink" href="#rungetint-run_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the run with the given id.</p>
@@ -1901,13 +1884,11 @@ boolean isTarget = features[0].getIs_target();
     Parameter_setting[] settings = run.getParameter_settings()
     EvaluationScore[] scores = run.getOutputEvaluation();
 </code></pre></div>
-
 <h3 id="run-management">Run management<a class="headerlink" href="#run-management" title="Permanent link">&para;</a></h3>
 <h4 id="rundeleteint-run_id"><code>runDelete(int run_id)</code><a class="headerlink" href="#rundeleteint-run_id" title="Permanent link">&para;</a></h4>
 <p>Deletes the run with the given id (if you are its owner).</p>
 <div class="highlight"><pre><span></span><code>    RunDelete response = client.runDelete(1);
 </code></pre></div>
-
 <h3 id="run-upload">Run upload<a class="headerlink" href="#run-upload" title="Permanent link">&para;</a></h3>
 <h4 id="runuploadrun-description-mapstringfile-output_files"><code>runUpload(Run description, Map&lt;String,File&gt; output_files)</code><a class="headerlink" href="#runuploadrun-description-mapstringfile-output_files" title="Permanent link">&para;</a></h4>
 <p>Uploads a run to OpenML, including a description and a set of output files depending on the task type.</p>
