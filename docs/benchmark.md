@@ -422,6 +422,11 @@ We excluded datasets which:
     * We removed datasets which were created by binarization of regression tasks or multiclass classification task for similar reasons as for forbidding dataset subsets.
     * We did not include sparse datasets because not all machine learning libraries (i.e., all machine learning models) can handle them gracefully, which is in contrast to our goal which is wide applicability.
 
+#### Citing the OpenML-CC18
+
+If you have used the OpenML-CC18 in a scientific publication, we would appreciate [citations of core OpenML packages](openml.org/cite) as well as a citation of the following paper:
+
+Bischl, Bernd and Casalicchio, Giuseppe and Feurer, Matthias and Hutter, Frank and Lang, Michel and Mantovani, Rafael G. and van Rijn, Jan N. and Vanschoren, Joaquin. OpenML Benchmarking Suites. [arXiv 1708.0373v2](https://arxiv.org/abs/1708.03731v2) (2019): 1-6
 
 ### OpenML100  
 The [OpenML100](https://www.openml.org/s/14) was a predecessor of the OpenML-CC18, consisting of [100 classification datasets](https://www.openml.org/search?q=tags.tag%3AOpenML100&type=data&table=1&size=100)</a>. We recommend that you use the **OpenML-CC18** instead, because the OpenML100 suffers from some teething issues in the design of benchmark suites. For instance, it contains several datasets that are too easy to model with today's machine learning algorithms, as well as datasets that represent time series analysis problems. These do not invalidate benchmarks run on the OpenML100, but may obfuscate the interpretation of results. The 'OpenML-CC18' handle is also more descriptive and allows easier versioning.
@@ -444,6 +449,11 @@ It excluded datasets which:
 * are variants of other datasets (e.g. binarized regression tasks)
 * include sparse data (e.g., text mining data sets)
 
+#### Citing the OpenML100
+
+If you have used the OpenML100 in a scientific publication, we would appreciate [citations of core OpenML packages](openml.org/cite) as well as a citation of the following paper:
+
+Bischl, Bernd and Casalicchio, Giuseppe and Feurer, Matthias and Hutter, Frank and Lang, Michel and Mantovani, Rafael G. and van Rijn, Jan N. and Vanschoren, Joaquin. OpenML Benchmarking Suites and the OpenML100. [arXiv 1708.0373v1](https://arxiv.org/abs/1708.03731v1) (2017): 1-6
 
 ## Need help?
 
