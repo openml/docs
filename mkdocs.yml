@@ -3,18 +3,23 @@ repo_url: https://github.com/openml/docs/
 site_url: https://docs.openml.org/
 edit_uri: edit/master/docs/
 theme:
-  name: 'material'
-  language: 'en'
+  name: "material"
+  language: "en"
   palette:
     primary: indigo
     accent: indigo
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
-  logo:
-    icon: 'school'
-  feature:
-    tabs: true
+    text: "Roboto"
+    code: "Roboto Mono"
+  icon:
+    logo: material/library
+  features:
+    - navigation.tabs
+  plugins:
+    - search:
+      separator: '[\s\-\.]+'
+      lang:
+        - en
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.betterem:
@@ -38,62 +43,62 @@ markdown_extensions:
       permalink: true
 nav:
   - Bootcamp:
-    - Get started: index.md
-    - Integrations:
-        - 'scikit-learn': sklearn.md
-        - 'mlr': mlr.md
-        - 'WEKA': Weka.md
-        - 'MOA': MOA.md
-    - Community:
-        - 'How to contribute': Contributing.md
-        - 'Communication Channels' : Communication-Channels.md
-        - 'Core team': Core-team.md
-    - Benchmarking: benchmark.md
-    - Altmetrics: altmetrics.md
-    - Terms: terms.md
+      - Get started: index.md
+      - Integrations:
+          - "scikit-learn": sklearn.md
+          - "mlr": mlr.md
+          - "WEKA": Weka.md
+          - "MOA": MOA.md
+      - Community:
+          - "How to contribute": Contributing.md
+          - "Communication Channels": Communication-Channels.md
+          - "Core team": Core-team.md
+      - Benchmarking: benchmark.md
+      - Altmetrics: altmetrics.md
+      - Terms: terms.md
   - APIs:
-    - OpenML APIs: APIs.md
-    - REST:
-        - Tutorial: REST-tutorial.md
-        - API Reference: REST-API.md
-    - Java:
-        - Tutorial: Java-guide.md
-    - Python:
-        - Get started: Python-start.md
-        - User guide: Python-guide.md
-        - Examples: Python-examples.md
-        - API Reference: Python-API.md
-        - Contributing: Python-contributing.md
-        - Changelog: Python-changelog.md
-    - R:
-        - Tutorial: R-guide.md
-        - API Reference: R-API.md
-    - '.NET (C#)':
-        - Tutorial: NET-API.md
+      - OpenML APIs: APIs.md
+      - REST:
+          - Tutorial: REST-tutorial.md
+          - API Reference: REST-API.md
+      - Java:
+          - Tutorial: Java-guide.md
+      - Python:
+          - Get started: Python-start.md
+          - User guide: Python-guide.md
+          - Examples: Python-examples.md
+          - API Reference: Python-API.md
+          - Contributing: Python-contributing.md
+          - Changelog: Python-changelog.md
+      - R:
+          - Tutorial: R-guide.md
+          - API Reference: R-API.md
+      - ".NET (C#)":
+          - Tutorial: NET-API.md
   - Developers:
-    - 'Welcome': developers.md
-    - 'Documenting': OpenML-Docs.md
-    - 'OpenML Definition': OpenML_definition.md
-    - 'Website':
-        - 'Getting started': Website.md
-        - 'Flask backend': Flask.md
-        - 'React frontend': React.md
-        - 'Dash visualizations': Dash.md
-    - 'Backend (API)':
-        - 'Local Installation': Local-Installation.md
-        - 'Code structure': WebApp-(PHP).md
-        - 'API Development': API-rules.md
-        - 'User Authentication': API-Authentication-and-User-types.md
-        - 'URL Mapping': URL-Mapping.md
-    - 'Evaluation Engine':
-        - 'Java App': Java-App.md
-        - 'Helper functions': Helper-functions.md
-    - 'Client Development': Client-API-Standards.md
-    - 'Datasets':
-        - 'Data Formats': Data-Formats.md
-        - 'Data Repositories': Data-Repositories.md
-        - 'Data collections': Data-collections.md
+      - "Welcome": developers.md
+      - "Documenting": OpenML-Docs.md
+      - "OpenML Definition": OpenML_definition.md
+      - "Website":
+          - "Getting started": Website.md
+          - "Flask backend": Flask.md
+          - "React frontend": React.md
+          - "Dash visualizations": Dash.md
+      - "Backend (API)":
+          - "Local Installation": Local-Installation.md
+          - "Code structure": WebApp-(PHP).md
+          - "API Development": API-rules.md
+          - "User Authentication": API-Authentication-and-User-types.md
+          - "URL Mapping": URL-Mapping.md
+      - "Evaluation Engine":
+          - "Java App": Java-App.md
+          - "Helper functions": Helper-functions.md
+      - "Client Development": Client-API-Standards.md
+      - "Datasets":
+          - "Data Formats": Data-Formats.md
+          - "Data Repositories": Data-Repositories.md
+          - "Data collections": Data-collections.md
 extra_css:
-        - css/extra.css
+  - css/extra.css
 extra_javascript:
-        - js/extra.js
+  - js/extra.js
