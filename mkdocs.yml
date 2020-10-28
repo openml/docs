@@ -49,10 +49,6 @@ nav:
           - "mlr": mlr.md
           - "WEKA": Weka.md
           - "MOA": MOA.md
-      - Community:
-          - "How to contribute": Contributing.md
-          - "Communication Channels": Communication-Channels.md
-          - "Core team": Core-team.md
       - Benchmarking: benchmark.md
       - Altmetrics: altmetrics.md
       - Terms: terms.md
@@ -75,29 +71,22 @@ nav:
           - API Reference: R-API.md
       - ".NET (C#)":
           - Tutorial: NET-API.md
-  - Developers:
-      - "Welcome": developers.md
+  - Contributors:
+      - "How to Contribute": Contributing.md
       - "Documenting": OpenML-Docs.md
-      - "OpenML Definition": OpenML_definition.md
       - "Website":
           - "Getting started": Website.md
           - "Flask backend": Flask.md
           - "React frontend": React.md
           - "Dash visualizations": Dash.md
-      - "Backend (API)":
+      - "Backend":
           - "Local Installation": Local-Installation.md
-          - "Code structure": WebApp-(PHP).md
-          - "API Development": API-rules.md
-          - "User Authentication": API-Authentication-and-User-types.md
-          - "URL Mapping": URL-Mapping.md
-      - "Evaluation Engine":
-          - "Java App": Java-App.md
-          - "Helper functions": Helper-functions.md
+          - "API Development": API-development.md
+          - "Evaluation Engine": Java-App.md
+      - "OpenML Definition": OpenML_definition.md
       - "Client Development": Client-API-Standards.md
-      - "Datasets":
-          - "Data Formats": Data-Formats.md
-          - "Data Repositories": Data-Repositories.md
-          - "Data collections": Data-collections.md
+      - "Datasets": Datasets.md
+      - "Resources": resources.md
 extra_css:
   - css/extra.css
 extra_javascript:
