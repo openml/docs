@@ -12,7 +12,7 @@ theme:
     text: "Roboto"
     code: "Roboto Mono"
   icon:
-    logo: material/cloud
+    logo: material/library
   features:
     - navigation.tabs
   plugins:
