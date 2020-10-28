@@ -20,18 +20,6 @@
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.openml.org/Contributing/</loc>
-     <lastmod>2020-10-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.openml.org/Communication-Channels/</loc>
-     <lastmod>2020-10-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.openml.org/Core-team/</loc>
-     <lastmod>2020-10-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://docs.openml.org/benchmark/</loc>
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
@@ -96,15 +84,11 @@
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.openml.org/developers/</loc>
+     <loc>https://docs.openml.org/Contributing/</loc>
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/OpenML-Docs/</loc>
-     <lastmod>2020-10-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.openml.org/OpenML_definition/</loc>
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -128,19 +112,7 @@
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.openml.org/WebApp-%28PHP%29/</loc>
-     <lastmod>2020-10-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.openml.org/API-rules/</loc>
-     <lastmod>2020-10-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.openml.org/API-Authentication-and-User-types/</loc>
-     <lastmod>2020-10-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.openml.org/URL-Mapping/</loc>
+     <loc>https://docs.openml.org/API-development/</loc>
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -148,7 +120,7 @@
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.openml.org/Helper-functions/</loc>
+     <loc>https://docs.openml.org/OpenML_definition/</loc>
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -156,15 +128,11 @@
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.openml.org/Data-Formats/</loc>
+     <loc>https://docs.openml.org/Datasets/</loc>
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.openml.org/Data-Repositories/</loc>
-     <lastmod>2020-10-28</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.openml.org/Data-collections/</loc>
+     <loc>https://docs.openml.org/resources/</loc>
      <lastmod>2020-10-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
