@@ -80,7 +80,7 @@
     <a href="https://docs.openml.org/" title="OpenML Documentation" class="md-header-nav__button md-logo" aria-label="OpenML Documentation">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -218,7 +218,7 @@
     <a href="https://docs.openml.org/" title="OpenML Documentation" class="md-nav__button md-logo" aria-label="OpenML Documentation">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     OpenML Documentation
@@ -352,20 +352,6 @@
         <li class="md-nav__item">
   <a href="#runs" class="md-nav__link">
     Runs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authentication" class="md-nav__link">
-    Authentication
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integrations" class="md-nav__link">
-    Integrations
   </a>
   
 </li>
@@ -1324,20 +1310,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication" class="md-nav__link">
-    Authentication
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integrations" class="md-nav__link">
-    Integrations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#programming-apis" class="md-nav__link">
     Programming APIs
   </a>
@@ -1386,17 +1358,11 @@
 <h1>An open, collaborative, <i>frictionless</i>, automated machine learning environment.</h1>
 
 <p><i class="fa fa-globe fa-fw fa-lg"></i> <a href="https://www.openml.org/d" target="_blank">Data sets</a> automatically analyzed, annotated, and organized online</p>
-
 <p><i class="fa fa-cogs fa-fw fa-lg"></i> <a href="https://www.openml.org/f" target="_blank">Machine learning pipelines</a> automatically shared from many libraries.</p>
-
 <p><i class="fa fa-code fa-fw fa-lg"></i> <a href="APIs">Extensive APIs</a> to integrate OpenML into your own tools and scripts</p>
-
 <p><i class="fa fa-flask fa-fw fa-lg"></i> <a href="https://www.openml.org/r" target="_blank">Reproducible results</a> (e.g. models, evaluations) for easy comparison and reuse</p>
-
 <p><i class="fa fa-users fa-fw fa-lg"></i> Collaborate in real time, right from your existing tools</p>
-
 <p><i class="fa fa-graduation-cap fa-fw fa-lg"></i> Make your work more visible, reusable, and easily citable</p>
-
 <p><i class="fa fa-bolt fa-fw fa-lg"></i> Open source tools to automate experimentation and model building</p>
 
 <h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Permanent link">&para;</a></h2>
@@ -1427,7 +1393,6 @@ is usually the target, also known as dependent variable, in supervised learning 
 target column is denoted by "(target)" in the web interface. Not all datasets
 have such a column, though, and a supervised task can pick any column as the
 target (as long as it is of the appropriate type).</p>
-
 <p>Example: The default target variable for the <a
 href="https://www.openml.org/d/554" target="_blank">MNIST</a> data is to predict the class from
 pixel values, OpenML also allows you to create a task that tries to predict the
@@ -1521,25 +1486,32 @@ might not be possible because of changes in numeric libraries and operating
 systems).</p>
 <p>OpenML organizes all runs online, linked to the underlying data, flows,
 parameter settings, people, and other details. OpenML also independently
-evaluates the results contained in the run given the provided predictions.</p>
+evaluates the results contained in the run given the provided predictions.</p></p>
 <p>You can search and compare everyone's runs online, download all results into
 your favorite machine learning environment, and relate evaluations to known
-properties of the data and algorithms.</p>
-<p><img alt="Run" src="img/run-ss1.png" /></p>
-<p>OpenML stores and analyzes results in fine detail, up to the level of
-individual instances.</p>
-<p>!!! Want to read more?
-    A more detailed description can be found <a href="https://medium.com/open-machine-learning/basic-components-of-openml-a5745634c664">in this blogpost</a>.</p>
-<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h2>
-<p>You can download and inspect all datasets, tasks, flows and runs through the
+properties of the data and algorithms.
+
+![Run](img/run-ss1.png)
+
+OpenML stores and analyzes results in fine detail, up to the level of
+individual instances.
+
+!!! Want to read more?
+    A more detailed description can be found [in this blogpost](https://medium.com/open-machine-learning/basic-components-of-openml-a5745634c664).
+
+## Authentication
+You can download and inspect all datasets, tasks, flows and runs through the
 website or the API without creating an account. However, if you want to upload
 datasets or experiments, you need to <a href="https://www.openml.org/register" target="_blank">create an account</a>
 or sign in and <a href="https://www.openml.org/#api" target="_blank">create an API key</a>.
-This key can then be used with any of the <a href="APIs">OpenML APIs</a>.</p>
-<h2 id="integrations">Integrations<a class="headerlink" href="#integrations" title="Permanent link">&para;</a></h2>
-<p>OpenML is deeply integrated in several popular machine learning environments. Given a task, these integrations will
+This key can then be used with any of the [OpenML APIs](APIs).
+
+
+## Integrations
+OpenML is deeply integrated in several popular machine learning environments. Given a task, these integrations will
 automatically download the data into the environments, allow you to run any
-algorithm/flow, and automatically upload all runs.</p></p>
+algorithm/flow, and automatically upload all runs.</p>
+
 <p><img alt="Plugins" src="img/plugins-ss1.png" /></p>
 <h2 id="programming-apis">Programming APIs<a class="headerlink" href="#programming-apis" title="Permanent link">&para;</a></h2>
 <p>If you want to integrate OpenML into your own tools, we offer several <a href="APIs">Language-specific APIs</a>, so you can easily interact with

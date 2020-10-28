@@ -80,7 +80,7 @@
     <a href="https://docs.openml.org/" title="OpenML Documentation" class="md-header-nav__button md-logo" aria-label="OpenML Documentation">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -218,7 +218,7 @@
     <a href="https://docs.openml.org/" title="OpenML Documentation" class="md-nav__button md-logo" aria-label="OpenML Documentation">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     OpenML Documentation
@@ -1262,16 +1262,13 @@ Then, go into that folder (it should have the <code>requirements.txt</code> and 
 to install the react build scripts, and then build a production version of the website:</p>
 <div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
 </code></pre></div>
-
 <p>Start the server by going back to the home directory and running:</p>
 <div class="highlight"><pre><span></span><code><span class="n">flask</span> <span class="n">run</span>
 </code></pre></div>
-
 <p>You should now see the app running in your browser at <code>localhost:5000</code></p>
 <p>Note: If you run the app using HTTPS, add the SSL context or use 'adhoc' to use on-the-fly certificates or you can specify your own certificates.</p>
 <div class="highlight"><pre><span></span><code><span class="n">flask</span> <span class="n">run</span> <span class="o">--</span><span class="n">cert</span><span class="o">=</span><span class="s1">&#39;adhoc&#39;</span>
 </code></pre></div>
-
 <p>As flask server is not suitable for production we recommend you to use some other server if you want to deploy
 your openml installation in production. We currently use gunicorn for production server. You can install the gunicorn server and run it:
 <div class="highlight"><pre><span></span><code>gunicorn --certfile cert.pem --keyfile key.pem -b localhost:5000 autoapp:app
@@ -1280,7 +1277,6 @@ your openml installation in production. We currently use gunicorn for production
 <p>To start the React frontend in developer mode, follow the installation steps above, go to <code>server/src/client/app</code> and run:</p>
 <div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">run</span> <span class="n">start</span>
 </code></pre></div>
-
 <p>The app should automatically open at <code>localhost:3000</code> and any changes made to
 the code will automatically reload the website (hot loading).</p>
 <h2 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h2>
