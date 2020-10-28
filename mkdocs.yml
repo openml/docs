@@ -52,6 +52,7 @@ nav:
       - Community:
           - "How to contribute": Contributing.md
           - "Communication Channels": Communication-Channels.md
+          - "Governance": Governance.md
           - "Core team": Core-team.md
       - Benchmarking: benchmark.md
       - Altmetrics: altmetrics.md
