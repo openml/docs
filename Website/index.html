@@ -1086,7 +1086,7 @@ Then, go into that folder (it should have the <code>requirements.txt</code> and 
 <p><div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">install</span>
 </code></pre></div>
 to install the react build scripts, and then build a production version of the website:</p>
-<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
+<div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span> <span class="o">--</span><span class="n">prefix</span> <span class="n">server</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">client</span><span class="o">/</span><span class="n">app</span><span class="o">/</span>
 </code></pre></div>
 <p>Start the server by going back to the home directory and running:</p>
 <div class="highlight"><pre><span></span><code><span class="n">flask</span> <span class="n">run</span>
