@@ -28,7 +28,7 @@ npm install
 to install the react build scripts, and then build a production version of the website:
 
 ``` python
-npm run build
+npm run build --prefix server/src/client/app/
 ```
 
 Start the server by going back to the home directory and running:
