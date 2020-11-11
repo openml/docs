@@ -16,6 +16,7 @@ A collection of sources made by different users
 - https://en.wikipedia.org/wiki/List_of_datasets_for_machine-learning_research
 - https://pathmind.com/wiki/open-datasets
 - https://paperswithcode.com/
+- https://medium.com/towards-artificial-intelligence/best-datasets-for-machine-learning-data-science-computer-vision-nlp-ai-c9541058cf4f
 
 Machine learning dataset repositories (mostly already in OpenML)
 
