@@ -7,7 +7,7 @@ This is a meritocratic, consensus-based community project. Anyone with an intere
 
 ### Roles And Responsibilities
 
-<img src="img/community/misc/OpenML-governance.png" alt="governance" width="400"/>
+<img src="https://github.com/openml/docs/raw/master/docs/img/community/misc/OpenML-governance.png" alt="governance" width="400"/>
 
 #### Contributors
 
