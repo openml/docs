@@ -1,5 +1,3 @@
-## OpenML governance and decision-making
-
 The purpose of this document is to formalize the governance process used by the [OpenML project](https://github.com/openml) (the OpenML GitHub organization which contains all code and projects related to OpenML.org), to clarify how decisions are made and how the various elements of our community interact. This document establishes a decision-making structure that takes into account feedback from all members of the community and strives to find consensus, while avoiding any deadlocks.
 
 The OpenML project is an independent open source project that is legally represented by the [Open Machine Learning Foundation](https://new.openml.org/about). The Open Machine Learning Foundation is a not-for-profit organization supporting, but not controlling, the OpenML project. The Foundation is open to engage with universities, companies, or anyone sharing the same goals. The OpenML project has a separate governance model described in this document.
@@ -9,8 +7,7 @@ This is a meritocratic, consensus-based community project. Anyone with an intere
 
 ### Roles And Responsibilities
 
-![OpenML governance](img/community/misc/OpenML-governance.png)
-
+<img src="img/community/misc/OpenML-governance.png" alt="governance" width="400"/>
 
 #### Contributors
 
@@ -68,6 +65,7 @@ If a veto -1 vote is cast on a lazy consensus, the proposer can appeal to the co
 ### Communication channels
 
 OpenML uses the following communication channels:  
+
 * An open contributor mailing list and the GitHub issue trackers.
 * A chat application for daily interaction with the community (currently Slack).
 * Private email lists (without archive) for the core developers (core@openml.org) and steering committee (steering@openml.org), for membership voting and sensitive discussions.
