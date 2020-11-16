@@ -50,7 +50,7 @@ nav:
           - "WEKA": Weka.md
           - "MOA": MOA.md
       - Benchmarking: benchmark.md
-      - Altmetrics: altmetrics.md
+      - Governance: Governance.md
       - Terms: terms.md
   - APIs:
       - OpenML APIs: APIs.md
