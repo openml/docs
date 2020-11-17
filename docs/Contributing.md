@@ -83,7 +83,7 @@ https://twitter.com/open_ml
 
 ### Blog
 
-https://openml.githut.io/blog
+https://openml.github.io/blog
 
 - Tutorials
 - News
