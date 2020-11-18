@@ -49,10 +49,12 @@ in the MainContext, see `App.js`.
 The search page is structured as follows:  
 
 * `SearchPanel`: the main search panel. Also contains callbacks for sorting and filtering, and lists what can be filtered or sorted on.
+
   * `FilterBar`: The top bar with the search statistics and functionality to add filters and sort results
   * `SearchResultsPanel`: The list of search results on the left. It shows a list of `Card` elements which are uniformly styled but their contents may vary. Depending on the selected type of result (selected in the left navigation bar) it is instantiated with different properties. E.g. a `DataListPanel` is a simple wrapper around `SearchResultsPanel` which defines the dataset-specific statistics to be shown in the cards.
-  * Search tabs: The tabs that allow you to choose between different aspects of the results (Statistics, Overview (Dash)) or the different views on the selected dataset, task, etc. (Details, Analysis (Dash),...)
-  * `ItemDetail`: When a search result is selected, this will show the details of the selection, e.g. the dataset details. Depending on the passed `type` prop, it will render the `Dataset`, `Task`, ... component.
+  
+    * Search tabs: The tabs that allow you to choose between different aspects of the results (Statistics, Overview (Dash)) or the different views on the selected dataset, task, etc. (Details, Analysis (Dash),...)
+    * `ItemDetail`: When a search result is selected, this will show the details of the selection, e.g. the dataset details. Depending on the passed `type` prop, it will render the `Dataset`, `Task`, ... component.
 
 The `api.js` file contains the `search` function, which translates a search query, filters, and other constraints into an ElasticSearch query and returns the results.
 
