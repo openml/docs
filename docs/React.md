@@ -33,6 +33,7 @@ authentication, search keywords, and other user input.
 possible routes is defined in `routes/index.js`.
 
 `pages` contain the various pages of the website. It has subdirectories for:  
+
 - `auth`: All pages that require authorization (login). These routes are protected.
 - `cover`: The front page of the website
 - `docs`: All normal information pages (e.g. 'About', 'API',...)
@@ -46,6 +47,7 @@ in the MainContext, see `App.js`.
 
 #### Search page
 The search page is structured as follows:  
+
 * `SearchPanel`: the main search panel. Also contains callbacks for sorting and filtering, and lists what can be filtered or sorted on.
   * `FilterBar`: The top bar with the search statistics and functionality to add filters and sort results
   * `SearchResultsPanel`: The list of search results on the left. It shows a list of `Card` elements which are uniformly styled but their contents may vary. Depending on the selected type of result (selected in the left navigation bar) it is instantiated with different properties. E.g. a `DataListPanel` is a simple wrapper around `SearchResultsPanel` which defines the dataset-specific statistics to be shown in the cards.
