@@ -1226,11 +1226,19 @@ in the MainContext, see <code>App.js</code>.</p>
 <h4 id="search-page">Search page<a class="headerlink" href="#search-page" title="Permanent link">&para;</a></h4>
 <p>The search page is structured as follows:  </p>
 <ul>
-<li><code>SearchPanel</code>: the main search panel. Also contains callbacks for sorting and filtering, and lists what can be filtered or sorted on.</li>
-<li><code>FilterBar</code>: The top bar with the search statistics and functionality to add filters and sort results</li>
-<li><code>SearchResultsPanel</code>: The list of search results on the left. It shows a list of <code>Card</code> elements which are uniformly styled but their contents may vary. Depending on the selected type of result (selected in the left navigation bar) it is instantiated with different properties. E.g. a <code>DataListPanel</code> is a simple wrapper around <code>SearchResultsPanel</code> which defines the dataset-specific statistics to be shown in the cards.</li>
+<li>
+<p><code>SearchPanel</code>: the main search panel. Also contains callbacks for sorting and filtering, and lists what can be filtered or sorted on.</p>
+</li>
+<li>
+<p><code>FilterBar</code>: The top bar with the search statistics and functionality to add filters and sort results</p>
+</li>
+<li>
+<p><code>SearchResultsPanel</code>: The list of search results on the left. It shows a list of <code>Card</code> elements which are uniformly styled but their contents may vary. Depending on the selected type of result (selected in the left navigation bar) it is instantiated with different properties. E.g. a <code>DataListPanel</code> is a simple wrapper around <code>SearchResultsPanel</code> which defines the dataset-specific statistics to be shown in the cards.</p>
+<ul>
 <li>Search tabs: The tabs that allow you to choose between different aspects of the results (Statistics, Overview (Dash)) or the different views on the selected dataset, task, etc. (Details, Analysis (Dash),...)</li>
 <li><code>ItemDetail</code>: When a search result is selected, this will show the details of the selection, e.g. the dataset details. Depending on the passed <code>type</code> prop, it will render the <code>Dataset</code>, <code>Task</code>, ... component.</li>
+</ul>
+</li>
 </ul>
 <p>The <code>api.js</code> file contains the <code>search</code> function, which translates a search query, filters, and other constraints into an ElasticSearch query and returns the results.</p>
 <h3 id="style-guide">Style guide<a class="headerlink" href="#style-guide" title="Permanent link">&para;</a></h3>
