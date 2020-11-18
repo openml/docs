@@ -834,12 +834,52 @@
     App structure
   </a>
   
+    <nav class="md-nav" aria-label="App structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-page" class="md-nav__link">
+    Search page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#styling" class="md-nav__link">
-    Styling
+  <a href="#style-guide" class="md-nav__link">
+    Style guide
   </a>
+  
+    <nav class="md-nav" aria-label="Style guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    Layouts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styled-components" class="md-nav__link">
+    Styled components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-palette" class="md-nav__link">
+    Color palette
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -850,6 +890,13 @@
   
     <nav class="md-nav" aria-label="Handling state">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-and-search" class="md-nav__link">
+    State and search
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#lifecycle-methods" class="md-nav__link">
@@ -1037,12 +1084,52 @@
     App structure
   </a>
   
+    <nav class="md-nav" aria-label="App structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-page" class="md-nav__link">
+    Search page
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#styling" class="md-nav__link">
-    Styling
+  <a href="#style-guide" class="md-nav__link">
+    Style guide
   </a>
+  
+    <nav class="md-nav" aria-label="Style guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layouts" class="md-nav__link">
+    Layouts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styled-components" class="md-nav__link">
+    Styled components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-palette" class="md-nav__link">
+    Color palette
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1053,6 +1140,13 @@
   
     <nav class="md-nav" aria-label="Handling state">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-and-search" class="md-nav__link">
+    State and search
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#lifecycle-methods" class="md-nav__link">
@@ -1109,7 +1203,7 @@ pages
 |-- search  
 routes  
 |-- index.js  
-|-- Routes.js  
+|-- Routes.js
 themes  
 </code></pre></div>
 <p>The website is designed as a single-page application.
@@ -1118,17 +1212,58 @@ The top level files bootstrap the app. <code>index.js</code> simply renders the 
 authentication, search keywords, and other user input.</p>
 <p><code>Routes.js</code> loads the correct components based on the current route (URL). The list of
 possible routes is defined in <code>routes/index.js</code>.</p>
-<p>There are two top level layouts: <code>Main</code> loads the main layout with a <code>Sidebar</code>, <code>Header</code>,
-and a certain page. The specific pages are in the <code>pages</code> folder. The <code>Clear.js</code> layout has no
-headers or sidebars, it is used mainly for user login and registration. Finally, <code>themes</code> contains the overall theme styling for the entire website.</p>
-<h3 id="styling">Styling<a class="headerlink" href="#styling" title="Permanent link">&para;</a></h3>
+<p><code>pages</code> contain the various pages of the website. It has subdirectories for:<br />
+- <code>auth</code>: All pages that require authorization (login). These routes are protected.
+- <code>cover</code>: The front page of the website
+- <code>docs</code>: All normal information pages (e.g. 'About', 'API',...)
+- <code>search</code>: All pages related to searching for datasets, tasks, flows, runs, etc.</p>
+<p><code>layout</code> contains the possible layouts, <code>Main</code> or <code>Clear</code> (see below). You define the theme of a page by 
+adding its route to either <code>mainRoutes</code> or <code>clearRoutes</code> in <code>routes/index.js</code>. The default is the <code>Main</code> layout.</p>
+<p><code>themes</code> contains the overall theme styling for the entire website. Currently, there is a dark and a light theme. They can be set using <code>setTheme</code> 
+in the MainContext, see <code>App.js</code>.</p>
+<h4 id="search-page">Search page<a class="headerlink" href="#search-page" title="Permanent link">&para;</a></h4>
+<p>The search page is structured as follows:<br />
+* <code>SearchPanel</code>: the main search panel. Also contains callbacks for sorting and filtering, and lists what can be filtered or sorted on.
+  * <code>FilterBar</code>: The top bar with the search statistics and functionality to add filters and sort results
+  * <code>SearchResultsPanel</code>: The list of search results on the left. It shows a list of <code>Card</code> elements which are uniformly styled but their contents may vary. Depending on the selected type of result (selected in the left navigation bar) it is instantiated with different properties. E.g. a <code>DataListPanel</code> is a simple wrapper around <code>SearchResultsPanel</code> which defines the dataset-specific statistics to be shown in the cards.
+  * Search tabs: The tabs that allow you to choose between different aspects of the results (Statistics, Overview (Dash)) or the different views on the selected dataset, task, etc. (Details, Analysis (Dash),...)
+  * <code>ItemDetail</code>: When a search result is selected, this will show the details of the selection, e.g. the dataset details. Depending on the passed <code>type</code> prop, it will render the <code>Dataset</code>, <code>Task</code>, ... component.</p>
+<p>The <code>api.js</code> file contains the <code>search</code> function, which translates a search query, filters, and other constraints into an ElasticSearch query and returns the results.</p>
+<h3 id="style-guide">Style guide<a class="headerlink" href="#style-guide" title="Permanent link">&para;</a></h3>
 <p>To keep a consistent style and minimize dependencies and complexity, we build on <a href="https://material-ui.com/">Material UI</a> components and <a href="https://fontawesome.com">FontAwesome</a> icons. Theming is defined in <code>themes/index.js</code> and loaded in as a context (<code>ThemeContext</code>) in <code>App.js</code>. More specific styling
 is always defined through styled components in the corresponding pages.</p>
+<h4 id="layouts">Layouts<a class="headerlink" href="#layouts" title="Permanent link">&para;</a></h4>
+<p>There are two top level layouts: <code>Main</code> loads the main layout with a <code>Sidebar</code>, <code>Header</code>,
+and a certain page with all the contents. The <code>Clear.js</code> layout has no headers or sidebars, 
+but has a colored gradient background. It is used mainly for user login and registration or other quick forms. </p>
+<p>The layout of the page content should use the <a href="https://material-ui.com/components/grid/">Material UI grid layout</a>. This
+makes sure it will adapt to different device screen sizes. Test using your browsers development tools whether the layout
+adapts correctly to different screens, including recent smartphones.</p>
+<h4 id="styled-components">Styled components<a class="headerlink" href="#styled-components" title="Permanent link">&para;</a></h4>
+<p>Any custom styling (beyond the Material UI default styling) is defined in styled components which are defined within the file for each page.
+Keep this as minimal as possible. Check if you can import styled components already defined for other pages, avoid duplication.</p>
+<p>Styled div's are defined as follows:
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">OpenMLTitle</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`</span>
+<span class="sb">  color: white;</span>
+<span class="sb">  font-size: 3em;</span>
+<span class="sb">`</span><span class="p">;</span>
+</code></pre></div></p>
+<p>Material UI components can be styled the same way:
+<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">WhiteButton</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">(</span><span class="nx">Button</span><span class="p">)</span><span class="sb">`</span>
+<span class="sb">  display: inline-block;</span>
+<span class="sb">  color: #fff;</span>
+<span class="sb">`</span><span class="p">;</span>
+</code></pre></div></p>
+<h4 id="color-palette">Color palette<a class="headerlink" href="#color-palette" title="Permanent link">&para;</a></h4>
+<p>We follow the general <a href="https://material-ui.com/customization/color/#color">Material UI color palette</a> with shade 400, except when that doesn't give sufficient contrast. The main colors used (e.g. for the icons in the sidebar are: 'green[400]', 'yellow[700]', 'blue[800]', 'red[400]', 'purple[400]', 'orange[400]', 'grey[400]'. Backgrounds are generally kept white (or dark grey for the dark theme). The global context (see below) has a <code>getColor</code> function to get the colors of the search types, e.g. <code>context.getColor("run")</code> returns <code>red[400]</code>.</p>
 <h3 id="handling-state">Handling state<a class="headerlink" href="#handling-state" title="Permanent link">&para;</a></h3>
 <p>There are different levels of state management:<br />
-* Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the <code>ThemeContext.Provider</code> in <code>App.js</code> and the <code>ThemeContext.Consumer</code> in <code>Sidebar.js</code>.<br />
+* Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the <code>ThemeContext.Provider</code> in <code>App.js</code> and the <code>ThemeContext.Consumer</code> in <code>Sidebar.js</code>. There is a <code>MainContext</code> which contains global state values such as the logged in user details, and the current state of the search.
 * Lower level components can pass state to their child components via props.<br />
-* Local state changes should, when possible, be defined by React Hooks.  </p>
+* Local state changes should, when possible, be defined by React Hooks.</p>
+<p>Note that changing the global state will re-render the entire website. Hence, do this only when necessary.</p>
+<h4 id="state-and-search">State and search<a class="headerlink" href="#state-and-search" title="Permanent link">&para;</a></h4>
+<p>Most global state variables have to do with search. The search pages typically work by changing the <code>query</code> and <code>filters</code> variables (see <code>App.js</code>). There is a <code>setSearch</code> function in the main context that can be called to change the search parameters. It checks whether the query has changed and whether updating the global state and re-rendering the website is necessary.</p>
 <h4 id="lifecycle-methods">Lifecycle Methods<a class="headerlink" href="#lifecycle-methods" title="Permanent link">&para;</a></h4>
 <p>These are the React lifecycle methods and how we use them. When a component mounts, methods 1,2,4,7 will be called. When it updates, methods 2-6 will be called.  </p>
 <ol>
