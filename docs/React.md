@@ -48,7 +48,7 @@ in the MainContext, see `App.js`.
 
 #### Component structure
 
-<img src="https://github.com/openml/docs/raw/master/docs/img/react-conponents.png" alt="conponents" width="80%"/>
+<img src="https://github.com/openml/docs/raw/master/docs/img/react-components.png" alt="components" width="80%"/>
 
 The component structure is shown above, for the `Main` layout. The `App` component also holds the state of the website using
 React's native Context API (see below). Next to the header and sidebar, the main component of the website (in yellow) shows
