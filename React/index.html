@@ -1261,10 +1261,12 @@ Keep this as minimal as possible. Check if you can import styled components alre
 <h4 id="color-palette">Color palette<a class="headerlink" href="#color-palette" title="Permanent link">&para;</a></h4>
 <p>We follow the general <a href="https://material-ui.com/customization/color/#color">Material UI color palette</a> with shade 400, except when that doesn't give sufficient contrast. The main colors used (e.g. for the icons in the sidebar are: 'green[400]', 'yellow[700]', 'blue[800]', 'red[400]', 'purple[400]', 'orange[400]', 'grey[400]'. Backgrounds are generally kept white (or dark grey for the dark theme). The global context (see below) has a <code>getColor</code> function to get the colors of the search types, e.g. <code>context.getColor("run")</code> returns <code>red[400]</code>.</p>
 <h3 id="handling-state">Handling state<a class="headerlink" href="#handling-state" title="Permanent link">&para;</a></h3>
-<p>There are different levels of state management:<br />
-* Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the <code>ThemeContext.Provider</code> in <code>App.js</code> and the <code>ThemeContext.Consumer</code> in <code>Sidebar.js</code>. There is a <code>MainContext</code> which contains global state values such as the logged in user details, and the current state of the search.
-* Lower level components can pass state to their child components via props.<br />
-* Local state changes should, when possible, be defined by React Hooks.</p>
+<p>There are different levels of state management:  </p>
+<ul>
+<li>Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the <code>ThemeContext.Provider</code> in <code>App.js</code> and the <code>ThemeContext.Consumer</code> in <code>Sidebar.js</code>. There is a <code>MainContext</code> which contains global state values such as the logged in user details, and the current state of the search.</li>
+<li>Lower level components can pass state to their child components via props.  </li>
+<li>Local state changes should, when possible, be defined by React Hooks.</li>
+</ul>
 <p>Note that changing the global state will re-render the entire website. Hence, do this only when necessary.</p>
 <h4 id="state-and-search">State and search<a class="headerlink" href="#state-and-search" title="Permanent link">&para;</a></h4>
 <p>Most global state variables have to do with search. The search pages typically work by changing the <code>query</code> and <code>filters</code> variables (see <code>App.js</code>). There is a <code>setSearch</code> function in the main context that can be called to change the search parameters. It checks whether the query has changed and whether updating the global state and re-rendering the website is necessary.</p>
