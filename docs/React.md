@@ -94,6 +94,7 @@ We follow the general [Material UI color palette](https://material-ui.com/custom
 
 ### Handling state
 There are different levels of state management:  
+
 * Global state is handled via React's native Context API (we don't use Redux). Contexts are defined in the component tree where needed (usually higher up) by a context provider component, and is accessed lower in the component tree by a context consumer. For instance, see the `ThemeContext.Provider` in `App.js` and the `ThemeContext.Consumer` in `Sidebar.js`. There is a `MainContext` which contains global state values such as the logged in user details, and the current state of the search.
 * Lower level components can pass state to their child components via props.  
 * Local state changes should, when possible, be defined by React Hooks.
