@@ -39,7 +39,7 @@ possible routes is defined in `routes/index.js`.
 - `docs`: All normal information pages (e.g. 'About', 'API',...)
 - `search`: All pages related to searching for datasets, tasks, flows, runs, etc.
 
-`layout` contains the possible layouts, `Main` or `Clear` (see below). You define the theme of a page by
+`layout` contains the possible layouts, `Main` or `Clear` (see below). You define the layout of a page by
 adding its route to either `mainRoutes` or `clearRoutes` in `routes/index.js`. The default is the `Main` layout.
 
 `themes` contains the overall theme styling for the entire website. Currently, there is a dark and a light theme. They can be set using `setTheme`
