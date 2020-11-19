@@ -29,7 +29,7 @@ The website is designed as a single-page application.
 The top level files bootstrap the app. `index.js` simply renders the top component, and
 `App.js` adds the relevant subcomponents based on the current theme and state.
 
-`Routes.js` loads the correct components based on the current route (URL). The list of
+`Routes.js` links components to the possible routes (based on the URL). The list of
 possible routes is defined in `routes/index.js`.
 
 `pages` contain the various pages of the website. It has subdirectories for:
