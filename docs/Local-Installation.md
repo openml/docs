@@ -1,8 +1,12 @@
-### Docker installation
+## 1.Using Docker
 The easiest way to set up a local version of OpenML is to use Docker Compose following the instructions here (thanks to Rui Quintino!):
 https://github.com/openml/openml-docker-dev
 
 If you run into problems, please post an issue in the same github repo.
+
+
+## 2. Installation from scratch
+If you want to install a local version of OpenML from scratch please follow the steps mentioned below:
 
 ### Requirements
 You'll need to have the following software running:
