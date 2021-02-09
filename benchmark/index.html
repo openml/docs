@@ -1292,6 +1292,7 @@
 </details>
 <h3 id="listing-the-benchmark-suites">Listing the benchmark suites<a class="headerlink" href="#listing-the-benchmark-suites" title="Permanent link">&para;</a></h3>
 <p>The current list of benchmark suites is explicitly listed on the bottom of this page. The list of all sets of tasks can also be fetched programmatically. This list includes the suite's ID (and optionally an alias), which can be used to fetch further details.</p>
+<p>Via the REST API, the list is returned in XML or JSON</p>
 <details class="note"><summary>REST</summary><p><a href="https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all">https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all</a></p>
 <p><a href="https://www.openml.org/api_docs/#!/study/get_study_list_filters">Check out the API docs</a></p>
 </details>
@@ -1318,6 +1319,7 @@
 </details>
 <h3 id="fetching-details">Fetching details<a class="headerlink" href="#fetching-details" title="Permanent link">&para;</a></h3>
 <p>Using the ID or alias of a benchmark suite, you can retrieve a description and the full list of tasks and the underlying datasets.</p>
+<p>Via the REST API, a list of all tasks and dataset IDs is returned in XML or JSON</p>
 <details class="note"><summary>REST</summary><p><a href="https://www.openml.org/api/v1/xml/study/OpenML-CC18">https://www.openml.org/api/v1/xml/study/OpenML-CC18</a></p>
 <p><a href="https://www.openml.org/api_docs/#!/study/get_study_id">Check out the API docs</a></p>
 </details>
@@ -1331,6 +1333,7 @@
     <span class="n">features</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">get_X_and_y</span><span class="p">()</span>  <span class="c1"># get the data</span>
 </code></pre></div>
 </details>
+<p>In Java, the data is returned as a WEKA Instances object:</p>
 <details class="note"><summary>Java example</summary><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">downloadDatasets</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
     <span class="n">OpenmlConnector</span> <span class="n">openml</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OpenmlConnector</span><span class="p">();</span>
     <span class="n">Study</span> <span class="n">benchmarksuite</span> <span class="o">=</span> <span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML-CC18&quot;</span><span class="p">,</span> <span class="s">&quot;tasks&quot;</span><span class="p">);</span>
@@ -1342,6 +1345,7 @@
 <span class="p">}</span>
 </code></pre></div>
 </details>
+<p>In R, the data is returned as an R dataframe:</p>
 <details class="note"><summary>R example</summary><div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">OpenML</span><span class="p">)</span>
 <span class="n">task.ids</span> <span class="o">=</span> <span class="nf">getOMLStudy</span><span class="p">(</span><span class="s">&#39;OpenML-CC18&#39;</span><span class="p">)</span><span class="o">$</span><span class="n">tasks</span><span class="o">$</span><span class="n">task.id</span> <span class="c1"># obtain the list of suggested tasks</span>
 <span class="nf">for </span><span class="p">(</span><span class="n">task.id</span> <span class="n">in</span> <span class="n">task.ids</span><span class="p">)</span> <span class="p">{</span> <span class="c1"># iterate over all tasks</span>

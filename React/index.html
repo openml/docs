@@ -1273,13 +1273,13 @@ adapts correctly to different screens, including recent smartphones.</p>
 <p>Any custom styling (beyond the Material UI default styling) is defined in styled components which are defined within the file for each page.
 Keep this as minimal as possible. Check if you can import styled components already defined for other pages, avoid duplication.</p>
 <p>Styled div's are defined as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">OpenMLTitle</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">OpenMLTitle</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">.</span><span class="nx">div</span><span class="sb">`</span>
 <span class="sb">  color: white;</span>
 <span class="sb">  font-size: 3em;</span>
 <span class="sb">`</span><span class="p">;</span>
 </code></pre></div>
 <p>Material UI components can be styled the same way:</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">WhiteButton</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">(</span><span class="nx">Button</span><span class="p">)</span><span class="sb">`</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">WhiteButton</span> <span class="o">=</span> <span class="nx">styled</span><span class="p">(</span><span class="nx">Button</span><span class="p">)</span><span class="sb">`</span>
 <span class="sb">  display: inline-block;</span>
 <span class="sb">  color: #fff;</span>
 <span class="sb">`</span><span class="p">;</span>
@@ -1315,9 +1315,9 @@ all event handlers, usually defined as callbacks. Note: for performance reasons,
 <p>HTML forms are different than other DOM elements because they keep their own state in plain HTML. To make sure that we can control the state
 we need to set the input field's <code>value</code> to a component state value.</p>
 <p>Here's an example of using an input field to change the title displayed in the component.</p>
-<div class="highlight"><pre><span></span><code><span class="kr">const</span> <span class="nx">titles</span><span class="o">:</span> <span class="p">{</span><span class="nx">mainTitle</span><span class="o">:</span> <span class="s1">&#39;OpenML&#39;</span><span class="p">};</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">titles</span><span class="o">:</span> <span class="p">{</span><span class="nx">mainTitle</span><span class="o">:</span> <span class="s1">&#39;OpenML&#39;</span><span class="p">};</span>
 
-<span class="kr">class</span> <span class="nx">App</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="nx">App</span> <span class="k">extends</span> <span class="nx">Component</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="nx">titles</span><span class="p">};</span>
 
   <span class="c1">// Receive synthetic event</span>
