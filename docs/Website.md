@@ -25,13 +25,13 @@ Do a production build of the frontend by going to `server/src/client/app` and ru
 ``` python
 npm install
 ```
-to install the react build scripts, and then build a production version of the website:
+Go back to the home directory. Build a production version of the website with:
 
 ``` python
 npm run build --prefix server/src/client/app/
 ```
 
-Start the server by going back to the home directory and running:
+Start the server by running:
 
 ``` python
 flask run
