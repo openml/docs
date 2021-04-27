@@ -1222,6 +1222,7 @@
 <h3 id="predictions">Predictions<a class="headerlink" href="#predictions" title="Permanent link">&para;</a></h3>
 <p>The contents of the prediction file depends on the task type.</p>
 <h4 id="task-type-supervised-classification">Task type: Supervised classification<a class="headerlink" href="#task-type-supervised-classification" title="Permanent link">&para;</a></h4>
+<p><a href="https://www.openml.org/api/v1/arff_example/predictions">Example predictions file</a></p>
 <ul>
 <li>repeat NUMERIC</li>
 <li>fold NUMERIC</li>
@@ -1232,16 +1233,18 @@
   Runs that have a different set of columns will be rejected.</li>
 </ul>
 <h3 id="trace">Trace<a class="headerlink" href="#trace" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.openml.org/api/v1/arff_example/trace">Example trace file</a></p>
 <ul>
-<li>repeat numeric</li>
-<li>fold numeric</li>
-<li>iteration numeric</li>
-<li>setup_string string, contains hyperparameters and settings of the optimizee (should be json parsable)</li>
-<li>evaluation numeric</li>
-<li>selected {false,true}
-  (open question) what is in the same fold/repeat combination the same config is ran multiple times with same evaluation?
-  Traces that have a different set of columns will be rejected.</li>
+<li>repeat: cross-validation repeat</li>
+<li>fold: cross-validation fold</li>
+<li>iteration: the index order within this repeat/fold combination</li>
+<li>evaluation (float): the evaluation score that was attached based on the validation set</li>
+<li>selected {True, False}: Whether in this repeat/run combination this was the selected hyperparameter configuration (exactly one should be tagged with True)</li>
+<li>Per optimized parameter a column that has the name of the parameter and the prefix "parameter_"</li>
+<li>setup_string: Due to legacy reasons accepted, but will be ignored by the default evaluation engine</li>
 </ul>
+<p>(open question) what is in the same fold/repeat combination the same config is ran multiple times with same evaluation?
+Traces that have a different set of columns will be rejected.</p>
 <h2 id="data-features">Data Features<a class="headerlink" href="#data-features" title="Permanent link">&para;</a></h2>
 <p>Data features are uploaded by the Java Evaluation Engine and will be documented later.</p>
 <h2 id="data-qualities">Data Qualities<a class="headerlink" href="#data-qualities" title="Permanent link">&para;</a></h2>
