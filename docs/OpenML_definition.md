@@ -52,6 +52,8 @@ The contents of the prediction file depends on the task type.
 
 #### Task type: Supervised classification
 
+[Example predictions file](https://www.openml.org/api/v1/arff_example/predictions)
+
 - repeat NUMERIC
 - fold NUMERIC
 - row_id NUMERIC
@@ -62,14 +64,18 @@ The contents of the prediction file depends on the task type.
 
 ### Trace
 
-- repeat numeric
-- fold numeric
-- iteration numeric
-- setup_string string, contains hyperparameters and settings of the optimizee (should be json parsable)
-- evaluation numeric
-- selected {false,true}
-  (open question) what is in the same fold/repeat combination the same config is ran multiple times with same evaluation?
-  Traces that have a different set of columns will be rejected.
+[Example trace file](https://www.openml.org/api/v1/arff_example/trace)
+
+- repeat: cross-validation repeat
+- fold: cross-validation fold
+- iteration: the index order within this repeat/fold combination
+- evaluation (float): the evaluation score that was attached based on the validation set
+- selected {True, False}: Whether in this repeat/run combination this was the selected hyperparameter configuration (exactly one should be tagged with True)
+- Per optimized parameter a column that has the name of the parameter and the prefix "parameter_"
+- setup_string: Due to legacy reasons accepted, but will be ignored by the default evaluation engine
+
+(open question) what is in the same fold/repeat combination the same config is ran multiple times with same evaluation?
+Traces that have a different set of columns will be rejected.
 
 ## Data Features
 
