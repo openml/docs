@@ -4,10 +4,10 @@ Machine learning research depends on objectively interpretable, comparable, and 
 
 Seamlessly integrated into the OpenML platform, benchmark suites standardize the setup, execution, analysis, and reporting of benchmarks. Moreover, they make benchmarking a whole lot easier:
 - all datasets are uniformly formatted in standardized data formats
-- they can be easily downloaded programmatically through [APIs and client libraries](APIs)
+- they can be easily downloaded programmatically through [APIs and client libraries](https://docs.openml.org/APIs/)
 - they come with machine-readable [meta-information](https://www.openml.org/search?type=measure&q=+measure_type%3Adata_quality), such as the occurrence of missing values, to train algorithms correctly
 - standardized train-test splits are provided to ensure that results can be objectively compared
-- results can be shared in a reproducible way through the [APIs](APIs)
+- results can be shared in a reproducible way through the [APIs](https://docs.openml.org/APIs/)
 - results from other users can be easily downloaded and reused
 
 
@@ -424,7 +424,7 @@ We excluded datasets which:
 
 #### Citing the OpenML-CC18
 
-If you have used the OpenML-CC18 in a scientific publication, we would appreciate [citations of core OpenML packages](openml.org/cite) as well as a citation of the following paper:
+If you have used the OpenML-CC18 in a scientific publication, we would appreciate [citations of core OpenML packages](https://www.openml.org/cite) as well as a citation of the following paper:
 
 Bischl, Bernd and Casalicchio, Giuseppe and Feurer, Matthias and Hutter, Frank and Lang, Michel and Mantovani, Rafael G. and van Rijn, Jan N. and Vanschoren, Joaquin. OpenML Benchmarking Suites. [arXiv 1708.0373v2](https://arxiv.org/abs/1708.03731v2) (2019): 1-6
 
@@ -451,7 +451,7 @@ It excluded datasets which:
 
 #### Citing the OpenML100
 
-If you have used the OpenML100 in a scientific publication, we would appreciate [citations of core OpenML packages](openml.org/cite) as well as a citation of the following paper:
+If you have used the OpenML100 in a scientific publication, we would appreciate [citations of core OpenML packages](https://www.openml.org/cite) as well as a citation of the following paper:
 
 Bischl, Bernd and Casalicchio, Giuseppe and Feurer, Matthias and Hutter, Frank and Lang, Michel and Mantovani, Rafael G. and van Rijn, Jan N. and Vanschoren, Joaquin. OpenML Benchmarking Suites and the OpenML100. [arXiv 1708.0373v1](https://arxiv.org/abs/1708.03731v1) (2017): 1-6
 
