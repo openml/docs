@@ -40,8 +40,9 @@ APIs (mostly defunct):
 - PyDataset (Python): https://github.com/iamaziz/PyDataset (wrapper for Rdatasets?)
 - RDatasets (R): https://github.com/vincentarelbundock/Rdatasets
 
-Time series data:
+Time series / Geo data:
 
+- Data commons: https://datacommons.org/
 - UCR: http://timeseriesclassification.com/
 - Older version: http://www.cs.ucr.edu/~eamonn/time_series_data/
 
@@ -51,6 +52,7 @@ Deep learning datasets (mostly image data)
 - http://deeplearning.net/datasets/
 - https://deeplearning4j.org/opendata
 - http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html
+- https://paperswithcode.com/datasets
 
 Extreme classification:
 
