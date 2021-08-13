@@ -17,7 +17,7 @@ not enabled.)
 Or just a XAMP (Mac), LAMP (Linux) or WAMP (Windows) package, which conveniently contains all these applications.
 
 ### Databases
-Next, OpenML runs on two databases, a public database with all experiment information, and a private database, with information like user accounts etc. The latest version of both databases can be downloaded here: https://docs.openml.org/developers/
+Next, OpenML runs on two databases, a public database with all experiment information, and a private database, with information like user accounts etc. The latest version of both databases can be downloaded here: https://docs.openml.org/resources
 
 Obviously, the private database does not include any actual user account info.
 
