@@ -2,7 +2,7 @@
 
 To guarantee interoperability, we focus on a limited set of data formats. We aim to support all sorts of data, but for the moment we only fully support tabular data in the ARFF format. We are currently working on supporting a much wider range of formats.
 
-[ARFF definition](https://waikato.github.io/weka-wiki/arff/). Also check that attribute definitions do not mix spaces and tabs, and do not include end-of-line comments.
+[ARFF definition](https://www.cs.waikato.ac.nz/ml/weka/arff.html). Also check that attribute definitions do not mix spaces and tabs, and do not include end-of-line comments.
 
 ### Data repositories
 
