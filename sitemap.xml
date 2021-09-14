@@ -1,139 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://docs.openml.org/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/sklearn/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/mlr/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Weka/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/MOA/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/benchmark/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Governance/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/terms/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/APIs/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/REST-tutorial/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/REST-API/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Java-guide/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Python-start/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Python-guide/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Python-examples/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Python-API/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Python-contributing/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Python-changelog/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/R-guide/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/R-API/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/NET-API/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Contributing/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/OpenML-Docs/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Website/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Flask/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/React/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Dash/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Local-Installation/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/API-development/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Java-App/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/OpenML_definition/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Client-API-Standards/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/Datasets/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.openml.org/resources/</loc>
-     <lastmod>2021-08-26</lastmod>
+     <lastmod>2021-09-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
