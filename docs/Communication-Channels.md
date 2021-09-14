@@ -24,7 +24,7 @@ https://groups.google.com/forum/#!forum/openml
 * Other major information  
 * Urgent or important issues  
 
-If you want to receive information on major news or upcoming events, sign up for the [mailing list](https://groups.google.com/forum/#!forum/openml). There is a privat mailing list for [OpenML core members](https://github.com/openml/OpenML/wiki/Core-team) which you can contact by sending an e-mail to openmlHQ@googlegroups.com.
+If you want to receive information on major news or upcoming events, sign up for the [mailing list](https://groups.google.com/forum/#!forum/openml). There is a private mailing list for [OpenML core members](https://github.com/openml/OpenML/wiki/Core-team) which you can contact by sending an e-mail to openmlHQ@googlegroups.com.
 
 
 ## Twitter (@open_ml)
