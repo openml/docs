@@ -18,6 +18,11 @@ pip install -r requirements.txt
 npm install
 ```
 
+Note: if you use NPM 7, it's currently best to use
+``` python
+npm install --legacy-peer-deps
+```
+
 ## Building and running
 
 Do a production build of the frontend by going to `server/src/client/app` and running
