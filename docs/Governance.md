@@ -46,24 +46,24 @@ If no option can gather two thirds of the votes cast (ignoring abstentions), the
 
 Decisions (in addition to adding core contributors and SC membership as above) are made according to the following rules:
 
-Normal changes:
+Normal changes:  
 
-  - Minor Documentation changes, such as typo fixes, or addition / correction of a sentence: requires one approved review by a core contributor, and no objections in the comments (lazy consensus). Core contributors are expected to give “reasonable time” to others to give their opinion on the pull request if they’re not confident others would agree.
-  - Non-server packages that only have one core contributor are not subject to the ruling in the bullet point above (i.e. a sole core developer can make decisions on their own).
+- Minor Documentation changes, such as typo fixes, or addition / correction of a sentence: requires one approved review by a core contributor, and no objections in the comments (lazy consensus). Core contributors are expected to give “reasonable time” to others to give their opinion on the pull request if they’re not confident others would agree.  
+- Non-server packages that only have one core contributor are not subject to the ruling in the bullet point above (i.e. a sole core developer can make decisions on their own).
 
-Major changes:
-  - Major changes to the API principles and metadata schema require a concrete proposal outlined in an OpenML Request for Comments (RfC), which has to be opened for public consultation for at least 1 month. The final version has to be approved using the decision-making process outlined above (two-third of the cast vote by core contributors or simple majority if escalated to the SC). Voting is typically done as a comment in the pull request (+1, -1, or 0 to abstain).
-  - RfCs must be announced and shared via the public mailing list and may link additional content (such as blog posts or google docs etc. detailing the changes).
-  - Changes to the governance model use the same decision process outlined above.
+Major changes:  
+- Major changes to the API principles and metadata schema require a concrete proposal outlined in an OpenML Request for Comments (RfC), which has to be opened for public consultation for at least 1 month. The final version has to be approved using the decision-making process outlined above (two-third of the cast vote by core contributors or simple majority if escalated to the SC). Voting is typically done as a comment in the pull request (+1, -1, or 0 to abstain).  
+- RfCs must be announced and shared via the public mailing list and may link additional content (such as blog posts or google docs etc. detailing the changes).  
+- Changes to the governance model use the same decision process outlined above.  
 
 If a veto -1 vote is cast on a lazy consensus, the proposer can appeal to the community and core contributors and the change can be approved or rejected using the decision making procedure outlined above.
 
 ### Communication channels
 
-OpenML uses the following communication channels:
+OpenML uses the following communication channels:  
 
-- An open contributor mailing list and the GitHub issue trackers.
-- A chat application for daily interaction with the community (currently Slack).
-- Private email lists (without archive) for the core developers (core@openml.org) and steering committee (steering@openml.org), for membership voting and sensitive discussions.
-- A monthly Steering Committee meeting at predefined times, listed on the website. They are usually open to all steering committee members and core contributors, and they can all request discussion on a topic via the private mailing list. Closed meetings for SC members only can be called in if there are sensitive discussions or other valid reasons.
-- A monthly Engineering meeting at predefined times, listed on the website. The meeting is open to all. Discussion points are put on the [project roadmap](https://github.com/orgs/openml/projects/2).
+- An open contributor mailing list and the GitHub issue trackers.  
+- A chat application for daily interaction with the community (currently Slack).  
+- Private email lists (without archive) for the core developers (core@openml.org) and steering committee (steering@openml.org), for membership voting and sensitive discussions.  
+- Biyearly Steering Committee meeting at predefined times, listed on the website, and asynchronous discussions on a discussion board. They are open to all steering committee members and core contributors, and they can all request discussion on a topic. Closed meetings for SC members only can be called in if there are sensitive discussions or other valid reasons.  
+- A monthly Engineering meeting at predefined times, listed on the website. The meeting is open to all. Discussion points are put on the [project roadmap]  (https://github.com/orgs/openml/projects/2).
