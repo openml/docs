@@ -12,7 +12,7 @@ Data is uploaded through the function [post data](https://www.openml.org/api_doc
 
 Tasks are uploaded through the function [post task](https://www.openml.org/api_docs#!/task/post_task). The following files are needed:
 
-- `description`: An XML adhiring to the [XSD schema](https://www.openml.org/api_new/v1/xsd/openml.task.upload).
+- `description`: An XML adhering to the [XSD schema](https://www.openml.org/api_new/v1/xsd/openml.task.upload).
   Uploading any other files will result in an error.
 
 The task file should contain several input fields. These are a name and value combination of fields that are marked to be relevant by the task type definition. There are several task type definitions, e.g.:
@@ -32,7 +32,7 @@ When creating a task, the API checks for all of the input fields whether the inp
 
 Flows are uploaded through the function [post flow](https://www.openml.org/api_docs#!/flow/post_flow). The following file is needed:
 
-- `description`: An XML adhiring to the [XSD schema](https://www.openml.org/api_new/v1/xsd/openml.implementation.upload).
+- `description`: An XML adhering to the [XSD schema](https://www.openml.org/api_new/v1/xsd/openml.implementation.upload).
   Uploading any other files will result in an error.
 
 Duplicate flows (i.e., same values for `name` and `external_version`) will be rejected.
@@ -41,7 +41,7 @@ Duplicate flows (i.e., same values for `name` and `external_version`) will be re
 
 Runs are uploaded through the function [post run](https://www.openml.org/api_docs#!/run/post_run). The following files are needed:
 
-- `description`: An XML adhiring to the [XSD schema](https://www.openml.org/api_new/v1/xsd/openml.run.upload).
+- `description`: An XML adhering to the [XSD schema](https://www.openml.org/api_new/v1/xsd/openml.run.upload).
 - `predictions`: An [ARFF file](https://www.cs.waikato.ac.nz/ml/weka/arff.html) containing the predictions (optional, depending on the task).
 - `trace`: An [ARFF file](https://www.cs.waikato.ac.nz/ml/weka/arff.html) containing the run trace (optional, depending on the flow).
   Uploading any other files will result in an error.
