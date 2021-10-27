@@ -1086,7 +1086,7 @@ Then, go into that folder (it should have the <code>requirements.txt</code> and 
 </code></pre></div></p>
 <h2 id="building-and-running">Building and running<a class="headerlink" href="#building-and-running" title="Permanent link">&para;</a></h2>
 <p>Do a production build of the frontend by going to <code>server/src/client/app</code> and running</p>
-<p><div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">install</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">legacy</span><span class="o">-</span><span class="n">peer</span><span class="o">-</span><span class="n">deps</span>
 </code></pre></div>
 Go back to the home directory. Build a production version of the website with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">npm</span> <span class="n">run</span> <span class="n">build</span> <span class="o">--</span><span class="n">prefix</span> <span class="n">server</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">client</span><span class="o">/</span><span class="n">app</span><span class="o">/</span>
