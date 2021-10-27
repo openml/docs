@@ -28,7 +28,7 @@ npm install --legacy-peer-deps
 Do a production build of the frontend by going to `server/src/client/app` and running
 
 ``` python
-npm install
+npm install --legacy-peer-deps
 ```
 Go back to the home directory. Build a production version of the website with:
 
