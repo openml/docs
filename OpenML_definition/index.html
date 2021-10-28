@@ -1191,7 +1191,7 @@
 <h2 id="tasks">Tasks<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h2>
 <p>Tasks are uploaded through the function <a href="https://www.openml.org/api_docs#!/task/post_task">post task</a>. The following files are needed:</p>
 <ul>
-<li><code>description</code>: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.task.upload">XSD schema</a>.
+<li><code>description</code>: An XML adhering to the <a href="https://www.openml.org/api_new/v1/xsd/openml.task.upload">XSD schema</a>.
   Uploading any other files will result in an error.</li>
 </ul>
 <p>The task file should contain several input fields. These are a name and value combination of fields that are marked to be relevant by the task type definition. There are several task type definitions, e.g.:</p>
@@ -1207,14 +1207,14 @@
 <h2 id="flow">FLow<a class="headerlink" href="#flow" title="Permanent link">&para;</a></h2>
 <p>Flows are uploaded through the function <a href="https://www.openml.org/api_docs#!/flow/post_flow">post flow</a>. The following file is needed:</p>
 <ul>
-<li><code>description</code>: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.implementation.upload">XSD schema</a>.
+<li><code>description</code>: An XML adhering to the <a href="https://www.openml.org/api_new/v1/xsd/openml.implementation.upload">XSD schema</a>.
   Uploading any other files will result in an error.</li>
 </ul>
 <p>Duplicate flows (i.e., same values for <code>name</code> and <code>external_version</code>) will be rejected.</p>
 <h2 id="runs">Runs<a class="headerlink" href="#runs" title="Permanent link">&para;</a></h2>
 <p>Runs are uploaded through the function <a href="https://www.openml.org/api_docs#!/run/post_run">post run</a>. The following files are needed:</p>
 <ul>
-<li><code>description</code>: An XML adhiring to the <a href="https://www.openml.org/api_new/v1/xsd/openml.run.upload">XSD schema</a>.</li>
+<li><code>description</code>: An XML adhering to the <a href="https://www.openml.org/api_new/v1/xsd/openml.run.upload">XSD schema</a>.</li>
 <li><code>predictions</code>: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the predictions (optional, depending on the task).</li>
 <li><code>trace</code>: An <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF file</a> containing the run trace (optional, depending on the flow).
   Uploading any other files will result in an error.</li>
