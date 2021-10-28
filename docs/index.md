@@ -3,7 +3,7 @@
 <h1>An open, collaborative, <i>frictionless</i>, automated machine learning environment.</h1>
 
 <p><i class="fa fa-globe fa-fw fa-lg"></i> <a href="https://www.openml.org/d" target="_blank">Data sets</a> automatically analyzed, annotated, and organized online</p>
-<p><i class="fa fa-cogs fa-fw fa-lg"></i> <a href="https://www.openml.org/f" target="_blank">Machine learning pipelines</a> automatically shared from many libraries.</p>
+<p><i class="fa fa-cogs fa-fw fa-lg"></i> <a href="https://www.openml.org/f" target="_blank">Machine learning pipelines</a> automatically shared from many libraries</p>
 <p><i class="fa fa-code fa-fw fa-lg"></i> <a href="APIs">Extensive APIs</a> to integrate OpenML into your own tools and scripts</p>
 <p><i class="fa fa-flask fa-fw fa-lg"></i> <a href="https://www.openml.org/r" target="_blank">Reproducible results</a> (e.g. models, evaluations) for easy comparison and reuse</p>
 <p><i class="fa fa-users fa-fw fa-lg"></i> Collaborate in real time, right from your existing tools</p>
