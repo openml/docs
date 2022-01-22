@@ -13,23 +13,14 @@ cd openml.org
 pip install -r requirements.txt
 ```
 
-* Install React and dependencies using [NPM (6 or higher)](https://nodejs.org/en/download/).
+* Install React and dependencies using [NPM (8 or higher)](https://nodejs.org/en/download/) 
 ``` python
+cd server/src/client/app/
 npm install
-```
-
-Note: if you use NPM 7, it's currently best to use
-``` python
-npm install --legacy-peer-deps
 ```
 
 ## Building and running
 
-Do a production build of the frontend by going to `server/src/client/app` and running
-
-``` python
-npm install --legacy-peer-deps
-```
 Go back to the home directory. Build a production version of the website with:
 
 ``` python
@@ -58,7 +49,7 @@ gunicorn --certfile cert.pem --keyfile key.pem -b localhost:5000 autoapp:app
 
 ## Development
 
-To start the React frontend in developer mode, follow the installation steps above, go to `server/src/client/app` and run:
+To start the React frontend in developer mode, go to `server/src/client/app` and run:
 
 ``` python
 npm run start
