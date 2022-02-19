@@ -18,6 +18,7 @@ A collection of sources made by different users
 - https://paperswithcode.com/
 - https://medium.com/towards-artificial-intelligence/best-datasets-for-machine-learning-data-science-computer-vision-nlp-ai-c9541058cf4f
 - https://lionbridge.ai/datasets/the-50-best-free-datasets-for-machine-learning/
+- https://www.v7labs.com/open-datasets?utm_source=v7&utm_medium=email&utm_campaign=edu_outreach
 
 Machine learning dataset repositories (mostly already in OpenML)
 
