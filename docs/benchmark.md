@@ -2,12 +2,18 @@
 
 Machine learning research depends on objectively interpretable, comparable, and reproducible algorithm benchmarks. OpenML aims to facilitate the creation of curated, comprehensive _suites_ of machine learning tasks, covering precise sets of conditions.
 
-Seamlessly integrated into the OpenML platform, benchmark suites standardize the setup, execution, analysis, and reporting of benchmarks. Moreover, they make benchmarking a whole lot easier:
-- all datasets are uniformly formatted in standardized data formats
+Seamlessly integrated into the OpenML platform, benchmark suites standardize the setup, execution, analysis, and reporting of benchmarks. Moreover, they make benchmarking a whole lot easier:  
+
+- all datasets are uniformly formatted in standardized data formats 
+
 - they can be easily downloaded programmatically through [APIs and client libraries](https://www.openml.org/apis)
+
 - they come with machine-readable [meta-information](https://www.openml.org/search?type=measure&q=+measure_type%3Adata_quality), such as the occurrence of missing values, to train algorithms correctly
+
 - standardized train-test splits are provided to ensure that results can be objectively compared
+
 - results can be shared in a reproducible way through the [APIs](https://www.openml.org/apis)
+
 - results from other users can be easily downloaded and reused
 
 
