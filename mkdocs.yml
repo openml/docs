@@ -68,6 +68,11 @@ nav:
       - "Client Development": Client-API-Standards.md
       - "Datasets": Datasets.md
       - "Resources": resources.md
+plugins:
+    - redirects:
+        redirect_maps:
+            'APIs.md': 'https://www.openml.org/apis'
+            'REST-API.md': 'https://www.openml.org/apis'
 extra_css:
   - css/extra.css
 extra_javascript:
