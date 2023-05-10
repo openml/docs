@@ -15,6 +15,7 @@ theme:
     logo: material/library
   features:
     - navigation.tabs
+    - content.action.edit
   plugins:
     - search:
       separator: '[\s\-\.]+'
