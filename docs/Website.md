@@ -58,6 +58,13 @@ npm run start
 The app should automatically open at `localhost:3000` and any changes made to
 the code will automatically reload the website (hot loading).
 
+For the new Next.js frontend, install and run like this:
+``` python
+cd app
+npm install
+npm run dev
+```
+
 ## Structure
 <img src="../img/structure.png" alt="OpenML Website structure" width="500"/>
 
