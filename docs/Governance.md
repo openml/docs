@@ -52,6 +52,7 @@ Normal changes:
 - Non-server packages that only have one core contributor are not subject to the ruling in the bullet point above (i.e. a sole core developer can make decisions on their own).
 
 Major changes:  
+
 - Major changes to the API principles and metadata schema require a concrete proposal outlined in an OpenML Request for Comments (RfC), which has to be opened for public consultation for at least 1 month. The final version has to be approved using the decision-making process outlined above (two-third of the cast vote by core contributors or simple majority if escalated to the SC). Voting is typically done as a comment in the pull request (+1, -1, or 0 to abstain).  
 - RfCs must be announced and shared via the public mailing list and may link additional content (such as blog posts or google docs etc. detailing the changes).  
 - Changes to the governance model use the same decision process outlined above.  
