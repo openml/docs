@@ -150,7 +150,7 @@ First, the list of tasks is downloaded as already illustrated above. Next, a spe
     
         task = openml.tasks.get_task(task_id)  # download the OpenML task
         run = openml.runs.run_model_on_task(clf, task)  # run the classifier on the task
-        score = run.get_metric_score(sklearn.metrics.accuracy_score)  # print accuracy score
+        score = run.get_metric_fn(sklearn.metrics.accuracy_score)  # print accuracy score
         print('Data set: %s; Accuracy: %0.2f' % (task.get_dataset().name,score.mean()))
         run.publish()  # publish the experiment on OpenML (optional, requires internet and an API key)
         print('URL for run: %s/run/%d' %(openml.config.server,run.run_id))
