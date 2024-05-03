@@ -1,5 +1,5 @@
 site_name: OpenML Documentation
-repo_url: https://github.com/openml/docs/
+repo_url: https://github.com/SubhadityaMukherjee/openml_docs/
 site_url: https://docs.openml.org/
 edit_uri: edit/master/docs/
 theme:
@@ -86,11 +86,11 @@ nav:
       - "Terms" : contributing/terms.md
   - Showcase: showcase.md
 plugins:
-    - mknotebooks:
-        binder: true
-        binder_service_name: "gh"
-        binder_branch: "SubhadityaMukherjee/openml_docs/attempting_to_unify_documentation"
-        binder_ui: "lab"
+    - mknotebooks
+    #     binder: true
+    #     binder_service_name: "gh"
+    #     binder_branch: "main"
+    #     binder_ui: "lab"
     - redirects:
         redirect_maps:
             'APIs.md': 'https://www.openml.org/apis'
