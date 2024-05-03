@@ -6,7 +6,7 @@ theme:
   name: "material"
   language: "en"
   palette:
-    primary: indigo
+    primary: darkblue
     accent: indigo
   font:
     text: "Roboto"
@@ -38,38 +38,59 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - fontawesome_markdown
+  # - fontawesome_markdown
   - admonition
   - toc:
       permalink: true
 nav:
-  - Bootcamp:
-      - Get started: index.md
-      - Integrations:
-          - "scikit-learn": sklearn.md
-          - "mlr": mlr.md
+  - Get started: index.md
+  - Integrations:
+      - Python Integrations:
+          - Scikit-learn:
+              - "Introduction": Scikit-learn/index.md
+              # - "Basic Tutorial": Scikit-learn/sklearn-basic-tutorial.md
+              - "Basic Tutorial": Scikit-learn/datasets_tutorial.ipynb
+              - "Advanced Tutorial": Scikit-learn/sklearn-advanced-tutorial.md
+          - "Pytorch": Pytorch.md
+          - "Tensorflow": Tensorflow.md
+          - "Keras": Keras.md
+      - R Integrations:
+          - MLR: R-integration/mlr.md
+      - Other Integrations:
           - "WEKA": Weka.md
           - "MOA": MOA.md
-      - Benchmarking: benchmark.md
-      - Governance: Governance.md
-      - Terms: terms.md
-  - Contributors:
-      - "How to Contribute": Contributing.md
-      - "Documenting": OpenML-Docs.md
+          - "Julia": Julia.md 
+          - "Java": Java.md
+          - "REST API": REST-API.md
+      - "Creating a new integration": creating_extensions.md
+  - AutoML:
+      - "AutoML Benchmark": AutoML-Benchmark.md
+  - Benchmarking: benchmark.md
+  - Governance: Governance.md
+  - Contributing:
+      - "How to Contribute": contributing/Contributing.md
+      - "Documenting": contributing/OpenML-Docs.md
       - "Website":
-          - "Getting started": Website.md
-          - "Flask backend": Flask.md
-          - "React frontend": React.md
-          - "Dash visualizations": Dash.md
+          - "Getting started": contributing/website/Website.md
+          - "Flask backend": contributing/website/Flask.md
+          - "React frontend": contributing/website/React.md
+          - "Dash visualizations": contributing/website/Dash.md
       - "Backend":
-          - "Local Installation": Local-Installation.md
-          - "API Development": API-development.md
-          - "Evaluation Engine": Java-App.md
-      - "OpenML Definition": OpenML_definition.md
-      - "Client Development": Client-API-Standards.md
-      - "Datasets": Datasets.md
-      - "Resources": resources.md
+          - "Local Installation": contributing/backend/Local-Installation.md
+          - "API Development": contributing/backend/API-development.md
+          - "Evaluation Engine": contributing/backend/Java-App.md
+      - "OpenML Definition": contributing/OpenML_definition.md
+      - "Client Development": contributing/Client-API-Standards.md
+      - "Datasets": contributing/Datasets.md
+      - "Resources": contributing/resources.md
+      - "Terms" : contributing/terms.md
+  - Showcase: showcase.md
 plugins:
+    - mknotebooks:
+        binder: true
+        binder_service_name: "gh"
+        binder_branch: "SubhadityaMukherjee/openml_docs/attempting_to_unify_documentation"
+        binder_ui: "lab"
     - redirects:
         redirect_maps:
             'APIs.md': 'https://www.openml.org/apis'
@@ -78,3 +99,4 @@ extra_css:
   - css/extra.css
 extra_javascript:
   - js/extra.js
+
