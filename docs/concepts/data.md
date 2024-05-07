@@ -2,7 +2,8 @@
 ## Discovery
 OpenML allows fine-grained search over thousands of machine learning datasets. Via the <a href="https://www.openml.org">website</a>, you can filter by many dataset properties, such as size, type, format, and many more. Via the [APIs](https://www.openml.org/apis) you have access to many more filters, and you can download a complete table with statistics of all datasest. Via the APIs you can also load datasets directly into your preferred data structures such as numpy ([example in Python](https://openml.github.io/openml-python/main/examples/20_basic/simple_datasets_tutorial.html#sphx-glr-examples-20-basic-simple-datasets-tutorial-py)). We are also working on better organization of all datasets by topic <i class="fa fa-heart fa-fw fa-lg" style="color:red"></i>
 
-<img src="img/data-ss.png" style="width:100% ;max-width:1000px;"/>
+<!-- <img src="../img/data-ss.png" style="width:100% ;max-width:1000px;"/> -->
+![](../img/data-ss.png)
 
 ## Sharing
 You can upload and download datasets through the <a href="https://www.openml.org/auth/upload-dataset" target="_blank">website</a> or though the [APIs](https://www.openml.org/apis) (recommended). You can share data directly from common data science libraries, e.g. from <a href="https://openml.github.io/openml-python/main/examples/30_extended/create_upload_tutorial.html#sphx-glr-examples-30-extended-create-upload-tutorial-py" target="_blank">Python</a> or <a href="https://openml.github.io/openml-r/articles/OpenML.html#upload-a-data-set-1" target="_blank">R</a> dataframes, in a few lines of code. The OpenML APIs will automatically extract lots of meta-data and store all datasets in a uniform format.</p>
@@ -24,7 +25,8 @@ You can upload and download datasets through the <a href="https://www.openml.org
 
 Every dataset gets a dedicated page on OpenML with all known information, and can be edited further online.
 
-<img src="img/data-ss2.png" style="width:100% ;max-width:1000px;"/>
+<!-- <img src="../img/data-ss2.png" style="width:100% ;max-width:1000px;"/> -->
+![](../img/data-ss2.png)
 
 Data hosted elsewhere can be referenced by URL. We are also working on interconnecting OpenML with other machine learning data set repositories <i class="fa fa-heart fa-fw fa-lg" style="color:red"></i>
 
@@ -33,7 +35,8 @@ OpenML will automatically analyze the data and compute a range of <a href="https
 
 The Analysis tab (see image below, or <a href="https://www.openml.org/search?type=data&status=active&id=180" target="_blank">try it live</a>) also shows an automated and interactive analysis of all datasets. This runs on open-source Python code via <a href="https://plotly.com/dash/" target="_blank">Dash</a> and we <a href="https://github.com/openml/openml.org" target="_blank">welcome all contributions</a> <i class="fa fa-heart fa-fw fa-lg" style="color:red"></i>
 
-<img src="img/data-ss1.png" style="width:100% ;max-width:1000px;"/>
+<!-- <img src="img/data-ss1.png" style="width:100% ;max-width:1000px;"/> -->
+![](../img/data-ss1.png)
 
 The third tab, 'Tasks', lists all tasks created on the dataset. More on that below.
 

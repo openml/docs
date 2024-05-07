@@ -6,7 +6,8 @@ Flows are machine learning pipelines, models, or scripts. They are typically upl
 
 Every flow gets a dedicated page with all known information. The Analysis tab shows an automated interactive analysis of all collected results. For instance, below are the results of a <a href="https://www.openml.org/f/17691" target="_blank">scikit-learn pipeline</a> including missing value imputation, feature encoding, and a RandomForest model. It shows the results across multiple tasks, and how the AUC score is affected by certain hyperparameters.
 
-<img src="img/flow_top.png" style="width:100%; max-width:800px;"/>
+<!-- <img src="img/flow_top.png" style="width:100%; max-width:800px;"/> -->
+![](../img/flow_top.png)
 
 This helps to better understand specific models, as well as their strengths and weaknesses.
 

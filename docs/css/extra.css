@@ -56,3 +56,35 @@ table {
     --md-primary-fg-color--light: #000482;
     --md-primary-fg-color--dark:  #b5b7ff;
   }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h2 {
+    margin-top: 0;
+  }
+
+  .card p {
+    margin-bottom: 0;}
+
+    .github-logo {
+      height: 15px;
+      width: 13px;
+      margin-left: 10px;
+  }
+
+  iframe[seamless] {
+    border: none;
+}

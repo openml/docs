@@ -42,24 +42,25 @@ nav:
   - Integrations:
       - Python Integrations:
           - Scikit-learn:
-              - "Introduction": Scikit-learn/index.md
+              - "Introduction": integrations/Scikit-learn/index.md
               - Tutorials:
-                  - "Loading a dataset": Scikit-learn/datasets_tutorial.ipynb
+                  - "Loading a dataset": integrations/Scikit-learn/datasets_tutorial.ipynb
           - "Pytorch": Pytorch.md
           - "Tensorflow": Tensorflow.md
           - "Keras": Keras.md
       - R Integrations:
-          - MLR: R-integration/mlr.md
+          - "MLR": integrations/mlr.md
+      - Julia Integrations:
+          - "Flux": integrations/Julia.md
+      - Other Integrations:
+          - "Weka": integrations/Weka.md
+          - "MOA": integrations/MOA.md
+          - "Java": integrations/Java.md
+          - "REST API": integrations/Rest.md
+      - Developer Guide:
+          - "Creating a new integration": integrations/creating_extensions.md
   - Ecosystem:
       - "Introduction" : ecosystem.md
-      - Community:
-          - "WEKA": Weka.md
-          - "MOA": MOA.md
-          - "Julia": Julia.md 
-          - "Java": Java.md
-          - "REST API": REST-API.md
-      - Developer Guide:
-          - "Creating a new integration": creating_extensions.md
   - AutoML:
       - "AutoML Benchmark": automl/AutoML-Benchmark.md
       - "Important Parameters": automl/important_params.md
