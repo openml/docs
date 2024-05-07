@@ -1,26 +1,22 @@
 site_name: OpenML Documentation
-repo_url: https://github.com/SubhadityaMukherjee/openml_docs/
+# repo_url: https://github.com/openml
+repo_url: https://github.com/SubhadityaMukherjee/openml_docs/blob/master/docs
+binder_url: SubhadityaMukherjee/openml_docs/tree/master/docs
 site_url: https://docs.openml.org/
-edit_uri: edit/master/docs/
 theme:
   name: "material"
   language: "en"
   palette:
-    primary: darkblue
+    # primary: darkblue
+    primary: white
     accent: indigo
   font:
     text: "Roboto"
     code: "Roboto Mono"
-  icon:
-    logo: material/library
+  logo: img/openmllogo.png
   features:
     - navigation.tabs
     - content.action.edit
-  plugins:
-    - search:
-      separator: '[\s\-\.]+'
-      lang:
-        - en
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.betterem:
@@ -28,8 +24,6 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -43,33 +37,41 @@ markdown_extensions:
   - toc:
       permalink: true
 nav:
-  - Get started: index.md
+  - Welcome: index.md
+  - ... | concepts/*
   - Integrations:
       - Python Integrations:
           - Scikit-learn:
               - "Introduction": Scikit-learn/index.md
-              # - "Basic Tutorial": Scikit-learn/sklearn-basic-tutorial.md
-              - "Basic Tutorial": Scikit-learn/datasets_tutorial.ipynb
-              - "Advanced Tutorial": Scikit-learn/sklearn-advanced-tutorial.md
+              - Tutorials:
+                  - "Loading a dataset": Scikit-learn/datasets_tutorial.ipynb
           - "Pytorch": Pytorch.md
           - "Tensorflow": Tensorflow.md
           - "Keras": Keras.md
       - R Integrations:
           - MLR: R-integration/mlr.md
-      - Other Integrations:
+  - Ecosystem:
+      - "Introduction" : ecosystem.md
+      - Community:
           - "WEKA": Weka.md
           - "MOA": MOA.md
           - "Julia": Julia.md 
           - "Java": Java.md
           - "REST API": REST-API.md
-      - "Creating a new integration": creating_extensions.md
+      - Developer Guide:
+          - "Creating a new integration": creating_extensions.md
   - AutoML:
-      - "AutoML Benchmark": AutoML-Benchmark.md
+      - "AutoML Benchmark": automl/AutoML-Benchmark.md
+      - "Important Parameters": automl/important_params.md
+      - Tutorials:
+          - "Basic Example - Random Forest": automl/basic_example.md
+          - "Specific Task and Fold": automl/specific_task_fold_example.md
   - Benchmarking: benchmark.md
   - Governance: Governance.md
   - Contributing:
       - "How to Contribute": contributing/Contributing.md
       - "Documenting": contributing/OpenML-Docs.md
+      - "Visual Guidelines": contributing/Visual-Guidelines.md
       - "Website":
           - "Getting started": contributing/website/Website.md
           - "Flask backend": contributing/website/Flask.md
@@ -95,6 +97,12 @@ plugins:
         redirect_maps:
             'APIs.md': 'https://www.openml.org/apis'
             'REST-API.md': 'https://www.openml.org/apis'
+    - search:
+        separator: '[\s\-\.]+'
+        lang:
+          - en
+    - awesome-pages
+
 extra_css:
   - css/extra.css
 extra_javascript:

@@ -1,6 +1,6 @@
 # scikit-learn
 
-OpenML is readily integrated with scikit-learn through the [Python API](https://github.com/openml/openml-python).
+OpenML is readily integrated with scikit-learn through the [Python API](https://openml.github.io/openml-python/main/api.html).
 This page provides a brief overview of the key features and installation instructions. For more detailed API documentation, please refer to the [official documentation](https://openml.github.io/openml-python/main/api.html).
 
 ## Key features:
