@@ -14,4 +14,4 @@ https://github.com/openml/openml-R
 https://github.com/JuliaAI/OpenML.jl/tree/master
 https://github.com/mbillingr/openml-rust
 https://github.com/openml/openml-dotnet
-https://github.com/openml/automlbenchmark/"
+https://github.com/openml/automlbenchmark/

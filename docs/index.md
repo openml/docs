@@ -22,6 +22,8 @@ The OpenML package is available in many languages and across libraries. For more
 [RUST](https://github.com/mbillingr/openml-rust): Install from source<br>
 [.Net](https://github.com/openml/openml-dotnet): `Install-Package openMl`
 
+You might also need to set up the API key. For more information, see the [API key page](./apikey.md)
+
 ## Learning OpenML
 
 Aside from the individual package documentations, you can learn more about OpenML through the following resources:<br>

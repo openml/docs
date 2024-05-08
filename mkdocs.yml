@@ -39,13 +39,18 @@ markdown_extensions:
 nav:
   - Welcome: index.md
   - ... | concepts/*
+  - Getting Started: integrations/getting_started.ipynb
   - Integrations:
       - Python Integrations:
           - Scikit-learn:
               - "Introduction": integrations/Scikit-learn/index.md
               - Tutorials:
+                  - "Basic tutorial": integrations/Scikit-learn/basic_tutorial.ipynb
                   - "Loading a dataset": integrations/Scikit-learn/datasets_tutorial.ipynb
-          - "Pytorch": Pytorch.md
+          - Pytorch:
+              - "Introduction" : integrations/Pytorch/index.md
+              - Tutorials:
+                  - "Basic Example": integrations/Pytorch/basic_tutorial.ipynb
           - "Tensorflow": Tensorflow.md
           - "Keras": Keras.md
       - R Integrations:
@@ -59,8 +64,8 @@ nav:
           - "REST API": integrations/Rest.md
       - Developer Guide:
           - "Creating a new integration": integrations/creating_extensions.md
-  - Ecosystem:
-      - "Introduction" : ecosystem.md
+  # - Ecosystem:
+      # - "Introduction" : ecosystem.md
   - AutoML:
       - "AutoML Benchmark": automl/AutoML-Benchmark.md
       - "Important Parameters": automl/important_params.md
@@ -87,13 +92,11 @@ nav:
       - "Datasets": contributing/Datasets.md
       - "Resources": contributing/resources.md
       - "Terms" : contributing/terms.md
-  - Showcase: showcase.md
+  - Showcase:
+      - "Code": showcase/index.md
+      - "Research": showcase/research.md
 plugins:
     - mknotebooks
-    #     binder: true
-    #     binder_service_name: "gh"
-    #     binder_branch: "main"
-    #     binder_ui: "lab"
     - redirects:
         redirect_maps:
             'APIs.md': 'https://www.openml.org/apis'
