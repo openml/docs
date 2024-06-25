@@ -1,26 +1,22 @@
 site_name: OpenML Documentation
-repo_url: https://github.com/openml/docs/
+# repo_url: https://github.com/openml
+repo_url: https://github.com/SubhadityaMukherjee/openml_docs/blob/master/docs
+binder_url: SubhadityaMukherjee/openml_docs/tree/master/docs
 site_url: https://docs.openml.org/
-edit_uri: edit/master/docs/
 theme:
   name: "material"
   language: "en"
   palette:
-    primary: indigo
+    # primary: darkblue
+    primary: white
     accent: indigo
   font:
     text: "Roboto"
     code: "Roboto Mono"
-  icon:
-    logo: material/library
+  logo: img/openmllogo.png
   features:
     - navigation.tabs
     - content.action.edit
-  plugins:
-    - search:
-      separator: '[\s\-\.]+'
-      lang:
-        - en
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.betterem:
@@ -28,8 +24,6 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -38,43 +32,87 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - fontawesome_markdown
+  # - fontawesome_markdown
+  - pymdownx.tabbed:
+      alternate_style: true
   - admonition
   - toc:
       permalink: true
 nav:
-  - Bootcamp:
-      - Get started: index.md
-      - Integrations:
-          - "scikit-learn": sklearn.md
-          - "mlr": mlr.md
-          - "WEKA": Weka.md
-          - "MOA": MOA.md
-      - Benchmarking: benchmark.md
-      - Governance: Governance.md
-      - Terms: terms.md
-  - Contributors:
-      - "How to Contribute": Contributing.md
-      - "Documenting": OpenML-Docs.md
+  - Welcome: index.md
+  - ... | concepts/*
+  - Getting Started: integrations/getting_started.ipynb
+  - Integrations:
+      - Python Integrations:
+          - Scikit-learn:
+              - "Introduction": integrations/Scikit-learn/index.md
+              - Tutorials:
+                  - "Basic tutorial": integrations/Scikit-learn/basic_tutorial.ipynb
+                  - "Loading a dataset": integrations/Scikit-learn/datasets_tutorial.ipynb
+          - Pytorch:
+              - "Introduction" : integrations/Pytorch/index.md
+              - Tutorials:
+                  - "Basic Example": integrations/Pytorch/basic_tutorial.ipynb
+          - "Tensorflow": Tensorflow.md
+          - "Keras": Keras.md
+      - R Integrations:
+          - "MLR": integrations/mlr.md
+      - Julia Integrations:
+          - "Flux": integrations/Julia.md
+      - Other Integrations:
+          - "Weka": integrations/Weka.md
+          - "MOA": integrations/MOA.md
+          - "Java": integrations/Java.md
+          - "REST API": integrations/Rest.md
+      - Developer Guide:
+          - "Creating a new integration": integrations/creating_extensions.md
+  # - Ecosystem:
+      # - "Introduction" : ecosystem.md
+  - AutoML:
+      - "AutoML Benchmark": automl/AutoML-Benchmark.md
+      - "Important Parameters": automl/important_params.md
+      - Tutorials:
+          - "Basic Example - Random Forest": automl/basic_example.md
+          - "Specific Task and Fold": automl/specific_task_fold_example.md
+  - Benchmarking: benchmark.md
+  - Governance: Governance.md
+  - Contributing:
+      - "How to Contribute": contributing/Contributing.md
+      - "Documenting": contributing/OpenML-Docs.md
+      - "Visual Guidelines": contributing/Visual-Guidelines.md
       - "Website":
-          - "Getting started": Website.md
-          - "Flask backend": Flask.md
-          - "React frontend": React.md
-          - "Dash visualizations": Dash.md
+          - "Getting started": contributing/website/Website.md
+          - "Flask backend": contributing/website/Flask.md
+          - "React frontend": contributing/website/React.md
+          - "Dash visualizations": contributing/website/Dash.md
       - "Backend":
-          - "Local Installation": Local-Installation.md
-          - "API Development": API-development.md
-          - "Evaluation Engine": Java-App.md
-      - "OpenML Definition": OpenML_definition.md
-      - "Client Development": Client-API-Standards.md
-      - "Datasets": Datasets.md
-      - "Resources": resources.md
+          - "Local Installation": contributing/backend/Local-Installation.md
+          - "API Development": contributing/backend/API-development.md
+          - "Evaluation Engine": contributing/backend/Java-App.md
+      - "OpenML Definition": contributing/OpenML_definition.md
+      - "Client Development": contributing/Client-API-Standards.md
+      - "Datasets": contributing/Datasets.md
+      - "Resources": contributing/resources.md
+      - "Terms" : contributing/terms.md
+  - Showcase:
+      - "Code": showcase/index.md
+      - Research:
+          - showcase/research.md
+
 plugins:
+    - mknotebooks
     - redirects:
         redirect_maps:
             'APIs.md': 'https://www.openml.org/apis'
             'REST-API.md': 'https://www.openml.org/apis'
+    - search:
+        separator: '[\s\-\.]+'
+        lang:
+          - en
+    - awesome-pages
+
 extra_css:
   - css/extra.css
 extra_javascript:
   - js/extra.js
+

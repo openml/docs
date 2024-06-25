@@ -1,0 +1,17 @@
+https://github.com/openml/openml-croissant
+https://github.com/openml/flow-visualization
+https://github.com/openml/continual-automl
+https://github.com/openml/openml-mxnet
+https://github.com/openml/openml-onnx
+https://github.com/openml/openml-azure
+https://github.com/openml/openml-rapidminer
+https://github.com/openml/OpenmlCortana
+https://github.com/openml/openml-python
+https://github.com/openml/openml-pytorch
+https://github.com/openml/openml-keras
+https://github.com/openml/openml-tensorflow
+https://github.com/openml/openml-R
+https://github.com/JuliaAI/OpenML.jl/tree/master
+https://github.com/mbillingr/openml-rust
+https://github.com/openml/openml-dotnet
+https://github.com/openml/automlbenchmark/

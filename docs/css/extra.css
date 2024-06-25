@@ -42,3 +42,49 @@ img[alt="icon"] {
     margin-left: -45px;
   }
 }
+table {
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  :root {
+    --md-primary-fg-color:        #1E88E5;
+    --md-primary-fg-color--light: #000482;
+    --md-primary-fg-color--dark:  #b5b7ff;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h2 {
+    margin-top: 0;
+  }
+
+  .card p {
+    margin-bottom: 0;}
+
+    .github-logo {
+      height: 15px;
+      width: 13px;
+      margin-left: 10px;
+  }
+
+  iframe[seamless] {
+    border: none;
+}
