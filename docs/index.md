@@ -13,14 +13,46 @@
 ## Installation
 
 The OpenML package is available in many languages and across libraries. For more information about them, see the [Integrations](./integrations/index.md) page.<br><br>
-[Python/sklearn](https://github.com/openml/openml-python): `pip install openml`<br>
-</t> [Pytorch](https://github.com/openml/openml-pytorch): `pip install openml-pytorch`<br>
-</t> [Keras](https://github.com/openml/openml-keras): `pip install openml-keras` <br>
-</t> [TensorFlow](https://github.com/openml/openml-tensorflow): `pip install openml-tensorflow`<br>
-[R](https://github.com/openml/openml-R): `install.packages("mlr3oml")`<br>
-[Julia](https://github.com/JuliaAI/OpenML.jl/tree/master): `using Pkg;Pkg.add("OpenML")`<br>
-[RUST](https://github.com/mbillingr/openml-rust): Install from source<br>
-[.Net](https://github.com/openml/openml-dotnet): `Install-Package openMl`
+
+=== "Python/sklearn"
+
+    - [Python/sklearn repository](https://github.com/openml/openml-python)
+    -  `pip install openml`
+
+=== "Pytorch"
+
+    -  [Pytorch repository](https://github.com/openml/openml-pytorch)
+    -  `pip install openml-pytorch`
+
+=== "Keras"
+
+    - [Keras repository](https://github.com/openml/openml-keras)
+    - `pip install openml-keras`
+
+=== "TensorFlow"
+    
+    - [TensorFlow repository](https://github.com/openml/openml-tensorflow)
+    - `pip install openml-tensorflow`
+  
+=== "R"
+        
+    - [R repository](https://github.com/openml/openml-R)
+    - `install.packages("mlr3oml")`
+=== "Julia"
+        
+    - [Julia repository](https://github.com/JuliaAI/OpenML.jl/tree/master)
+    - `using Pkg;Pkg.add("OpenML")`
+
+=== "RUST"
+        
+    - [RUST repository](https://github.com/mbillingr/openml-rust)
+    - Install from source
+
+=== ".Net"
+        
+    - [.Net repository](https://github.com/openml/openml-dotnet)
+    - `Install-Package openMl`
+
 
 You might also need to set up the API key. For more information, see the [API key page](./apikey.md)
 
