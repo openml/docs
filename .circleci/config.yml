@@ -3,7 +3,7 @@ version: 2
 jobs:
   deploydocs:
     docker:
-      - image: python:3.7
+      - image: python:3.10
     steps:
       - checkout
       - run:
