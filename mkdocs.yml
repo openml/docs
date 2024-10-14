@@ -106,6 +106,7 @@ nav:
             - showcase/research.md
 plugins:
     - mkdocs-jupyter
+    - awesome-pages
     - redirects:
         redirect_maps:
             'APIs.md': 'https://www.openml.org/apis'
@@ -114,7 +115,9 @@ plugins:
         separator: '[\s\-\.]+'
         lang:
             - en
-    - awesome-pages
+    - multirepo:
+        cleanup: true
+        keep_docs_dir: true
 
 extra_css:
     - css/extra.css
