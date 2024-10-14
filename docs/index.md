@@ -2,7 +2,8 @@
 
 <h1>An <i>open, automated, and frictionless</i> machine learning environment.</h1>
 
-<p><i class="fa fa-layer-group fa-fw fa-lg"></i><a href="https://www.openml.org/search?type=data" target="_blank">&nbsp; 1000s of data sets</a>, uniformly formatted, easy to load, organized online</p>
+:fontawesome-solid-layer-group: </i><a href="https://www.openml.org/search?type=data" target="_blank">&nbsp; 1000s of data sets</a>, uniformly formatted, easy to load, organized online
+
 <p><i class="fa fa-rocket fa-fw fa-lg"></i> <a href="https://www.openml.org/search?type=flow" target="_blank">&nbsp;Models and pipelines</a> automatically uploaded from machine learning libraries</p>
 <p><i class="fa fa-code fa-fw fa-lg"></i>&nbsp; <a href="https://www.openml.org/apis">Extensive APIs</a> to integrate OpenML into your tools and scripts</p>
 <p><i class="fa fa-flask fa-fw fa-lg"></i>&nbsp; <a href="https://www.openml.org/search?type=run" target="_blank"> Easily reproducible results</a> (e.g. models, evaluations) for comparison and reuse</p>
