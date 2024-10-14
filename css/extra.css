@@ -10,6 +10,10 @@
   max-width: 122rem !important;
 }
 
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+  height: 2.2rem;
+}
+
 .framed-python {
   margin-top: -70px;
   overflow: hidden;
