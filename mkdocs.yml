@@ -7,10 +7,27 @@ site_url: https://docs.openml.org/
 theme:
     name: "material"
     language: "en"
+    features:
+        - content.code.copy
+        - content.action.edit
+        - content.action.view
     palette:
-    # primary: darkblue
-        primary: white
-        accent: indigo
+        # Light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: white
+          accent: indigo
+          toggle:
+            icon: material/toggle-switch-off-outline
+            name: Switch to dark mode
+        # Dark mode
+        - media: "(prefers-color-scheme: dark)"
+          primary: indigo
+          accent: indigo
+          scheme: slate
+          toggle:
+            icon: material/toggle-switch
+            name: Switch to light mode
     font:
         text: "Roboto"
         code: "Roboto Mono"
