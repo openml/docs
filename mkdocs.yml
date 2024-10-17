@@ -1,13 +1,14 @@
-site_name: OpenML Documentation
+site_name: OpenML Docs
 repo_url: https://github.com/openml/docs/
 repo_name: 'openml/docs'
-edit_uri: edit/master/
-binder_url: openml/docs/tree/master/docs
+edit_uri: edit/master/docs/
 site_url: https://docs.openml.org/
 theme:
     name: "material"
     language: "en"
     features:
+        - navigation.tabs
+        - navigation.tabs.sticky
         - content.code.copy
         - content.action.edit
         - content.action.view
@@ -32,9 +33,6 @@ theme:
         text: "Roboto"
         code: "Roboto Mono"
     logo: img/openml.png
-    features:
-        - navigation.tabs
-        - content.action.edit
     icon:
         edit: material/pencil 
         view: material/eye
@@ -62,11 +60,85 @@ markdown_extensions:
     - pymdownx.emoji:
         emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+        anchor_linenums: true
+
+plugins:
+    - multirepo:
+        cleanup: false
+    - autorefs
+    - section-index
+    #- awesome-pages
+    - mkdocs-jupyter:
+        remove_tag_config:
+            remove_input_tags:
+                - hide_code
+    - redirects:
+        redirect_maps:
+            'APIs.md': 'https://www.openml.org/apis'
+            'REST-API.md': 'https://www.openml.org/apis'
+    - search:
+        separator: '[\s\-\.]+'
+        lang:
+            - en
+    #- mkdocstrings:
+    #    handlers:
+    #        python:
+    #        options:
+    #            docstring_style: numpy
+    #- gen-files:
+    #    scripts:
+    #        - scripts/gen_ref_pages.py
+    #- literate-nav:
+    #    nav_file: SUMMARY.md
 nav:
-    - Welcome: index.md
-    - ... | concepts/*
-    - Getting Started: integrations/getting_started.ipynb
-    - Integrations:
+    - OpenML:
+        - Introduction: index.md
+        - Getting Started: integrations/getting_started.ipynb
+        - Concepts:
+            - Main concepts: concepts/index.md
+            - Data: concepts/data.md
+            - Tasks: concepts/tasks.md
+            - Flows: concepts/flows.md
+            - Runs: concepts/runs.md
+            - Collections: concepts/benchmarking.md
+            - Tagging: concepts/tagging.md
+            - Openness: concepts/openness.md
+            - Sharing: concepts/sharing.md
+        - Governance: Governance.md
+    - Showcase:
+        - "Code": showcase/index.md
+        - Research: showcase/research.md
+    - Benchmarking:
+        - Benchmarking Suites: benchmark.md
+        - AutoML Benchmark:
+            - "AutoML Benchmark": automl/AutoML-Benchmark.md
+            - "Important Parameters": automl/important_params.md
+            - Tutorials:
+                - "Basic Example - Random Forest": automl/basic_example.md
+                - "Specific Task and Fold": automl/specific_task_fold_example.md
+    - Contributing:
+        - "How to Contribute": contributing/Contributing.md
+        - "Documenting": contributing/OpenML-Docs.md
+        - "Visual Guidelines": contributing/Visual-Guidelines.md
+        - "Website":
+            - "Getting started": contributing/website/Website.md
+            - "Flask backend": contributing/website/Flask.md
+            - "React frontend": contributing/website/React.md
+            - "Dash visualizations": contributing/website/Dash.md
+        - "Backend":
+            - "Local Installation": contributing/backend/Local-Installation.md
+            - "API Development": contributing/backend/API-development.md
+            - "Evaluation Engine": contributing/backend/Java-App.md
+        - "OpenML Definition": contributing/OpenML_definition.md
+        - "Client Development": contributing/Client-API-Standards.md
+        - "Datasets": contributing/Datasets.md
+        - "Resources": contributing/resources.md
+        - "Terms" : contributing/terms.md
+    #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
+    - PyTorch: '!import https://github.com/openml/openml-pytorch'
+    - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
+    - Ecosystem:
         - Python Integrations:
             - Scikit-learn:
                 - "Introduction": integrations/Scikit-learn/index.md
@@ -90,52 +162,6 @@ nav:
             - "REST API": integrations/Rest.md
         - Developer Guide:
             - "Creating a new integration": integrations/creating_extensions.md
-    - Benchmarking:
-        - Benchmarking Suites: benchmark.md
-        - AutoML Benchmark:
-            - "AutoML Benchmark": automl/AutoML-Benchmark.md
-            - "Important Parameters": automl/important_params.md
-            - Tutorials:
-                - "Basic Example - Random Forest": automl/basic_example.md
-                - "Specific Task and Fold": automl/specific_task_fold_example.md
-    - Governance: Governance.md
-    - Contributing:
-        - "How to Contribute": contributing/Contributing.md
-        - "Documenting": contributing/OpenML-Docs.md
-        - "Visual Guidelines": contributing/Visual-Guidelines.md
-        - "Website":
-            - "Getting started": contributing/website/Website.md
-            - "Flask backend": contributing/website/Flask.md
-            - "React frontend": contributing/website/React.md
-            - "Dash visualizations": contributing/website/Dash.md
-        - "Backend":
-            - "Local Installation": contributing/backend/Local-Installation.md
-            - "API Development": contributing/backend/API-development.md
-            - "Evaluation Engine": contributing/backend/Java-App.md
-        - "OpenML Definition": contributing/OpenML_definition.md
-        - "Client Development": contributing/Client-API-Standards.md
-        - "Datasets": contributing/Datasets.md
-        - "Resources": contributing/resources.md
-        - "Terms" : contributing/terms.md
-    - Showcase:
-        - "Code": showcase/index.md
-        - Research:
-            - showcase/research.md
-plugins:
-    - mkdocs-jupyter
-    - awesome-pages
-    - redirects:
-        redirect_maps:
-            'APIs.md': 'https://www.openml.org/apis'
-            'REST-API.md': 'https://www.openml.org/apis'
-    - search:
-        separator: '[\s\-\.]+'
-        lang:
-            - en
-    - multirepo:
-        cleanup: true
-        keep_docs_dir: true
-
 extra_css:
     - css/extra.css
 extra_javascript:
