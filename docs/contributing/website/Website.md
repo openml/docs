@@ -66,7 +66,8 @@ npm run dev
 ```
 
 ## Structure
-<img src="../img/structure.png" alt="OpenML Website structure" width="500"/>
+<img src="https://github.com/openml/docs/raw/master/docs/img/structure.png" alt="components" width="80%"/>
+
 
 The website is built on the following components:  
 

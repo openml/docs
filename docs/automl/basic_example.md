@@ -79,19 +79,19 @@ for the `runbenchmark.py` script, but the most important ones are:
 ### Framework (required)
 
 - The AutoML framework or baseline to evaluate and is not case-sensitive. See
-  [integrated frameworks](WEBSITE/frameworks.html) for a list of supported frameworks. 
+  [integrated frameworks](https://openml.github.io/automlbenchmark/frameworks.html) for a list of supported frameworks. 
   In the above example, this benchmarked framework `randomforest`.
 
 ### Benchmark (optional, default='test')
 
 - The benchmark suite is the dataset or set of datasets to evaluate the framework on.
-  These can be defined as on [OpenML](https://www.openml.org) as a [study or task](extending/benchmark.md#defining-a-benchmark-on-openml) 
-  (formatted as `openml/s/X` or `openml/t/Y` respectively) or in a [local file](extending/benchmark.md#defining-a-benchmark-with-a-file).
+  These can be defined as on [OpenML](https://www.openml.org) as a [study or task](https://openml.github.io/automlbenchmark/docs/extending/benchmark.md#defining-a-benchmark-on-openml) 
+  (formatted as `openml/s/X` or `openml/t/Y` respectively) or in a [local file](https://openml.github.io/automlbenchmark/docs/extending//benchmark.md#defining-a-benchmark-with-a-file).
   The default is a short evaluation on two folds of `iris`, `kc2`, and `cholesterol`.
 
 ### Constraints (optional, default='test')
 
-- The constraints applied to the benchmark as defined by default in [constraints.yaml](GITHUB/resources/constraints.yaml).
+- The constraints applied to the benchmark as defined by default in [constraints.yaml](https://github.com/openml/automlbenchmark/blob/master/resources/constraints.yaml).
   These include time constraints, memory constrains, the number of available cpu cores, and more.
   Default constraint is `test` (2 folds for 10 min each). 
 

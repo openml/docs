@@ -1,4 +1,12 @@
-OpenML is at its core a database, from which entities can be downloaded and to which entities can be uploaded. Although there are various interfaces for these, at the core all communication with the database goes through the API. In this document, we describe the standard how to upload entities to OpenML and what the resulting database state will be.
+OpenML is at its core a meta-database, from which datasets, pipelines (flows), experiments (runs) and other entities can be downloaded and uploaded,
+all described using a clearly defined meta-data standard. In this document, we describe the standard how to upload entities to OpenML and what the resulting database state will be.
+
+!!! tip ":croissant: Croissant"
+    OpenML has partnered with MLCommons, Google, Kaggle, HuggingFace, and a consortium of other partners to define a new metadata standard for machine
+    learning datasets: :croissant: [Croissant](https://mlcommons.org/working-groups/data/croissant/)!
+    You can already download all OpenML datasets in the Croissant format, and we're working further supporting and extending Croissant.
+
+Below is the OpenML metadata standard for version 1 of the API.
 
 ## Data
 
@@ -28,7 +36,7 @@ Duplicate tasks (i.e., same value for `task_type_id` and all `input` fields equa
 
 When creating a task, the API checks for all of the input fields whether the input is legitimate. (Todo: describe the checks and what they depend on).
 
-## FLow
+## Flow
 
 Flows are uploaded through the function [post flow](https://www.openml.org/api_docs#!/flow/post_flow). The following file is needed:
 
@@ -74,21 +82,4 @@ The contents of the prediction file depends on the task type.
 - Per optimized parameter a column that has the name of the parameter and the prefix "parameter_"
 - setup_string: Due to legacy reasons accepted, but will be ignored by the default evaluation engine
 
-(open question) what is in the same fold/repeat combination the same config is ran multiple times with same evaluation?
 Traces that have a different set of columns will be rejected.
-
-## Data Features
-
-Data features are uploaded by the Java Evaluation Engine and will be documented later.
-
-## Data Qualities
-
-Data qualities are uploaded by the Java Evaluation Engine and will be documented later.
-
-## Evaluations
-
-Evaluations are uploaded by Java Evaluation Engine and will be documented later.
-
-## Trace Iterations
-
-Trace Iterations are uploaded by Java Evaluation Engine and will be documented later.

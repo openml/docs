@@ -20,7 +20,7 @@ We are currently looking for help with:
 - Frontend / UX / Design of the website
 - Backend / API
 - Outreach / making OpenML better known (especially in non-ML-communities, where people have data but no analysis experise)
-- Helping with the interfaces ([Python](Python-start), [WEKA](https://www.openml.org/#WEKA), [MOA](https://www.openml.org/#plugin_moa), [RapidMiner](https://www.openml.org/#plugin_rm), [Java](Java-guide), [R](R-guide); find the links to GitHub repos [here](https://github.com/openml/OpenML/wiki))
+- Helping with the interfaces (Python,R,Julia,Java) and tool integrations
 - Helping with documenting the interfaces or the API
 - What could we do better to get new users started? Help us to figure out what is difficult to understand about OpenML. If you _are_ a new user, you are the perfect person for this!
 
@@ -30,7 +30,7 @@ Check out the issues labeled [Good first issue](https://github.com/issues?q=is%3
 
 ### Change the world
 
-If you have your own ideas on how you want to contribute, please [get in touch](Communication-Channels)! We are very friendly and open to new ideas :wink:
+If you have your own ideas on how you want to contribute, please get in touch! We are very friendly and open to new ideas :wink:
 
 ## Communication channels:
 
@@ -47,14 +47,14 @@ Anyone with a GitHub account can write issues. We are happy if people get involv
 
 Please post issues in the relevant issue tracker.
 
-- <a href="https://github.com/openml/OpenML">:fa-github: OpenML Core</a> - Web services and API
-- <a href="https://github.com/openml/openml.org">:fa-github: Website</a> - The (new) OpenML website
-- <a href="https://github.com/openml/docs">:fa-github: Docs</a> - The documentation pages
-- <a href="https://github.com/openml/python">:fa-github: Python API</a> - The Python API
-- <a href="https://github.com/openml/r">:fa-github: R API</a> - The OpenML R package
-- <a href="https://github.com/openml/java">:fa-github: Java API</a> - The Java API and Java-based plugins
-- <a href="https://github.com/openml/data">:fa-github: Datasets</a> - For issues about datasets
-- <a href="https://github.com/openml/blog">:fa-github: Blog</a> - The OpenML Blog
+- <a href="https://github.com/openml/OpenML">:simple-github: OpenML Core</a> - Web services and API
+- <a href="https://github.com/openml/openml.org">:simple-github: Website</a> - The (new) OpenML website
+- <a href="https://github.com/openml/docs">:simple-github: Docs</a> - The documentation pages
+- <a href="https://github.com/openml/python">:simple-github: Python API</a> - The Python API
+- <a href="https://github.com/openml/r">:simple-github: R API</a> - The OpenML R package
+- <a href="https://github.com/openml/java">:simple-github: Java API</a> - The Java API and Java-based plugins
+- <a href="https://github.com/openml/data">:simple-github: Datasets</a> - For issues about datasets
+- <a href="https://github.com/openml/blog">:simple-github: Blog</a> - The OpenML Blog
 
 ### Slack
 
@@ -63,16 +63,6 @@ https://openml.slack.com
 - Informal communication
 
 We use slack for day to day discussions and news. If you want to join the OpenML slack chat, please message us (openmlHQ@googlegroups.com).
-
-### Mailing List
-
-https://groups.google.com/forum/#!forum/openml
-
-- Information on upcoming workshop
-- Other major information
-- Urgent or important issues
-
-If you want to receive information on major news or upcoming events, sign up for the [mailing list](https://groups.google.com/forum/#!forum/openml). There is a privat mailing list for [OpenML core members](https://github.com/openml/OpenML/wiki/Core-team) which you can contact by sending an e-mail to openmlHQ@googlegroups.com.
 
 ### Twitter (@open_ml)
 

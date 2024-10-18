@@ -106,9 +106,11 @@ nav:
             - Openness: concepts/openness.md
             - Sharing: concepts/sharing.md
         - Governance: Governance.md
-    - Showcase:
-        - "Code": showcase/index.md
-        - Research: showcase/research.md
+        - Terms : terms.md
+        - Style guide : Style.md
+    #- Showcase:
+    #    - "Code": showcase/index.md
+    #    - Research: showcase/research.md
     - Benchmarking:
         - Benchmarking Suites: benchmark.md
         - AutoML Benchmark:
@@ -117,10 +119,29 @@ nav:
             - Tutorials:
                 - "Basic Example - Random Forest": automl/basic_example.md
                 - "Specific Task and Fold": automl/specific_task_fold_example.md
+    #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
+    - PyTorch: '!import https://github.com/openml/openml-pytorch'
+    - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
+    - Ecosystem:
+        - Overview: showcase/index.md
+        - "Python Integrations": contributing/clients/creating_extensions.md
+        - Scikit-learn:
+            - "Introduction": integrations/Scikit-learn/index.md
+            - Tutorials:
+                - "Basic tutorial": integrations/Scikit-learn/basic_tutorial.ipynb
+                - "Loading a dataset": integrations/Scikit-learn/datasets_tutorial.ipynb
+        - MLR: integrations/mlr.md
+        - "Weka": integrations/Weka.md
+        - "MOA": integrations/MOA.md
+        - "Java": integrations/Java.md
+        - "REST API": integrations/Rest.md
     - Contributing:
         - "How to Contribute": contributing/Contributing.md
-        - "Documenting": contributing/OpenML-Docs.md
-        - "Visual Guidelines": contributing/Visual-Guidelines.md
+        - "Documentation": contributing/OpenML-Docs.md
+        - "Clients":
+            - "Client development": contributing/clients/Client-API-Standards.md
+            - "Metadata definition": contributing/clients/metadata_definition.md
+            - "REST API": contributing/clients/Rest.md
         - "Website":
             - "Getting started": contributing/website/Website.md
             - "Flask backend": contributing/website/Flask.md
@@ -130,38 +151,7 @@ nav:
             - "Local Installation": contributing/backend/Local-Installation.md
             - "API Development": contributing/backend/API-development.md
             - "Evaluation Engine": contributing/backend/Java-App.md
-        - "OpenML Definition": contributing/OpenML_definition.md
-        - "Client Development": contributing/Client-API-Standards.md
-        - "Datasets": contributing/Datasets.md
         - "Resources": contributing/resources.md
-        - "Terms" : contributing/terms.md
-    #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
-    - PyTorch: '!import https://github.com/openml/openml-pytorch'
-    - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
-    - Ecosystem:
-        - Python Integrations:
-            - Scikit-learn:
-                - "Introduction": integrations/Scikit-learn/index.md
-                - Tutorials:
-                    - "Basic tutorial": integrations/Scikit-learn/basic_tutorial.ipynb
-                    - "Loading a dataset": integrations/Scikit-learn/datasets_tutorial.ipynb
-            - Pytorch:
-                - "Introduction" : integrations/Pytorch/index.md
-                - Tutorials:
-                    - "Basic Example": integrations/Pytorch/basic_tutorial.ipynb
-            - "Tensorflow": Tensorflow.md
-            - "Keras": Keras.md
-        - R Integrations:
-            - "MLR": integrations/mlr.md
-        - Julia Integrations:
-            - "Flux": integrations/Julia.md
-        - Other Integrations:
-            - "Weka": integrations/Weka.md
-            - "MOA": integrations/MOA.md
-            - "Java": integrations/Java.md
-            - "REST API": integrations/Rest.md
-        - Developer Guide:
-            - "Creating a new integration": integrations/creating_extensions.md
 extra_css:
     - css/extra.css
 extra_javascript:

@@ -2,7 +2,7 @@
 
 The defaults are very useful for performing a quick test, as the datasets are small
 and cover different task types (binary classification, multiclass classification, and 
-regression). We also have a ["validation" benchmark](GITHUB/resources/benchmarks/validation.yaml)
+regression). We also have a ["validation" benchmark](https://openml.github.io/automlbenchmark/resources/benchmarks/validation.yaml)
 suite for more elaborate testing that also includes missing data, categorical data, 
 wide data, and more. The benchmark defines 9 tasks, and evaluating two folds with a
 10-minute time constraint would take roughly 3 hours (=9 tasks * 2 folds * 10 minutes,

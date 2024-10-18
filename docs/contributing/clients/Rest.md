@@ -1,6 +1,6 @@
-# REST tutorial
+# REST API
 
-OpenML offers a RESTful Web API, with predictive URLs, for uploading and downloading machine learning resources. Try the <a href="https://www.openml.org/api_docs" target="_blank">API Documentation</a> to see examples of all calls, and test them right in your browser.
+OpenML offers a RESTful Web API, with predictive URLs, for uploading and downloading machine learning resources. Try the <a href="https://www.openml.org/apis" target="_blank">REST API Documentation</a> to see examples of all calls, and test them right in your browser.
 
 ## Getting started
 
@@ -33,7 +33,7 @@ All error messages are listed in the API documentation. E.g. try to get a non-ex
 You need to be logged in for these examples to work.
 
 ### Download a dataset
-![Dataset](img/api_get_dataset.png)
+![Dataset](../../img/api_get_dataset.png)
 
 * User asks for a dataset using the <a href="https://www.openml.org/api_docs/#!/data/get_data_id">/data/{id}</a> service. The <code>dataset id</code> is typically part of a task, or can be found on OpenML.org.
 * OpenML returns a description of the dataset as an XML file (or JSON). <a href="https://www.openml.org/api_new/v1/data/1" type="button" class="btn btn-primary btn-xs" target="_blank">Try it now</a>
@@ -41,7 +41,7 @@ You need to be logged in for these examples to work.
 * The dataset is returned by the server hosting the dataset. This can be OpenML, but also any other data repository. <a href="http://www.openml.org/data/download/1/dataset_1_anneal.arff" type="button" class="btn btn-primary btn-xs" target="_blank">Try it now</a>
 
 ### Download a flow
-![Flow](img/api_get_implementation.png)
+![Flow](../../img/api_get_implementation.png)
 
 * User asks for a flow using the <a href="https://www.openml.org/api_docs/#!/flow/get_flow_id">/flow/{id}</a> service and a <code>flow id</code>. The <code>flow id</code> can be found on OpenML.org.
 * OpenML returns a description of the flow as an XML file (or JSON). <a href="https://www.openml.org/api/v1/flow/65" type="button" class="btn btn-primary btn-xs" target="_blank">Try it now</a>
@@ -49,7 +49,7 @@ You need to be logged in for these examples to work.
 * The flow is returned by the server hosting it. This can be OpenML, but also any other code repository. <a href="http://sourceforge.net/projects/weka/files/weka-3-4/3.4.8/weka-3-4-8a.zip/download" type="button" class="btn btn-primary btn-xs" target="_blank">Try it now</a>
 
 ### Download a task
-![Task](img/api_get_task.png)
+![Task](../../img/api_get_task.png)
 
 * User asks for a task using the <a href="https://www.openml.org/api_docs/#!/task/get_task_id">/task/{id}</a> service and a <code>task id</code>. The <code>task id</code> is typically returned when searching for tasks.
 * OpenML returns a description of the task as an XML file (or JSON). <a href="https://www.openml.org/api/v1/task/1" type="button" class="btn btn-primary btn-xs" target="_blank">Try it now</a>

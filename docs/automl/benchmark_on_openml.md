@@ -1,8 +1,8 @@
 # Example: Benchmarks on OpenML
 
 In the previous examples, we used benchmarks which were defined in a local file
-([test.yaml](GITHUB/resources/benchmarks/test.yaml) and 
-[validation.yaml](GITHUB/resources/benchmarks/validation.yaml), respectively). 
+([test.yaml](https://github.com/openml/automlbenchmark/resources/benchmarks/test.yaml) and 
+[validation.yaml](https://github.com/openml/automlbenchmark/resources/benchmarks/validation.yaml), respectively). 
 However, we can also use tasks and
 benchmarking suites defined on OpenML directly from the command line. When referencing
 an OpenML task or suite, we can use `openml/t/ID` or `openml/s/ID` respectively as 

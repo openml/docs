@@ -1,4 +1,4 @@
-# Creating an Extension
+# Integrating your Python libraries
 
 OpenML-Python provides an extension interface to connect other machine
 learning libraries than scikit-learn to OpenML. Please check the

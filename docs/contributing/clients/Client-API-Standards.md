@@ -1,6 +1,17 @@
-This page defines a minimal standard to adhere in programming APIs.
+## Building clients ##
+You can access OpenML datasets, pipelines, benchmarks, and much more, through a range of client APIs.
+Well-developed clients exist in Python, R, Java, and several other languages. 
 
-## Configuration file ##
+If you want to develop your own client, please check out the following resources:  
+
+* [REST API](./Rest.md): all endpoints to GET, POST, or DELETE resources
+* [Metadata Standard](./metadata_definition.md): how we describe datasets and all other OpenML resources
+* Minimal standards (below) for uniform client configuration and caching mechanisms, to make the client behavior more uniform across languages.
+
+
+## Minimal standards
+
+### Configuration file
 
 The configuration file resides in a directory `.openml` in the home directory of the user and is called config. It consists of `key = value` pairs which are seperated by newlines. The following keys are defined:
 
@@ -18,13 +29,13 @@ The configuration file resides in a directory `.openml` in the home directory of
     * `RWeka`: This is the standard Java parser used in Weka.
     * `farff`: The [farff package](http://www.github.com/mlr-org/farff) lives below the mlr-org and is a newer, faster parser without Java.
 
-## Caching ##
+### Caching
 
-### Cache invalidation ###
+#### Cache invalidation
 
 All parts of the entities which affect experiments are immutable. The entities dataset and task have a flag `status` which tells the user whether they can be used safely.
 
-### File structure ###
+#### File structure
 
 Caching should be implemented for
 

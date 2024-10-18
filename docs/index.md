@@ -55,7 +55,7 @@ The OpenML package is available in many languages and across libraries. For more
     - `Install-Package openMl`
 
 
-You might also need to set up the API key. For more information, see the [API key page](./apikey.md)
+You might also need to set up the API key. For more information, see [Authentication](http://localhost:8000/concepts/openness/).
 
 ## Learning OpenML
 

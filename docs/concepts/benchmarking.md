@@ -9,7 +9,7 @@ Collections of tasks can be published as _benchmarking suites_. Seamlessly integ
 - standardized train-test splits are provided to ensure that results can be objectively compared - results can be shared in a reproducible way through the APIs  
 - results from other users can be easily downloaded and reused 
 
-You can search for <a href="https://www.openml.org/search?type=benchmark&sort=tasks_included&study_type=task" target="_blank">all existing benchmarking suites</a> or create your own. For all further details, see the [benchmarking guide](benchmark).
+You can search for <a href="https://www.openml.org/search?type=benchmark&sort=tasks_included&study_type=task" target="_blank">all existing benchmarking suites</a> or create your own. For all further details, see the [benchmarking guide](../benchmark.md).
 
 <img src="img/studies.png" style="width:100%; max-width:800px;"/>
 
