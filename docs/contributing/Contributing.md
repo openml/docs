@@ -1,22 +1,26 @@
 OpenML is an open source project, <a href="https://github.com/openml">hosted on GitHub</a>. We welcome everybody to help improve OpenML, and make it more useful for everyone.
 
-We want to make machine learning and data analysis **simple**, **accessible**, **collaborative** and **open** with an optimal **division of labour** between computers and humans.
+!!! tip "Mission"
+    We want to make machine learning **open** and **accessible** for the benefit of all of humanity.
+    OpenML offers an **entirely open online platform** for machine learning datasets, models, and experiments,
+    making them **easy to use and share** to facilitate global collaboration and extensive automation.
 
 ## Want to get involved?
 
 Awesome, we're happy to have you! :tada:
 
-OpenML is dependent on the community. If you want to help, please email us (openmlHQ@googlegroups.com). If you feel already comfortable you can help by opening issues or make a pull request on GitHub. We also have regular workshops you can join (they are announced on openml.org).
-
 ### Who are we?
 
-We are a group of friendly people who are excited about open science and machine learning. A list of people currently involved can be found [here](https://www.openml.org/contact).
+We are a group of friendly people who are excited about open science and machine learning. 
+
+[Read more about who we are, what we stand for, and how to get in touch](https://www.openml.org/about).
 
 ### We need help!
 
 We are currently looking for help with:
 
-- User feedback (best via GitHub issues, but email is also fine)
+:octicons-comment-discussion-16: User feedback (best via [GitHub issues](https://github.com/openml), but email or Slack is also fine)
+
 - Frontend / UX / Design of the website
 - Backend / API
 - Outreach / making OpenML better known (especially in non-ML-communities, where people have data but no analysis experise)

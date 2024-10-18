@@ -54,6 +54,8 @@ markdown_extensions:
     - pymdownx.tabbed:
         alternate_style: true
     - admonition
+    - codehilite
+    - pymdownx.inlinehilite
     - toc:
         permalink: true
     - attr_list
@@ -62,10 +64,12 @@ markdown_extensions:
         emoji_generator: !!python/name:material.extensions.emoji.to_svg
     - pymdownx.highlight:
         anchor_linenums: true
+        linenums: true
 
 plugins:
     - multirepo:
         cleanup: false
+        #keep_docs_dir: true
     - autorefs
     - section-index
     #- awesome-pages
@@ -81,6 +85,16 @@ plugins:
         separator: '[\s\-\.]+'
         lang:
             - en
+    - mkdocstrings:
+        default_handler: python
+        handlers:
+            python:
+                paths: [temp_dir/pytorch/openml_pytorch]
+                load_external_modules: true
+                show_source: true
+                options:
+                    docstring_section_style: table
+                    show_docstring_functions: true
     #- mkdocstrings:
     #    handlers:
     #        python:
@@ -120,7 +134,7 @@ nav:
                 - "Basic Example - Random Forest": automl/basic_example.md
                 - "Specific Task and Fold": automl/specific_task_fold_example.md
     #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
-    - PyTorch: '!import https://github.com/openml/openml-pytorch'
+    - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
     - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
     - Ecosystem:
         - Overview: showcase/index.md

@@ -6,5 +6,9 @@ mkdocs-jupyter==0.25.0
 mkdocs-awesome-pages-plugin==2.9.3
 mkdocs-multirepo-plugin==0.8.3
 notebook==6.4.12
-mkdocs-autorefs==1.2.0
-mkdocs-section-index==0.3.9
+mkdocs-autorefs
+mkdocs-section-index
+mkdocstrings
+mkdocs-gen-files
+mkdocs-literate-nav
+mkdocstrings-python

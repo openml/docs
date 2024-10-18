@@ -204,7 +204,7 @@ It is also recommended to add the newly created folder to the mapping in
 the `routes.php` config file. This way it can also be requested by the
 shortened version of the URL. (Note that we deliberately avoided to
 auto-load all pages into this file using a directory scan, as this makes
-the webplatform slow. )
+the webplatform slow.)
 
 ## URL to Page Mapping
 
