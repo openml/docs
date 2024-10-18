@@ -81,16 +81,16 @@ plugins:
         separator: '[\s\-\.]+'
         lang:
             - en
-    #- mkdocstrings:
-    #    handlers:
-    #        python:
-    #        options:
-    #            docstring_style: numpy
-    #- gen-files:
-    #    scripts:
-    #        - scripts/gen_ref_pages.py
-    #- literate-nav:
-    #    nav_file: SUMMARY.md
+    - mkdocstrings:
+        handlers:
+            python:
+            options:
+                    docstring_style: numpy
+    - gen-files:
+        scripts:
+            - scripts/gen_ref_pages.py
+    - literate-nav:
+        nav_file: SUMMARY.md
 nav:
     - OpenML:
         - Introduction: index.md
@@ -119,7 +119,7 @@ nav:
             - Tutorials:
                 - "Basic Example - Random Forest": automl/basic_example.md
                 - "Specific Task and Fold": automl/specific_task_fold_example.md
-    #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
+    - Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
     - PyTorch: '!import https://github.com/openml/openml-pytorch'
     - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
     - Ecosystem:

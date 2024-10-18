@@ -1,2 +1,0 @@
-# OpenML Connection
-::: extension
