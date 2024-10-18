@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../../css/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -2654,12 +2656,13 @@ repository should work off-the-shelf with <em>OpenML-Python</em> installed.</p>
 <p>Create a <a href="https://docs.github.com/en/github/getting-started-with-github/create-a-repo">public Github
 repo</a>
 with the following directory structure:</p>
-<div class="highlight"><pre><span></span><code>| [repo name]
-|    |-- [extension name]
-|    |    |-- __init__.py
-|    |    |-- extension.py
-|    |    |-- config.py (optionally)
+<div class="codehilite"><pre><span></span><code><span class="o">|</span><span class="w"> </span><span class="p">[</span><span class="n">repo</span><span class="w"> </span><span class="n">name</span><span class="p">]</span>
+<span class="o">|</span><span class="w">    </span><span class="o">|--</span><span class="w"> </span><span class="p">[</span><span class="n">extension</span><span class="w"> </span><span class="n">name</span><span class="p">]</span>
+<span class="o">|</span><span class="w">    </span><span class="o">|</span><span class="w">    </span><span class="o">|--</span><span class="w"> </span><span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="o">|</span><span class="w">    </span><span class="o">|</span><span class="w">    </span><span class="o">|--</span><span class="w"> </span><span class="n">extension</span><span class="p">.</span><span class="n">py</span>
+<span class="o">|</span><span class="w">    </span><span class="o">|</span><span class="w">    </span><span class="o">|--</span><span class="w"> </span><span class="n">config</span><span class="p">.</span><span class="n">py</span><span class="w"> </span><span class="p">(</span><span class="n">optionally</span><span class="p">)</span>
 </code></pre></div>
+
 <h3 id="recommended">Recommended<a class="headerlink" href="#recommended" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Test cases to keep the extension up to date with the

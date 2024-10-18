@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -2587,16 +2589,16 @@
 <p>Let's try evaluating the <code>RandomForest</code> baseline, which uses <a href="https://scikit-learn.org/stable/">scikit-learn</a>'s random forest:</p>
 <h2 id="running-the-benchmark">Running the Benchmark<a class="headerlink" href="#running-the-benchmark" title="Permanent link">&para;</a></h2>
 <h3 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>runbenchmark.py<span class="w"> </span>randomforest<span class="w"> </span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>python<span class="w"> </span>runbenchmark.py<span class="w"> </span>randomforest<span class="w"> </span>
+</code></pre></div></td></tr></table></div>
 <h3 id="macos">MacOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>runbenchmark.py<span class="w"> </span>randomforest<span class="w"> </span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>python<span class="w"> </span>runbenchmark.py<span class="w"> </span>randomforest<span class="w"> </span>
+</code></pre></div></td></tr></table></div>
 <h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
 <p>As noted above, we need to install the AutoML frameworks (and baselines) in
 a container. Add <code>-m docker</code> to the command as shown:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>runbenchmark.py<span class="w"> </span>randomforest<span class="w"> </span>-m<span class="w"> </span>docker
-</code></pre></div></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>python<span class="w"> </span>runbenchmark.py<span class="w"> </span>randomforest<span class="w"> </span>-m<span class="w"> </span>docker
+</code></pre></div></td></tr></table></div></p>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
 <p>Future example usages will only show invocations without <code>-m docker</code> mode,
@@ -2606,15 +2608,22 @@ but Windows users will need to run in some non-local mode.</p>
 <p>After running the command, there will be a lot of output to the screen that reports
 on what is currently happening. After a few minutes final results are shown and should 
 look similar to this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Summing up scores for current run:
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>               id        task  fold    framework constraint     result      metric  duration      seed
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>openml.org/t/3913         kc2     0 RandomForest       test   0.865801         auc      11.1 851722466
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>openml.org/t/3913         kc2     1 RandomForest       test   0.857143         auc       9.1 851722467
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  openml.org/t/59        iris     0 RandomForest       test  -0.120755 neg_logloss       8.7 851722466
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  openml.org/t/59        iris     1 RandomForest       test  -0.027781 neg_logloss       8.5 851722467
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>openml.org/t/2295 cholesterol     0 RandomForest       test -44.220800    neg_rmse       8.7 851722466
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>openml.org/t/2295 cholesterol     1 RandomForest       test -55.216500    neg_rmse       8.7 851722467
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>Summing up scores for current run:
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>               id        task  fold    framework constraint     result      metric  duration      seed
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>openml.org/t/3913         kc2     0 RandomForest       test   0.865801         auc      11.1 851722466
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>openml.org/t/3913         kc2     1 RandomForest       test   0.857143         auc       9.1 851722467
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>  openml.org/t/59        iris     0 RandomForest       test  -0.120755 neg_logloss       8.7 851722466
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>  openml.org/t/59        iris     1 RandomForest       test  -0.027781 neg_logloss       8.5 851722467
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>openml.org/t/2295 cholesterol     0 RandomForest       test -44.220800    neg_rmse       8.7 851722466
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>openml.org/t/2295 cholesterol     1 RandomForest       test -55.216500    neg_rmse       8.7 851722467
+</code></pre></div></td></tr></table></div>
 <p>The result denotes the performance of the framework on the test data as measured by
 the metric listed in the metric column. The result column always denotes performance 
 in a way where higher is better (metrics which normally observe "lower is better" are
@@ -2702,8 +2711,8 @@ small datasets. For more information, see <a href="#ADD-link-to-adding-benchmark
 </li>
 </ul>
 <p>For a full list of parameters available, run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python runbenchmark.py --help
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>python runbenchmark.py --help
+</code></pre></div></td></tr></table></div>
 
 
 

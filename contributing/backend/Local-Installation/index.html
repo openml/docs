@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../../css/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -2537,44 +2539,80 @@ Or just a XAMP (Mac), LAMP (Linux) or WAMP (Windows) package, which conveniently
 <p>If you want to run your own (separate) OpenML instance, and store your own data, you'll also want to build your own search indices to show all data on the website. The OpenML website is based on the ElasticSearch stack. To install it, follow the instructions here: <a href="http://knowm.org/how-to-set-up-the-elk-stack-elasticsearch-logstash-and-kibana/">http://knowm.org/how-to-set-up-the-elk-stack-elasticsearch-logstash-and-kibana/</a></p>
 <h3 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">&para;</a></h3>
 <p>This script wipes all OpenML server data and rebuilds the database and search index. Replace 'openmldir' with the directory where you want OpenML to store files.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># delete data from server
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo rm -rf /openmldir/*
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>mkdir /openmldir/log
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a># delete database
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>mysqladmin -u &quot;root&quot; -p&quot;yourpassword&quot; DROP openml_expdb
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>mysql -h localhost -u root -p&quot;yourpassword&quot; -e &quot;TRUNCATE openml.file;&quot;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a># reset ES search index
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>echo &quot;Deleting and recreating the ES index: &quot;
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>curl -XDELETE http://localhost:9200/openml
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>curl -XPUT &#39;localhost:9200/openml?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39;
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>{
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    &quot;settings&quot; : {
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        &quot;index&quot; : {
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            &quot;number_of_shards&quot; : 3,
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            &quot;number_of_replicas&quot; : 2
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        }
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    }
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>}
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>&#39;
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a># go to directory with the website source code
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>cd /var/www/openml.org/public_html/
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a># reinitiate the database
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>mysql -u root -p&quot;yourpassword!&quot; &lt; downloads/openml_expdb.sql
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a># fill important columns
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>sudo php index.php cron install_database
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a># rebuild search index
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>sudo php index.php cron initialize_es_indices
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>sudo php index.php cron build_es_indices
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>sudo chown apache:apache /openmldir/log
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>sudo chown apache:apache /openmldir/log/*
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a># delete data from server
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>sudo rm -rf /openmldir/*
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>mkdir /openmldir/log
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a># delete database
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>mysqladmin -u &quot;root&quot; -p&quot;yourpassword&quot; DROP openml_expdb
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>mysql -h localhost -u root -p&quot;yourpassword&quot; -e &quot;TRUNCATE openml.file;&quot;
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a># reset ES search index
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>echo &quot;Deleting and recreating the ES index: &quot;
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>curl -XDELETE http://localhost:9200/openml
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>curl -XPUT &#39;localhost:9200/openml?pretty&#39; -H &#39;Content-Type: application/json&#39; -d&#39;
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>{
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    &quot;settings&quot; : {
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>        &quot;index&quot; : {
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>            &quot;number_of_shards&quot; : 3,
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>            &quot;number_of_replicas&quot; : 2
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>        }
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    }
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>}
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>&#39;
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a># go to directory with the website source code
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>cd /var/www/openml.org/public_html/
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a># reinitiate the database
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>mysql -u root -p&quot;yourpassword!&quot; &lt; downloads/openml_expdb.sql
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a># fill important columns
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>sudo php index.php cron install_database
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a># rebuild search index
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>sudo php index.php cron initialize_es_indices
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>sudo php index.php cron build_es_indices
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>sudo chown apache:apache /openmldir/log
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a>sudo chown apache:apache /openmldir/log/*
+</code></pre></div></td></tr></table></div>
 
 
 

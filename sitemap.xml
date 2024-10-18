@@ -5,10 +5,6 @@
          <lastmod>2024-10-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.openml.org/APIs/</loc>
-         <lastmod>2024-10-18</lastmod>
-    </url>
-    <url>
          <loc>https://docs.openml.org/Data-collections/</loc>
          <lastmod>2024-10-18</lastmod>
     </url>
@@ -161,10 +157,6 @@
          <lastmod>2024-10-18</lastmod>
     </url>
     <url>
-         <loc>https://docs.openml.org/integrations/</loc>
-         <lastmod>2024-10-18</lastmod>
-    </url>
-    <url>
          <loc>https://docs.openml.org/integrations/Java/</loc>
          <lastmod>2024-10-18</lastmod>
     </url>
@@ -274,6 +266,42 @@
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/Examples/Tabular%20Classification/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/__init__/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/callbacks/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/config/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/custom_datasets/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/extension/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/metrics/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/trainer/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/layers/__init__/</loc>
+         <lastmod>2024-10-18</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/pytorch/openml_pytorch/layers/functional/</loc>
          <lastmod>2024-10-18</lastmod>
     </url>
     <url>

@@ -44,6 +44,8 @@
       
     
     
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../css/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -2377,10 +2379,12 @@ Check these docs to see what is possible in terms of styling.</p>
 <div class="admonition deployment">
 <p class="admonition-title">Deployment</p>
 <p>To deploy the documentation manually, you need to have MkDocs and MkDocs-Material installed:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install mkdocs
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip install mkdocs-material
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip install fontawesome_markdown
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip install mkdocs
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>pip install mkdocs-material
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>pip install fontawesome_markdown
+</code></pre></div></td></tr></table></div>
 To deploy the documentation locally, run <code>mkdocs serve</code> in the top directory (with the <code>mkdocs.yml</code> file). Any changes made after that will be hot-loaded.</p>
 <p>The documentation will be auto-deployed with every push or merge with the master branch of <code>https://www.github.com/openml/docs/</code>. In the background, a CI job
 will run <code>mkdocs gh-deploy</code>, which will build the HTML files and push them to the gh-pages branch of openml/docs. <code>https://docs.openml.org</code> is just a reverse proxy for <code>https://openml.github.io/docs/</code>.</p>

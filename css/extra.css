@@ -92,3 +92,22 @@ table {
   iframe[seamless] {
     border: none;
 }
+
+.green{
+  color: #4caf50
+}
+.red{
+  color: #f44336
+}
+.yellow{
+  color: #ffc107
+}
+.blue{
+  color: #2196f3
+}
+.purple{
+  color: #4caf50
+}
+.pink{
+  color: #4caf50
+}

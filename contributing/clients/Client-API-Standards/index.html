@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../../css/extra.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -2507,13 +2509,19 @@
 
 <h2 id="building-clients">Building clients<a class="headerlink" href="#building-clients" title="Permanent link">&para;</a></h2>
 <p>You can access OpenML datasets, pipelines, benchmarks, and much more, through a range of client APIs.
-Well-developed clients exist in Python, R, Java, and several other languages. </p>
-<p>If you want to develop your own client, please check out the following resources:  </p>
+Well-developed clients exist in Python, R, Java, and several other languages. Please see their documentation (in the other tabs)
+for more guidance of how to contribute to them.</p>
+<p>If you want to develop your own client (e.g. for a new language), please check out the following resources:  </p>
 <ul>
 <li><a href="../Rest/">REST API</a>: all endpoints to GET, POST, or DELETE resources</li>
 <li><a href="../metadata_definition/">Metadata Standard</a>: how we describe datasets and all other OpenML resources</li>
 <li>Minimal standards (below) for uniform client configuration and caching mechanisms, to make the client behavior more uniform across languages.</li>
 </ul>
+<div class="admonition info">
+<p class="admonition-title">Integrating tools</p>
+<p>If you want to integrate OpenML into machine learning and data science tools, it's often easier to build on one of the existing clients, 
+which often can be used as is or extended. For instance, see how to <a href="../creating_extensions/">extend the Python API</a> to integrate OpenML into Python tools. </p>
+</div>
 <h2 id="minimal-standards">Minimal standards<a class="headerlink" href="#minimal-standards" title="Permanent link">&para;</a></h2>
 <h3 id="configuration-file">Configuration file<a class="headerlink" href="#configuration-file" title="Permanent link">&para;</a></h3>
 <p>The configuration file resides in a directory <code>.openml</code> in the home directory of the user and is called config. It consists of <code>key = value</code> pairs which are seperated by newlines. The following keys are defined:</p>
@@ -2536,11 +2544,6 @@ Well-developed clients exist in Python, R, Java, and several other languages. </
 <li>if not given, will default to <code>file.path(tempdir(), "cache")</code>.</li>
 </ul>
 </li>
-<li>arff.reader:<ul>
-<li><code>RWeka</code>: This is the standard Java parser used in Weka.</li>
-<li><code>farff</code>: The <a href="http://www.github.com/mlr-org/farff">farff package</a> lives below the mlr-org and is a newer, faster parser without Java.</li>
-</ul>
-</li>
 </ul>
 <h3 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">&para;</a></h3>
 <h4 id="cache-invalidation">Cache invalidation<a class="headerlink" href="#cache-invalidation" title="Permanent link">&para;</a></h4>
@@ -2561,8 +2564,8 @@ Well-developed clients exist in Python, R, Java, and several other languages. </
 <li><code>$cache/runs</code></li>
 </ul>
 </li>
-<li>For every dataset there is an extra directory for which the name is the dataset ID, e.g. <code>$cache/datasets/2</code> for the dataset anneal.ORIG<ul>
-<li>The dataset should be called <code>dataset.arff</code></li>
+<li>For every dataset there is an extra directory for which the name is the dataset ID, e.g. <code>$cache/datasets/2</code> for the dataset with OpenML ID 2.<ul>
+<li>The dataset should be called <code>dataset.pq</code> or <code>dataset.arff</code></li>
 <li>Every other file should be named by the API call which was used to obtain it. The XML returned by invoking <code>openml.data.qualities</code> should therefore be called qualities.xml.</li>
 </ul>
 </li>

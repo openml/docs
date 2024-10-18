@@ -48,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -3084,140 +3086,185 @@ Or, you can check out the developer version from <a href="https://github.com/ope
 <p>All functions are described in the <a href="https://www.openml.org/docs">Java Docs</a>.</p>
 <h3 id="downloading">Downloading<a class="headerlink" href="#downloading" title="Permanent link">&para;</a></h3>
 <p>To download data, flows, tasks, runs, etc. you need the unique id of that resource. The id is shown on each item's webpage and in the corresponding url. For instance, let's download <a href="d/1">Data set 1</a>. The following returns a DataSetDescription object that contains all information about that data set.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DataSetDescription data = client.dataGet(1);
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>DataSetDescription data = client.dataGet(1);
+</code></pre></div></td></tr></table></div>
 <p>You can also <a href="search">search</a> for the items you need online, and click the icon to get all id's that match a search.</p>
 <h3 id="uploading">Uploading<a class="headerlink" href="#uploading" title="Permanent link">&para;</a></h3>
 <p>To upload data, flows, runs, etc. you need to provide a description of the object. We provide wrapper classes to provide this information, e.g. <code>DataSetDescription</code>, as well as to capture the server response, e.g. <code>UploadDataSet</code>, which always includes the generated id for reference:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>DataSetDescription description = new DataSetDescription( &quot;iris&quot;, &quot;The famous iris dataset&quot;, &quot;arff&quot;, &quot;class&quot;);
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>UploadDataSet result = client.dataUpload( description, datasetFile );
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>int data_id = result.getId();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>DataSetDescription description = new DataSetDescription( &quot;iris&quot;, &quot;The famous iris dataset&quot;, &quot;arff&quot;, &quot;class&quot;);
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>UploadDataSet result = client.dataUpload( description, datasetFile );
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>int data_id = result.getId();
+</code></pre></div></td></tr></table></div>
 <p>More details are given in the corresponding functions below. Also see the <a href="docs">Java Docs</a> for all possible inputs and return values.</p>
 <h3 id="data-download">Data download<a class="headerlink" href="#data-download" title="Permanent link">&para;</a></h3>
 <h4 id="datagetint-data_id"><code>dataGet(int data_id)</code><a class="headerlink" href="#datagetint-data_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of a specified data set.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>DataSetDescription data = client.dataGet(1);
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>String name = data.getName();
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>String version = data.getVersion();
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>String description = data.getDescription();
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>String url = data.getUrl();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>DataSetDescription data = client.dataGet(1);
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>String name = data.getName();
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>String version = data.getVersion();
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>String description = data.getDescription();
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>String url = data.getUrl();
+</code></pre></div></td></tr></table></div>
 <h4 id="datafeaturesint-data_id"><code>dataFeatures(int data_id)</code><a class="headerlink" href="#datafeaturesint-data_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the features of a specified data set.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>DataFeature reponse = client.dataFeatures(1);
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>DataFeature.Feature[] features = reponse.getFeatures();
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>String name = features[0].getName();
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>String type = features[0].getDataType();
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>boolean isTarget = features[0].getIs_target();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>DataFeature reponse = client.dataFeatures(1);
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>DataFeature.Feature[] features = reponse.getFeatures();
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>String name = features[0].getName();
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>String type = features[0].getDataType();
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>boolean isTarget = features[0].getIs_target();
+</code></pre></div></td></tr></table></div>
 <h4 id="dataqualityint-data_id"><code>dataQuality(int data_id)</code><a class="headerlink" href="#dataqualityint-data_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the qualities (meta-features) of a specified data set.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    DataQuality response = client.dataQuality(1);
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    DataQuality.Quality[] qualities = reponse.getQualities();
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    String name = qualities[0].getName();
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    String value = qualities[0].getValue();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>    DataQuality response = client.dataQuality(1);
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    DataQuality.Quality[] qualities = reponse.getQualities();
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    String name = qualities[0].getName();
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    String value = qualities[0].getValue();
+</code></pre></div></td></tr></table></div>
 <h4 id="dataqualityint-data_id-int-start-int-end-int-interval_size"><code>dataQuality(int data_id, int start, int end, int interval_size)</code><a class="headerlink" href="#dataqualityint-data_id-int-start-int-end-int-interval_size" title="Permanent link">&para;</a></h4>
 <p>For data streams. Retrieves the description of the qualities (meta-features) of a specified portion of a data stream.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    DataQuality qualities = client.dataQuality(1,0,10000,null);
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>    DataQuality qualities = client.dataQuality(1,0,10000,null);
+</code></pre></div></td></tr></table></div>
 <h4 id="dataqualitylist"><code>dataQualityList()</code><a class="headerlink" href="#dataqualitylist" title="Permanent link">&para;</a></h4>
 <p>Retrieves a list of all data qualities known to OpenML.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    DataQualityList response = client.dataQualityList();
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    String[] qualities = response.getQualities();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>    DataQualityList response = client.dataQualityList();
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    String[] qualities = response.getQualities();
+</code></pre></div></td></tr></table></div>
 <h3 id="data-upload">Data upload<a class="headerlink" href="#data-upload" title="Permanent link">&para;</a></h3>
 <h4 id="datauploaddatasetdescription-description-file-dataset"><code>dataUpload(DataSetDescription description, File dataset)</code><a class="headerlink" href="#datauploaddatasetdescription-description-file-dataset" title="Permanent link">&para;</a></h4>
 <p>Uploads a data set file to OpenML given a description. Throws an exception if the upload failed, see <a href="#openml_data_upload">openml.data.upload</a> for error codes.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>    DataSetDescription dataset = new DataSetDescription( &quot;iris&quot;, &quot;The iris dataset&quot;, &quot;arff&quot;, &quot;class&quot;);
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    UploadDataSet data = client.dataUpload( dataset, new File(&quot;data/path&quot;));
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    int data_id = result.getId();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>    DataSetDescription dataset = new DataSetDescription( &quot;iris&quot;, &quot;The iris dataset&quot;, &quot;arff&quot;, &quot;class&quot;);
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    UploadDataSet data = client.dataUpload( dataset, new File(&quot;data/path&quot;));
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    int data_id = result.getId();
+</code></pre></div></td></tr></table></div>
 <h4 id="datauploaddatasetdescription-description"><code>dataUpload(DataSetDescription description)</code><a class="headerlink" href="#datauploaddatasetdescription-description" title="Permanent link">&para;</a></h4>
 <p>Registers an existing dataset (hosted elsewhere). The description needs to include the url of the data set. Throws an exception if the upload failed, see <a href="#openml_data_upload">openml.data.upload</a> for error codes.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    DataSetDescription description = new DataSetDescription( &quot;iris&quot;, &quot;The iris dataset&quot;, &quot;arff&quot;, &quot;class&quot;);
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    description.setUrl(&quot;http://datarepository.org/mydataset&quot;);
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    UploadDataSet data = client.dataUpload( description );
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    int data_id = result.getId();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>    DataSetDescription description = new DataSetDescription( &quot;iris&quot;, &quot;The iris dataset&quot;, &quot;arff&quot;, &quot;class&quot;);
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    description.setUrl(&quot;http://datarepository.org/mydataset&quot;);
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>    UploadDataSet data = client.dataUpload( description );
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    int data_id = result.getId();
+</code></pre></div></td></tr></table></div>
 <h3 id="flow-download">Flow download<a class="headerlink" href="#flow-download" title="Permanent link">&para;</a></h3>
 <h4 id="flowgetint-flow_id"><code>flowGet(int flow_id)</code><a class="headerlink" href="#flowgetint-flow_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the flow/implementation with the given id.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    Implementation flow = client.flowGet(100);
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    String name = flow.getName();
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    String version = flow.getVersion();
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    String description = flow.getDescription();
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    String binary_url = flow.getBinary_url();
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    String source_url = flow.getSource_url();
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    Parameter[] parameters = flow.getParameter();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>    Implementation flow = client.flowGet(100);
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    String name = flow.getName();
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    String version = flow.getVersion();
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    String description = flow.getDescription();
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>    String binary_url = flow.getBinary_url();
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    String source_url = flow.getSource_url();
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>    Parameter[] parameters = flow.getParameter();
+</code></pre></div></td></tr></table></div>
 <h3 id="flow-management">Flow management<a class="headerlink" href="#flow-management" title="Permanent link">&para;</a></h3>
 <h4 id="flowowned"><code>flowOwned()</code><a class="headerlink" href="#flowowned" title="Permanent link">&para;</a></h4>
 <p>Retrieves an array of id's of all flows/implementations owned by you.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>    ImplementationOwned response = client.flowOwned();
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    Integer[] ids = response.getIds();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>    ImplementationOwned response = client.flowOwned();
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    Integer[] ids = response.getIds();
+</code></pre></div></td></tr></table></div>
 <h4 id="flowexistsstring-name-string-version"><code>flowExists(String name, String version)</code><a class="headerlink" href="#flowexistsstring-name-string-version" title="Permanent link">&para;</a></h4>
 <p>Checks whether an implementation with the given name and version is already registered on OpenML.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>    ImplementationExists check = client.flowExists(&quot;weka.j48&quot;, &quot;3.7.12&quot;);
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    boolean exists = check.exists();
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    int flow_id = check.getId();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>    ImplementationExists check = client.flowExists(&quot;weka.j48&quot;, &quot;3.7.12&quot;);
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    boolean exists = check.exists();
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    int flow_id = check.getId();
+</code></pre></div></td></tr></table></div>
 <h4 id="flowdeleteint-id"><code>flowDelete(int id)</code><a class="headerlink" href="#flowdeleteint-id" title="Permanent link">&para;</a></h4>
 <p>Removes the flow with the given id (if you are its owner).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>    ImplementationDelete response = client.openmlImplementationDelete(100);
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>    ImplementationDelete response = client.openmlImplementationDelete(100);
+</code></pre></div></td></tr></table></div>
 <h3 id="flow-upload">Flow upload<a class="headerlink" href="#flow-upload" title="Permanent link">&para;</a></h3>
 <h4 id="flowuploadimplementation-description-file-binary-file-source"><code>flowUpload(Implementation description, File binary, File source)</code><a class="headerlink" href="#flowuploadimplementation-description-file-binary-file-source" title="Permanent link">&para;</a></h4>
 <p>Uploads implementation files (binary and/or source) to OpenML given a description.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>    Implementation flow = new Implementation(&quot;weka.J48&quot;, &quot;3.7.12&quot;, &quot;description&quot;, &quot;Java&quot;, &quot;WEKA 3.7.12&quot;)
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    UploadImplementation response = client.flowUpload( flow, new File(&quot;code.jar&quot;), new File(&quot;source.zip&quot;));
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    int flow_id = response.getId();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>    Implementation flow = new Implementation(&quot;weka.J48&quot;, &quot;3.7.12&quot;, &quot;description&quot;, &quot;Java&quot;, &quot;WEKA 3.7.12&quot;)
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    UploadImplementation response = client.flowUpload( flow, new File(&quot;code.jar&quot;), new File(&quot;source.zip&quot;));
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>    int flow_id = response.getId();
+</code></pre></div></td></tr></table></div>
 <h3 id="task-download">Task download<a class="headerlink" href="#task-download" title="Permanent link">&para;</a></h3>
 <h4 id="taskgetint-task_id"><code>taskGet(int task_id)</code><a class="headerlink" href="#taskgetint-task_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the task with the given id.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>    Task task = client.taskGet(1);
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    String task_type = task.getTask_type();
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    Input[] inputs = task.getInputs();
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    Output[] outputs = task.getOutputs();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>    Task task = client.taskGet(1);
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>    String task_type = task.getTask_type();
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>    Input[] inputs = task.getInputs();
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>    Output[] outputs = task.getOutputs();
+</code></pre></div></td></tr></table></div>
 <h4 id="taskevaluationsint-task_id"><code>taskEvaluations(int task_id)</code><a class="headerlink" href="#taskevaluationsint-task_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves all evaluations for the task with the given id.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>    TaskEvaluations response = client.taskEvaluations(1);
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    Evaluation[] evaluations = response.getEvaluation();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>    TaskEvaluations response = client.taskEvaluations(1);
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>    Evaluation[] evaluations = response.getEvaluation();
+</code></pre></div></td></tr></table></div>
 <h4 id="taskevaluationsint-task_id-int-start-int-end-int-interval_size"><code>taskEvaluations(int task_id, int start, int end, int interval_size)</code><a class="headerlink" href="#taskevaluationsint-task_id-int-start-int-end-int-interval_size" title="Permanent link">&para;</a></h4>
 <p>For data streams. Retrieves all evaluations for the task over the specified window of the stream.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>    TaskEvaluations response = client.taskEvaluations(1);
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    Evaluation[] evaluations = response.getEvaluation();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>    TaskEvaluations response = client.taskEvaluations(1);
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>    Evaluation[] evaluations = response.getEvaluation();
+</code></pre></div></td></tr></table></div>
 <h3 id="run-download">Run download<a class="headerlink" href="#run-download" title="Permanent link">&para;</a></h3>
 <h4 id="rungetint-run_id"><code>runGet(int run_id)</code><a class="headerlink" href="#rungetint-run_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of the run with the given id.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>    Run run = client.runGet(1);
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    int task_id = run.getTask_id();
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    int flow_id = run.getImplementation_id();
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    Parameter_setting[] settings = run.getParameter_settings()
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    EvaluationScore[] scores = run.getOutputEvaluation();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>    Run run = client.runGet(1);
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>    int task_id = run.getTask_id();
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>    int flow_id = run.getImplementation_id();
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>    Parameter_setting[] settings = run.getParameter_settings()
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>    EvaluationScore[] scores = run.getOutputEvaluation();
+</code></pre></div></td></tr></table></div>
 <h3 id="run-management">Run management<a class="headerlink" href="#run-management" title="Permanent link">&para;</a></h3>
 <h4 id="rundeleteint-run_id"><code>runDelete(int run_id)</code><a class="headerlink" href="#rundeleteint-run_id" title="Permanent link">&para;</a></h4>
 <p>Deletes the run with the given id (if you are its owner).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>    RunDelete response = client.runDelete(1);
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>    RunDelete response = client.runDelete(1);
+</code></pre></div></td></tr></table></div>
 <h3 id="run-upload">Run upload<a class="headerlink" href="#run-upload" title="Permanent link">&para;</a></h3>
 <h4 id="runuploadrun-description-mapstringfile-output_files"><code>runUpload(Run description, Map&lt;String,File&gt; output_files)</code><a class="headerlink" href="#runuploadrun-description-mapstringfile-output_files" title="Permanent link">&para;</a></h4>
 <p>Uploads a run to OpenML, including a description and a set of output files depending on the task type.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>    Run.Parameter_setting[] parameter_settings = new Run.Parameter_setting[1];
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    parameter_settings[0] = Run.Parameter_setting(null, &quot;M&quot;, &quot;2&quot;);
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    Run run = new Run(&quot;1&quot;, null, &quot;100&quot;, &quot;setup_string&quot;, parameter_settings);
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    Map outputs = new HashMap&lt;String,File&gt;();
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    outputs.add(&quot;predictions&quot;,new File(&quot;predictions.arff&quot;));
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    UploadRun response = client.runUpload( run, outputs);
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    int run_id = response.getRun_id();
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span>
+<span class="normal"><a href="#__codelineno-19-5">5</a></span>
+<span class="normal"><a href="#__codelineno-19-6">6</a></span>
+<span class="normal"><a href="#__codelineno-19-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>    Run.Parameter_setting[] parameter_settings = new Run.Parameter_setting[1];
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>    parameter_settings[0] = Run.Parameter_setting(null, &quot;M&quot;, &quot;2&quot;);
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>    Run run = new Run(&quot;1&quot;, null, &quot;100&quot;, &quot;setup_string&quot;, parameter_settings);
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>    Map outputs = new HashMap&lt;String,File&gt;();
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>    outputs.add(&quot;predictions&quot;,new File(&quot;predictions.arff&quot;));
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>    UploadRun response = client.runUpload( run, outputs);
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a>    int run_id = response.getRun_id();
+</code></pre></div></td></tr></table></div>
 
 
 
