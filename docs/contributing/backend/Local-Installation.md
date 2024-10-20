@@ -1,12 +1,25 @@
-## 1.Using Docker
-The easiest way to set up a local version of OpenML is to use Docker Compose following the instructions here (thanks to Rui Quintino!):
-https://github.com/openml/openml-docker-dev
+!!! tip "Test server"
+    OpenML has a fully functional test server accessible at `test.openml.org` that you can use to develop against.
+    For many cases, this is sufficient for development, and a full local installation is not required.
+
+!!! warning "Backend evolution"
+    OpenML has grown organically, since before the current ecosystem of python tools for platform building.
+    We are currently rewriting the entire backend using state-of-the-art Python tools (e.g. [FastAPI](https://github.com/openml/server-api)) so that the entire platform
+    can be easily installed locally in one go. We plan this to be available early/mid 2025. Please get in touch 
+    if you want to know more or want to contribute.
+
+## Using Docker Compose
+The easiest way to set up a local version of OpenML is to use Docker Compose following the instructions here (thanks to Jos van der Velde!):
+https://github.com/openml/openml-services.
 
 If you run into problems, please post an issue in the same github repo.
 
+<img src="https://github.com/openml/services/blob/main/documentation/OpenML-overview.png?raw=true"></img>
 
-## 2. Installation from scratch
-If you want to install a local version of OpenML from scratch please follow the steps mentioned below:
+
+## Installation from scratch
+If you want to install a local version of OpenML from scratch please follow the steps mentioned below.
+Note that this does not include the Kubernetes and S3 Object storage components that we use in production.
 
 ### Requirements
 You'll need to have the following software running:

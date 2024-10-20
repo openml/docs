@@ -3,9 +3,9 @@
 These are some (non-mandatory) style guidelines to make the OpenML experience more pleasant and consistent for everyone.
 
 ## Logos
-<img src="../img/dots-sq.png" width=200></img><br />
-<img src="../img/openml-black.png" width=200></img><br />
-<img src="../img/openml-gray.png" width=200></img><br />
+<img src="../../img/dots-sq.png" width=200></img><br />
+<img src="../../img/openml-black.png" width=200></img><br />
+<img src="../../img/openml-gray.png" width=200></img><br />
 <img src="https://raw.githubusercontent.com/openml/openml.org/refs/heads/master/app/public/static/svg/logo.svg" width=200>(SVG)</img><br />
 
 ## Colors

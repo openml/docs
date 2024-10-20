@@ -69,7 +69,6 @@ markdown_extensions:
 plugins:
     - multirepo:
         cleanup: false
-        #keep_docs_dir: true
     - autorefs
     - section-index
     #- awesome-pages
@@ -105,67 +104,72 @@ plugins:
     #        - scripts/gen_ref_pages.py
     #- literate-nav:
     #    nav_file: SUMMARY.md
+exclude_docs: |
+    scripts/
+    old/
+    pytorch/openml_pytorch/
+    pytorch/Examples/index.md
 nav:
     - OpenML:
         - Introduction: index.md
-        - Getting Started: integrations/getting_started.ipynb
+        - Getting Started: notebooks/getting_started.ipynb
         - Concepts:
             - Main concepts: concepts/index.md
             - Data: concepts/data.md
             - Tasks: concepts/tasks.md
             - Flows: concepts/flows.md
             - Runs: concepts/runs.md
-            - Collections: concepts/benchmarking.md
+            - Collections & Benchmarks: concepts/benchmarking.md
             - Tagging: concepts/tagging.md
-            - Openness: concepts/openness.md
+            - Authentication: concepts/authentication.md
             - Sharing: concepts/sharing.md
-        - Governance: Governance.md
-        - Terms : terms.md
-        - Style guide : Style.md
-    #- Showcase:
-    #    - "Code": showcase/index.md
-    #    - Research: showcase/research.md
+        - Showcase : intro/showcase.md
+        - Governance: intro/Governance.md
+        - Terms : intro/terms.md
     - Benchmarking:
-        - Benchmarking Suites: benchmark.md
+        - Benchmarking Suites: benchmark/benchmark.md
         - AutoML Benchmark:
-            - "AutoML Benchmark": automl/AutoML-Benchmark.md
-            - "Important Parameters": automl/important_params.md
+            - AutoML Benchmark: benchmark/automl/AutoML-Benchmark.md
+            - Important Parameters: benchmark/automl/important_params.md
+            - Benchmark on OpenML: benchmark/automl/benchmark_on_openml.md
             - Tutorials:
-                - "Basic Example - Random Forest": automl/basic_example.md
-                - "Specific Task and Fold": automl/specific_task_fold_example.md
+                - Basic Example - Random Forest: benchmark/automl/basic_example.md
+                - Specific Task and Fold: benchmark/automl/specific_task_fold_example.md
     #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
     - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
     - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
     - Ecosystem:
-        - Overview: showcase/index.md
-        - "Python Integrations": contributing/clients/creating_extensions.md
+        - Overview: ecosystem/index.md
+        - Python Integrations: ecosystem/Python_extensions.md
         - Scikit-learn:
-            - "Introduction": integrations/Scikit-learn/index.md
+            - Introduction: ecosystem/Scikit-learn/index.md
             - Tutorials:
-                - "Basic tutorial": integrations/Scikit-learn/basic_tutorial.ipynb
-                - "Loading a dataset": integrations/Scikit-learn/datasets_tutorial.ipynb
-        - MLR: integrations/mlr.md
-        - "Weka": integrations/Weka.md
-        - "MOA": integrations/MOA.md
-        - "Java": integrations/Java.md
-        - "REST API": integrations/Rest.md
+                - Basic tutorial: ecosystem/Scikit-learn/basic_tutorial.ipynb
+                - Loading a dataset: ecosystem/Scikit-learn/datasets_tutorial.ipynb
+        - MLR: ecosystem/mlr.md
+        - Weka: ecosystem/Weka.md
+        - MOA: ecosystem/MOA.md
+        - Java: ecosystem/Java.md
+        - REST API: ecosystem/Rest.md
     - Contributing:
-        - "How to Contribute": contributing/Contributing.md
-        - "Documentation": contributing/OpenML-Docs.md
-        - "Clients":
-            - "Client development": contributing/clients/Client-API-Standards.md
-            - "Metadata definition": contributing/clients/metadata_definition.md
-            - "REST API": contributing/clients/Rest.md
-        - "Website":
-            - "Getting started": contributing/website/Website.md
-            - "Flask backend": contributing/website/Flask.md
-            - "React frontend": contributing/website/React.md
-            - "Dash visualizations": contributing/website/Dash.md
-        - "Backend":
-            - "Local Installation": contributing/backend/Local-Installation.md
-            - "API Development": contributing/backend/API-development.md
-            - "Evaluation Engine": contributing/backend/Java-App.md
-        - "Resources": contributing/resources.md
+        - How to Contribute: contributing/index.md
+        - Documentation: contributing/OpenML-Docs.md
+        - Backend:
+            - Local Installation: contributing/backend/Local-Installation.md
+            - API Development: contributing/backend/API-development.md
+            - Datasets: contributing/backend/Datasets.md
+            - Evaluation Engine: contributing/backend/Java-App.md
+        - Frontend:
+            - Getting started: contributing/website/Website.md
+            - Flask backend: contributing/website/Flask.md
+            - React frontend: contributing/website/React.md
+            - Dash visualizations: contributing/website/Dash.md
+        - Clients:
+            - Client development: contributing/clients/Client-API-Standards.md
+            - Metadata definition: contributing/clients/metadata_definition.md
+            - REST API: contributing/clients/Rest.md
+        - Style guide : contributing/Style.md
+        - Resources: contributing/resources.md
 extra_css:
     - css/extra.css
 extra_javascript:

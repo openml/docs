@@ -1,10 +1,30 @@
-### Data Formats
+## Data Formats
+
+OpenML aims to achieve full data interoperability, meaning that you can load all datasets in a uniform way (a 'universal dataloader'). This requires
+that all datasets are stored in the same dataformat (or a set of interoperable formats), or at least have a version of it stored in that format. After
+an intensive study, [which you can read on our blog](https://blog.openml.org/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html),
+we settled on the [Parquet format](https://parquet.apache.org/#:~:text=Apache%20Parquet%20is%20an%20open,programming%20language%20and%20analytics%20tools).
+
+This means that all OpenML datasets can be retrieved in the Parquet format. They are also stored on our servers in this format. Oftentimes, you will not notice this, as the OpenML clients can automatically convert data into your preferred data structures, and be fed directly into machine learning workflows. For example:
+
+```python
+import openml
+dataset = openml.datasets.get_dataset("Fashion-MNIST")     # Returns the dataset meta-data 
+X, y, _, _ = dataset.get_data(dataset_format="dataframe",  # Downloads the data and returns a Pandas dataframe
+                target=dataset.default_target_attribute)
+
+from sklearn.ensemble import GradientBoostingClassifier         # Using a sklearn model as an example
+model = GradientBoostingClassifier(n_estimators=10).fit(X, y)   # Set hyperparameters and train the model 
+```
+
+### Tabular data
+OpenML has historically focussed on tabular data, and has extensive support 
 
 To guarantee interoperability, we focus on a limited set of data formats. We aim to support all sorts of data, but for the moment we only fully support tabular data in the ARFF format. We are currently working on supporting a much wider range of formats.
 
 [ARFF definition](https://www.cs.waikato.ac.nz/ml/weka/arff.html). Also check that attribute definitions do not mix spaces and tabs, and do not include end-of-line comments.
 
-### Data repositories
+## Data repositories
 
 This is a list of public dataset repositories that offer additional useful machine learning datasets.
 These have widely varying data formats, so they require manual selection, parsing and meta-data extraction.

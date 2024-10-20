@@ -13,7 +13,7 @@
 
 ## Installation
 
-The OpenML package is available in many languages and across libraries. For more information about them, see the [Integrations](./integrations/index.md) page.<br><br>
+The OpenML package is available in many languages and across libraries. For more information about them, see the [Integrations](./ecosystem/index.md) page.<br><br>
 
 === "Python/sklearn"
 
@@ -64,7 +64,7 @@ The core concepts of OpenML are explained in the [Concepts](./concepts/index.md)
 
 ## Contributing to OpenML
 
-OpenML is an open source project, <a href="https://github.com/openml">hosted on GitHub</a>. We welcome everybody to help improve OpenML, and make it more useful for everyone. For more information on how to contribute, see the [Contributing](./contributing/Contributing.md) page.
+OpenML is an open source project, <a href="https://github.com/openml">hosted on GitHub</a>. We welcome everybody to help improve OpenML, and make it more useful for everyone. For more information on how to contribute, see the [Contributing](./contributing/index.md) page.
 
 We want to make machine learning and data analysis **simple**, **accessible**, **collaborative** and **open** with an optimal **division of labour** between computers and humans.
 

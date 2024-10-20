@@ -1,3 +1,6 @@
+!!! note "Phasing out"
+    The Java components of the OpenML backend are being rewritten in Python and will soon be phased out.
+
 The Java App is used for a number of OpenML components, such as the ARFF parser and Evaluation engine, which depend on the Weka API. It is invoked from the OpenML API by means of a CLI interface. Typically, a call looks like this:
 
 `java -jar webapplication.jar -config "api_key=S3CR3T_AP1_K3Y" -f evaluate_run -r 500`
@@ -30,6 +33,17 @@ In order to make new functionalities available to the website, there also needs 
 By design, the REST API is not allowed to communicate with the Java App. All interfaces with the Java webapplication should go through other controllers of the PHP CodeIgniter framework., for example api_splits. Currently, the website features two main API's. These are represented by a Controller. Controllers can be found in the folder openml_OS/controllers. Here we see:
 * api_new.php, representing the REST API
 * api_splits.php, representing an API interfacing to the Java webapplication. 
+
+## Helper functions
+The Java code is available in the 'OpenML' repository: https://github.com/openml/OpenML/tree/master/Java
+
+### Components
+Support for tasks:  
+
+- *foldgeneration*: Java code for generating cross-validation folds. Can be used from command line.
+- *splitgeneration*: Split generator for cross validation and holdout. Unsure what's the difference with the previous?
+- *generate_predictions*: Helper class to build prediction files based on WEKA output. Move to WEKA repository?
+- *evaluate_predictions*: The evaluation engine computing evaluation scores based on submitted predictions
 
 
 
