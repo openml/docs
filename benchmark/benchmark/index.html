@@ -1,0 +1,3423 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.openml.org/benchmark/benchmark/">
+      
+      
+        <link rel="prev" href="../../intro/terms/">
+      
+      
+        <link rel="next" href="../automl/AutoML-Benchmark/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
+    
+    
+      
+        <title>Benchmarking Suites - OpenML Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#benchmarking-suites" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenML Docs" class="md-header__button md-logo" aria-label="OpenML Docs" data-md-component="logo">
+      
+  <img src="../../img/openml.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenML Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Benchmarking Suites
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/openml/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    openml/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  OpenML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Benchmarking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../pytorch/" class="md-tabs__link">
+          
+  
+  PyTorch
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../julia/" class="md-tabs__link">
+          
+  
+  Julia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecosystem/" class="md-tabs__link">
+          
+  
+  Ecosystem
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/" class="md-tabs__link">
+          
+  
+  Contributing
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenML Docs" class="md-nav__button md-logo" aria-label="OpenML Docs" data-md-component="logo">
+      
+  <img src="../../img/openml.png" alt="logo">
+
+    </a>
+    OpenML Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/openml/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    openml/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OpenML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            OpenML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebooks/getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/flows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/runs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Runs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/benchmarking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collections & Benchmarks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/tagging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tagging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sharing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/showcase/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Showcase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/Governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/terms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Benchmarking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Benchmarking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Benchmarking Suites
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Benchmarking Suites
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#software-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-openml-benchmark-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using OpenML Benchmark Suites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using OpenML Benchmark Suites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-the-benchmark-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing the benchmark suites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetching-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fetching details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-and-sharing-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running and sharing benchmarks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-runs-on-a-benchmarking-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving runs on a benchmarking suites:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-new-benchmark-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating new benchmark suites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-a-benchmark-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating a benchmark suite
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-code-examples-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further code examples and use cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-benchmarking-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of benchmarking suites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List of benchmarking suites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openml-cc18" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenML-CC18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenML-CC18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citing-the-openml-cc18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citing the OpenML-CC18
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openml100" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenML100
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenML100">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citing-the-openml100" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citing the OpenML100
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need help?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AutoML Benchmark
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            AutoML Benchmark
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automl/AutoML-Benchmark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AutoML Benchmark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automl/important_params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Important Parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automl/benchmark_on_openml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benchmark on OpenML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automl/basic_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Example - Random Forest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automl/specific_task_fold_example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specific Task and Fold
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            PyTorch
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/API%20reference/Callbacks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Callbacks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/API%20reference/Custom%20Datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/API%20reference/Metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/API%20reference/OpenML%20Connection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OpenML Connection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/API%20reference/Trainer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trainer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/Examples/Create%20Dataset%20and%20Task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create dataset and task - tiniest imagenet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/Examples/Image%20Classification%20Task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image classification task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/Examples/Pretrained%20Transformer%20Image%20Classification%20Task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pretrained Image classification example - Transformer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/Examples/Sequential%20Classification%20Task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequential classification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/Examples/Tabular%20Classification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tabular classification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/Limitations%20of%20the%20API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Limitations of the API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pytorch/Philosophy%20behind%20the%20API%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Philosphy behind the API Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Julia
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Julia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../julia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ecosystem
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Ecosystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/Python_extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Integrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Scikit-learn
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Scikit-learn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/Scikit-learn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/Scikit-learn/basic_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/Scikit-learn/datasets_tutorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/mlr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/Weka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weka
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/MOA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MOA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/Java/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/Rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Contributing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Contribute
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/OpenML-Docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Backend
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Backend
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/backend/Local-Installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/backend/API-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/backend/Datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/backend/Java-App/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation Engine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Frontend
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Frontend
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/website/Website/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/website/Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask backend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/website/React/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    React frontend
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/website/Dash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dash visualizations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Clients
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Clients
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/clients/Client-API-Standards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/clients/metadata_definition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata definition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/clients/Rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REST API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/Style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Style guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#software-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software interfaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-openml-benchmark-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using OpenML Benchmark Suites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using OpenML Benchmark Suites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-the-benchmark-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing the benchmark suites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fetching-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fetching details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-and-sharing-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running and sharing benchmarks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieving-runs-on-a-benchmarking-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieving runs on a benchmarking suites:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-new-benchmark-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating new benchmark suites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updating-a-benchmark-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating a benchmark suite
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-code-examples-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further code examples and use cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-benchmarking-suites" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of benchmarking suites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="List of benchmarking suites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openml-cc18" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenML-CC18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenML-CC18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citing-the-openml-cc18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citing the OpenML-CC18
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openml100" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenML100
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenML100">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citing-the-openml100" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citing the OpenML100
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need help?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/openml/docs/edit/master/docs/benchmark/benchmark.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/openml/docs/raw/master/docs/benchmark/benchmark.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<h1 id="benchmarking-suites">Benchmarking suites<a class="headerlink" href="#benchmarking-suites" title="Permanent link">&para;</a></h1>
+<p>Machine learning research depends on objectively interpretable, comparable, and reproducible algorithm benchmarks. OpenML aims to facilitate the creation of curated, comprehensive <em>suites</em> of machine learning tasks, covering precise sets of conditions.</p>
+<p>Seamlessly integrated into the OpenML platform, benchmark suites standardize the setup, execution, analysis, and reporting of benchmarks. Moreover, they make benchmarking a whole lot easier:  </p>
+<ul>
+<li>
+<p>all datasets are uniformly formatted in standardized data formats </p>
+</li>
+<li>
+<p>they can be easily downloaded programmatically through <a href="https://www.openml.org/apis">APIs and client libraries</a></p>
+</li>
+<li>
+<p>they come with machine-readable <a href="https://www.openml.org/search?type=measure&amp;q=+measure_type%3Adata_quality">meta-information</a>, such as the occurrence of missing values, to train algorithms correctly</p>
+</li>
+<li>
+<p>standardized train-test splits are provided to ensure that results can be objectively compared</p>
+</li>
+<li>
+<p>results can be shared in a reproducible way through the <a href="https://www.openml.org/apis">APIs</a></p>
+</li>
+<li>
+<p>results from other users can be easily downloaded and reused</p>
+</li>
+</ul>
+<h2 id="software-interfaces">Software interfaces<a class="headerlink" href="#software-interfaces" title="Permanent link">&para;</a></h2>
+<p>To use OpenML Benchmark suites, you can use bindings in several programming languages. These all interface with the OpenML REST API. The default endpoint for this is <code>https://www.openml.org/api/v1/</code>, but this can change when later versions of the API are released. To use the code examples below, you only need a recent version of one of the following libraries:</p>
+<ul>
+<li><a href="https://mvnrepository.com/artifact/org.openml/apiconnector">OpenML Java ApiConnector</a> (version <code>1.0.22</code> and up).</li>
+<li><a href="https://search.maven.org/search?q=a:openmlweka">OpenML Weka</a> (version <code>0.9.6</code> and up). This package adds a Weka Integration.</li>
+<li><a href="https://pypi.org/project/openml/">OpenML Python</a> (version <code>0.9.0</code> and up)</li>
+<li><a href="https://cran.r-project.org/web/packages/OpenML/index.html">OpenML R</a> (version <code>1.8</code> and up)</li>
+</ul>
+<h2 id="using-openml-benchmark-suites">Using OpenML Benchmark Suites<a class="headerlink" href="#using-openml-benchmark-suites" title="Permanent link">&para;</a></h2>
+<p>Below are walk-through instructions for common use cases, as well as code examples. These illustrations use the reference <a href="https://docs.openml.org/benchmark/#openml-cc18">OpenML-CC18</a> benchmark suite, but you can replace it with any other benchmark suite. Note that a benchmark suite is a set of OpenML <code>tasks</code>, which envelop not only a specific dataset, but also the train-test splits and (for predictive tasks) the target feature.</p>
+<details class="note">
+<summary>Terminology and current status</summary>
+<p>Benchmark suites are sets of OpenML tasks that you can create and manage yourself. At the same time, it is often useful to also share the set of experiments (runs) with the ensuing benchmarking results. For legacy reasons, such sets of tasks or runs are called <code>studies</code> in the OpenML REST API. In the OpenML bindings (Python, R, Java,...) these are called either <code>sets</code> or <code>studies</code>.</p>
+<p>When benchmarking, you will probably use two types of sets:</p>
+<ul>
+<li>Sets of tasks. These can be created, edited, downloaded or deleted via the OpenML API. Website forms will be added soon. Also the set of underlying datasets can be easily retrieved via the API.</li>
+<li>Sets of runs. Likewise, these can be created, edited, downloaded or deleted via the OpenML API. On the website, these are currently simply called 'studies'. Also the set of underlying tasks, datasets and flows can be easily retrieved. It is possible to link a set of runs to a benchmark study, aimed to collect future runs on that specific set of tasks. Additional information on these will be provided in a separate page.</li>
+</ul>
+</details>
+<h3 id="listing-the-benchmark-suites">Listing the benchmark suites<a class="headerlink" href="#listing-the-benchmark-suites" title="Permanent link">&para;</a></h3>
+<p>The current list of benchmark suites is explicitly listed on the bottom of this page. The list of all sets of tasks can also be fetched programmatically. This list includes the suite's ID (and optionally an alias), which can be used to fetch further details.</p>
+<p>Via the REST API, the list is returned in XML or JSON</p>
+<details class="note">
+<summary>REST</summary>
+<p><a href="https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all">https://www.openml.org/api/v1/xml/study/list/main_entity_type/task/status/all</a></p>
+<p><a href="https://www.openml.org/api_docs/#!/study/get_study_list_filters">Check out the API docs</a></p>
+</details>
+<details class="note">
+<summary>Python example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">openml</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># using the main entity type task, only benchmark suites are returned</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># each benchmark suite has an ID, some also have an alias. These can be</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1"># used to obtain the full details. </span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">studies</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">list_suites</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>Java example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">listBenchmarksuites</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">OpenmlConnector</span><span class="w"> </span><span class="n">openml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OpenmlConnector</span><span class="p">();</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">filters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;all&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;main_entity_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;task&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;20&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="n">StudyList</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">studyList</span><span class="p">(</span><span class="n">filters</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>R example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>studies = listOMLStudies()
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="fetching-details">Fetching details<a class="headerlink" href="#fetching-details" title="Permanent link">&para;</a></h3>
+<p>Using the ID or alias of a benchmark suite, you can retrieve a description and the full list of tasks and the underlying datasets.</p>
+<p>Via the REST API, a list of all tasks and dataset IDs is returned in XML or JSON</p>
+<details class="note">
+<summary>REST</summary>
+<p><a href="https://www.openml.org/api/v1/xml/study/OpenML-CC18">https://www.openml.org/api/v1/xml/study/OpenML-CC18</a></p>
+<p><a href="https://www.openml.org/api_docs/#!/study/get_study_id">Check out the API docs</a></p>
+</details>
+<p>In Python, the data is returned as <code>features, targets</code> numpy arrays:</p>
+<details class="note">
+<summary>Python example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">openml</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span> <span class="c1"># obtain the benchmark suite</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="k">for</span> <span class="n">task_id</span> <span class="ow">in</span> <span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">:</span>  <span class="c1"># iterate over all tasks</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>  <span class="c1"># download the OpenML task</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="n">features</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">get_X_and_y</span><span class="p">()</span>  <span class="c1"># get the data</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>In Java, the data is returned as a WEKA Instances object:</p>
+<details class="note">
+<summary>Java example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">downloadDatasets</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="n">OpenmlConnector</span><span class="w"> </span><span class="n">openml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OpenmlConnector</span><span class="p">();</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">Study</span><span class="w"> </span><span class="n">benchmarksuite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML-CC18&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;tasks&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">taskId</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">benchmarksuite</span><span class="p">.</span><span class="na">getTasks</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// iterate over all tasks</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="n">Task</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">taskGet</span><span class="p">(</span><span class="n">taskId</span><span class="p">);</span><span class="w"> </span><span class="c1">// download the OpenML task</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="c1">// note that InstanceHelper is part of the OpenML-weka package</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="n">Instances</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstancesHelper</span><span class="p">.</span><span class="na">getDatasetFromTask</span><span class="p">(</span><span class="n">openml</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c1">// obtain the dataset</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>In R, the data is returned as an R dataframe:</p>
+<details class="note">
+<summary>R example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">OpenML</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">task.ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">getOMLStudy</span><span class="p">(</span><span class="s">&#39;OpenML-CC18&#39;</span><span class="p">)</span><span class="o">$</span><span class="n">tasks</span><span class="o">$</span><span class="n">task.id</span><span class="w"> </span><span class="c1"># obtain the list of suggested tasks</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nf">for </span><span class="p">(</span><span class="n">task.id</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">task.ids</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># iterate over all tasks</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">  </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">getOMLTask</span><span class="p">(</span><span class="n">task.id</span><span class="p">)</span><span class="w"> </span><span class="c1"># download single OML task</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">  </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">task</span><span class="p">)</span><span class="w"> </span><span class="c1"># obtain raw data set</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="running-and-sharing-benchmarks">Running and sharing benchmarks<a class="headerlink" href="#running-and-sharing-benchmarks" title="Permanent link">&para;</a></h3>
+<p>The code below demonstrates how OpenML benchmarking suites can be conveniently imported for benchmarking using the Python, Java and R APIs.</p>
+<p>First, the list of tasks is downloaded as already illustrated above. Next, a specific algorithm (or pipeline) can be run on each of them. The OpenML API will automatically evaluate the algorithm using the pre-set train-test splits and store the predictions and scores in a run object. This run object can then be immediately published, pushing the results to the OpenML server, so that they can be compared against all others on the same benchmark set. Uploading results requires an OpenML API key, which can be found in your account details after logging into the OpenML website.</p>
+<details class="note">
+<summary>REST</summary>
+<p>Requires POST requests:<br />
+<a href="https://www.openml.org/api_docs/#!/study/post_study_id_attach">Attaching a new run to a benchmark_study</a><br />
+<a href="https://www.openml.org/api_docs/#!/study/post_study_id_detach">Detaching a run from benchmark_study</a>  </p>
+</details>
+<details class="note">
+<summary>Python example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">openml</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">import</span> <span class="nn">sklearn</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="s1">&#39;FILL_IN_OPENML_API_KEY&#39;</span>  <span class="c1"># set the OpenML Api Key</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span>  <span class="c1"># obtain the benchmark suite</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># build a scikit-learn classifier</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">clf</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">make_pipeline</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">Imputer</span><span class="p">(),</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>                                     <span class="n">sklearn</span><span class="o">.</span><span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">())</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="k">for</span> <span class="n">task_id</span> <span class="ow">in</span> <span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">:</span>  <span class="c1"># iterate over all tasks</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>    <span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="n">task_id</span><span class="p">)</span>  <span class="c1"># download the OpenML task</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>    <span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">task</span><span class="p">)</span>  <span class="c1"># run the classifier on the task</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>    <span class="n">score</span> <span class="o">=</span> <span class="n">run</span><span class="o">.</span><span class="n">get_metric_fn</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">accuracy_score</span><span class="p">)</span>  <span class="c1"># print accuracy score</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data set: </span><span class="si">%s</span><span class="s1">; Accuracy: </span><span class="si">%0.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">task</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">score</span><span class="o">.</span><span class="n">mean</span><span class="p">()))</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>    <span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>  <span class="c1"># publish the experiment on OpenML (optional, requires internet and an API key)</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;URL for run: </span><span class="si">%s</span><span class="s1">/run/</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">server</span><span class="p">,</span><span class="n">run</span><span class="o">.</span><span class="n">run_id</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>Java example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">runTasksAndUpload</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="n">OpenmlConnector</span><span class="w"> </span><span class="n">openml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OpenmlConnector</span><span class="p">();</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">  </span><span class="n">openml</span><span class="p">.</span><span class="na">setApiKey</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="c1">// obtain the benchmark suite</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="n">Study</span><span class="w"> </span><span class="n">benchmarksuite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML-CC18&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;tasks&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">  </span><span class="n">Classifier</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">REPTree</span><span class="p">();</span><span class="w"> </span><span class="c1">// build a Weka classifier</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">taskId</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">benchmarksuite</span><span class="p">.</span><span class="na">getTasks</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// iterate over all tasks</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="n">Task</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">taskGet</span><span class="p">(</span><span class="n">taskId</span><span class="p">);</span><span class="w"> </span><span class="c1">// download the OpenML task</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="n">Instances</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstancesHelper</span><span class="p">.</span><span class="na">getDatasetFromTask</span><span class="p">(</span><span class="n">openml</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="c1">// obtain the dataset</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">runId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RunOpenmlJob</span><span class="p">.</span><span class="na">executeTask</span><span class="p">(</span><span class="n">openml</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WekaConfig</span><span class="p">(),</span><span class="w"> </span><span class="n">taskId</span><span class="p">,</span><span class="w"> </span><span class="n">tree</span><span class="p">);</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="n">Run</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">runGet</span><span class="p">(</span><span class="n">runId</span><span class="p">);</span><span class="w">   </span><span class="c1">// retrieve the uploaded run</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>R example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">OpenML</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nf">setOMLConfig</span><span class="p">(</span><span class="n">apikey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;FILL_IN_OPENML_API_KEY&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">lrn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">makeLearner</span><span class="p">(</span><span class="s">&#39;classif.rpart&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1"># construct a simple CART classifier</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">task.ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">getOMLStudy</span><span class="p">(</span><span class="s">&#39;OpenML-CC18&#39;</span><span class="p">)</span><span class="o">$</span><span class="n">tasks</span><span class="o">$</span><span class="n">task.id</span><span class="w"> </span><span class="c1"># obtain the list of suggested tasks</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nf">for </span><span class="p">(</span><span class="n">task.id</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">task.ids</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># iterate over all tasks</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">  </span><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">getOMLTask</span><span class="p">(</span><span class="n">task.id</span><span class="p">)</span><span class="w"> </span><span class="c1"># download single OML task</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.data.frame</span><span class="p">(</span><span class="n">task</span><span class="p">)</span><span class="w"> </span><span class="c1"># obtain raw data set</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">  </span><span class="n">run</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">runTaskMlr</span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">learner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lrn</span><span class="p">)</span><span class="w"> </span><span class="c1"># run constructed learner</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">  </span><span class="n">upload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">uploadOMLRun</span><span class="p">(</span><span class="n">run</span><span class="p">)</span><span class="w"> </span><span class="c1"># upload and tag the run</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="retrieving-runs-on-a-benchmarking-suites">Retrieving runs on a benchmarking suites:<a class="headerlink" href="#retrieving-runs-on-a-benchmarking-suites" title="Permanent link">&para;</a></h3>
+<p>Once a benchmark suite has been created, the listing functions can be used to 
+obtain all results on the benchmark suite. Note that there are several other
+ways to select and bundle runs together. This will be featured in 
+a separate article on reproducible benchmarks. </p>
+<details class="note">
+<summary>REST (TODO)</summary>
+<p><a href="https://www.openml.org/api/v1/xml/run/list/study/OpenML-CC18">https://www.openml.org/api/v1/xml/run/list/study/OpenML-CC18</a></p>
+<p><a href="https://www.openml.org/api_docs/#!/run/get_run_list_filters">Check out the API docs</a></p>
+</details>
+<details class="note">
+<summary>Python example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">benchmark_suite</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_suite</span><span class="p">(</span><span class="s1">&#39;OpenML-CC18&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">runs</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">list_runs</span><span class="p">(</span><span class="n">task</span><span class="o">=</span><span class="n">benchmark_suite</span><span class="o">.</span><span class="n">tasks</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>Java example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span>
+<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">downloadResultsBenchmarkSuite</span><span class="p">()</span><span class="w">  </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="n">Study</span><span class="w"> </span><span class="n">benchmarkSuite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="s">&quot;OpenML100&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;tasks&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">filters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="n">filters</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;task&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">benchmarkSuite</span><span class="p">.</span><span class="na">getTasks</span><span class="p">()));</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="n">RunList</span><span class="w"> </span><span class="n">rl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">runList</span><span class="p">(</span><span class="n">filters</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">    </span><span class="n">assertTrue</span><span class="p">(</span><span class="n">rl</span><span class="p">.</span><span class="na">getRuns</span><span class="p">().</span><span class="na">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>R example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">benchmark.suite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">getOMLStudy</span><span class="p">(</span><span class="n">study</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;OpenML-CC18&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">run.ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">extractOMLStudyIds</span><span class="p">(</span><span class="n">benchmark.suite</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;run.id&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">runs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rbindlist</span><span class="p">(</span><span class="nf">lapply</span><span class="p">(</span><span class="n">run.ids</span><span class="p">,</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="nf">listOMLRuns</span><span class="p">(</span><span class="n">run.id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">)))</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="c1"># TODO waiting for REST API</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="creating-new-benchmark-suites">Creating new benchmark suites<a class="headerlink" href="#creating-new-benchmark-suites" title="Permanent link">&para;</a></h3>
+<p>Additional OpenML benchmark suites can be created by defining the precise set of tasks, as well as a textual description. New datasets first need to be <a href="https://www.openml.org/new/data">registered on OpenML</a> and tasks need to be created on them.</p>
+<p>We have provided <a href="https://github.com/openml/benchmark-suites">a GitHub repository</a> with additional tools and scripts to build new benchmark studies, e.g. to select all datasets adhering to strict conditions, and to analyse bencharking results.</p>
+<details class="note">
+<summary>REST</summary>
+<p>Requires POST requests:<br />
+<a href="https://www.openml.org/api_docs/#!/study/post_study">Creating a benchmark suite</a>  </p>
+</details>
+<details class="note">
+<summary>Python example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">openml</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="c1"># find 250 tasks that we are interested in, e.g., the tasks that have between</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="c1"># 100 and 10000 instances and between 4 and 20 attributes</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="n">tasks</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">list_tasks</span><span class="p">(</span><span class="n">number_instances</span><span class="o">=</span><span class="s1">&#39;100..10000&#39;</span><span class="p">,</span> <span class="n">number_features</span><span class="o">=</span><span class="s1">&#39;4..20&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="n">task_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="c1"># create the benchmark suite</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="c1"># the arguments are the alias, name, description, and list of task_ids, respectively.</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="n">study</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">create_benchmark_suite</span><span class="p">(</span> 
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MidSize Suite&quot;</span><span class="p">,</span> 
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>    <span class="n">alias</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;illustrating how to create a benchmark suite&quot;</span><span class="p">,</span> 
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a>    <span class="n">task_ids</span><span class="o">=</span><span class="n">task_ids</span><span class="p">,</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="p">)</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="n">study_id</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>Java example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">createBenchmarkSuite</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="n">OpenmlConnector</span><span class="w"> </span><span class="n">openml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OpenmlConnector</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="c1">// find 250 tasks that we are interested in, e.g., the tasks that have between</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="c1">// 100 and 10000 instances and between 4 and 20 attributes</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">filtersOrig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;number_instances&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;100..10000&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;number_features&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;4..20&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;250&quot;</span><span class="p">);</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="n">Tasks</span><span class="w"> </span><span class="n">tasksOrig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client_write_test</span><span class="p">.</span><span class="na">taskList</span><span class="p">(</span><span class="n">filtersOrig</span><span class="p">);</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="c1">// create the study</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="n">Study</span><span class="w"> </span><span class="n">study</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Study</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">tasksOrig</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">(),</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">studyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">studyUpload</span><span class="p">(</span><span class="n">study</span><span class="p">);</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>R example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="c1"># find 250 tasks with 100 and 10000 instances and between 4 and 20 attributes</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">tid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">listOMLTasks</span><span class="p">(</span><span class="n">number.of.instances</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">10000</span><span class="p">),</span><span class="w"> </span><span class="n">number.of.features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">),</span><span class="w"> </span><span class="n">limit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">250</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">study</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">makeOMLStudy</span><span class="p">(</span><span class="n">alias</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;test_alias&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Test Upload from R&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Just testing&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">task.id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tid</span><span class="o">$</span><span class="n">task.id</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">uploadOMLStudy</span><span class="p">(</span><span class="n">study</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="updating-a-benchmark-suite">Updating a benchmark suite<a class="headerlink" href="#updating-a-benchmark-suite" title="Permanent link">&para;</a></h3>
+<p>You can add tasks to a benchmark suite, or remove them.</p>
+<details class="note">
+<summary>REST</summary>
+<p>Requires POST requests:<br />
+<a href="https://www.openml.org/api_docs/#!/study/post_study_id_attach">Attaching a new task</a><br />
+<a href="https://www.openml.org/api_docs/#!/study/post_study_id_detach">Detaching a task</a>  </p>
+</details>
+<details class="note">
+<summary>Python example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span>
+<span class="normal"><a href="#__codelineno-15-22">22</a></span>
+<span class="normal"><a href="#__codelineno-15-23">23</a></span>
+<span class="normal"><a href="#__codelineno-15-24">24</a></span>
+<span class="normal"><a href="#__codelineno-15-25">25</a></span>
+<span class="normal"><a href="#__codelineno-15-26">26</a></span>
+<span class="normal"><a href="#__codelineno-15-27">27</a></span>
+<span class="normal"><a href="#__codelineno-15-28">28</a></span>
+<span class="normal"><a href="#__codelineno-15-29">29</a></span>
+<span class="normal"><a href="#__codelineno-15-30">30</a></span>
+<span class="normal"><a href="#__codelineno-15-31">31</a></span>
+<span class="normal"><a href="#__codelineno-15-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">import</span> <span class="nn">openml</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="c1"># find 250 tasks that we are interested in, e.g., the tasks that have between</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="c1"># 100 and 10000 instances and between 4 and 20 attributes</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="n">tasks</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">list_tasks</span><span class="p">(</span><span class="n">number_instances</span><span class="o">=</span><span class="s1">&#39;100..10000&#39;</span><span class="p">,</span> <span class="n">number_features</span><span class="o">=</span><span class="s1">&#39;4..20&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="n">task_ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tasks</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="c1"># create the benchmark suite</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="n">study</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">create_benchmark_suite</span><span class="p">(</span> 
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;MidSize Suite&quot;</span><span class="p">,</span> 
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>    <span class="n">alias</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;illustrating how to create a benchmark suite&quot;</span><span class="p">,</span> 
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a>    <span class="n">task_ids</span><span class="o">=</span><span class="n">task_ids</span><span class="p">,</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="p">)</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="n">study_id</span> <span class="o">=</span> <span class="n">study</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="c1"># download the study from the server, for verification purposes</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="n">study</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_study</span><span class="p">(</span><span class="n">study_id</span><span class="p">)</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="c1"># until the benchmark suite is activated, we can also add some more tasks. Search for the letter dataset:</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="n">tasks_new</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">list_tasks</span><span class="p">(</span><span class="n">data_name</span><span class="o">=</span><span class="s1">&#39;letter&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="n">task_ids_new</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tasks_new</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">attach_to_study</span><span class="p">(</span><span class="n">study_id</span><span class="p">,</span> <span class="n">task_ids_new</span><span class="p">)</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="c1"># or even remove these again</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">detach_from_study</span><span class="p">(</span><span class="n">study_id</span><span class="p">,</span> <span class="n">task_ids_new</span><span class="p">)</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a>
+<a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="c1"># redownload the study</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29"></a><span class="n">study_prime</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">study</span><span class="o">.</span><span class="n">get_study</span><span class="p">(</span><span class="n">study_id</span><span class="p">)</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30"></a>
+<a id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="k">assert</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">tasks</span> <span class="o">==</span> <span class="n">study_prime</span><span class="o">.</span><span class="n">tasks</span><span class="p">)</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32"></a><span class="k">assert</span><span class="p">(</span><span class="n">study</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="n">study_prime</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>Java example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span>
+<span class="normal"><a href="#__codelineno-16-15">15</a></span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span>
+<span class="normal"><a href="#__codelineno-16-17">17</a></span>
+<span class="normal"><a href="#__codelineno-16-18">18</a></span>
+<span class="normal"><a href="#__codelineno-16-19">19</a></span>
+<span class="normal"><a href="#__codelineno-16-20">20</a></span>
+<span class="normal"><a href="#__codelineno-16-21">21</a></span>
+<span class="normal"><a href="#__codelineno-16-22">22</a></span>
+<span class="normal"><a href="#__codelineno-16-23">23</a></span>
+<span class="normal"><a href="#__codelineno-16-24">24</a></span>
+<span class="normal"><a href="#__codelineno-16-25">25</a></span>
+<span class="normal"><a href="#__codelineno-16-26">26</a></span>
+<span class="normal"><a href="#__codelineno-16-27">27</a></span>
+<span class="normal"><a href="#__codelineno-16-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">attachDetachStudy</span><span class="p">()</span><span class="w">  </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="n">OpenmlConnector</span><span class="w"> </span><span class="n">openml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OpenmlConnector</span><span class="p">(</span><span class="s">&quot;FILL_IN_OPENML_API_KEY&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="c1">// find 250 tasks that we are interested in, e.g., the tasks that have between</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="c1">// 100 and 10000 instances and between 4 and 20 attributes</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">filtersOrig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">    </span><span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;number_instances&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;100..10000&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;number_features&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;4..20&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">    </span><span class="n">filtersOrig</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;250&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">    </span><span class="n">Tasks</span><span class="w"> </span><span class="n">tasksOrig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">taskList</span><span class="p">(</span><span class="n">filtersOrig</span><span class="p">);</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">    </span><span class="c1">// create the study</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="w">    </span><span class="n">Study</span><span class="w"> </span><span class="n">study</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Study</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">tasksOrig</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">(),</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">studyId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">studyUpload</span><span class="p">(</span><span class="n">study</span><span class="p">);</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">    </span><span class="c1">// until the benchmark suite is activated, we can also add some more tasks. Search for the letter dataset:</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="w">    </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">filtersAdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TreeMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17"></a><span class="w">    </span><span class="n">filtersAdd</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;data_name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;letter&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18"></a><span class="w">    </span><span class="n">filtersAdd</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;limit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19"></a><span class="w">    </span><span class="n">Tasks</span><span class="w"> </span><span class="n">tasksAdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">taskList</span><span class="p">(</span><span class="n">filtersAdd</span><span class="p">);</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20"></a><span class="w">    </span><span class="n">openml</span><span class="p">.</span><span class="na">studyAttach</span><span class="p">(</span><span class="n">studyId</span><span class="p">,</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">tasksAdd</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">()));</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21"></a>
+<a id="__codelineno-16-22" name="__codelineno-16-22"></a><span class="w">    </span><span class="c1">// or even remove these again</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">    </span><span class="n">openml</span><span class="p">.</span><span class="na">studyDetach</span><span class="p">(</span><span class="n">studyId</span><span class="p">,</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">tasksAdd</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">()));</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24"></a>
+<a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="w">    </span><span class="c1">// download the study</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">    </span><span class="n">Study</span><span class="w"> </span><span class="n">studyDownloaded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">openml</span><span class="p">.</span><span class="na">studyGet</span><span class="p">(</span><span class="n">studyId</span><span class="p">);</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="w">    </span><span class="n">assertArrayEquals</span><span class="p">(</span><span class="n">tasksOrig</span><span class="p">.</span><span class="na">getTaskIds</span><span class="p">(),</span><span class="w"> </span><span class="n">studyDownloaded</span><span class="p">.</span><span class="na">getTasks</span><span class="p">());</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="note">
+<summary>R example</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>TODO
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="further-code-examples-and-use-cases">Further code examples and use cases<a class="headerlink" href="#further-code-examples-and-use-cases" title="Permanent link">&para;</a></h2>
+<p>As mentioned above, we host <a href="https://github.com/openml/benchmark-suites">a GitHub repository</a> with additional tools and scripts to easily create and use new benchmark studies. It includes:</p>
+<ul>
+<li>A Jupyter Notebook that builds a new benchmark suite with datasets that adhere to strict and complex conditions, as well as automated tests to remove tasks that are too easy for proper benchmarking.</li>
+<li>A Jupyter Notebook that shows how to pull in the latest state-of-the-art results for any of the benchmark suites</li>
+<li>A Jupyter Notebook that does a detailed analysis of all results in a benchmark suite, and an example run on the OpenML-CC18. It includes a wide range of plots and rankings to get a deeper insight into the benchmark results.</li>
+<li>Scripts in Python and R to facilitate common subtasks.</li>
+</ul>
+<p>We very much welcome new scripts and notebooks, or improvements to the existing ones, that help others to create benchmark suites and analyse benchmarking results.</p>
+<h2 id="list-of-benchmarking-suites">List of benchmarking suites<a class="headerlink" href="#list-of-benchmarking-suites" title="Permanent link">&para;</a></h2>
+<h3 id="openml-cc18">OpenML-CC18<a class="headerlink" href="#openml-cc18" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://www.openml.org/s/99">OpenML-CC18</a> suite contains all OpenML datasets from mid-2018 that satisfy a large set of clear requirements for thorough yet practical benchmarking. It includes datasets frequently used in benchmarks published over the last years, so it can be used as a drop-in replacement for many benchmarking setups.</p>
+<p><a href="https://www.openml.org/search?q=tags.tag%3Astudy_99&amp;type=data&amp;table=1&amp;size=73">List of datasets and properties</a></p>
+<p>The suite is defined as the set of all verified OpenML datasets that satisfy the following requirements:</p>
+<ul>
+<li>the number of observations are between 500 and 100000 to focus on medium-sized datasets, that are not too small and not too big,</li>
+<li>the number of features does not exceed 5000 features to keep the runtime of algorithms low,</li>
+<li>the target attribute has at least two classes</li>
+<li>the ratio of the minority class and the majority class is above 0.05, to eliminate highly imbalanced datasets which require special treatment for both algorithms and evaluation measures.</li>
+</ul>
+<p>We excluded datasets which:</p>
+<ul>
+<li>are artificially generated (not to confuse with simulated)</li>
+<li>cannot be randomized via a 10-fold cross-validation due to grouped samples or because they are time series or data streams</li>
+<li>are a subset of a larger dataset</li>
+<li>have classes with less than 20 observations</li>
+<li>have no source or reference available</li>
+<li>can be perfectly classified by a single attribute or a decision stump</li>
+<li>allow a decision tree to achieve 100% accuracy on a 10-fold cross-validation task</li>
+<li>have more than 5000 features after one-hot-encoding categorical features</li>
+<li>are created by binarization of regression tasks or multiclass classification tasks, or</li>
+<li>are sparse data (e.g., text mining data sets)</li>
+</ul>
+<details class="note">
+<summary>Detailed motivation of these decisions</summary>
+<p>We chose the CC18 datasets to allow for practical benchmarking based on the characteristics that might be problematic based on our experience, and to avoid common pitfalls that may invalidate benchmark studies:  </p>
+<ul>
+<li>We used at least 500 data points to allow performing cross-validation while still having a large-enough test split.</li>
+<li>We limited the datasets to 100.000 data points to allow the algorithms to train machine learning models in a reasonable amount of time.</li>
+<li>We limited the number of features to 5000 to allow the usage of algorithms which scale unfavourably in the number of features. This limitation, together with the two limitations above aims to allow running all “standard” machine learning algorithms (naive bayes, linear models, support vector machines, tree-based ensemble methods and neural networks) on the benchmark suite.</li>
+<li>We required each dataset to have at least two classes to be able to work in a supervised classification setting.</li>
+<li>We require each class to have at least 20 observations to be able to perform stratified cross-validation where there is at least one observation from each class in each split. We have found that not having all classes present in all training and test sets can make several machine learning packages fail.</li>
+<li>We require a certain balancedness (ratio of minority class to majority class) to prevent cases where only predicting the majority class would be beneficial. This is most likely the restriction which is most debatable, but we found it very helpful to apply a large set of machine learning algorithms across several libraries to the study. We expect that future studies focus more on imbalanced datasets. </li>
+</ul>
+<p>Furthermore, we aimed to have the dataset collection as general as possible, rule out as few algorithms as possible and have it usable as easily as possible:</p>
+<ul>
+<li>We strived to remove artificial datasets as they, for example, come from textbooks and it is hard to reliably assess their difficulty. We admit that there is a blurred line between artificial and simulated datasets and do not have a perfect distinction between them (for example, a lot of phenomena can be simulated, but the outcome might be like a simple, artificial dataset). Therefore, we removed datasets if we were in doubt of whether they are simulated or artificial. </li>
+<li>We removed datasets which require grouped sampling because they are time series or data streams which should be treated with special care by machine learning algorithms (i.e., taking the time aspect into account). To be on the safe side, we also removed datasets where each sample constitutes a single data stream.</li>
+<li>We removed datasets which are a subset of larger datasets. Allowing subsets would be very subjective as there is no objective choice of a dataset subset size or a subset of the variables or classes. Therefore, creating dataset subsets would open a Pandora’s Box.</li>
+<li>We removed datasets which have no source or reference available to potentially learn more about these datasets if we observe unexpected behavior in future studies. In contrast, we would not be able to learn more about the background of a dataset which has no description and publication attached, leaving us with a complete black box.</li>
+<li>We removed datasets which can be perfectly classified by a single attribute or a decision stump as they do not allow to meaningfully compare machine learning algorithms (they all achieve 100% accuracy unless the hyperparameters are set in a bogus way).</li>
+<li>We removed datasets where a decision tree could achieve 100% accuracy on a 10-fold cross-validation task to remove datasets which can be solved by a simple algorithm which is prone to overfitting training data. We found that this is a good indicator of too easy datasets. Obviously, other datasets will appear easy for several algorithms, and we aim to learn more about the characteristics of such datasets in future studies.</li>
+<li>We removed datasets which have more than 5000 features after one-hot-encoding categorical features. One-hot-encoding is the most frequent way to deal with categorical variables across the different machine learning libraries MLR, scikit-learn and WEKA. In order to limit the number of features to 5000 as explained above, we imposed the additional constraint that this should be counted after one-hot-encoding to allow wide applicability of the benchmark suite.</li>
+<li>We removed datasets which were created by binarization of regression tasks or multiclass classification task for similar reasons as for forbidding dataset subsets.</li>
+<li>We did not include sparse datasets because not all machine learning libraries (i.e., all machine learning models) can handle them gracefully, which is in contrast to our goal which is wide applicability.</li>
+</ul>
+</details>
+<h4 id="citing-the-openml-cc18">Citing the OpenML-CC18<a class="headerlink" href="#citing-the-openml-cc18" title="Permanent link">&para;</a></h4>
+<p>If you have used the OpenML-CC18 in a scientific publication, we would appreciate <a href="https://www.openml.org/cite">citations of core OpenML packages</a> as well as a citation of the following paper:</p>
+<p>Bischl, Bernd and Casalicchio, Giuseppe and Feurer, Matthias and Hutter, Frank and Lang, Michel and Mantovani, Rafael G. and van Rijn, Jan N. and Vanschoren, Joaquin. OpenML Benchmarking Suites. <a href="https://arxiv.org/abs/1708.03731v2">arXiv 1708.0373v2</a> (2019): 1-6</p>
+<h3 id="openml100">OpenML100<a class="headerlink" href="#openml100" title="Permanent link">&para;</a></h3>
+<p>The <a href="https://www.openml.org/s/14">OpenML100</a> was a predecessor of the OpenML-CC18, consisting of <a href="https://www.openml.org/search?q=tags.tag%3AOpenML100&amp;type=data&amp;table=1&amp;size=100">100 classification datasets</a></a>. We recommend that you use the <strong>OpenML-CC18</strong> instead, because the OpenML100 suffers from some teething issues in the design of benchmark suites. For instance, it contains several datasets that are too easy to model with today's machine learning algorithms, as well as datasets that represent time series analysis problems. These do not invalidate benchmarks run on the OpenML100, but may obfuscate the interpretation of results. The 'OpenML-CC18' handle is also more descriptive and allows easier versioning.
+The OpenML100 was first published in the Arxiv preprint <a href="https://arxiv.org/abs/1708.03731">OpenML Benchmarking Suites and the OpenML100</a>.</p>
+<p><a href="https://www.openml.org/s/14">List of datasets and properties</a></p>
+<p>For reference, the OpenML100 included datasets satisfying the following requirements:</p>
+<ul>
+<li>the number of observations are between 500 and 100000 to focus on medium-sized datasets, that are not too small for proper training and not too big for practical experimentation</li>
+<li>the number of features does not exceed 5000 features to keep the runtime of algorithms low</li>
+<li>the target attribute has at least two classes</li>
+<li>he ratio of the minority class and the majority class is above 0.05 to eliminate highly imbalanced datasets that would obfuscate a clear analysis</li>
+</ul>
+<p>It excluded datasets which:</p>
+<ul>
+<li>cannot be randomized via a 10-fold cross-validation due to grouped samples</li>
+<li>have an unknown origin or no clearly defined task</li>
+<li>are variants of other datasets (e.g. binarized regression tasks)</li>
+<li>include sparse data (e.g., text mining data sets)</li>
+</ul>
+<h4 id="citing-the-openml100">Citing the OpenML100<a class="headerlink" href="#citing-the-openml100" title="Permanent link">&para;</a></h4>
+<p>If you have used the OpenML100 in a scientific publication, we would appreciate <a href="https://www.openml.org/cite">citations of core OpenML packages</a> as well as a citation of the following paper:</p>
+<p>Bischl, Bernd and Casalicchio, Giuseppe and Feurer, Matthias and Hutter, Frank and Lang, Michel and Mantovani, Rafael G. and van Rijn, Jan N. and Vanschoren, Joaquin. OpenML Benchmarking Suites and the OpenML100. <a href="https://arxiv.org/abs/1708.03731v1">arXiv 1708.0373v1</a> (2017): 1-6</p>
+<h2 id="need-help">Need help?<a class="headerlink" href="#need-help" title="Permanent link">&para;</a></h2>
+<p>We are happy to answer to any suggestion or question you may have. For general questions or issues, please open an issue in the <a href="https://github.com/openml/benchmark-suites">benchmarking issue tracker</a>. If the issue lies with one of the language-specific bindings, please post an issue <a href="https://docs.openml.org/developers/">in the appropriate issue tracker</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
