@@ -1139,6 +1139,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../pytorch/API reference/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../pytorch/API%20reference/Callbacks/" class="md-nav__link">
         
   
@@ -1265,16 +1286,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../pytorch/Examples/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Examples
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
@@ -2646,22 +2675,42 @@
 
 
 <h1 id="machine-learning-in-r-mlr">Machine Learning in R (mlr)<a class="headerlink" href="#machine-learning-in-r-mlr" title="Permanent link">&para;</a></h1>
-<p>OpenML is readily integrated with mlr through the <a href="../R-guide">R API</a>.</p>
+<p>OpenML is readily integrated with mlr through the <a href="https://mlr3oml.mlr-org.com/index.html">mlr3oml</a> package.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">OpenML</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">mlr</span><span class="p">)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">mlr3oml</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">mlr3</span><span class="p">)</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">task</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">getOMLTask</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">lrn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">makeLearner</span><span class="p">(</span><span class="s">&quot;classif.rpart&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">run</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">runTaskMlr</span><span class="p">(</span><span class="n">task</span><span class="p">,</span><span class="w"> </span><span class="n">lrn</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">run.id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">uploadOMLRun</span><span class="p">(</span><span class="n">run</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># Search for specific datasets</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">odatasets</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list_oml_data</span><span class="p">(</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">number_features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">),</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">number_instances</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">45000</span><span class="p">,</span><span class="w"> </span><span class="m">50000</span><span class="p">),</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">number_classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># Get dataset</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">odata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">odt</span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1590</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1"># Access the actual data</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">odata</span><span class="o">$</span><span class="n">data</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1"># Convert to an mlr3::Task</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">tsk_adult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as_task</span><span class="p">(</span><span class="n">odata</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;class&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <p>Key features:  </p>
@@ -2671,7 +2720,7 @@
 <li>Upload your runs for collaboration or publishing  </li>
 <li>Query, download and reuse all shared runs  </li>
 </ul>
-<p>For many more details and examples, see the <a href="../R-guide">R tutorial</a>.</p>
+<p>There is also an older (deprecated) <a href="http://openml.github.io/openml-r/">OpenML R package</a>.</p>
 
 
 

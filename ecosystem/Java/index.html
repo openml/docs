@@ -1139,6 +1139,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../pytorch/API reference/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../pytorch/API%20reference/Callbacks/" class="md-nav__link">
         
   
@@ -1265,16 +1286,24 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../pytorch/Examples/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Examples
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
@@ -3391,10 +3420,10 @@ Or, you can check out the developer version from <a href="https://github.com/ope
 </ul>
 <p>All functions are described in the <a href="https://www.openml.org/docs">Java Docs</a>.</p>
 <h3 id="downloading">Downloading<a class="headerlink" href="#downloading" title="Permanent link">&para;</a></h3>
-<p>To download data, flows, tasks, runs, etc. you need the unique id of that resource. The id is shown on each item's webpage and in the corresponding url. For instance, let's download <a href="d/1">Data set 1</a>. The following returns a DataSetDescription object that contains all information about that data set.</p>
+<p>To download data, flows, tasks, runs, etc. you need the unique id of that resource. The id is shown on each item's webpage and in the corresponding url. For instance, let's download <a href="https://openml.org/d/1">Data set 1</a>. The following returns a DataSetDescription object that contains all information about that data set.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>DataSetDescription data = client.dataGet(1);
 </code></pre></div></td></tr></table></div>
-<p>You can also <a href="search">search</a> for the items you need online, and click the icon to get all id's that match a search.</p>
+<p>You can also <a href="https://openml.org">search</a> for the items you need online, and click the icon to get all id's that match a search.</p>
 <h3 id="uploading">Uploading<a class="headerlink" href="#uploading" title="Permanent link">&para;</a></h3>
 <p>To upload data, flows, runs, etc. you need to provide a description of the object. We provide wrapper classes to provide this information, e.g. <code>DataSetDescription</code>, as well as to capture the server response, e.g. <code>UploadDataSet</code>, which always includes the generated id for reference:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -3403,7 +3432,7 @@ Or, you can check out the developer version from <a href="https://github.com/ope
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>UploadDataSet result = client.dataUpload( description, datasetFile );
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>int data_id = result.getId();
 </code></pre></div></td></tr></table></div>
-<p>More details are given in the corresponding functions below. Also see the <a href="docs">Java Docs</a> for all possible inputs and return values.</p>
+<p>More details are given in the corresponding functions below. Also see the <a href="https://openml.github.io/openml-java/">Java Docs</a> for all possible inputs and return values.</p>
 <h3 id="data-download">Data download<a class="headerlink" href="#data-download" title="Permanent link">&para;</a></h3>
 <h4 id="datagetint-data_id"><code>dataGet(int data_id)</code><a class="headerlink" href="#datagetint-data_id" title="Permanent link">&para;</a></h4>
 <p>Retrieves the description of a specified data set.</p>
@@ -3451,7 +3480,7 @@ Or, you can check out the developer version from <a href="https://github.com/ope
 </code></pre></div></td></tr></table></div>
 <h3 id="data-upload">Data upload<a class="headerlink" href="#data-upload" title="Permanent link">&para;</a></h3>
 <h4 id="datauploaddatasetdescription-description-file-dataset"><code>dataUpload(DataSetDescription description, File dataset)</code><a class="headerlink" href="#datauploaddatasetdescription-description-file-dataset" title="Permanent link">&para;</a></h4>
-<p>Uploads a data set file to OpenML given a description. Throws an exception if the upload failed, see <a href="#openml_data_upload">openml.data.upload</a> for error codes.</p>
+<p>Uploads a data set file to OpenML given a description. Throws an exception if the upload failed, see <a href="https://www.openml.org/apis">openml.data.upload</a> for error codes.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>    DataSetDescription dataset = new DataSetDescription( &quot;iris&quot;, &quot;The iris dataset&quot;, &quot;arff&quot;, &quot;class&quot;);
@@ -3459,7 +3488,7 @@ Or, you can check out the developer version from <a href="https://github.com/ope
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a>    int data_id = result.getId();
 </code></pre></div></td></tr></table></div>
 <h4 id="datauploaddatasetdescription-description"><code>dataUpload(DataSetDescription description)</code><a class="headerlink" href="#datauploaddatasetdescription-description" title="Permanent link">&para;</a></h4>
-<p>Registers an existing dataset (hosted elsewhere). The description needs to include the url of the data set. Throws an exception if the upload failed, see <a href="#openml_data_upload">openml.data.upload</a> for error codes.</p>
+<p>Registers an existing dataset (hosted elsewhere). The description needs to include the url of the data set. Throws an exception if the upload failed, see <a href="https://www.openml.org/apis">openml.data.upload</a> for error codes.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
