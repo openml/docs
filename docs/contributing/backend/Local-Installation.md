@@ -16,7 +16,6 @@ If you run into problems, please post an issue in the same github repo.
 
 <img src="https://github.com/openml/services/blob/main/documentation/OpenML-overview.png?raw=true"></img>
 
-
 ## Installation from scratch
 If you want to install a local version of OpenML from scratch please follow the steps mentioned below.
 Note that this does not include the Kubernetes and S3 Object storage components that we use in production.

@@ -17,12 +17,16 @@ from sklearn.ensemble import GradientBoostingClassifier         # Using a sklear
 model = GradientBoostingClassifier(n_estimators=10).fit(X, y)   # Set hyperparameters and train the model 
 ```
 
+To guarantee interoperability, we focus on a limited set of data formats.
+
 ### Tabular data
-OpenML has historically focussed on tabular data, and has extensive support 
+OpenML has historically focussed on tabular data, and has extensive support for all kinds of tabular data. As explained above, we store all data in the [Parquet format](https://parquet.apache.org/#:~:text=Apache%20Parquet%20is%20an%20open,programming%20language%20and%20analytics%20tools). You can upload data from many different data structures, such as Pandas dataframes and R dataframes, after which they will be converted and stored in Parquet. You can also upload datasets as CSV files or [ARFF files](https://www.cs.waikato.ac.nz/ml/weka/arff.html), and we aim to allow direct Parquet uploads soon.
 
-To guarantee interoperability, we focus on a limited set of data formats. We aim to support all sorts of data, but for the moment we only fully support tabular data in the ARFF format. We are currently working on supporting a much wider range of formats.
+!!! tip "ARFF legacy"
+    At the moment, some aspects of OpenML still has a dependency on the ARFF format. This will be fully phased out in favor of Parquet.
 
-[ARFF definition](https://www.cs.waikato.ac.nz/ml/weka/arff.html). Also check that attribute definitions do not mix spaces and tabs, and do not include end-of-line comments.
+### Image data
+OpenML generally supports other data types by requiring a 'header table', a table (stored in Parquet) listing all data instances with additional meta-data (e.g. classes, bounding boxes,...) and references to data files, such as images (e.g. JPGs), stored in seperate folders. [See our blog post for details](https://blog.openml.org/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html). We will provide more detailed guidelines here as soon as possible.
 
 ## Data repositories
 

@@ -156,9 +156,9 @@ nav:
         - Documentation: contributing/OpenML-Docs.md
         - Backend:
             - Local Installation: contributing/backend/Local-Installation.md
-            - API Development: contributing/backend/API-development.md
             - Datasets: contributing/backend/Datasets.md
-            - Evaluation Engine: contributing/backend/Java-App.md
+            - Code structure (phasing out): contributing/backend/API-development.md
+            - Evaluation Engine (phasing out): contributing/backend/Java-App.md
         - Frontend:
             - Getting started: contributing/website/Website.md
             - Flask backend: contributing/website/Flask.md

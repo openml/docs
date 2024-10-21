@@ -1,7 +1,14 @@
-!!! note "Phasing out"
-    The Java components of the OpenML backend are being rewritten in Python and will soon be phased out.
+When you submit datasets or experiments (runs) to OpenML, they will be processed by set of server-side processes, combined in the 'Evaluation Engine':
 
-The Java App is used for a number of OpenML components, such as the ARFF parser and Evaluation engine, which depend on the Weka API. It is invoked from the OpenML API by means of a CLI interface. Typically, a call looks like this:
+- It extracts the features in tabular datasets and their statistical types
+- It computes a set of dataset characteristics (meta-features), e.g. the number of features and classes, that help with search and filtering, or to compute dataset similarity measures
+- It evaluates experiments using a set of server-side evaluation metrics that are computed uniformly for all experiments so that they are comparable
+- It creates consistent train-test splits based on task characteristics.
+
+!!! tip "Phasing out"
+    This documentation is about the older Java-based version of the OpenML evaluation engine, which will be phased out. These parts are being rewritten as a set of independent services in Python.
+
+The application that implements the evaluation engine was originally implemented in Java because it bulds on the Weka API. It is invoked from the OpenML API by means of a CLI interface. Typically, a call looks like this:
 
 `java -jar webapplication.jar -config "api_key=S3CR3T_AP1_K3Y" -f evaluate_run -r 500`
 

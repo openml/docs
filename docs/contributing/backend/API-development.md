@@ -1,3 +1,17 @@
+!!! tip "Phasing out"
+    This documentation is about the old PHP-based API, which wil be phased out in favor of (e.g. [the new Python-based API (using FastAPI)](https://github.com/openml/server-api)). See the 'Server' tab for more information.
+
+
+## Important resources
+
+REST API docs: www.openml.org/apis
+
+Controller: https://github.com/openml/OpenML/blob/master/openml_OS/controllers/Api_new.php
+
+Models: https://github.com/openml/OpenML/tree/master/openml_OS/models/api/v1
+
+Templates: https://github.com/openml/OpenML/tree/master/openml_OS/views/pages/api_new/v1
+
 ## Golden Rules for Development
 
 1. **Code Maintainability before anything else**. The code has to be understandable, and if not conflicting with that, short. Avoid code duplications as much as possible.
@@ -6,24 +20,14 @@
 4. Try to avoid direct queries to the database. Instead, use the respective models functions: 'get()', 'getWhere()', 'getById()', insert(), etc (Please make yourself familiar with the basic model: [read-only](https://github.com/openml/website/blob/master/openml_OS/models/abstract/Database_read.php) and [write](https://github.com/openml/website/blob/master/openml_OS/models/abstract/Database_write.php))
 5. No external program/script execution during API calls (with one exception: data split generation). This makes the API unnecessarily slow, hard to debug and vulnerable to crashes. If necessary, make a cronjob that executes the program / script
 
-## Important resources
-
-API docs: www.openml.org/api_docs
-
-Controller: https://github.com/openml/OpenML/blob/master/openml_OS/controllers/Api_new.php
-
-Models: https://github.com/openml/OpenML/tree/master/openml_OS/models/api/v1
-
-Templates: https://github.com/openml/OpenML/tree/master/openml_OS/views/pages/api_new/v1
-
 ## Backend code structure
 
 The high-level architecture of the website, including the controllers for different parts of the website (REST API, html, ...) and connections to the database.
 
 ### Code
 
-The source code is available in the 'website' repository:
-https://github.com/openml/website
+The source code is available in the 'OpenML' repository:
+https://github.com/openml/OpenML 
 
 ### Important files and folders
 
@@ -318,3 +322,4 @@ A user can be part of one or many groups. The following user groups exists:
 4. Backend Group: (Work in Progress) Level that has more privileges than 'Normal Group'. Can submit Data Qualities and Evaluations.
 
 The ION_Auth functions in_group(), add_to_group(), remove_from_group() and get_users_groups() are key towards interaction with these tables.
+
