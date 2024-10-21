@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://docs.openml.org/contributing/backend/API-development/">
       
       
-        <link rel="prev" href="../Local-Installation/">
+        <link rel="prev" href="../Datasets/">
       
       
-        <link rel="next" href="../Datasets/">
+        <link rel="next" href="../Java-App/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>API Development - OpenML Docs</title>
+        <title>Code structure (phasing out) - OpenML Docs</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#golden-rules-for-development" class="md-skip">
+        <a href="#important-resources" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Development
+              Code structure (phasing out)
             
           </span>
         </div>
@@ -1990,6 +1990,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2004,7 +2025,7 @@
           
   
   <span class="md-ellipsis">
-    API Development
+    Code structure (phasing out)
   </span>
   
 
@@ -2015,7 +2036,7 @@
         
   
   <span class="md-ellipsis">
-    API Development
+    Code structure (phasing out)
   </span>
   
 
@@ -2035,18 +2056,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#golden-rules-for-development" class="md-nav__link">
+  <a href="#important-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Golden Rules for Development
+      Important resources
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#important-resources" class="md-nav__link">
+  <a href="#golden-rules-for-development" class="md-nav__link">
     <span class="md-ellipsis">
-      Important resources
+      Golden Rules for Development
     </span>
   </a>
   
@@ -2227,32 +2248,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Datasets/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Datasets
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Java-App/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Evaluation Engine
+    Evaluation Engine (phasing out)
   </span>
   
 
@@ -2583,18 +2583,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#golden-rules-for-development" class="md-nav__link">
+  <a href="#important-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Golden Rules for Development
+      Important resources
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#important-resources" class="md-nav__link">
+  <a href="#golden-rules-for-development" class="md-nav__link">
     <span class="md-ellipsis">
-      Important resources
+      Golden Rules for Development
     </span>
   </a>
   
@@ -2790,8 +2790,17 @@
   
 
 
-  <h1>API Development</h1>
+  <h1>Code structure (phasing out)</h1>
 
+<div class="admonition tip">
+<p class="admonition-title">Phasing out</p>
+<p>This documentation is about the old PHP-based API, which wil be phased out in favor of (e.g. <a href="https://github.com/openml/server-api">the new Python-based API (using FastAPI)</a>). See the 'Server' tab for more information.</p>
+</div>
+<h2 id="important-resources">Important resources<a class="headerlink" href="#important-resources" title="Permanent link">&para;</a></h2>
+<p>REST API docs: <a href="http://www.openml.org/apis">www.openml.org/apis</a></p>
+<p>Controller: <a href="https://github.com/openml/OpenML/blob/master/openml_OS/controllers/Api_new.php">https://github.com/openml/OpenML/blob/master/openml_OS/controllers/Api_new.php</a></p>
+<p>Models: <a href="https://github.com/openml/OpenML/tree/master/openml_OS/models/api/v1">https://github.com/openml/OpenML/tree/master/openml_OS/models/api/v1</a></p>
+<p>Templates: <a href="https://github.com/openml/OpenML/tree/master/openml_OS/views/pages/api_new/v1">https://github.com/openml/OpenML/tree/master/openml_OS/views/pages/api_new/v1</a></p>
 <h2 id="golden-rules-for-development">Golden Rules for Development<a class="headerlink" href="#golden-rules-for-development" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Code Maintainability before anything else</strong>. The code has to be understandable, and if not conflicting with that, short. Avoid code duplications as much as possible.</li>
@@ -2800,16 +2809,11 @@
 <li>Try to avoid direct queries to the database. Instead, use the respective models functions: 'get()', 'getWhere()', 'getById()', insert(), etc (Please make yourself familiar with the basic model: <a href="https://github.com/openml/website/blob/master/openml_OS/models/abstract/Database_read.php">read-only</a> and <a href="https://github.com/openml/website/blob/master/openml_OS/models/abstract/Database_write.php">write</a>)</li>
 <li>No external program/script execution during API calls (with one exception: data split generation). This makes the API unnecessarily slow, hard to debug and vulnerable to crashes. If necessary, make a cronjob that executes the program / script</li>
 </ol>
-<h2 id="important-resources">Important resources<a class="headerlink" href="#important-resources" title="Permanent link">&para;</a></h2>
-<p>API docs: <a href="http://www.openml.org/api_docs">www.openml.org/api_docs</a></p>
-<p>Controller: <a href="https://github.com/openml/OpenML/blob/master/openml_OS/controllers/Api_new.php">https://github.com/openml/OpenML/blob/master/openml_OS/controllers/Api_new.php</a></p>
-<p>Models: <a href="https://github.com/openml/OpenML/tree/master/openml_OS/models/api/v1">https://github.com/openml/OpenML/tree/master/openml_OS/models/api/v1</a></p>
-<p>Templates: <a href="https://github.com/openml/OpenML/tree/master/openml_OS/views/pages/api_new/v1">https://github.com/openml/OpenML/tree/master/openml_OS/views/pages/api_new/v1</a></p>
 <h2 id="backend-code-structure">Backend code structure<a class="headerlink" href="#backend-code-structure" title="Permanent link">&para;</a></h2>
 <p>The high-level architecture of the website, including the controllers for different parts of the website (REST API, html, ...) and connections to the database.</p>
 <h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h3>
-<p>The source code is available in the 'website' repository:
-<a href="https://github.com/openml/website">https://github.com/openml/website</a></p>
+<p>The source code is available in the 'OpenML' repository:
+<a href="https://github.com/openml/OpenML">https://github.com/openml/OpenML</a> </p>
 <h3 id="important-files-and-folders">Important files and folders<a class="headerlink" href="#important-files-and-folders" title="Permanent link">&para;</a></h3>
 <p>In this section we go through all important files and folder of the
 system.</p>

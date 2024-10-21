@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://docs.openml.org/contributing/backend/Datasets/">
       
       
-        <link rel="prev" href="../API-development/">
+        <link rel="prev" href="../Local-Installation/">
       
       
-        <link rel="next" href="../Java-App/">
+        <link rel="next" href="../API-development/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1990,27 +1990,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../API-development/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    API Development
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2074,6 +2053,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#image-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image data
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2104,11 +2092,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../API-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code structure (phasing out)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Java-App/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Evaluation Engine
+    Evaluation Engine (phasing out)
   </span>
   
 
@@ -2457,6 +2466,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#image-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image data
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2524,10 +2542,15 @@ we settled on the <a href="https://parquet.apache.org/#:~:text=Apache%20Parquet%
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">GradientBoostingClassifier</span>         <span class="c1"># Using a sklearn model as an example</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">model</span> <span class="o">=</span> <span class="n">GradientBoostingClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>   <span class="c1"># Set hyperparameters and train the model </span>
 </code></pre></div></td></tr></table></div>
+<p>To guarantee interoperability, we focus on a limited set of data formats.</p>
 <h3 id="tabular-data">Tabular data<a class="headerlink" href="#tabular-data" title="Permanent link">&para;</a></h3>
-<p>OpenML has historically focussed on tabular data, and has extensive support </p>
-<p>To guarantee interoperability, we focus on a limited set of data formats. We aim to support all sorts of data, but for the moment we only fully support tabular data in the ARFF format. We are currently working on supporting a much wider range of formats.</p>
-<p><a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF definition</a>. Also check that attribute definitions do not mix spaces and tabs, and do not include end-of-line comments.</p>
+<p>OpenML has historically focussed on tabular data, and has extensive support for all kinds of tabular data. As explained above, we store all data in the <a href="https://parquet.apache.org/#:~:text=Apache%20Parquet%20is%20an%20open,programming%20language%20and%20analytics%20tools">Parquet format</a>. You can upload data from many different data structures, such as Pandas dataframes and R dataframes, after which they will be converted and stored in Parquet. You can also upload datasets as CSV files or <a href="https://www.cs.waikato.ac.nz/ml/weka/arff.html">ARFF files</a>, and we aim to allow direct Parquet uploads soon.</p>
+<div class="admonition tip">
+<p class="admonition-title">ARFF legacy</p>
+<p>At the moment, some aspects of OpenML still has a dependency on the ARFF format. This will be fully phased out in favor of Parquet.</p>
+</div>
+<h3 id="image-data">Image data<a class="headerlink" href="#image-data" title="Permanent link">&para;</a></h3>
+<p>OpenML generally supports other data types by requiring a 'header table', a table (stored in Parquet) listing all data instances with additional meta-data (e.g. classes, bounding boxes,...) and references to data files, such as images (e.g. JPGs), stored in seperate folders. <a href="https://blog.openml.org/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html">See our blog post for details</a>. We will provide more detailed guidelines here as soon as possible.</p>
 <h2 id="data-repositories">Data repositories<a class="headerlink" href="#data-repositories" title="Permanent link">&para;</a></h2>
 <p>This is a list of public dataset repositories that offer additional useful machine learning datasets.
 These have widely varying data formats, so they require manual selection, parsing and meta-data extraction.</p>
