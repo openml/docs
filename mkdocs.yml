@@ -55,6 +55,7 @@ markdown_extensions:
         alternate_style: true
     - admonition
     - codehilite
+    - tables
     - pymdownx.inlinehilite
     - toc:
         permalink: true
@@ -138,6 +139,7 @@ nav:
     #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
     - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
     - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
+    - APIv2: '!import https://github.com/openml/server-api?branch=main'
     - Ecosystem:
         - Overview: ecosystem/index.md
         - Python Integrations: ecosystem/Python_extensions.md
