@@ -236,4 +236,36 @@
          <loc>https://docs.openml.org/julia/</loc>
          <lastmod>2024-10-21</lastmod>
     </url>
+    <url>
+         <loc>https://docs.openml.org/apiv2/</loc>
+         <lastmod>2024-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/apiv2/installation/</loc>
+         <lastmod>2024-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/apiv2/migration/</loc>
+         <lastmod>2024-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/apiv2/contributing/</loc>
+         <lastmod>2024-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/apiv2/contributing/contributing/</loc>
+         <lastmod>2024-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/apiv2/contributing/documentation/</loc>
+         <lastmod>2024-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/apiv2/contributing/project_overview/</loc>
+         <lastmod>2024-10-21</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/apiv2/contributing/tests/</loc>
+         <lastmod>2024-10-21</lastmod>
+    </url>
 </urlset>
