@@ -1,16 +1,26 @@
 # Machine Learning in R (mlr)
 
-OpenML is readily integrated with mlr through the [R API](../R-guide).
+OpenML is readily integrated with mlr through the [mlr3oml](https://mlr3oml.mlr-org.com/index.html) package.
 
 !!! example
     ```r
-    library(OpenML)
-    library(mlr)
+    library(mlr3oml)
+    library(mlr3)
 
-    task = getOMLTask(10)
-    lrn = makeLearner("classif.rpart")
-    run = runTaskMlr(task, lrn)
-    run.id = uploadOMLRun(run)
+    # Search for specific datasets
+    odatasets = list_oml_data(
+    number_features = c(10, 20),
+    number_instances = c(45000, 50000),
+    number_classes = 2
+    )
+
+    # Get dataset
+    odata = odt(id = 1590)
+    # Access the actual data
+    odata$data
+
+    # Convert to an mlr3::Task
+    tsk_adult = as_task(odata, target = "class")
     ```
 
 Key features:  
@@ -20,4 +30,4 @@ Key features:
 * Upload your runs for collaboration or publishing  
 * Query, download and reuse all shared runs  
 
-For many more details and examples, see the [R tutorial](../R-guide).
+There is also an older (deprecated) [OpenML R package](http://openml.github.io/openml-r/).

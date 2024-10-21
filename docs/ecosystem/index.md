@@ -8,7 +8,7 @@ OpenML has a rich ecosystem of tools and projects that seamlessly integrate Open
 
 !!! info "Integrate OpenML in your libraries"
     If you want to integrate OpenML into machine learning and data science tools, it's easiest to build on one of the existing clients, 
-    which often can be used as is or extended. For instance, see how to [extend the Python API](./creating_extensions.md) to integrate OpenML into Python tools. 
+    which often can be used as is or extended. For instance, see how to [extend the Python API](./Python_extensions.md) to integrate OpenML into Python tools. 
 
 <div class="card-container">
 

@@ -22,4 +22,4 @@ OpenML is always evolving, but we keep hosting the resources that were used in p
 
 ## Other dataset repositories
 
-We keep a list of [other dataset repositories all over the world](./Datasets.md)
+We keep a list of [other dataset repositories all over the world](./backend/Datasets.md)

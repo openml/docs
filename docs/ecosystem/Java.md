@@ -17,13 +17,13 @@ Include the jar file in your projects as usual, or [install via Maven](http://ma
 All functions are described in the [Java Docs](https://www.openml.org/docs).
 
 ### Downloading
-To download data, flows, tasks, runs, etc. you need the unique id of that resource. The id is shown on each item's webpage and in the corresponding url. For instance, let's download [Data set 1](d/1). The following returns a DataSetDescription object that contains all information about that data set.
+To download data, flows, tasks, runs, etc. you need the unique id of that resource. The id is shown on each item's webpage and in the corresponding url. For instance, let's download [Data set 1](https://openml.org/d/1). The following returns a DataSetDescription object that contains all information about that data set.
 
 ```
 DataSetDescription data = client.dataGet(1);
 ```
 
-You can also [search](search) for the items you need online, and click the icon to get all id's that match a search.
+You can also [search](https://openml.org) for the items you need online, and click the icon to get all id's that match a search.
 
 ### Uploading
 
@@ -35,7 +35,7 @@ UploadDataSet result = client.dataUpload( description, datasetFile );
 int data_id = result.getId();
 ```
 
-More details are given in the corresponding functions below. Also see the [Java Docs](docs) for all possible inputs and return values.
+More details are given in the corresponding functions below. Also see the [Java Docs](https://openml.github.io/openml-java/) for all possible inputs and return values.
 
 ### Data download
 
@@ -95,7 +95,7 @@ Retrieves a list of all data qualities known to OpenML.
 
 #### `dataUpload(DataSetDescription description, File dataset)`
 
-Uploads a data set file to OpenML given a description. Throws an exception if the upload failed, see [openml.data.upload](#openml_data_upload) for error codes.
+Uploads a data set file to OpenML given a description. Throws an exception if the upload failed, see [openml.data.upload](https://www.openml.org/apis) for error codes.
 
 ```
     DataSetDescription dataset = new DataSetDescription( "iris", "The iris dataset", "arff", "class");
@@ -106,7 +106,7 @@ Uploads a data set file to OpenML given a description. Throws an exception if th
 
 #### `dataUpload(DataSetDescription description)`
 
-Registers an existing dataset (hosted elsewhere). The description needs to include the url of the data set. Throws an exception if the upload failed, see [openml.data.upload](#openml_data_upload) for error codes.
+Registers an existing dataset (hosted elsewhere). The description needs to include the url of the data set. Throws an exception if the upload failed, see [openml.data.upload](https://www.openml.org/apis) for error codes.
 
 ```
     DataSetDescription description = new DataSetDescription( "iris", "The iris dataset", "arff", "class");

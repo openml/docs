@@ -11,7 +11,7 @@ If you want to develop your own client (e.g. for a new language), please check o
 
 !!! info "Integrating tools"
     If you want to integrate OpenML into machine learning and data science tools, it's often easier to build on one of the existing clients, 
-    which often can be used as is or extended. For instance, see how to [extend the Python API](./creating_extensions.md) to integrate OpenML into Python tools. 
+    which often can be used as is or extended. For instance, see how to [extend the Python API](../../ecosystem/Python_extensions.md) to integrate OpenML into Python tools. 
 
 
 ## Minimal standards

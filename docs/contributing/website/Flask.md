@@ -3,7 +3,7 @@ authentication, dataset upload, task creation, and other aspects that require
 server-side interaction. It is designed to be _independent_ from the OpenML API.
 This means that you can use it to create your own personal frontend for OpenML,
 using the main OpenML server to provide the data. Of course, you can also link
-it to your own [local OpenML setup](Local-Installation).
+it to your own [local OpenML setup](../backend/Local-Installation.md).
 
 ### Design
 Out flask app follows [Application factories design pattern](https://flask.palletsprojects.com/en/1.1.x/patterns/appfactories/).
