@@ -290,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../apiv2/installation/" class="md-tabs__link">
+        <a href="../apiv2/" class="md-tabs__link">
           
   
   APIv2
@@ -1202,27 +1202,6 @@
   
   
     <li class="md-nav__item">
-      <a href="API reference/index.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="API%20reference/Callbacks/" class="md-nav__link">
         
   
@@ -1349,24 +1328,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="Examples/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Examples
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
@@ -1648,6 +1619,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../apiv2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../apiv2/installation/" class="md-nav__link">
         
   
@@ -1679,7 +1671,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
           
@@ -1695,14 +1687,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -2755,7 +2747,7 @@
 <p>PyPi link <a href="https://pypi.org/project/openml-pytorch/">https://pypi.org/project/openml-pytorch/</a></p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>To use this extension, you need to have a task from OpenML. You can either browse the <a href="https://openml.org/search?type=task&amp;sort=runs">OpenML website</a> to find a task (and get it's ID), or follow the <a href="Examples/Create%20Dataset%20and%20Task/">example</a> to create a task from a custom dataset.</p>
-<p>Then, follow one of the examples in the <a href="./Examples">Examples</a> folder to see how to use this extension for your type of data.</p>
+<p>Then, follow one of the examples in the <a href="Examples/Create%20Dataset%20and%20Task/">Examples</a> folder to see how to use this extension for your type of data.</p>
 <p>Import openML libraries
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -2850,7 +2842,7 @@ Run the model on the task
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;URL for run: </span><span class="si">%s</span><span class="s1">/run/</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">server</span><span class="p">,</span> <span class="n">run</span><span class="o">.</span><span class="n">run_id</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
-Note: The input layer of the network should be compatible with OpenML data output shape. Please check <a href="/examples/">examples</a> for more information.</p>
+Note: The input layer of the network should be compatible with OpenML data output shape. Please check <a href="Examples/Create%20Dataset%20and%20Task/">examples</a> for more information.</p>
 <p>Additionally, if you want to publish the run with onnx file, then you must call <code>openml_pytorch.add_onnx_to_run()</code> immediately before <code>run.publish()</code>. </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">run</span> <span class="o">=</span> <span class="n">openml_pytorch</span><span class="o">.</span><span class="n">add_onnx_to_run</span><span class="p">(</span><span class="n">run</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>

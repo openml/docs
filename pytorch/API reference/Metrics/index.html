@@ -290,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../apiv2/installation/" class="md-tabs__link">
+        <a href="../../../apiv2/" class="md-tabs__link">
           
   
   APIv2
@@ -1146,27 +1146,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API reference/index.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Callbacks/" class="md-nav__link">
         
   
@@ -1369,24 +1348,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../Examples/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Examples
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
@@ -1668,6 +1639,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../apiv2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../apiv2/installation/" class="md-nav__link">
         
   
@@ -1699,7 +1691,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
           
@@ -1715,14 +1707,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -2879,92 +2871,13 @@ Tensor: The mean accuracy of the predictions, computed as a float tensor.</p>
     <div class="doc doc-contents ">
 
         <p>Computes the top-k accuracy of the given model outputs.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>out</code>
-            </td>
-            <td>
-                  <code><span title="torch.Tensor">Tensor</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The output predictions of the model, of shape (batch_size, num_classes).</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td>
-                <code>yb</code>
-            </td>
-            <td>
-                  <code><span title="torch.Tensor">Tensor</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The ground truth labels, of shape (batch_size,).</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td>
-                <code>k</code>
-            </td>
-            <td>
-                  <code>int</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The number of top predictions to consider. Default is 5.</p>
-              </div>
-            </td>
-            <td>
-                  <code>5</code>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-<th>Name</th>          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-<td><code>float</code></td>            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The top-k accuracy as a float value.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-        <p>The function calculates how often the true label is among the top-k predicted labels.</p>
+<p>Args:
+    out (torch.Tensor): The output predictions of the model, of shape (batch_size, num_classes).
+    yb (torch.Tensor): The ground truth labels, of shape (batch_size,).
+    k (int, optional): The number of top predictions to consider. Default is 5.</p>
+<p>Returns:
+    float: The top-k accuracy as a float value.</p>
+<p>The function calculates how often the true label is among the top-k predicted labels.</p>
 
             <details class="quote">
               <summary>Source code in <code>temp_dir/pytorch/openml_pytorch/metrics.py</code></summary>
@@ -3020,59 +2933,11 @@ Tensor: The mean accuracy of the predictions, computed as a float tensor.</p>
 <p>The sigmoid function is defined as 1 / (1 + exp(-x)). This function is used
 to map any real-valued number into the range (0, 1). It is widely used in
 machine learning, especially in logistic regression and neural networks.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>x</code>
-            </td>
-            <td>
-                  <code><span title="numpy.ndarray">ndarray</span> or float</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>The input value or array over which the</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>numpy.ndarray or float: The sigmoid of the input value or array.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+<p>Args:
+    x (numpy.ndarray or float): The input value or array over which the
+    sigmoid function should be applied.</p>
+<p>Returns:
+    numpy.ndarray or float: The sigmoid of the input value or array.</p>
 
             <details class="quote">
               <summary>Source code in <code>temp_dir/pytorch/openml_pytorch/metrics.py</code></summary>

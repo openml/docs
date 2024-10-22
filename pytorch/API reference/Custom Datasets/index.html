@@ -290,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../apiv2/installation/" class="md-tabs__link">
+        <a href="../../../apiv2/" class="md-tabs__link">
           
   
   APIv2
@@ -1146,27 +1146,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API reference/index.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../Callbacks/" class="md-nav__link">
         
   
@@ -1360,24 +1339,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../Examples/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Examples
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
@@ -1659,6 +1630,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../apiv2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../apiv2/installation/" class="md-nav__link">
         
   
@@ -1690,7 +1682,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
           
@@ -1706,14 +1698,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -2954,45 +2946,14 @@ __len__(self)
         <p>OpenMLTabularDataset</p>
 <p>A custom dataset class to handle tabular data from OpenML (or any similar tabular dataset).
 It encodes categorical features and the target column using LabelEncoder from sklearn.</p>
+<p>Methods:
+    <strong>init</strong>(X, y) : Initializes the dataset with the data and the target column.
+                     Encodes the categorical features and target if provided.</p>
+<div class="codehilite"><pre><span></span><code>__getitem__(idx): Retrieves the input data and target value at the specified index.
+                  Converts the data to tensors and returns them.
 
-
-<p><span class="doc-section-title">Methods:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-            <tr class="doc-section-item">
-              <td><code><span title="custom_datasets.OpenMLTabularDataset.__init__">__init__</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Initializes the dataset with the data and the target column.
-             Encodes the categorical features and target if provided.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="custom_datasets.OpenMLTabularDataset.__getitem__">__getitem__</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Retrieves the input data and target value at the specified index.
-              Converts the data to tensors and returns them.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="custom_datasets.OpenMLTabularDataset.__len__">__len__</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Returns the length of the dataset.</p>
-                </div>
-              </td>
-            </tr>
-      </tbody>
-    </table>
+__len__(): Returns the length of the dataset.
+</code></pre></div>
 
 
 

@@ -290,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../apiv2/installation/" class="md-tabs__link">
+        <a href="../../../apiv2/" class="md-tabs__link">
           
   
   APIv2
@@ -1143,27 +1143,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../API reference/index.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1552,24 +1531,16 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../Examples/" class="md-nav__link ">
-              
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Examples
   </span>
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
@@ -1851,6 +1822,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../apiv2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../apiv2/installation/" class="md-nav__link">
         
   
@@ -1882,7 +1874,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
           
@@ -1898,14 +1890,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -3196,103 +3188,27 @@
 
 
         <p>AvgStats class is used to track and accumulate average statistics (like loss and other metrics) during training and validation phases.</p>
+<p>Attributes:
+    metrics (list): A list of metric functions to be tracked.
+    in_train (bool): A flag to indicate if the statistics are for the training phase.</p>
+<p>Methods:
+    <strong>init</strong>(metrics, in_train):
+        Initializes the AvgStats with metrics and in_train flag.</p>
+<div class="codehilite"><pre><span></span><code>reset():
+    Resets the accumulated statistics.
 
+all_stats:
+    Property that returns all accumulated statistics including loss and metrics.
 
-<p><span class="doc-section-title">Attributes:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code><span title="callbacks.AvgStats.metrics">metrics</span></code></td>
-            <td>
-                  <code>list</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>A list of metric functions to be tracked.</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="callbacks.AvgStats.in_train">in_train</span></code></td>
-            <td>
-                  <code>bool</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>A flag to indicate if the statistics are for the training phase.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+avg_stats:
+    Property that returns the average of the accumulated statistics.
 
+accumulate(run):
+    Accumulates the statistics using the data from the given run.
 
-<p><span class="doc-section-title">Methods:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStats.__init__">__init__</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Initializes the AvgStats with metrics and in_train flag.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStats.reset">reset</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Resets the accumulated statistics.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStats.all_stats">all_stats</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Property that returns all accumulated statistics including loss and metrics.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStats.avg_stats">avg_stats</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Property that returns the average of the accumulated statistics.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStats.accumulate">accumulate</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Accumulates the statistics using the data from the given run.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStats.__repr__">__repr__</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Returns a string representation of the average statistics.</p>
-                </div>
-              </td>
-            </tr>
-      </tbody>
-    </table>
+__repr__():
+    Returns a string representation of the average statistics.
+</code></pre></div>
 
 
 
@@ -3446,81 +3362,13 @@
 
 
         <p>AvgStatsCallBack class is a custom callback used to track and print average statistics for training and validation phases during the training loop.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>metrics</code>
-            </td>
-            <td>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>A list of metric functions to evaluate during training and validation.</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-<p><span class="doc-section-title">Methods:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStatsCallBack.__init__">__init__</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Initializes the callback with given metrics and sets up AvgStats objects for both training and validation phases.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStatsCallBack.begin_epoch">begin_epoch</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Resets the statistics at the beginning of each epoch.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStatsCallBack.after_loss">after_loss</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Accumulates the metrics after computing the loss, differentiating between training and validation phases.</p>
-                </div>
-              </td>
-            </tr>
-            <tr class="doc-section-item">
-              <td><code><span title="callbacks.AvgStatsCallBack.after_epoch">after_epoch</span></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Prints the accumulated statistics for both training and validation phases after each epoch.</p>
-                </div>
-              </td>
-            </tr>
-      </tbody>
-    </table>
+<p>Arguments:
+    metrics: A list of metric functions to evaluate during training and validation.</p>
+<p>Methods:
+    <strong>init</strong>: Initializes the callback with given metrics and sets up AvgStats objects for both training and validation phases.
+    begin_epoch: Resets the statistics at the beginning of each epoch.
+    after_loss: Accumulates the metrics after computing the loss, differentiating between training and validation phases.
+    after_epoch: Prints the accumulated statistics for both training and validation phases after each epoch.</p>
 
 
 
@@ -4137,42 +3985,9 @@ and appends the current learning rate and loss to the corresponding lists.</p>
 
         <p>Initializes attributes necessary for the fitting process.</p>
 <p>Sets up learning rates and losses storage.</p>
-
-
-<p><span class="doc-section-title">Attributes:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td><code><span title="callbacks.Recorder.begin_fit.self.lrs">self.lrs</span></code></td>
-            <td>
-                  <code>list</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>A list of lists, where each inner list will hold learning rates for a parameter group.</p>
-              </div>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td><code><span title="callbacks.Recorder.begin_fit.self.losses">self.losses</span></code></td>
-            <td>
-                  <code>list</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>An empty list to store loss values during the fitting process.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+<p>Attributes:
+    self.lrs (list): A list of lists, where each inner list will hold learning rates for a parameter group.
+    self.losses (list): An empty list to store loss values during the fitting process.</p>
 
             <details class="quote">
               <summary>Source code in <code>temp_dir/pytorch/openml_pytorch/callbacks.py</code></summary>
