@@ -37,6 +37,14 @@ theme:
         edit: material/pencil 
         view: material/eye
 markdown_extensions:
+    - admonition
+    - codehilite
+    - tables
+    - attr_list
+    - toc:
+        permalink: true
+    - markdown_include.include:
+        base_path: docs
     - pymdownx.arithmatex
     - pymdownx.betterem:
         smart_enable: all
@@ -53,13 +61,7 @@ markdown_extensions:
     - pymdownx.tilde
     - pymdownx.tabbed:
         alternate_style: true
-    - admonition
-    - codehilite
-    - tables
     - pymdownx.inlinehilite
-    - toc:
-        permalink: true
-    - attr_list
     - pymdownx.emoji:
         emoji_index: !!python/name:material.extensions.emoji.twemoji
         emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -72,8 +74,8 @@ plugins:
         cleanup: false
     - autorefs
     - section-index
-    #- awesome-pages
     - mkdocs-jupyter:
+        theme: light
         remove_tag_config:
             remove_input_tags:
                 - hide_code
@@ -89,20 +91,16 @@ plugins:
         default_handler: python
         handlers:
             python:
-                paths: [temp_dir/pytorch/openml_pytorch]
+                paths: [temp_dir/pytorch/openml_pytorch,temp_dir/python/examples,temp_dir/python/openml,temp_dir/python,./]
                 load_external_modules: true
                 show_source: true
                 options:
                     docstring_section_style: table
                     show_docstring_functions: true
-    #- mkdocstrings:
-    #    handlers:
-    #        python:
-    #        options:
-    #            docstring_style: numpy
+                    docstring_style: numpy
     #- gen-files:
     #    scripts:
-    #        - scripts/gen_ref_pages.py
+    #        - docs/scripts/gen_ref_pages.py
     #- literate-nav:
     #    nav_file: SUMMARY.md
 exclude_docs: |
@@ -110,6 +108,7 @@ exclude_docs: |
     old/
     pytorch/openml_pytorch/
     pytorch/Examples/index.md
+    ecosystem/showcase.md
 nav:
     - OpenML:
         - Introduction: index.md
@@ -136,7 +135,7 @@ nav:
             - Tutorials:
                 - Basic Example - Random Forest: benchmark/automl/basic_example.md
                 - Specific Task and Fold: benchmark/automl/specific_task_fold_example.md
-    #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc'
+    #- Python: '!import https://github.com/openml/openml-python?branch=docs/mkdoc&extra_imports=["examples/*","openml/*"]'
     - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
     - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
     - APIv2: '!import https://github.com/openml/server-api?branch=main'

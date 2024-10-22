@@ -10,15 +10,9 @@ import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-with open("scripts/showcase_urls.txt", "r") as file:
+with open("showcase_urls.txt", "r") as file:
     target_urls = file.readlines()
     target_urls = [url.strip() for url in target_urls]
-main_info = """# Showcase
-
-This page is a showcase of some projects and research done using the OpenML libary. Did you use OpenML in your work and want to share it with the community? We would love to have you!
-
-Simply create a pull request with the necessary information and we will add it to this page.\n"""
-
 
 def get_github_info(target_url):
     """
@@ -124,8 +118,7 @@ def generate_page(info):
 
 info = return_details(target_urls)
 # print(generate_page(info))
-with open("showcase.md", "w") as file:
-    file.write(main_info)
+with open("../docs/ecosystem/showcase.md", "w") as file:
     file.write(generate_page(info))
 
 # test = ["https://github.com/openml/openml-python"]
