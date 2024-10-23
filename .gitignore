@@ -1,3 +1,5 @@
 site/*
+openml/*
+examples/*
 temp_dir/*
 .DS_store
