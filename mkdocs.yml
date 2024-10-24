@@ -80,9 +80,13 @@ plugins:
                 openml/*
                 *.md
                 ]
+          - name: R
+            import_url: https://github.com/mlr-org/mlr3oml?branch=main
+            imports: [README.md]
     - autorefs
     - section-index
     - mkdocs-jupyter:
+        ignore: ['temp_dir/**/*']
         theme: light
         remove_tag_config:
             remove_input_tags:
@@ -137,17 +141,6 @@ nav:
             - Tutorials:
                 - Basic Example - Random Forest: benchmark/automl/basic_example.md
                 - Specific Task and Fold: benchmark/automl/specific_task_fold_example.md
-    - Python:
-        - index.md
-        - Code Reference: reference/
-        - Examples: example_refs/
-        - Usage: python/usage.md
-        - Contributing: python/contributing.md
-        - Extensions: python/extensions.md
-        - Changelog: python/progress.md
-    - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
-    - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
-    - APIv2: '!import https://github.com/openml/server-api?branch=main'
     - Ecosystem:
         - Overview: ecosystem/index.md
         - Python Integrations: ecosystem/Python_extensions.md
@@ -161,6 +154,19 @@ nav:
         - MOA: ecosystem/MOA.md
         - Java: ecosystem/Java.md
         - REST API: ecosystem/Rest.md
+    - Python:
+        - python/index.md
+        - Code Reference: reference/
+        - Examples: python/examples/
+        - Usage: python/usage.md
+        - Contributing: python/contributing.md
+        - Extensions: python/extensions.md
+        - Changelog: python/progress.md
+    - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
+    - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
+    - R: 
+        - r/README.md
+    - APIv2: '!import https://github.com/openml/server-api?branch=main'
     - Contributing:
         - How to Contribute: contributing/index.md
         - Documentation: contributing/OpenML-Docs.md
@@ -189,9 +195,8 @@ extra_javascript:
 exclude_docs: |
     scripts/
     old/
-    pytorch/openml_pytorch/
-    python/examples/
     python/openml/
+    pytorch/openml_pytorch/
     pytorch/Examples/index.md
     ecosystem/showcase.md
     
