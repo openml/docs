@@ -12,4 +12,5 @@ mkdocstrings
 mkdocs-gen-files
 mkdocs-literate-nav
 mkdocstrings-python
+markdown-include
 tqdm
