@@ -90,7 +90,7 @@ with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
 # Generate the example page index
 nav = mkdocs_gen_files.Nav()
 examples_src = root / "docs" / "python" / "examples"
-for path in sorted(examples_src.rglob("*.py")):
+for path in sorted(examples_src.rglob("*.md")) + sorted(examples_src.rglob("*.py")):
     dest_path = path.relative_to(examples_src)
 
     # Temporary. Renames the ugly folder names
@@ -98,6 +98,7 @@ for path in sorted(examples_src.rglob("*.py")):
     parts[0] = parts[0].split("_", 1)[-1].capitalize()
     parts = tuple(parts) 
 
-    nav[parts] = dest_path.as_posix()
+    if len(parts) > 1:
+        nav[parts] = dest_path.as_posix()
 with open(examples_src / "SUMMARY.md", "w") as nav_file:
     nav_file.writelines(nav.build_literate_nav())
