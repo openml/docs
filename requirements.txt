@@ -10,8 +10,6 @@ mkdocs-autorefs
 mkdocs-section-index
 mkdocstrings
 mkdocs-gen-files
-#mkdocs-literate-nav
+mkdocs-literate-nav
 mkdocstrings-python
-markdown-include
-mkdocs-macros-plugin
 tqdm
