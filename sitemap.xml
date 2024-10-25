@@ -197,6 +197,98 @@
          <lastmod>2024-10-25</lastmod>
     </url>
     <url>
+         <loc>https://docs.openml.org/examples/SUMMARY/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/20_basic/introduction_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/20_basic/simple_datasets_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/20_basic/simple_flows_and_runs_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/20_basic/simple_suites_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/configure_logging/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/create_upload_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/custom_flow_/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/datasets_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/fetch_evaluations_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/fetch_runtimes_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/flow_id_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/flows_and_runs_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/plot_svm_hyperparameters_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/run_setup_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/study_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/suites_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/task_manual_iteration_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/30_extended/tasks_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/40_paper/2015_neurips_feurer_example/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/40_paper/2018_ida_strang_example/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/40_paper/2018_kdd_rijn_example/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/examples/40_paper/2018_neurips_perrone_example/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
          <loc>https://docs.openml.org/intro/Governance/</loc>
          <lastmod>2024-10-25</lastmod>
     </url>
@@ -277,18 +369,6 @@
          <lastmod>2024-10-25</lastmod>
     </url>
     <url>
-         <loc>https://docs.openml.org/python/examples/</loc>
-         <lastmod>2024-10-25</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/SUMMARY/</loc>
-         <lastmod>2024-10-25</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/20_basic/</loc>
-         <lastmod>2024-10-25</lastmod>
-    </url>
-    <url>
          <loc>https://docs.openml.org/python/examples/20_basic/introduction_tutorial/</loc>
          <lastmod>2024-10-25</lastmod>
     </url>
@@ -302,10 +382,6 @@
     </url>
     <url>
          <loc>https://docs.openml.org/python/examples/20_basic/simple_suites_tutorial/</loc>
-         <lastmod>2024-10-25</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/</loc>
          <lastmod>2024-10-25</lastmod>
     </url>
     <url>
@@ -362,10 +438,6 @@
     </url>
     <url>
          <loc>https://docs.openml.org/python/examples/30_extended/tasks_tutorial/</loc>
-         <lastmod>2024-10-25</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/40_paper/</loc>
          <lastmod>2024-10-25</lastmod>
     </url>
     <url>
