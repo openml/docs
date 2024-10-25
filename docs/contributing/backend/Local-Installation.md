@@ -10,11 +10,9 @@
 
 ## Using Docker Compose
 The easiest way to set up a local version of OpenML is to use Docker Compose following the instructions here (thanks to Jos van der Velde!):
-https://github.com/openml/openml-services.
+https://github.com/openml/services.
 
 If you run into problems, please post an issue in the same github repo.
-
-<img src="https://github.com/openml/services/blob/main/documentation/OpenML-overview.png?raw=true"></img>
 
 ## Installation from scratch
 If you want to install a local version of OpenML from scratch please follow the steps mentioned below.

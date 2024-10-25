@@ -83,6 +83,9 @@ plugins:
           - name: R
             import_url: https://github.com/mlr-org/mlr3oml?branch=main
             imports: [README.md]
+          - name: Services
+            import_url: https://github.com/openml/services?branch=main
+            imports: [README.md]
     - autorefs
     - section-index
     - mkdocs-jupyter:
@@ -172,6 +175,7 @@ nav:
         - Documentation: contributing/OpenML-Docs.md
         - Backend:
             - Local Installation: contributing/backend/Local-Installation.md
+            - Services: services/README.md
             - Datasets: contributing/backend/Datasets.md
             - Code structure (phasing out): contributing/backend/API-development.md
             - Evaluation Engine (phasing out): contributing/backend/Java-App.md
