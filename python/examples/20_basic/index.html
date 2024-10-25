@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://docs.openml.org/pytorch/Limitations%20of%20the%20API/">
+        <link rel="canonical" href="https://docs.openml.org/python/examples/20_basic/">
       
       
-        <link rel="prev" href="../Examples/Tabular%20Classification/">
+        <link rel="prev" href="../../../reference/utils/">
       
       
-        <link rel="next" href="../Philosophy%20behind%20the%20API%20Design/">
+        <link rel="next" href="introduction_tutorial/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
-        <title>Limitations of the API - OpenML Docs</title>
+        <title>README.md - OpenML Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#limitations" class="md-skip">
+        <a href="#introductory-examples" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="OpenML Docs" class="md-header__button md-logo" aria-label="OpenML Docs" data-md-component="logo">
+    <a href="../../.." title="OpenML Docs" class="md-header__button md-logo" aria-label="OpenML Docs" data-md-component="logo">
       
-  <img src="../../img/openml.png" alt="logo">
+  <img src="../../../img/openml.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Limitations of the API
+              README.md
             
           </span>
         </div>
@@ -216,7 +216,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
   OpenML
@@ -234,7 +234,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../benchmark/benchmark/" class="md-tabs__link">
+        <a href="../../../benchmark/benchmark/" class="md-tabs__link">
           
   
   Benchmarking
@@ -252,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ecosystem/" class="md-tabs__link">
+        <a href="../../../ecosystem/" class="md-tabs__link">
           
   
   Ecosystem
@@ -266,9 +266,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../python/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../" class="md-tabs__link">
         
   
     
@@ -283,13 +285,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../pytorch/" class="md-tabs__link">
           
   
   PyTorch
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../julia/" class="md-tabs__link">
+        <a href="../../../julia/" class="md-tabs__link">
           
   
   Julia
@@ -323,7 +323,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../r/" class="md-tabs__link">
+      <a href="../../../r/" class="md-tabs__link">
         
   
     
@@ -342,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../apiv2/" class="md-tabs__link">
+        <a href="../../../apiv2/" class="md-tabs__link">
           
   
   APIv2
@@ -360,7 +360,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../contributing/" class="md-tabs__link">
+        <a href="../../../contributing/" class="md-tabs__link">
           
   
   Contributing
@@ -399,9 +399,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="OpenML Docs" class="md-nav__button md-logo" aria-label="OpenML Docs" data-md-component="logo">
+    <a href="../../.." title="OpenML Docs" class="md-nav__button md-logo" aria-label="OpenML Docs" data-md-component="logo">
       
-  <img src="../../img/openml.png" alt="logo">
+  <img src="../../../img/openml.png" alt="logo">
 
     </a>
     OpenML Docs
@@ -466,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -487,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../notebooks/getting_started/" class="md-nav__link">
+      <a href="../../../notebooks/getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/" class="md-nav__link">
+      <a href="../../../concepts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/data/" class="md-nav__link">
+      <a href="../../../concepts/data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/tasks/" class="md-nav__link">
+      <a href="../../../concepts/tasks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -609,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/flows/" class="md-nav__link">
+      <a href="../../../concepts/flows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/runs/" class="md-nav__link">
+      <a href="../../../concepts/runs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -651,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/benchmarking/" class="md-nav__link">
+      <a href="../../../concepts/benchmarking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -672,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/tagging/" class="md-nav__link">
+      <a href="../../../concepts/tagging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -693,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/authentication/" class="md-nav__link">
+      <a href="../../../concepts/authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/sharing/" class="md-nav__link">
+      <a href="../../../concepts/sharing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/showcase/" class="md-nav__link">
+      <a href="../../../intro/showcase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/Governance/" class="md-nav__link">
+      <a href="../../../intro/Governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -785,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/terms/" class="md-nav__link">
+      <a href="../../../intro/terms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/benchmark/" class="md-nav__link">
+      <a href="../../../benchmark/benchmark/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -910,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/AutoML-Benchmark/" class="md-nav__link">
+      <a href="../../../benchmark/automl/AutoML-Benchmark/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/important_params/" class="md-nav__link">
+      <a href="../../../benchmark/automl/important_params/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/benchmark_on_openml/" class="md-nav__link">
+      <a href="../../../benchmark/automl/benchmark_on_openml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/basic_example/" class="md-nav__link">
+      <a href="../../../benchmark/automl/basic_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1032,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/specific_task_fold_example/" class="md-nav__link">
+      <a href="../../../benchmark/automl/specific_task_fold_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1114,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/" class="md-nav__link">
+      <a href="../../../ecosystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1135,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Python_extensions/" class="md-nav__link">
+      <a href="../../../ecosystem/Python_extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1194,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Scikit-learn/" class="md-nav__link">
+      <a href="../../../ecosystem/Scikit-learn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Scikit-learn/basic_tutorial/" class="md-nav__link">
+      <a href="../../../ecosystem/Scikit-learn/basic_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1274,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Scikit-learn/datasets_tutorial/" class="md-nav__link">
+      <a href="../../../ecosystem/Scikit-learn/datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1311,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/mlr/" class="md-nav__link">
+      <a href="../../../ecosystem/mlr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1332,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Weka/" class="md-nav__link">
+      <a href="../../../ecosystem/Weka/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1353,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/MOA/" class="md-nav__link">
+      <a href="../../../ecosystem/MOA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1374,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Java/" class="md-nav__link">
+      <a href="../../../ecosystem/Java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Rest/" class="md-nav__link">
+      <a href="../../../ecosystem/Rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1420,25 +1420,30 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../python/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1449,13 +1454,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -1507,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/base/" class="md-nav__link">
+      <a href="../../../reference/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1528,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/cli/" class="md-nav__link">
+      <a href="../../../reference/cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1549,7 +1554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/config/" class="md-nav__link">
+      <a href="../../../reference/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1585,7 +1590,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/datasets/" class="md-nav__link ">
+            <a href="../../../reference/datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1616,7 +1621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/datasets/data_feature/" class="md-nav__link">
+      <a href="../../../reference/datasets/data_feature/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1637,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/datasets/dataset/" class="md-nav__link">
+      <a href="../../../reference/datasets/dataset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1658,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/datasets/functions/" class="md-nav__link">
+      <a href="../../../reference/datasets/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1702,7 +1707,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/evaluations/" class="md-nav__link ">
+            <a href="../../../reference/evaluations/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1733,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/evaluations/evaluation/" class="md-nav__link">
+      <a href="../../../reference/evaluations/evaluation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1754,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/evaluations/functions/" class="md-nav__link">
+      <a href="../../../reference/evaluations/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1783,7 +1788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/exceptions/" class="md-nav__link">
+      <a href="../../../reference/exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1819,7 +1824,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/extensions/" class="md-nav__link ">
+            <a href="../../../reference/extensions/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1850,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/extensions/extension_interface/" class="md-nav__link">
+      <a href="../../../reference/extensions/extension_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1871,7 +1876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/extensions/functions/" class="md-nav__link">
+      <a href="../../../reference/extensions/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1907,7 +1912,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/extensions/sklearn/" class="md-nav__link ">
+            <a href="../../../reference/extensions/sklearn/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1938,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/extensions/sklearn/extension/" class="md-nav__link">
+      <a href="../../../reference/extensions/sklearn/extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1990,7 +1995,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/flows/" class="md-nav__link ">
+            <a href="../../../reference/flows/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2021,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/flows/flow/" class="md-nav__link">
+      <a href="../../../reference/flows/flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +2047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/flows/functions/" class="md-nav__link">
+      <a href="../../../reference/flows/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2086,7 +2091,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/runs/" class="md-nav__link ">
+            <a href="../../../reference/runs/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2117,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/runs/functions/" class="md-nav__link">
+      <a href="../../../reference/runs/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2138,7 +2143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/runs/run/" class="md-nav__link">
+      <a href="../../../reference/runs/run/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2159,7 +2164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/runs/trace/" class="md-nav__link">
+      <a href="../../../reference/runs/trace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2203,7 +2208,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/setups/" class="md-nav__link ">
+            <a href="../../../reference/setups/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2234,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/setups/functions/" class="md-nav__link">
+      <a href="../../../reference/setups/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2255,7 +2260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/setups/setup/" class="md-nav__link">
+      <a href="../../../reference/setups/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2299,7 +2304,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/study/" class="md-nav__link ">
+            <a href="../../../reference/study/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2330,7 +2335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/study/functions/" class="md-nav__link">
+      <a href="../../../reference/study/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2351,7 +2356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/study/study/" class="md-nav__link">
+      <a href="../../../reference/study/study/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2395,7 +2400,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../reference/tasks/" class="md-nav__link ">
+            <a href="../../../reference/tasks/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2426,7 +2431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tasks/functions/" class="md-nav__link">
+      <a href="../../../reference/tasks/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2447,7 +2452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tasks/split/" class="md-nav__link">
+      <a href="../../../reference/tasks/split/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2468,7 +2473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/tasks/task/" class="md-nav__link">
+      <a href="../../../reference/tasks/task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2497,7 +2502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/testing/" class="md-nav__link">
+      <a href="../../../reference/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2518,7 +2523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference/utils/" class="md-nav__link">
+      <a href="../../../reference/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2544,6 +2549,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2553,11 +2560,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -2571,7 +2578,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -2582,6 +2589,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2591,11 +2600,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
@@ -2609,7 +2618,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2_1">
             <span class="md-nav__icon md-icon"></span>
             Basic
@@ -2620,10 +2629,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../python/examples/20_basic/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2632,6 +2650,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2644,7 +2663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/20_basic/introduction_tutorial/" class="md-nav__link">
+      <a href="introduction_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2665,7 +2684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/20_basic/simple_datasets_tutorial/" class="md-nav__link">
+      <a href="simple_datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2686,7 +2705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/20_basic/simple_flows_and_runs_tutorial/" class="md-nav__link">
+      <a href="simple_flows_and_runs_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2707,7 +2726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/20_basic/simple_suites_tutorial/" class="md-nav__link">
+      <a href="simple_suites_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2774,7 +2793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/" class="md-nav__link">
+      <a href="../30_extended/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2795,7 +2814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/configure_logging/" class="md-nav__link">
+      <a href="../30_extended/configure_logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2816,7 +2835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/create_upload_tutorial/" class="md-nav__link">
+      <a href="../30_extended/create_upload_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2837,7 +2856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/custom_flow_/" class="md-nav__link">
+      <a href="../30_extended/custom_flow_/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2858,7 +2877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/datasets_tutorial/" class="md-nav__link">
+      <a href="../30_extended/datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2879,7 +2898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/fetch_evaluations_tutorial/" class="md-nav__link">
+      <a href="../30_extended/fetch_evaluations_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2900,7 +2919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/fetch_runtimes_tutorial/" class="md-nav__link">
+      <a href="../30_extended/fetch_runtimes_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2921,7 +2940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/flow_id_tutorial/" class="md-nav__link">
+      <a href="../30_extended/flow_id_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2942,7 +2961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/flows_and_runs_tutorial/" class="md-nav__link">
+      <a href="../30_extended/flows_and_runs_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2963,7 +2982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/plot_svm_hyperparameters_tutorial/" class="md-nav__link">
+      <a href="../30_extended/plot_svm_hyperparameters_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2984,7 +3003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/run_setup_tutorial/" class="md-nav__link">
+      <a href="../30_extended/run_setup_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3005,7 +3024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/study_tutorial/" class="md-nav__link">
+      <a href="../30_extended/study_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3026,7 +3045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/suites_tutorial/" class="md-nav__link">
+      <a href="../30_extended/suites_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3047,7 +3066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/task_manual_iteration_tutorial/" class="md-nav__link">
+      <a href="../30_extended/task_manual_iteration_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3068,7 +3087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/30_extended/tasks_tutorial/" class="md-nav__link">
+      <a href="../30_extended/tasks_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3135,7 +3154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/40_paper/" class="md-nav__link">
+      <a href="../40_paper/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3156,7 +3175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/40_paper/2015_neurips_feurer_example/" class="md-nav__link">
+      <a href="../40_paper/2015_neurips_feurer_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3177,7 +3196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/40_paper/2018_ida_strang_example/" class="md-nav__link">
+      <a href="../40_paper/2018_ida_strang_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3198,7 +3217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/40_paper/2018_kdd_rijn_example/" class="md-nav__link">
+      <a href="../40_paper/2018_kdd_rijn_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3219,7 +3238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/examples/40_paper/2018_neurips_perrone_example/" class="md-nav__link">
+      <a href="../40_paper/2018_neurips_perrone_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3256,7 +3275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/usage/" class="md-nav__link">
+      <a href="../../usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3277,7 +3296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3298,7 +3317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/extensions/" class="md-nav__link">
+      <a href="../../extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3319,7 +3338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/progress/" class="md-nav__link">
+      <a href="../../progress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3344,28 +3363,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3376,7 +3390,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             PyTorch
@@ -3390,7 +3404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../../pytorch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3449,7 +3463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../API%20reference/Callbacks/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/Callbacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3470,7 +3484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../API%20reference/Custom%20Datasets/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/Custom%20Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3491,7 +3505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../API%20reference/Metrics/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/Metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3512,7 +3526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../API%20reference/OpenML%20Connection/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/OpenML%20Connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3533,7 +3547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../API%20reference/Trainer/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3600,7 +3614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Examples/Create%20Dataset%20and%20Task/" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Create%20Dataset%20and%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3621,7 +3635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Examples/Image%20Classification%20Task/" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Image%20Classification%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3642,7 +3656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Examples/Pretrained%20Transformer%20Image%20Classification%20Task/" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Pretrained%20Transformer%20Image%20Classification%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3663,7 +3677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Examples/Sequential%20Classification%20Task/" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Sequential%20Classification%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3684,7 +3698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Examples/Tabular%20Classification/" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Tabular%20Classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3710,19 +3724,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../pytorch/Limitations%20of%20the%20API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3731,7 +3736,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3744,7 +3748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Philosophy%20behind%20the%20API%20Design/" class="md-nav__link">
+      <a href="../../../pytorch/Philosophy%20behind%20the%20API%20Design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3810,7 +3814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../julia/" class="md-nav__link">
+      <a href="../../../julia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3838,7 +3842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../r/" class="md-nav__link">
+      <a href="../../../r/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3896,7 +3900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/" class="md-nav__link">
+      <a href="../../../apiv2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3917,7 +3921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/installation/" class="md-nav__link">
+      <a href="../../../apiv2/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3953,7 +3957,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../apiv2/contributing/" class="md-nav__link ">
+            <a href="../../../apiv2/contributing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3984,7 +3988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/contributing/contributing/" class="md-nav__link">
+      <a href="../../../apiv2/contributing/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4005,7 +4009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/contributing/tests/" class="md-nav__link">
+      <a href="../../../apiv2/contributing/tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4026,7 +4030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/contributing/documentation/" class="md-nav__link">
+      <a href="../../../apiv2/contributing/documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4047,7 +4051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/contributing/project_overview/" class="md-nav__link">
+      <a href="../../../apiv2/contributing/project_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4076,7 +4080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/migration/" class="md-nav__link">
+      <a href="../../../apiv2/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4142,7 +4146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
+      <a href="../../../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4163,7 +4167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/OpenML-Docs/" class="md-nav__link">
+      <a href="../../../contributing/OpenML-Docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4222,7 +4226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/backend/Local-Installation/" class="md-nav__link">
+      <a href="../../../contributing/backend/Local-Installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4243,7 +4247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../services/" class="md-nav__link">
+      <a href="../../../services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4264,7 +4268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/backend/Datasets/" class="md-nav__link">
+      <a href="../../../contributing/backend/Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4285,7 +4289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/backend/API-development/" class="md-nav__link">
+      <a href="../../../contributing/backend/API-development/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4306,7 +4310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/backend/Java-App/" class="md-nav__link">
+      <a href="../../../contributing/backend/Java-App/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4373,7 +4377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/website/Website/" class="md-nav__link">
+      <a href="../../../contributing/website/Website/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4394,7 +4398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/website/Flask/" class="md-nav__link">
+      <a href="../../../contributing/website/Flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4415,7 +4419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/website/React/" class="md-nav__link">
+      <a href="../../../contributing/website/React/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4436,7 +4440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/website/Dash/" class="md-nav__link">
+      <a href="../../../contributing/website/Dash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4503,7 +4507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/clients/Client-API-Standards/" class="md-nav__link">
+      <a href="../../../contributing/clients/Client-API-Standards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4524,7 +4528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/clients/metadata_definition/" class="md-nav__link">
+      <a href="../../../contributing/clients/metadata_definition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4545,7 +4549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/clients/Rest/" class="md-nav__link">
+      <a href="../../../contributing/clients/Rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4574,7 +4578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/Style/" class="md-nav__link">
+      <a href="../../../contributing/Style/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4595,7 +4599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/resources/" class="md-nav__link">
+      <a href="../../../contributing/resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4649,7 +4653,7 @@
                   
 
   
-    <a href="https://github.com/openml/openml-pytorch/edit/master/Limitations of the API.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/openml/docs/edit/master/docs/python/examples/20_basic/README.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -4658,18 +4662,15 @@
     
       
     
-    <a href="https://github.com/openml/openml-pytorch/raw/master/Limitations of the API.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/openml/docs/raw/master/docs/python/examples/20_basic/README.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
   
 
 
-<h1 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h1>
-<ul>
-<li>Image datasets are supported as a workaround by using a CSV file with image paths. This is not ideal and might eventually be replaced by something else. At the moment, the focus is on tabular data.</li>
-<li>Many features (like custom metrics, models etc) are still dependant on the OpenML Python API, which is in the middle of a major rewrite. Until that is complete, this package will not be able to provide all the features it aims to.</li>
-</ul>
+<h1 id="introductory-examples">Introductory Examples<a class="headerlink" href="#introductory-examples" title="Permanent link">&para;</a></h1>
+<p>Introductory examples to the usage of the OpenML python connector.</p>
 
 
 
@@ -4716,12 +4717,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
-        <script src="../../js/extra.js"></script>
+        <script src="../../../js/extra.js"></script>
       
     
   </body>

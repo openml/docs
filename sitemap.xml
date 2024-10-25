@@ -277,6 +277,18 @@
          <lastmod>2024-10-25</lastmod>
     </url>
     <url>
+         <loc>https://docs.openml.org/python/examples/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/python/examples/SUMMARY/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/python/examples/20_basic/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
          <loc>https://docs.openml.org/python/examples/20_basic/introduction_tutorial/</loc>
          <lastmod>2024-10-25</lastmod>
     </url>
@@ -290,6 +302,10 @@
     </url>
     <url>
          <loc>https://docs.openml.org/python/examples/20_basic/simple_suites_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/python/examples/30_extended/</loc>
          <lastmod>2024-10-25</lastmod>
     </url>
     <url>
@@ -346,6 +362,10 @@
     </url>
     <url>
          <loc>https://docs.openml.org/python/examples/30_extended/tasks_tutorial/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/python/examples/40_paper/</loc>
          <lastmod>2024-10-25</lastmod>
     </url>
     <url>
