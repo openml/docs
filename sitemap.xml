@@ -576,4 +576,8 @@
          <loc>https://docs.openml.org/reference/tasks/task/</loc>
          <lastmod>2024-10-25</lastmod>
     </url>
+    <url>
+         <loc>https://docs.openml.org/services/</loc>
+         <lastmod>2024-10-25</lastmod>
+    </url>
 </urlset>
