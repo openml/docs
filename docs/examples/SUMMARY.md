@@ -1,11 +1,9 @@
 * Basic
-    * [README.md](20_basic/README.md)
     * [introduction_tutorial.py](20_basic/introduction_tutorial.py)
     * [simple_datasets_tutorial.py](20_basic/simple_datasets_tutorial.py)
     * [simple_flows_and_runs_tutorial.py](20_basic/simple_flows_and_runs_tutorial.py)
     * [simple_suites_tutorial.py](20_basic/simple_suites_tutorial.py)
 * Extended
-    * [README.md](30_extended/README.md)
     * [configure_logging.py](30_extended/configure_logging.py)
     * [create_upload_tutorial.py](30_extended/create_upload_tutorial.py)
     * [custom_flow_.py](30_extended/custom_flow_.py)
@@ -21,7 +19,6 @@
     * [task_manual_iteration_tutorial.py](30_extended/task_manual_iteration_tutorial.py)
     * [tasks_tutorial.py](30_extended/tasks_tutorial.py)
 * Paper
-    * [README.md](40_paper/README.md)
     * [2015_neurips_feurer_example.py](40_paper/2015_neurips_feurer_example.py)
     * [2018_ida_strang_example.py](40_paper/2018_ida_strang_example.py)
     * [2018_kdd_rijn_example.py](40_paper/2018_kdd_rijn_example.py)

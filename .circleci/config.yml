@@ -12,6 +12,9 @@ jobs:
       - run:
           name: Deploy
           command: mkdocs gh-deploy -m "Deployment of commit {sha} [ci skip]"
+      - run:
+          name: Deploy2
+          command: mkdocs gh-deploy -m "Deployment of commit {sha} [ci skip]"
 
 
 workflows:

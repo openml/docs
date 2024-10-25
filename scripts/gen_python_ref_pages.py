@@ -36,12 +36,6 @@ def copy_folders_to_destinations(source_folders, destination_folders):
         # Copy the folder
         shutil.copytree(src, dest)
 
-        # Make md files out of README.txt files
-        for readme_file in dest.rglob("README.txt"):
-            new_name = readme_file.with_name("README.md")
-            readme_file.rename(new_name)
-
-# Example usage
 temp_dir = Path(__file__).parent.parent / "temp_dir" / "python"
 source_folders = [
     temp_dir / "docs",
@@ -51,7 +45,7 @@ source_folders = [
 destination_folders = [
     Path(__file__).parent.parent / "docs" / "python",
     Path(__file__).parent.parent / "openml",
-    Path(__file__).parent.parent / "docs" / "python" / "examples" # Move them straight here to avoid duplication. mkdocs-jupyter will handle them.
+    Path(__file__).parent.parent / "docs" / "examples" # Move them straight here to avoid duplication. mkdocs-jupyter will handle them.
 ]
 copy_folders_to_destinations(source_folders, destination_folders)
 
@@ -89,8 +83,8 @@ with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
 
 # Generate the example page index
 nav = mkdocs_gen_files.Nav()
-examples_src = root / "docs" / "python" / "examples"
-for path in sorted(examples_src.rglob("*.md")) + sorted(examples_src.rglob("*.py")):
+examples_src = root / "docs" / "examples"
+for path in sorted(examples_src.rglob("*.py")):
     dest_path = path.relative_to(examples_src)
 
     # Temporary. Renames the ugly folder names

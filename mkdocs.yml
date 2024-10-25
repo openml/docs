@@ -160,7 +160,7 @@ nav:
     - Python:
         - python/index.md
         - Code Reference: reference/
-        - Examples: python/examples/
+        - Examples: examples/
         - Usage: python/usage.md
         - Contributing: python/contributing.md
         - Extensions: python/extensions.md
@@ -177,8 +177,8 @@ nav:
             - Local Installation: contributing/backend/Local-Installation.md
             - Services: services/README.md
             - Datasets: contributing/backend/Datasets.md
-            - Code structure (phasing out): contributing/backend/API-development.md
-            - Evaluation Engine (phasing out): contributing/backend/Java-App.md
+            - Code structure: contributing/backend/API-development.md
+            - Evaluation Engine: contributing/backend/Java-App.md
         - Frontend:
             - Getting started: contributing/website/Website.md
             - Flask backend: contributing/website/Flask.md
