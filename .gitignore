@@ -1,5 +1,4 @@
 site/*
 openml/*
-docs/python/examples/*
 temp_dir/*
 .DS_store
