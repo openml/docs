@@ -9,13 +9,12 @@ Inspired in part from https://brightdata.com/blog/how-tos/how-to-scrape-github-r
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
-from Typing import List, Tuple, Dict
 
 with open("showcase_urls.txt", "r") as file:
     target_urls = file.readlines()
     target_urls = [url.strip() for url in target_urls]
 
-def get_github_info(target_url:str)->Tuple[str, str, str]:
+def get_github_info(target_url:str)->tuple[str, str, str]:
     """
     Get the name, description and number of stars of a GitHub repository from its URL.
     """
@@ -37,7 +36,7 @@ def get_github_info(target_url:str)->Tuple[str, str, str]:
     return name, description, stars
 
 
-def return_details(target_urls:List[str])->Dict[str, Dict[str, str]]:
+def return_details(target_urls:list[str])->dict[str, dict[str, str]]:
     """
     For a list of GitHub URLs, return a dictionary with the name, description and number of stars of the repositories.
     """
@@ -58,7 +57,7 @@ def return_details(target_urls:List[str])->Dict[str, Dict[str, str]]:
     return urls
 
 
-def return_div(url:str, urls:Dict[str, Dict[str, str]]):
+def return_div(url:str, urls:dict[str, dict[str, str]]):
     """
         Return a div element with the information of a GitHub repository. Creates a card with the name, description and number of stars of the repository.
 
@@ -105,7 +104,7 @@ def return_div(url:str, urls:Dict[str, Dict[str, str]]):
     """
 
 
-def generate_page(info:Dict[str,str]):
+def generate_page(info:dict[str,str]):
     """
     Generate a page with a grid of cards with the information of the repositories.
     """
