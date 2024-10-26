@@ -11,7 +11,6 @@ import shutil
 import mkdocs_gen_files
 import os
 import shutil
-from typing import List
 
 # Move the python code and example folders into the root folder. This is necessary because the literate-nav has very strong
 # opinions on where the files should be located. It refuses to work from the temp_dir directory.
