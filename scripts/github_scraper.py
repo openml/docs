@@ -14,7 +14,7 @@ with open("showcase_urls.txt", "r") as file:
     target_urls = file.readlines()
     target_urls = [url.strip() for url in target_urls]
 
-def get_github_info(target_url):
+def get_github_info(target_url:str)->tuple[str, str, str]:
     """
     Get the name, description and number of stars of a GitHub repository from its URL.
     """
@@ -36,11 +36,11 @@ def get_github_info(target_url):
     return name, description, stars
 
 
-def return_details(target_urls):
+def return_details(target_urls:list[str])->dict[str, dict[str, str]]:
     """
     For a list of GitHub URLs, return a dictionary with the name, description and number of stars of the repositories.
     """
-    target_urls = list(set(target_urls))  # remove duplicates
+    target_urls = set(target_urls)  # remove duplicates
     urls = {}
     for target_url in target_urls:
         name, description, stars = get_github_info(target_url)
@@ -57,7 +57,7 @@ def return_details(target_urls):
     return urls
 
 
-def return_div(url, urls):
+def return_div(url:str, urls:dict[str, dict[str, str]]):
     """
         Return a div element with the information of a GitHub repository. Creates a card with the name, description and number of stars of the repository.
 
@@ -104,7 +104,7 @@ def return_div(url, urls):
     """
 
 
-def generate_page(info):
+def generate_page(info:dict[str,str]):
     """
     Generate a page with a grid of cards with the information of the repositories.
     """
