@@ -1,4 +1,5 @@
-"""Generate the code reference pages.
+"""
+Generate the code reference pages.
 
 based on https://github.com/mkdocstrings/mkdocstrings/blob/33aa573efb17b13e7b9da77e29aeccb3fbddd8e8/docs/recipes.md
 but modified for lack of "src/" file structure.
@@ -10,10 +11,11 @@ import shutil
 import mkdocs_gen_files
 import os
 import shutil
+from typing import List
 
 # Move the python code and example folders into the root folder. This is necessary because the literate-nav has very strong
 # opinions on where the files should be located. It refuses to work from the temp_dir directory.
-def copy_folders_to_destinations(source_folders, destination_folders):
+def copy_folders_to_destinations(source_folders:List[str], destination_folders:List[str]):
     """
     Copies folders from source to specified destinations and overwrites if they already exist.
 
