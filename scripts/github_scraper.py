@@ -41,7 +41,7 @@ def return_details(target_urls:List[str])->Dict[str, Dict[str, str]]:
     """
     For a list of GitHub URLs, return a dictionary with the name, description and number of stars of the repositories.
     """
-    target_urls = list(set(target_urls))  # remove duplicates
+    target_urls = set(target_urls)  # remove duplicates
     urls = {}
     for target_url in target_urls:
         name, description, stars = get_github_info(target_url)
