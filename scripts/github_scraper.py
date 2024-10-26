@@ -14,7 +14,7 @@ with open("showcase_urls.txt", "r") as file:
     target_urls = file.readlines()
     target_urls = [url.strip() for url in target_urls]
 
-def get_github_info(target_url):
+def get_github_info(target_url:str):
     """
     Get the name, description and number of stars of a GitHub repository from its URL.
     """
