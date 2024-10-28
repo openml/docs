@@ -9,6 +9,7 @@ mkdocs-autorefs
 mkdocs-section-index
 mkdocs-gen-files
 mkdocs-literate-nav
+mkdocs-git-committers-plugin-2
 mkdocs-git-revision-date-localized-plugin
 mkdocstrings
 mkdocstrings-python
