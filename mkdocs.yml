@@ -1,4 +1,4 @@
-site_name: OpenML Docs
+site_name: Open Machine Learning
 repo_url: https://github.com/openml/docs/
 repo_name: 'openml/docs'
 edit_uri: edit/master/docs/
@@ -118,6 +118,10 @@ plugins:
             - scripts/gen_python_ref_pages.py
     - literate-nav:
         nav_file: SUMMARY.md
+    - git-revision-date-localized:
+        enable_creation_date: true
+    - git-committers:
+        repository: openml/docs
 nav:
     - OpenML:
         - Introduction: index.md

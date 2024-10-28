@@ -5,12 +5,13 @@ mkdocs-redirects==1.2.1
 mkdocs-jupyter==0.25.0
 mkdocs-awesome-pages-plugin==2.9.3
 mkdocs-multirepo-plugin==0.8.3
-notebook==6.4.12
 mkdocs-autorefs
 mkdocs-section-index
-mkdocstrings
 mkdocs-gen-files
 mkdocs-literate-nav
+mkdocs-git-revision-date-localized-plugin
+mkdocstrings
 mkdocstrings-python
 markdown-include
+notebook==6.4.12
 tqdm
