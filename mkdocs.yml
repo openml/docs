@@ -41,6 +41,7 @@ markdown_extensions:
     - codehilite
     - tables
     - attr_list
+    - md_in_html
     - toc:
         permalink: true
     - markdown_include.include:
@@ -194,7 +195,7 @@ nav:
             - REST API: contributing/clients/Rest.md
         - Style guide : contributing/Style.md
         - Resources: contributing/resources.md
-
+    - Questions?: contact.md
 
 extra_css:
     - css/extra.css
