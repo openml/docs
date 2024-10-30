@@ -1,3 +1,7 @@
+---
+icon: material/help-circle
+---
+
 If you have questions, you can contact us in various ways.
 Here are the best ways to reach out depending on your questions.
 

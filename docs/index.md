@@ -1,3 +1,7 @@
+---
+icon: material/dots-circle
+---
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
 <h1>An <i>open, automated, and frictionless</i> machine learning environment.</h1>

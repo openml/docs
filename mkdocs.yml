@@ -7,28 +7,34 @@ theme:
     name: "material"
     language: "en"
     features:
-        - navigation.tabs
-        - navigation.tabs.sticky
         - content.code.copy
         - content.action.edit
         - content.action.view
+        - content.tabs.link
+        - navigation.indexes
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.footer
+        - search.highlight
+        - search.suggest
+        - toc.follow
     palette:
-        # Light mode
+        # Palette toggle for automatic mode
+        - media: "(prefers-color-scheme)"
+          toggle:
+            icon: material/brightness-auto
+
+        # Palette toggle for light mode
         - media: "(prefers-color-scheme: light)"
           scheme: default
-          primary: white
-          accent: indigo
           toggle:
-            icon: material/toggle-switch-off-outline
-            name: Switch to dark mode
-        # Dark mode
+            icon: material/brightness-7
+
+        # Palette toggle for dark mode
         - media: "(prefers-color-scheme: dark)"
-          primary: indigo
-          accent: indigo
           scheme: slate
           toggle:
-            icon: material/toggle-switch
-            name: Switch to light mode
+            icon: material/brightness-4
     font:
         text: "Roboto"
         code: "Roboto Mono"
@@ -141,7 +147,7 @@ nav:
         - Governance: intro/Governance.md
         - Terms : intro/terms.md
     - Benchmarking:
-        - Benchmarking Suites: benchmark/benchmark.md
+        - Benchmarking Suites: benchmark/index.md
         - AutoML Benchmark:
             - AutoML Benchmark: benchmark/automl/AutoML-Benchmark.md
             - Important Parameters: benchmark/automl/important_params.md
@@ -162,19 +168,6 @@ nav:
         - MOA: ecosystem/MOA.md
         - Java: ecosystem/Java.md
         - REST API: ecosystem/Rest.md
-    - Python:
-        - python/index.md
-        - Code Reference: reference/
-        - Examples: examples/
-        - Usage: python/usage.md
-        - Contributing: python/contributing.md
-        - Extensions: python/extensions.md
-        - Changelog: python/progress.md
-    - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
-    - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
-    - R: 
-        - r/README.md
-    - APIv2: '!import https://github.com/openml/server-api?branch=main'
     - Contributing:
         - How to Contribute: contributing/index.md
         - Documentation: contributing/OpenML-Docs.md
@@ -195,7 +188,20 @@ nav:
             - REST API: contributing/clients/Rest.md
         - Style guide : contributing/Style.md
         - Resources: contributing/resources.md
-    - Questions?: contact.md
+    - Questions: help/index.md
+    - Python:
+        - python/index.md
+        - Code Reference: reference/
+        - Examples: examples/
+        - Usage: python/usage.md
+        - Contributing: python/contributing.md
+        - Extensions: python/extensions.md
+        - Changelog: python/progress.md
+    - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
+    - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
+    - R: 
+        - r/README.md
+    - APIv2: '!import https://github.com/openml/server-api?branch=main'
 
 extra_css:
     - css/extra.css
@@ -205,6 +211,7 @@ exclude_docs: |
     scripts/
     old/
     python/openml/
+    python/examples/
     pytorch/openml_pytorch/
     pytorch/Examples/index.md
     ecosystem/showcase.md

@@ -1,3 +1,7 @@
+---
+icon: material/bookshelf
+---
+
 # OpenML
 
 **Collaborative Machine Learning in Python**

@@ -1,3 +1,7 @@
+---
+icon: fontawesome/solid/child-reaching
+---
+
 OpenML is an open source project, <a href="https://github.com/openml">hosted on GitHub</a>. We welcome everybody to help improve OpenML, and make it more useful for everyone.
 
 !!! tip "Mission"

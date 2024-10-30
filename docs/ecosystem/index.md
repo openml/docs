@@ -1,3 +1,7 @@
+---
+icon: fontawesome/solid/seedling
+---
+
 # Ecosystem
 
 OpenML has a rich ecosystem of tools and projects that seamlessly integrate OpenML in various ways. 

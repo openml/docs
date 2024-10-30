@@ -97,3 +97,11 @@ for path in sorted(examples_src.rglob("*.py")):
         nav[parts] = dest_path.as_posix()
 with open(examples_src / "SUMMARY.md", "w") as nav_file:
     nav_file.writelines(nav.build_literate_nav())
+
+# Add icon to the reference pages
+content_to_add = "---\nicon: material/bookshelf\n---\n\n"
+index_file = root / "docs" / "python" / "index.md"
+with open(index_file, "r+") as file:
+    original_content = file.read()
+    file.seek(0)
+    file.write(content_to_add + original_content)

@@ -1,3 +1,7 @@
+---
+icon: fontawesome/solid/gauge-high
+---
+
 # Benchmarking suites
 
 Machine learning research depends on objectively interpretable, comparable, and reproducible algorithm benchmarks. OpenML aims to facilitate the creation of curated, comprehensive _suites_ of machine learning tasks, covering precise sets of conditions.
