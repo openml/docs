@@ -2,678 +2,590 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.openml.org/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/contact/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/apiv2/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/apiv2/installation/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/apiv2/migration/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/apiv2/contributing/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/apiv2/contributing/contributing/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/apiv2/contributing/documentation/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/apiv2/contributing/project_overview/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/apiv2/contributing/tests/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
-         <loc>https://docs.openml.org/benchmark/benchmark/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <loc>https://docs.openml.org/benchmark/</loc>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/benchmark/automl/AutoML-Benchmark/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/benchmark/automl/basic_example/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/benchmark/automl/benchmark_on_openml/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/benchmark/automl/important_params/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/benchmark/automl/specific_task_fold_example/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/authentication/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/benchmarking/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/data/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/flows/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/runs/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/sharing/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/tagging/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/concepts/tasks/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/OpenML-Docs/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/Style/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/resources/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/backend/API-development/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/backend/Datasets/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/backend/Java-App/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/backend/Local-Installation/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/clients/Client-API-Standards/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/clients/Rest/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/clients/metadata_definition/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/website/Dash/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/website/Flask/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/website/React/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/contributing/website/Website/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/Java/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/MOA/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/Python_extensions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/Rest/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/Weka/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/mlr/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/Scikit-learn/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/Scikit-learn/basic_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/ecosystem/Scikit-learn/datasets_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/SUMMARY/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/20_basic/introduction_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/20_basic/simple_datasets_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/20_basic/simple_flows_and_runs_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/20_basic/simple_suites_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/configure_logging/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/create_upload_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/custom_flow_/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/datasets_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/fetch_evaluations_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/fetch_runtimes_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/flow_id_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/flows_and_runs_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/plot_svm_hyperparameters_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/run_setup_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/study_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/suites_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/task_manual_iteration_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/30_extended/tasks_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/40_paper/2015_neurips_feurer_example/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/40_paper/2018_ida_strang_example/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/40_paper/2018_kdd_rijn_example/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/examples/40_paper/2018_neurips_perrone_example/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/help/</loc>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/intro/Governance/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/intro/showcase/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/intro/terms/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/julia/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/notebooks/getting_started/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/CONTRIBUTING/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/ISSUE_TEMPLATE/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/PULL_REQUEST_TEMPLATE/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/contributing/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/extensions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/progress/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/usage/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/docker/readme/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/docs/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/docs/contributing/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/docs/extensions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/docs/progress/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/python/docs/usage/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/20_basic/introduction_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/20_basic/simple_datasets_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/20_basic/simple_flows_and_runs_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/20_basic/simple_suites_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/configure_logging/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/create_upload_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/custom_flow_/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/datasets_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/fetch_evaluations_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/fetch_runtimes_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/flow_id_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/flows_and_runs_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/plot_svm_hyperparameters_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/run_setup_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/study_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/suites_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/task_manual_iteration_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/30_extended/tasks_tutorial/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/40_paper/2015_neurips_feurer_example/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/40_paper/2018_ida_strang_example/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/40_paper/2018_kdd_rijn_example/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.openml.org/python/examples/40_paper/2018_neurips_perrone_example/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/Limitations%20of%20the%20API/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/Philosophy%20behind%20the%20API%20Design/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/API%20reference/Callbacks/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/API%20reference/Custom%20Datasets/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/API%20reference/Metrics/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/API%20reference/OpenML%20Connection/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/API%20reference/Trainer/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/Examples/Create%20Dataset%20and%20Task/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/Examples/Image%20Classification%20Task/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/Examples/Pretrained%20Transformer%20Image%20Classification%20Task/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/Examples/Sequential%20Classification%20Task/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/pytorch/Examples/Tabular%20Classification/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/r/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/SUMMARY/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/__version__/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/_api_calls/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/base/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/cli/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/config/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/exceptions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/testing/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/utils/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/datasets/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/datasets/data_feature/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/datasets/dataset/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/datasets/functions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/evaluations/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/evaluations/evaluation/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/evaluations/functions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/extensions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/extensions/extension_interface/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/extensions/functions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/extensions/sklearn/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/extensions/sklearn/extension/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/flows/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/flows/flow/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/flows/functions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/runs/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/runs/functions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/runs/run/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/runs/trace/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/setups/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/setups/functions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/setups/setup/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/study/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/study/functions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/study/study/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/tasks/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/tasks/functions/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/tasks/split/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/reference/tasks/task/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
     <url>
          <loc>https://docs.openml.org/services/</loc>
-         <lastmod>2024-10-29</lastmod>
+         <lastmod>2024-10-30</lastmod>
     </url>
 </urlset>
