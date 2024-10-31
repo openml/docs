@@ -90,6 +90,9 @@ plugins:
           - name: R
             import_url: https://github.com/mlr-org/mlr3oml?branch=main
             imports: [README.md]
+          - name: TensorFlow
+            import_url: https://github.com/openml/openml-tensorflow
+            imports: [README.md]
           - name: Services
             import_url: https://github.com/openml/services?branch=main
             imports: [README.md]
@@ -127,6 +130,7 @@ plugins:
         nav_file: SUMMARY.md
     - git-revision-date-localized:
         enable_creation_date: true
+        fallback_to_build_date: true
     - git-committers:
         repository: openml/docs
 nav:
@@ -198,6 +202,8 @@ nav:
         - Extensions: python/extensions.md
         - Changelog: python/progress.md
     - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
+    - TensorFlow:
+        - tensorflow/README.md
     - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
     - R: 
         - r/README.md
