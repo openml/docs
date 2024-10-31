@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://docs.openml.org/reference/exceptions/">
+        <link rel="canonical" href="https://docs.openml.org/tensorflow/">
       
       
-        <link rel="prev" href="../evaluations/functions/">
+        <link rel="prev" href="../pytorch/Philosophy%20behind%20the%20API%20Design/">
       
       
-        <link rel="next" href="../extensions/">
+        <link rel="next" href="../julia/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
-        <title>exceptions - Open Machine Learning</title>
+        <title>TensorFlow - Open Machine Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../css/extra.css">
+      <link rel="stylesheet" href="../css/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#openml.exceptions" class="md-skip">
+        <a href="#tensorflow-extension-for-openml-python" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Open Machine Learning" class="md-header__button md-logo" aria-label="Open Machine Learning" data-md-component="logo">
+    <a href=".." title="Open Machine Learning" class="md-header__button md-logo" aria-label="Open Machine Learning" data-md-component="logo">
       
-  <img src="../../img/openml.png" alt="logo">
+  <img src="../img/openml.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              exceptions
+              TensorFlow
             
           </span>
         </div>
@@ -228,7 +228,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href=".." class="md-tabs__link">
           
   
     
@@ -250,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../benchmark/" class="md-tabs__link">
+        <a href="../benchmark/" class="md-tabs__link">
           
   
     
@@ -272,7 +272,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ecosystem/" class="md-tabs__link">
+        <a href="../ecosystem/" class="md-tabs__link">
           
   
     
@@ -294,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../contributing/" class="md-tabs__link">
+        <a href="../contributing/" class="md-tabs__link">
           
   
     
@@ -314,7 +314,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../help/" class="md-tabs__link">
+      <a href="../help/" class="md-tabs__link">
         
   
     
@@ -331,11 +331,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="../../python/" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../python/" class="md-tabs__link">
         
   
     
@@ -356,7 +354,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../pytorch/" class="md-tabs__link">
+        <a href="../pytorch/" class="md-tabs__link">
           
   
     
@@ -372,9 +370,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../tensorflow/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -393,7 +393,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../julia/" class="md-tabs__link">
+        <a href="../julia/" class="md-tabs__link">
           
   
     
@@ -411,7 +411,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../r/" class="md-tabs__link">
+      <a href="../r/" class="md-tabs__link">
         
   
     
@@ -430,7 +430,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../apiv2/" class="md-tabs__link">
+        <a href="../apiv2/" class="md-tabs__link">
           
   
     
@@ -471,9 +471,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Open Machine Learning" class="md-nav__button md-logo" aria-label="Open Machine Learning" data-md-component="logo">
+    <a href=".." title="Open Machine Learning" class="md-nav__button md-logo" aria-label="Open Machine Learning" data-md-component="logo">
       
-  <img src="../../img/openml.png" alt="logo">
+  <img src="../img/openml.png" alt="logo">
 
     </a>
     Open Machine Learning
@@ -531,7 +531,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href=".." class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 19c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-18c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m-3-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m3-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m3-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m-3-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2"/></svg>
@@ -566,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../notebooks/getting_started/" class="md-nav__link">
+      <a href="../notebooks/getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -624,7 +624,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../concepts/" class="md-nav__link ">
+            <a href="../concepts/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -657,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/data/" class="md-nav__link">
+      <a href="../concepts/data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -678,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/tasks/" class="md-nav__link">
+      <a href="../concepts/tasks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/flows/" class="md-nav__link">
+      <a href="../concepts/flows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -720,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/runs/" class="md-nav__link">
+      <a href="../concepts/runs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -741,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/benchmarking/" class="md-nav__link">
+      <a href="../concepts/benchmarking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -762,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/tagging/" class="md-nav__link">
+      <a href="../concepts/tagging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -783,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/authentication/" class="md-nav__link">
+      <a href="../concepts/authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -804,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/sharing/" class="md-nav__link">
+      <a href="../concepts/sharing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -833,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/showcase/" class="md-nav__link">
+      <a href="../intro/showcase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/Governance/" class="md-nav__link">
+      <a href="../intro/Governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/terms/" class="md-nav__link">
+      <a href="../intro/terms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -926,7 +926,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../benchmark/" class="md-nav__link ">
+            <a href="../benchmark/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0M288 96a32 32 0 1 0-64 0 32 32 0 1 0 64 0m-32 320c35.3 0 64-28.7 64-64 0-17.4-6.9-33.1-18.1-44.6L366 161.7c5.3-12.1-.2-26.3-12.3-31.6s-26.3.2-31.6 12.3L257.9 288H256c-35.3 0-64 28.7-64 64s28.7 64 64 64m-80-272a32 32 0 1 0-64 0 32 32 0 1 0 64 0M96 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64m352-32a32 32 0 1 0-64 0 32 32 0 1 0 64 0"/></svg>
@@ -1009,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/AutoML-Benchmark/" class="md-nav__link">
+      <a href="../benchmark/automl/AutoML-Benchmark/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1030,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/important_params/" class="md-nav__link">
+      <a href="../benchmark/automl/important_params/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/benchmark_on_openml/" class="md-nav__link">
+      <a href="../benchmark/automl/benchmark_on_openml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1116,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/basic_example/" class="md-nav__link">
+      <a href="../benchmark/automl/basic_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../benchmark/automl/specific_task_fold_example/" class="md-nav__link">
+      <a href="../benchmark/automl/specific_task_fold_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1216,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ecosystem/" class="md-nav__link ">
+            <a href="../ecosystem/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 32c0 113.6-84.6 207.5-194.2 222-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0h32c17.7 0 32 14.3 32 32M0 96c0-17.7 14.3-32 32-32h32c123.7 0 224 100.3 224 224v192c0 17.7-14.3 32-32 32s-32-14.3-32-32V320C100.3 320 0 219.7 0 96"/></svg>
@@ -1251,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Python_extensions/" class="md-nav__link">
+      <a href="../ecosystem/Python_extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1295,7 +1295,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ecosystem/Scikit-learn/" class="md-nav__link ">
+            <a href="../ecosystem/Scikit-learn/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1372,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Scikit-learn/basic_tutorial/" class="md-nav__link">
+      <a href="../ecosystem/Scikit-learn/basic_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1393,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Scikit-learn/datasets_tutorial/" class="md-nav__link">
+      <a href="../ecosystem/Scikit-learn/datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1430,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/mlr/" class="md-nav__link">
+      <a href="../ecosystem/mlr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1451,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Weka/" class="md-nav__link">
+      <a href="../ecosystem/Weka/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1472,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/MOA/" class="md-nav__link">
+      <a href="../ecosystem/MOA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1493,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Java/" class="md-nav__link">
+      <a href="../ecosystem/Java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1514,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ecosystem/Rest/" class="md-nav__link">
+      <a href="../ecosystem/Rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1575,7 +1575,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../contributing/" class="md-nav__link ">
+            <a href="../contributing/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 64a64 64 0 1 0-128 0 64 64 0 1 0 128 0M152.9 169.3c-23.7-8.4-44.5-24.3-58.8-45.8L74.6 94.2C64.8 79.5 45 75.6 30.2 85.4s-18.7 29.7-8.9 44.4L40.9 159c18.1 27.1 42.8 48.4 71.1 62.4V480c0 17.7 14.3 32 32 32s32-14.3 32-32v-96h32v96c0 17.7 14.3 32 32 32s32-14.3 32-32V221.6c29.1-14.2 54.4-36.2 72.7-64.2l18.2-27.9c9.6-14.8 5.4-34.6-9.4-44.3s-34.6-5.5-44.3 9.4L291 122.4c-21.8 33.4-58.9 53.6-98.8 53.6-12.6 0-24.9-2-36.6-5.8-.9-.3-1.8-.7-2.7-.9"/></svg>
@@ -1610,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/OpenML-Docs/" class="md-nav__link">
+      <a href="../contributing/OpenML-Docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1660,7 +1660,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../services/" class="md-nav__link ">
+            <a href="../services/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1691,7 +1691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/backend/Local-Installation/" class="md-nav__link">
+      <a href="../contributing/backend/Local-Installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1714,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/backend/Datasets/" class="md-nav__link">
+      <a href="../contributing/backend/Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1735,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/backend/API-development/" class="md-nav__link">
+      <a href="../contributing/backend/API-development/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1756,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/backend/Java-App/" class="md-nav__link">
+      <a href="../contributing/backend/Java-App/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1833,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/website/Website/" class="md-nav__link">
+      <a href="../contributing/website/Website/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1854,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/website/Flask/" class="md-nav__link">
+      <a href="../contributing/website/Flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1875,7 +1875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/website/React/" class="md-nav__link">
+      <a href="../contributing/website/React/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1896,7 +1896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/website/Dash/" class="md-nav__link">
+      <a href="../contributing/website/Dash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1971,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/clients/Client-API-Standards/" class="md-nav__link">
+      <a href="../contributing/clients/Client-API-Standards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1992,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/clients/metadata_definition/" class="md-nav__link">
+      <a href="../contributing/clients/metadata_definition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2013,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/clients/Rest/" class="md-nav__link">
+      <a href="../contributing/clients/Rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +2042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/Style/" class="md-nav__link">
+      <a href="../contributing/Style/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2063,7 +2063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/resources/" class="md-nav__link">
+      <a href="../contributing/resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2091,7 +2091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../help/" class="md-nav__link">
+      <a href="../help/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></svg>
@@ -2110,10 +2110,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -2132,22 +2130,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../python/" class="md-nav__link ">
+            <a href="../python/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
@@ -2160,13 +2155,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -2177,10 +2172,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2234,16 +2227,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../datasets/" class="md-nav__link ">
+            <a href="../reference/datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2260,7 +2253,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
             Code Reference
@@ -2274,7 +2267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../base/" class="md-nav__link">
+      <a href="../reference/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2295,7 +2288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli/" class="md-nav__link">
+      <a href="../reference/cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2316,7 +2309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/" class="md-nav__link">
+      <a href="../reference/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2360,7 +2353,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../evaluations/" class="md-nav__link ">
+            <a href="../reference/evaluations/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2391,7 +2384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../evaluations/evaluation/" class="md-nav__link">
+      <a href="../reference/evaluations/evaluation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2412,7 +2405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../evaluations/functions/" class="md-nav__link">
+      <a href="../reference/evaluations/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2438,28 +2431,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    exceptions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../reference/exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2468,123 +2443,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      exceptions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.ObjectNotPublishedError" class="md-nav__link">
-    <span class="md-ellipsis">
-      ObjectNotPublishedError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLCacheException" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLCacheException
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLHashException" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLHashException
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLNotAuthorizedError" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLNotAuthorizedError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLPrivateDatasetError" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLPrivateDatasetError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLRunsExistError" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLRunsExistError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLServerError" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLServerError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLServerException" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLServerException
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLServerNoResult" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLServerNoResult
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.PyOpenMLError" class="md-nav__link">
-    <span class="md-ellipsis">
-      PyOpenMLError
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2622,7 +2480,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../extensions/" class="md-nav__link ">
+            <a href="../reference/extensions/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2653,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensions/extension_interface/" class="md-nav__link">
+      <a href="../reference/extensions/extension_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2674,7 +2532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensions/functions/" class="md-nav__link">
+      <a href="../reference/extensions/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2714,7 +2572,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../extensions/sklearn/" class="md-nav__link ">
+            <a href="../reference/extensions/sklearn/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2745,7 +2603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../extensions/sklearn/extension/" class="md-nav__link">
+      <a href="../reference/extensions/sklearn/extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2803,7 +2661,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../flows/" class="md-nav__link ">
+            <a href="../reference/flows/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2834,7 +2692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flows/flow/" class="md-nav__link">
+      <a href="../reference/flows/flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2855,7 +2713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flows/functions/" class="md-nav__link">
+      <a href="../reference/flows/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2907,7 +2765,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../runs/" class="md-nav__link ">
+            <a href="../reference/runs/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2938,7 +2796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../runs/functions/" class="md-nav__link">
+      <a href="../reference/runs/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2959,7 +2817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../runs/run/" class="md-nav__link">
+      <a href="../reference/runs/run/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2980,7 +2838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../runs/trace/" class="md-nav__link">
+      <a href="../reference/runs/trace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3030,7 +2888,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../setups/" class="md-nav__link ">
+            <a href="../reference/setups/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3061,7 +2919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setups/functions/" class="md-nav__link">
+      <a href="../reference/setups/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3082,7 +2940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setups/setup/" class="md-nav__link">
+      <a href="../reference/setups/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3132,7 +2990,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../study/" class="md-nav__link ">
+            <a href="../reference/study/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3163,7 +3021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../study/functions/" class="md-nav__link">
+      <a href="../reference/study/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3184,7 +3042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../study/study/" class="md-nav__link">
+      <a href="../reference/study/study/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3236,7 +3094,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../tasks/" class="md-nav__link ">
+            <a href="../reference/tasks/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3267,7 +3125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tasks/functions/" class="md-nav__link">
+      <a href="../reference/tasks/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3288,7 +3146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tasks/split/" class="md-nav__link">
+      <a href="../reference/tasks/split/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3309,7 +3167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tasks/task/" class="md-nav__link">
+      <a href="../reference/tasks/task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3338,7 +3196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing/" class="md-nav__link">
+      <a href="../reference/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3359,7 +3217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../utils/" class="md-nav__link">
+      <a href="../reference/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3482,7 +3340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/20_basic/introduction_tutorial/" class="md-nav__link">
+      <a href="../examples/20_basic/introduction_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3503,7 +3361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/20_basic/simple_datasets_tutorial/" class="md-nav__link">
+      <a href="../examples/20_basic/simple_datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3524,7 +3382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/20_basic/simple_flows_and_runs_tutorial/" class="md-nav__link">
+      <a href="../examples/20_basic/simple_flows_and_runs_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3545,7 +3403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/20_basic/simple_suites_tutorial/" class="md-nav__link">
+      <a href="../examples/20_basic/simple_suites_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3642,7 +3500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/configure_logging/" class="md-nav__link">
+      <a href="../examples/30_extended/configure_logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3663,7 +3521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/create_upload_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/create_upload_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3684,7 +3542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/custom_flow_/" class="md-nav__link">
+      <a href="../examples/30_extended/custom_flow_/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3705,7 +3563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/datasets_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3726,7 +3584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/fetch_evaluations_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/fetch_evaluations_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3747,7 +3605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/fetch_runtimes_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/fetch_runtimes_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3768,7 +3626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/flow_id_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/flow_id_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3789,7 +3647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/flows_and_runs_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/flows_and_runs_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3810,7 +3668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/plot_svm_hyperparameters_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/plot_svm_hyperparameters_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3831,7 +3689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/run_setup_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/run_setup_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3852,7 +3710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/study_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/study_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3873,7 +3731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/suites_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/suites_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3894,7 +3752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/task_manual_iteration_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/task_manual_iteration_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3915,7 +3773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/30_extended/tasks_tutorial/" class="md-nav__link">
+      <a href="../examples/30_extended/tasks_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3992,7 +3850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/40_paper/2015_neurips_feurer_example/" class="md-nav__link">
+      <a href="../examples/40_paper/2015_neurips_feurer_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4013,7 +3871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/40_paper/2018_ida_strang_example/" class="md-nav__link">
+      <a href="../examples/40_paper/2018_ida_strang_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4034,7 +3892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/40_paper/2018_kdd_rijn_example/" class="md-nav__link">
+      <a href="../examples/40_paper/2018_kdd_rijn_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4055,7 +3913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/40_paper/2018_neurips_perrone_example/" class="md-nav__link">
+      <a href="../examples/40_paper/2018_neurips_perrone_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4092,7 +3950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/usage/" class="md-nav__link">
+      <a href="../python/usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4113,7 +3971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/contributing/" class="md-nav__link">
+      <a href="../python/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4134,7 +3992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/extensions/" class="md-nav__link">
+      <a href="../python/extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4155,7 +4013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/progress/" class="md-nav__link">
+      <a href="../python/progress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4212,7 +4070,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../pytorch/" class="md-nav__link ">
+            <a href="../pytorch/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4295,7 +4153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/API%20reference/Callbacks/" class="md-nav__link">
+      <a href="../pytorch/API%20reference/Callbacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4316,7 +4174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/API%20reference/Custom%20Datasets/" class="md-nav__link">
+      <a href="../pytorch/API%20reference/Custom%20Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4337,7 +4195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/API%20reference/Metrics/" class="md-nav__link">
+      <a href="../pytorch/API%20reference/Metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4358,7 +4216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/API%20reference/OpenML%20Connection/" class="md-nav__link">
+      <a href="../pytorch/API%20reference/OpenML%20Connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4379,7 +4237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/API%20reference/Trainer/" class="md-nav__link">
+      <a href="../pytorch/API%20reference/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4458,7 +4316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/Examples/Create%20Dataset%20and%20Task/" class="md-nav__link">
+      <a href="../pytorch/Examples/Create%20Dataset%20and%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4479,7 +4337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/Examples/Image%20Classification%20Task/" class="md-nav__link">
+      <a href="../pytorch/Examples/Image%20Classification%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4500,7 +4358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/Examples/Pretrained%20Transformer%20Image%20Classification%20Task/" class="md-nav__link">
+      <a href="../pytorch/Examples/Pretrained%20Transformer%20Image%20Classification%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4521,7 +4379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/Examples/Sequential%20Classification%20Task/" class="md-nav__link">
+      <a href="../pytorch/Examples/Sequential%20Classification%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4542,7 +4400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/Examples/Tabular%20Classification/" class="md-nav__link">
+      <a href="../pytorch/Examples/Tabular%20Classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4571,7 +4429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/Limitations%20of%20the%20API/" class="md-nav__link">
+      <a href="../pytorch/Limitations%20of%20the%20API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4592,7 +4450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pytorch/Philosophy%20behind%20the%20API%20Design/" class="md-nav__link">
+      <a href="../pytorch/Philosophy%20behind%20the%20API%20Design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4617,10 +4475,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../tensorflow/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TensorFlow
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -4629,6 +4507,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Instructions:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4661,7 +4577,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../julia/" class="md-nav__link ">
+            <a href="../julia/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4701,7 +4617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../r/" class="md-nav__link">
+      <a href="../r/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4750,7 +4666,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../apiv2/" class="md-nav__link ">
+            <a href="../apiv2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4783,7 +4699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/installation/" class="md-nav__link">
+      <a href="../apiv2/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4829,7 +4745,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../apiv2/contributing/" class="md-nav__link ">
+            <a href="../apiv2/contributing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4860,7 +4776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/contributing/contributing/" class="md-nav__link">
+      <a href="../apiv2/contributing/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4881,7 +4797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/contributing/tests/" class="md-nav__link">
+      <a href="../apiv2/contributing/tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4902,7 +4818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/contributing/documentation/" class="md-nav__link">
+      <a href="../apiv2/contributing/documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4923,7 +4839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/contributing/project_overview/" class="md-nav__link">
+      <a href="../apiv2/contributing/project_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4952,7 +4868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apiv2/migration/" class="md-nav__link">
+      <a href="../apiv2/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4990,6 +4906,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -4998,99 +4916,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#openml.exceptions" class="md-nav__link">
+  <a href="#installation-instructions" class="md-nav__link">
     <span class="md-ellipsis">
-      exceptions
+      Installation Instructions:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#openml.exceptions.ObjectNotPublishedError" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
-      ObjectNotPublishedError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLCacheException" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLCacheException
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLHashException" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLHashException
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLNotAuthorizedError" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLNotAuthorizedError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLPrivateDatasetError" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLPrivateDatasetError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLRunsExistError" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLRunsExistError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLServerError" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLServerError
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLServerException" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLServerException
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.OpenMLServerNoResult" class="md-nav__link">
-    <span class="md-ellipsis">
-      OpenMLServerNoResult
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#openml.exceptions.PyOpenMLError" class="md-nav__link">
-    <span class="md-ellipsis">
-      PyOpenMLError
+      Usage
     </span>
   </a>
   
@@ -5111,7 +4948,7 @@
                   
 
   
-    <a href="https://github.com/openml/openml-python/blob/docs/mkdoc/openml/exceptions.py" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/openml/openml-tensorflow/edit/master/README.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -5120,608 +4957,57 @@
     
       
     
-    <a href="https://github.com/openml/openml-python/raw/docs/mkdoc/openml/exceptions.py" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/openml/openml-tensorflow/raw/master/README.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
   
 
 
-  <h1>exceptions</h1>
-
-<div class="doc doc-object doc-module">
-
-
-
-<a id="openml.exceptions"></a>
-    <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.ObjectNotPublishedError" class="doc doc-heading">
-            <code>ObjectNotPublishedError</code>
-
-
-<a href="#openml.exceptions.ObjectNotPublishedError" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.PyOpenMLError" href="#openml.exceptions.PyOpenMLError">PyOpenMLError</a></code></p>
-
-
-        <p>Indicates an object has not been published yet.</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-66">66</a></span>
-<span class="normal"><a href="#__codelineno-0-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="k">class</span> <span class="nc">ObjectNotPublishedError</span><span class="p">(</span><span class="n">PyOpenMLError</span><span class="p">):</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Indicates an object has not been published yet.&quot;&quot;&quot;</span>
+<h1 id="tensorflow-extension-for-openml-python">Tensorflow extension for OpenML python<a class="headerlink" href="#tensorflow-extension-for-openml-python" title="Permanent link">&para;</a></h1>
+<p>Tensorflow extension for <a href="https://github.com/openml/openml-python">openml-python API</a>.</p>
+<h4 id="installation-instructions">Installation Instructions:<a class="headerlink" href="#installation-instructions" title="Permanent link">&para;</a></h4>
+<p><code>pip install openml-tensorflow</code></p>
+<p>PyPi link <a href="https://pypi.org/project/openml-keras/">https://pypi.org/project/openml-keras/</a></p>
+<h4 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h4>
+<p>Import openML libraries
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">openml</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">openml_tensorflow</span>
 </code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.OpenMLCacheException" class="doc doc-heading">
-            <code>OpenMLCacheException</code>
-
-
-<a href="#openml.exceptions.OpenMLCacheException" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.PyOpenMLError" href="#openml.exceptions.PyOpenMLError">PyOpenMLError</a></code></p>
-
-
-        <p>Dataset / task etc not found in cache</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="k">class</span> <span class="nc">OpenMLCacheException</span><span class="p">(</span><span class="n">PyOpenMLError</span><span class="p">):</span>  <span class="c1"># noqa: N818</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Dataset / task etc not found in cache&quot;&quot;&quot;</span>
+Create  and compile a keras model
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">BatchNormalization</span><span class="p">(),</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">activations</span><span class="o">.</span><span class="n">relu</span><span class="p">),</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="mf">0.4</span><span class="p">),</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">activations</span><span class="o">.</span><span class="n">softmax</span><span class="p">),</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">])</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="c1"># We will compile using the Adam optimizer while targeting accuracy.</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>              <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;sparse_categorical_crossentropy&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.OpenMLHashException" class="doc doc-heading">
-            <code>OpenMLHashException</code>
-
-
-<a href="#openml.exceptions.OpenMLHashException" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.PyOpenMLError" href="#openml.exceptions.PyOpenMLError">PyOpenMLError</a></code></p>
-
-
-        <p>Locally computed hash is different than hash announced by the server.</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-44">44</a></span>
-<span class="normal"><a href="#__codelineno-0-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="k">class</span> <span class="nc">OpenMLHashException</span><span class="p">(</span><span class="n">PyOpenMLError</span><span class="p">):</span>  <span class="c1"># noqa: N818</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Locally computed hash is different than hash announced by the server.&quot;&quot;&quot;</span>
-</code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.OpenMLNotAuthorizedError" class="doc doc-heading">
-            <code>OpenMLNotAuthorizedError</code>
-
-
-<a href="#openml.exceptions.OpenMLNotAuthorizedError" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.OpenMLServerError" href="#openml.exceptions.OpenMLServerError">OpenMLServerError</a></code></p>
-
-
-        <p>Indicates an authenticated user is not authorized to execute the requested action.</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-62">62</a></span>
-<span class="normal"><a href="#__codelineno-0-63">63</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="k">class</span> <span class="nc">OpenMLNotAuthorizedError</span><span class="p">(</span><span class="n">OpenMLServerError</span><span class="p">):</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Indicates an authenticated user is not authorized to execute the requested action.&quot;&quot;&quot;</span>
-</code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.OpenMLPrivateDatasetError" class="doc doc-heading">
-            <code>OpenMLPrivateDatasetError</code>
-
-
-<a href="#openml.exceptions.OpenMLPrivateDatasetError" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.PyOpenMLError" href="#openml.exceptions.PyOpenMLError">PyOpenMLError</a></code></p>
-
-
-        <p>Exception thrown when the user has no rights to access the dataset.</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-48">48</a></span>
-<span class="normal"><a href="#__codelineno-0-49">49</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="k">class</span> <span class="nc">OpenMLPrivateDatasetError</span><span class="p">(</span><span class="n">PyOpenMLError</span><span class="p">):</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Exception thrown when the user has no rights to access the dataset.&quot;&quot;&quot;</span>
-</code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.OpenMLRunsExistError" class="doc doc-heading">
-            <code>OpenMLRunsExistError</code>
-
-
-<a href="#openml.exceptions.OpenMLRunsExistError" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.PyOpenMLError" href="#openml.exceptions.PyOpenMLError">PyOpenMLError</a></code></p>
-
-
-        <p>Indicates run(s) already exists on the server when they should not be duplicated.</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-52">52</a></span>
-<span class="normal"><a href="#__codelineno-0-53">53</a></span>
-<span class="normal"><a href="#__codelineno-0-54">54</a></span>
-<span class="normal"><a href="#__codelineno-0-55">55</a></span>
-<span class="normal"><a href="#__codelineno-0-56">56</a></span>
-<span class="normal"><a href="#__codelineno-0-57">57</a></span>
-<span class="normal"><a href="#__codelineno-0-58">58</a></span>
-<span class="normal"><a href="#__codelineno-0-59">59</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="k">class</span> <span class="nc">OpenMLRunsExistError</span><span class="p">(</span><span class="n">PyOpenMLError</span><span class="p">):</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Indicates run(s) already exists on the server when they should not be duplicated.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">run_ids</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">run_ids</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a>            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Set of run ids must be non-empty.&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">run_ids</span> <span class="o">=</span> <span class="n">run_ids</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.OpenMLServerError" class="doc doc-heading">
-            <code>OpenMLServerError</code>
-
-
-<a href="#openml.exceptions.OpenMLServerError" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.PyOpenMLError" href="#openml.exceptions.PyOpenMLError">PyOpenMLError</a></code></p>
-
-
-        <p>class for when something is really wrong on the server
-(result did not parse to dict), contains unparsed error.</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="k">class</span> <span class="nc">OpenMLServerError</span><span class="p">(</span><span class="n">PyOpenMLError</span><span class="p">):</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;class for when something is really wrong on the server</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sd">    (result did not parse to dict), contains unparsed error.</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">    &quot;&quot;&quot;</span>
-</code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.OpenMLServerException" class="doc doc-heading">
-            <code>OpenMLServerException</code>
-
-
-<a href="#openml.exceptions.OpenMLServerException" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.OpenMLServerError" href="#openml.exceptions.OpenMLServerError">OpenMLServerError</a></code></p>
-
-
-        <p>exception for when the result of the server was
-not 200 (e.g., listing call w/o results).</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">class</span> <span class="nc">OpenMLServerException</span><span class="p">(</span><span class="n">OpenMLServerError</span><span class="p">):</span>  <span class="c1"># noqa: N818</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;exception for when the result of the server was</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="sd">    not 200 (e.g., listing call w/o results).</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a>    <span class="c1"># Code needs to be optional to allow the exception to be picklable:</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="c1"># https://stackoverflow.com/questions/16244923/how-to-make-a-custom-exception-class-with-multiple-init-args-pickleable  # noqa: E501</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">code</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">code</span> <span class="o">=</span> <span class="n">code</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2"> returned code </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
-</code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.OpenMLServerNoResult" class="doc doc-heading">
-            <code>OpenMLServerNoResult</code>
-
-
-<a href="#openml.exceptions.OpenMLServerNoResult" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.exceptions.OpenMLServerException" href="#openml.exceptions.OpenMLServerException">OpenMLServerException</a></code></p>
-
-
-        <p>Exception for when the result of the server is empty.</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="k">class</span> <span class="nc">OpenMLServerNoResult</span><span class="p">(</span><span class="n">OpenMLServerException</span><span class="p">):</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Exception for when the result of the server is empty.&quot;&quot;&quot;</span>
-</code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="openml.exceptions.PyOpenMLError" class="doc doc-heading">
-            <code>PyOpenMLError</code>
-
-
-<a href="#openml.exceptions.PyOpenMLError" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code>Exception</code></p>
-
-
-        <p>Base class for all exceptions in OpenML-Python.</p>
-
-
-
-
-
-
-              <details class="quote">
-                <summary>Source code in <code>openml/exceptions.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">class</span> <span class="nc">PyOpenMLError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Base class for all exceptions in OpenML-Python.&quot;&quot;&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-              </details>
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
+Download the task from openML and run the model on task.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="mi">3573</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">avoid_duplicate_runs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;URL for run: </span><span class="si">%s</span><span class="s1">/run/</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">server</span><span class="p">,</span> <span class="n">run</span><span class="o">.</span><span class="n">run_id</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div></p>
+<p>This library is currently under development, please report any bugs or feature reuest in issues section.</p>
 
 
 
@@ -5785,7 +5071,7 @@ not 200 (e.g., listing call w/o results).</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../evaluations/functions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: functions">
+          <a href="../pytorch/Philosophy%20behind%20the%20API%20Design/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Philosphy behind the API Design">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5795,20 +5081,20 @@ not 200 (e.g., listing call w/o results).</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                functions
+                Philosphy behind the API Design
               </div>
             </div>
           </a>
         
         
           
-          <a href="../extensions/" class="md-footer__link md-footer__link--next" aria-label="Next: extensions">
+          <a href="../julia/" class="md-footer__link md-footer__link--next" aria-label="Next: Home">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                extensions
+                Home
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -5842,12 +5128,12 @@ not 200 (e.g., listing call w/o results).</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "content.action.view", "content.tabs.link", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.action.edit", "content.action.view", "content.tabs.link", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
       
-        <script src="../../js/extra.js"></script>
+        <script src="../js/extra.js"></script>
       
     
   </body>
