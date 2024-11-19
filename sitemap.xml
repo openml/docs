@@ -596,4 +596,56 @@
          <loc>https://docs.openml.org/tensorflow/</loc>
          <lastmod>2024-11-19</lastmod>
     </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/Limitations%20of%20the%20API/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/API%20reference/Config/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/API%20reference/OpenML%20integration/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/Docker%20reference/Docker/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/Examples/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/Examples/tf_image_classification/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/Examples/tf_image_classification_Indoorscenes_dataset/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/Examples/tf_image_classification_sanity_check/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/Examples/tf_pretrained_model_Indoorscenes_dataset/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/Examples/tf_transfer_learning/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/openml_tensorflow/__init__/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/openml_tensorflow/config/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/tensorflow/openml_tensorflow/extension/</loc>
+         <lastmod>2024-11-19</lastmod>
+    </url>
 </urlset>
