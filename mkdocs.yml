@@ -90,9 +90,6 @@ plugins:
           - name: R
             import_url: https://github.com/mlr-org/mlr3oml?branch=main
             imports: [README.md]
-          - name: TensorFlow
-            import_url: https://github.com/openml/openml-tensorflow
-            imports: [README.md]
           - name: Services
             import_url: https://github.com/openml/services?branch=main
             imports: [README.md]
