@@ -4049,6 +4049,8 @@
       
         
       
+        
+      
     
     
       
@@ -4411,6 +4413,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pytorch/Integrations%20of%20OpenML%20in%20PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other Integrations
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -5380,7 +5403,7 @@ learning. OpenML can be used to</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.study.study.BaseStudy" href="study/study/#openml.study.study.BaseStudy">BaseStudy</a></code></p>
+              Bases: <code>BaseStudy</code></p>
 
 
         <p>An OpenMLBenchmarkSuite represents the OpenML concept of a suite (a collection of tasks).</p>
@@ -5760,7 +5783,7 @@ Each tag is a dict of (tag) name, window_start and write_access.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.tasks.task.OpenMLSupervisedTask" href="tasks/task/#openml.tasks.task.OpenMLSupervisedTask">OpenMLSupervisedTask</a></code></p>
+              Bases: <code>OpenMLSupervisedTask</code></p>
 
 
         <p>OpenML Classification object.</p>
@@ -5782,7 +5805,7 @@ Each tag is a dict of (tag) name, window_start and write_access.</p>
                 <code>task_type_id</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.tasks.task.TaskType" href="tasks/task/#openml.tasks.task.TaskType">TaskType</a></code>
+                  <code>TaskType</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6140,7 +6163,7 @@ Each tag is a dict of (tag) name, window_start and write_access.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.tasks.task.OpenMLTask" href="tasks/task/#openml.tasks.task.OpenMLTask">OpenMLTask</a></code></p>
+              Bases: <code>OpenMLTask</code></p>
 
 
         <p>OpenML Clustering object.</p>
@@ -6162,7 +6185,7 @@ Each tag is a dict of (tag) name, window_start and write_access.</p>
                 <code>task_type_id</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.tasks.task.TaskType" href="tasks/task/#openml.tasks.task.TaskType">TaskType</a></code>
+                  <code>TaskType</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6996,7 +7019,7 @@ URL where the information is provided.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.base.OpenMLBase" href="base/#openml.base.OpenMLBase">OpenMLBase</a></code></p>
+              Bases: <code>OpenMLBase</code></p>
 
 
         <p>Dataset object.</p>
@@ -9757,7 +9780,7 @@ If <code>dataframe</code>, the returned dataset will be a Pandas DataFrame.</p>
           </tr>
           <tr class="doc-section-item">
 <td><code>y</code></td>            <td>
-                  <code>(ndarray or <span title="pandas.Series">Series</span>, shape(n_samples) or None)</code>
+                  <code>(ndarray or Series, shape(n_samples) or None)</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -10939,7 +10962,7 @@ according to the evaluation/list function</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.base.OpenMLBase" href="base/#openml.base.OpenMLBase">OpenMLBase</a></code></p>
+              Bases: <code>OpenMLBase</code></p>
 
 
         <p>OpenML Flow. Stores machine learning models.</p>
@@ -11016,7 +11039,7 @@ openml.implementation.upload.xsd&gt;</code>_.</p>
                 <code>components</code>
             </td>
             <td>
-                  <code><span title="collections.OrderedDict">OrderedDict</span></code>
+                  <code>OrderedDict</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -11037,7 +11060,7 @@ the same components).</p>
                 <code>parameters</code>
             </td>
             <td>
-                  <code><span title="collections.OrderedDict">OrderedDict</span></code>
+                  <code>OrderedDict</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -11056,7 +11079,7 @@ the correct type.</p>
                 <code>parameters_meta_info</code>
             </td>
             <td>
-                  <code><span title="collections.OrderedDict">OrderedDict</span></code>
+                  <code>OrderedDict</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -11275,7 +11298,7 @@ machines.</p>
                 <code>extension</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.extensions.Extension" href="extensions/#openml.extensions.Extension">Extension</a></code>
+                  <code>Extension</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -12626,7 +12649,7 @@ structure. Allowed values {flow_id, name}</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.flows.flow.OpenMLFlow" href="flows/flow/#openml.flows.flow.OpenMLFlow">OpenMLFlow</a></code>
+                  <code>OpenMLFlow</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -12761,7 +12784,7 @@ If False, update the local flow to match the server flow.</p>
       <tbody>
           <tr class="doc-section-item">
 <td><code>self</code></td>            <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.flows.flow.OpenMLFlow" href="flows/flow/#openml.flows.flow.OpenMLFlow">OpenMLFlow</a></code>
+                  <code>OpenMLFlow</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -12960,7 +12983,7 @@ If False, update the local flow to match the server flow.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.tasks.task.OpenMLClassificationTask" href="tasks/task/#openml.tasks.task.OpenMLClassificationTask">OpenMLClassificationTask</a></code></p>
+              Bases: <code>OpenMLClassificationTask</code></p>
 
 
         <p>OpenML Learning Curve object.</p>
@@ -12982,7 +13005,7 @@ If False, update the local flow to match the server flow.</p>
                 <code>task_type_id</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.tasks.task.TaskType" href="tasks/task/#openml.tasks.task.TaskType">TaskType</a></code>
+                  <code>TaskType</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -13690,7 +13713,7 @@ default value is selected arbitrarily</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.tasks.task.OpenMLSupervisedTask" href="tasks/task/#openml.tasks.task.OpenMLSupervisedTask">OpenMLSupervisedTask</a></code></p>
+              Bases: <code>OpenMLSupervisedTask</code></p>
 
 
         <p>OpenML Regression object.</p>
@@ -13712,7 +13735,7 @@ default value is selected arbitrarily</p>
                 <code>task_type_id</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.tasks.task.TaskType" href="tasks/task/#openml.tasks.task.TaskType">TaskType</a></code>
+                  <code>TaskType</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -14016,7 +14039,7 @@ default value is selected arbitrarily</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.base.OpenMLBase" href="base/#openml.base.OpenMLBase">OpenMLBase</a></code></p>
+              Bases: <code>OpenMLBase</code></p>
 
 
         <p>OpenML Run: result of running a model on an OpenML dataset.</p>
@@ -14246,7 +14269,7 @@ default value is selected arbitrarily</p>
                 <code>trace</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.runs.trace.OpenMLRunTrace" href="runs/trace/#openml.runs.trace.OpenMLRunTrace">OpenMLRunTrace</a> | None</code>
+                  <code>OpenMLRunTrace | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -14326,7 +14349,7 @@ default value is selected arbitrarily</p>
                 <code>parameter_settings</code>
             </td>
             <td>
-                  <code>list[dict[str, <span title="typing.Any">Any</span>]] | None</code>
+                  <code>list[dict[str, Any]] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -14358,7 +14381,7 @@ default value is selected arbitrarily</p>
                 <code>task</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.tasks.OpenMLTask" href="tasks/#openml.tasks.OpenMLTask">OpenMLTask</a> | None</code>
+                  <code>OpenMLTask | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -14375,7 +14398,7 @@ with the run.</p>
                 <code>flow</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.flows.OpenMLFlow" href="flows/#openml.flows.OpenMLFlow">OpenMLFlow</a> | None</code>
+                  <code>OpenMLFlow | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -15926,7 +15949,7 @@ be present.</p>
       <tbody>
           <tr class="doc-section-item">
 <td><code>run</code></td>            <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.runs.run.OpenMLRun" href="runs/run/#openml.runs.run.OpenMLRun">OpenMLRun</a></code>
+                  <code>OpenMLRun</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -17308,7 +17331,7 @@ model.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="numpy.ndarray">ndarray</span></code>
+                  <code>ndarray</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -17428,7 +17451,7 @@ model.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.study.study.BaseStudy" href="study/study/#openml.study.study.BaseStudy">BaseStudy</a></code></p>
+              Bases: <code>BaseStudy</code></p>
 
 
         <p>An OpenMLStudy represents the OpenML concept of a study (a collection of runs).</p>
@@ -17876,7 +17899,7 @@ Each tag is a dict of (tag) name, window_start and write_access.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.tasks.task.OpenMLTask" href="tasks/task/#openml.tasks.task.OpenMLTask">OpenMLTask</a></code>, <code><span title="abc.ABC">ABC</span></code></p>
+              Bases: <code>OpenMLTask</code>, <code>ABC</code></p>
 
 
         <p>OpenML Supervised Classification object.</p>
@@ -17898,7 +17921,7 @@ Each tag is a dict of (tag) name, window_start and write_access.</p>
                 <code>task_type_id</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.tasks.task.TaskType" href="tasks/task/#openml.tasks.task.TaskType">TaskType</a></code>
+                  <code>TaskType</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -18561,7 +18584,7 @@ for possible options.</p>
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code><a class="autorefs autorefs-internal" title="openml.base.OpenMLBase" href="base/#openml.base.OpenMLBase">OpenMLBase</a></code></p>
+              Bases: <code>OpenMLBase</code></p>
 
 
         <p>OpenML Task object.</p>
@@ -18599,7 +18622,7 @@ for possible options.</p>
                 <code>task_type_id</code>
             </td>
             <td>
-                  <code><a class="autorefs autorefs-internal" title="openml.tasks.task.TaskType" href="tasks/task/#openml.tasks.task.TaskType">TaskType</a></code>
+                  <code>TaskType</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -19499,7 +19522,7 @@ for possible options.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 31, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2024</span>
   </span>
 
     
@@ -19509,7 +19532,7 @@ for possible options.</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 31, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2024</span>
   </span>
 
     
