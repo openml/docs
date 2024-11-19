@@ -202,8 +202,7 @@ nav:
         - Extensions: python/extensions.md
         - Changelog: python/progress.md
     - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
-    - TensorFlow:
-        - tensorflow/README.md
+    - TensorFlow: '!import https://github.com/openml/openml-tensorflow?extra_imports=["openml_tensorflow/*"]'
     - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
     - R: 
         - r/README.md
