@@ -1,5 +1,3 @@
-
-# Governance
 The purpose of this document is to formalize the governance process used by the [OpenML project](https://openml.org) (including the [OpenML organization on GitHub](https://github.com/openml) which contains all code and projects related to OpenML.org), to clarify how decisions are made and how the various elements of our community interact. This document establishes a decision-making structure that takes into account feedback from all members of the community and strives to find consensus, while avoiding any deadlocks.
 
 The OpenML project is an independent open source project that is legally represented by the [Open Machine Learning Foundation](https://new.openml.org/about). The Open Machine Learning Foundation is a not-for-profit organization supporting, but not controlling, the OpenML project. The Foundation is open to engage with universities, companies, or anyone sharing the same goals. The OpenML project has a separate governance model described in this document.
