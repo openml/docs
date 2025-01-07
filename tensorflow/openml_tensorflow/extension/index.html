@@ -5531,6 +5531,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -5729,7 +5730,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b98ffa7a">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9135a530">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5747,23 +5748,23 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>
-<span class="kn">import</span> <span class="nn">importlib</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">pickle</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">import</span> <span class="nn">zlib</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>  <span class="c1"># noqa: F401</span>
-<span class="kn">from</span> <span class="nn">distutils.version</span> <span class="kn">import</span> <span class="n">LooseVersion</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
-<span class="kn">import</span> <span class="nn">tensorflow</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">scipy.sparse</span>
-<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">config</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">zlib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">OrderedDict</span>  <span class="c1"># noqa: F401</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">distutils.version</span><span class="w"> </span><span class="kn">import</span> <span class="n">LooseVersion</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.sparse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">config</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">import copy
 import importlib
@@ -5788,7 +5789,7 @@ from . import config</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=239639c7">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=99aa0a3e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5806,19 +5807,19 @@ from . import config</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
-<span class="kn">from</span> <span class="nn">openml.exceptions</span> <span class="kn">import</span> <span class="n">PyOpenMLError</span>
-<span class="kn">from</span> <span class="nn">openml.extensions</span> <span class="kn">import</span> <span class="n">Extension</span><span class="p">,</span> <span class="n">register_extension</span>
-<span class="kn">from</span> <span class="nn">openml.flows</span> <span class="kn">import</span> <span class="n">OpenMLFlow</span>
-<span class="kn">from</span> <span class="nn">openml.runs.trace</span> <span class="kn">import</span> <span class="n">OpenMLRunTrace</span><span class="p">,</span> <span class="n">OpenMLTraceIteration</span>
-<span class="kn">from</span> <span class="nn">openml.tasks</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">PyOpenMLError</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml.extensions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Extension</span><span class="p">,</span> <span class="n">register_extension</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml.flows</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLFlow</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml.runs.trace</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLRunTrace</span><span class="p">,</span> <span class="n">OpenMLTraceIteration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml.tasks</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">OpenMLTask</span><span class="p">,</span>
     <span class="n">OpenMLSupervisedTask</span><span class="p">,</span>
     <span class="n">OpenMLClassificationTask</span><span class="p">,</span>
     <span class="n">OpenMLRegressionTask</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
-<span class="kn">import</span> <span class="nn">tf2onnx</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.preprocessing.image</span><span class="w"> </span><span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tf2onnx</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">import openml
 from openml.exceptions import PyOpenMLError
@@ -5839,7 +5840,7 @@ import tf2onnx</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4d3f099f">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e73afca5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5858,7 +5859,7 @@ import tf2onnx</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">json.decoder</span> <span class="kn">import</span> <span class="n">JSONDecodeError</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">json.decoder</span><span class="w"> </span><span class="kn">import</span> <span class="n">JSONDecodeError</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">JSONDecodeError</span> <span class="o">=</span> <span class="ne">ValueError</span>
 </pre></div>
@@ -5872,7 +5873,7 @@ else:
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=028fd021">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=08e9b356">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5905,7 +5906,7 @@ else:
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f8e391e9">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=064c4884">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5936,7 +5937,7 @@ SIMPLE_TYPES = tuple([bool, int, float, str] + SIMPLE_NUMPY_TYPES)</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=49f8edac">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2cee6a2a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5963,7 +5964,7 @@ SIMPLE_TYPES = tuple([bool, int, float, str] + SIMPLE_NUMPY_TYPES)</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a728ae83">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=15adfe1b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5990,7 +5991,7 @@ SIMPLE_TYPES = tuple([bool, int, float, str] + SIMPLE_NUMPY_TYPES)</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a50598ee">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9059382f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6019,7 +6020,7 @@ last_models = None</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=80718213">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f8068181">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6037,14 +6038,14 @@ last_models = None</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">TensorflowExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">TensorflowExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Connect Keras to OpenML-Python."""</span>
 
     <span class="c1">################################################################################################</span>
     <span class="c1"># General setup</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">can_handle_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="s1">'OpenMLFlow'</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">can_handle_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="s1">'OpenMLFlow'</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Check whether a given flow describes a Keras neural network.</span>
 
 <span class="sd">        This is done by parsing the ``external_version`` field.</span>
@@ -6060,7 +6061,7 @@ last_models = None</div>
         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_is_tf_flow</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">can_handle_model</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">can_handle_model</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Check whether a model is an instance of ``tf.models.Model``.</span>
 
 <span class="sd">        Parameters</span>
@@ -6076,7 +6077,7 @@ last_models = None</div>
     <span class="c1">################################################################################################</span>
     <span class="c1"># Methods for flow serialization and de-serialization</span>
 
-    <span class="k">def</span> <span class="nf">flow_to_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="s1">'OpenMLFlow'</span><span class="p">,</span> <span class="n">initialize_with_defaults</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">flow_to_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="s1">'OpenMLFlow'</span><span class="p">,</span> <span class="n">initialize_with_defaults</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Initializes a Keras model based on a flow.</span>
 
 <span class="sd">        Parameters</span>
@@ -6095,7 +6096,7 @@ last_models = None</div>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize_tf</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">initialize_with_defaults</span><span class="o">=</span><span class="n">initialize_with_defaults</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_deserialize_tf</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_tf</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
             <span class="n">components</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -6198,7 +6199,7 @@ last_models = None</div>
                      <span class="o">%</span> <span class="p">(</span><span class="s1">'-'</span> <span class="o">*</span> <span class="n">recursion_depth</span><span class="p">,</span> <span class="n">o</span><span class="p">,</span> <span class="n">rval</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">rval</span>
 
-    <span class="k">def</span> <span class="nf">model_to_flow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'OpenMLFlow'</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">model_to_flow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'OpenMLFlow'</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Transform a Keras model to a flow for uploading it to OpenML.</span>
 
 <span class="sd">        Parameters</span>
@@ -6212,7 +6213,7 @@ last_models = None</div>
         <span class="c1"># Necessary to make pypy not complain about all the different possible return types</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_tf</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_serialize_tf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">parent_model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_tf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">parent_model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
         <span class="n">rval</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Any</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_estimator</span><span class="p">(</span><span class="n">o</span><span class="p">):</span>
             <span class="c1"># is the main model or a submodel</span>
@@ -6255,7 +6256,7 @@ last_models = None</div>
                 <span class="k">else</span><span class="p">:</span>
                    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">o</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">rval</span>
-    <span class="k">def</span> <span class="nf">get_version_information</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_version_information</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">"""List versions of libraries required by the flow.</span>
 
 <span class="sd">        Libraries listed are ``Python``, ``tensorflow``, ``numpy`` and ``scipy``.</span>
@@ -6265,9 +6266,9 @@ last_models = None</div>
 <span class="sd">        List</span>
 <span class="sd">        """</span>
 
-        <span class="kn">import</span> <span class="nn">tensorflow</span>
-        <span class="kn">import</span> <span class="nn">scipy</span>
-        <span class="kn">import</span> <span class="nn">numpy</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 
         <span class="n">major</span><span class="p">,</span> <span class="n">minor</span><span class="p">,</span> <span class="n">micro</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span>
         <span class="n">python_version</span> <span class="o">=</span> <span class="s1">'Python_</span><span class="si">{}</span><span class="s1">.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
@@ -6278,7 +6279,7 @@ last_models = None</div>
 
         <span class="k">return</span> <span class="p">[</span><span class="n">python_version</span><span class="p">,</span> <span class="n">tensorflow_version</span><span class="p">,</span> <span class="n">numpy_version</span><span class="p">,</span> <span class="n">scipy_version</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="nf">create_setup_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_setup_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Create a string which can be used to reinstantiate the given model.</span>
 
 <span class="sd">        Parameters</span>
@@ -6293,12 +6294,12 @@ last_models = None</div>
         <span class="k">return</span> <span class="n">run_environment</span> <span class="o">+</span> <span class="s2">" "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_is_tf_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_is_tf_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="c1">#        breakpoint()</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">flow</span><span class="o">.</span><span class="n">external_version</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'keras=='</span><span class="p">)</span>
                 <span class="ow">or</span> <span class="s1">',tensorflow=='</span> <span class="ow">in</span> <span class="n">flow</span><span class="o">.</span><span class="n">external_version</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_serialize_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Create an OpenMLFlow.</span>
 
 <span class="sd">        Calls `tf_to_flow` recursively to properly serialize the</span>
@@ -6356,7 +6357,7 @@ last_models = None</div>
                           <span class="n">dependencies</span><span class="o">=</span><span class="n">dependencies</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">flow</span>
 
-    <span class="k">def</span> <span class="nf">_get_external_version_string</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_external_version_string</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
             <span class="n">sub_components</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">OpenMLFlow</span><span class="p">],</span>
@@ -6382,7 +6383,7 @@ last_models = None</div>
 
         <span class="k">return</span> <span class="s1">','</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">external_versions</span><span class="p">)))</span>
 
-    <span class="k">def</span> <span class="nf">_from_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="s1">'OrderedDict[str, Any]'</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_from_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="s1">'OrderedDict[str, Any]'</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">""" Get a tensorflow model from flow parameters """</span>
 
         <span class="c1"># Create a dict and recursively fill it with model components</span>
@@ -6431,7 +6432,7 @@ last_models = None</div>
 
         <span class="k">return</span> <span class="n">model</span> 
 
-    <span class="k">def</span> <span class="nf">_get_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'OrderedDict[str, Optional[str]]'</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'OrderedDict[str, Optional[str]]'</span><span class="p">:</span>
         <span class="c1"># Get the parameters from a model in an OrderedDict</span>
         <span class="n">parameters</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># type: OrderedDict[str, Any]</span>
 
@@ -6492,7 +6493,7 @@ last_models = None</div>
         
         <span class="k">return</span> <span class="n">parameters</span>
 
-    <span class="k">def</span> <span class="nf">_extract_information_from_model</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_information_from_model</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span>
@@ -6518,7 +6519,7 @@ last_models = None</div>
 
         <span class="k">return</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">parameters_meta_info</span><span class="p">,</span> <span class="n">sub_components</span><span class="p">,</span> <span class="n">sub_components_explicit</span>
 
-    <span class="k">def</span> <span class="nf">_deserialize_model</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_model</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">,</span>
             <span class="n">keep_defaults</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
@@ -6566,7 +6567,7 @@ last_models = None</div>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_from_parameters</span><span class="p">(</span><span class="n">parameter_dict</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_check_dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check_dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Checks whether the dependencies required for the deserialization of an OpenMLFlow are met</span>
 
@@ -6610,7 +6611,7 @@ last_models = None</div>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Trying to deserialize a model with dependency '</span>
                                  <span class="s1">'</span><span class="si">%s</span><span class="s1"> not satisfied.'</span> <span class="o">%</span> <span class="n">dependency_string</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_format_external_version</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_format_external_version</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">model_package_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
             <span class="n">model_package_version_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -6633,7 +6634,7 @@ last_models = None</div>
     <span class="c1">################################################################################################</span>
     <span class="c1"># Methods for performing runs with extension modules</span>
 
-    <span class="k">def</span> <span class="nf">is_estimator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_estimator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Check whether the given model is a Keras neural network.</span>
 
 <span class="sd">        This function is only required for backwards compatibility and will be removed in the</span>
@@ -6649,7 +6650,7 @@ last_models = None</div>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">seed_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">seed_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Not applied for Keras, since there are no random states in Keras.</span>
 
@@ -6668,7 +6669,7 @@ last_models = None</div>
 
         <span class="k">return</span> <span class="n">model</span>
 
-    <span class="k">def</span> <span class="nf">_run_model_on_fold</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_run_model_on_fold</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
             <span class="n">task</span><span class="p">:</span> <span class="s1">'OpenMLTask'</span><span class="p">,</span>
@@ -6729,7 +6730,7 @@ last_models = None</div>
 <span class="sd">            Additional information provided by the extension to be converted into additional files.</span>
 <span class="sd">        """</span>
 
-        <span class="k">def</span> <span class="nf">_prediction_to_probabilities</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">classes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">_prediction_to_probabilities</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">classes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">            </span><span class="sd">"""Transforms predicted probabilities to match with OpenML class indices.</span>
 
 <span class="sd">            Parameters</span>
@@ -6764,8 +6765,8 @@ last_models = None</div>
         <span class="c1"># This might look like a hack, and it is, but it maintains the compilation status,</span>
         <span class="c1"># in contrast to clone_model, and also is faster than using get_config + load_from_config</span>
         <span class="c1"># since it avoids string parsing</span>
-        <span class="kn">import</span> <span class="nn">dill</span>
-        <span class="kn">import</span> <span class="nn">weakref</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">dill</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">weakref</span>
         <span class="n">model_copy</span> <span class="o">=</span> <span class="n">dill</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">dill</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">model</span><span class="p">))</span>
         <span class="c1"># model_copy = tensorflow.keras.models.clone_model(model, input_tensors=None, clone_function=None)</span>
         <span class="c1">#model_copy = pickle.loads(pickle.dumps(model))</span>
@@ -6787,8 +6788,8 @@ last_models = None</div>
                           
         <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">perform_validation</span><span class="p">:</span>
                     
-            <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-            <span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.preprocessing.image</span><span class="w"> </span><span class="kn">import</span> <span class="n">ImageDataGenerator</span>
             
             <span class="c1"># TODO: Here we're assuming that X has a label column, this won't work in general</span>
             <span class="n">X_train_train</span><span class="p">,</span> <span class="n">x_val</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">validation_split</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">X_train</span><span class="p">[</span><span class="s1">'labels'</span><span class="p">],</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -6811,7 +6812,7 @@ last_models = None</div>
                                             <span class="n">target_size</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">target_size</span><span class="p">,</span>
                                             <span class="n">batch_size</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">batch_size</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+            <span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras.preprocessing.image</span><span class="w"> </span><span class="kn">import</span> <span class="n">ImageDataGenerator</span>
             <span class="n">datagen</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">datagen</span>
             <span class="n">train_generator</span> <span class="o">=</span> <span class="n">datagen</span><span class="o">.</span><span class="n">flow_from_dataframe</span><span class="p">(</span><span class="n">dataframe</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">dir</span><span class="p">,</span>
                                             <span class="n">x_col</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">x_col</span><span class="p">,</span> <span class="n">y_col</span><span class="o">=</span><span class="s1">'labels'</span><span class="p">,</span>
@@ -6921,7 +6922,7 @@ last_models = None</div>
         
         <span class="k">return</span> <span class="n">pred_y</span><span class="p">,</span> <span class="n">proba_y</span><span class="p">,</span> <span class="n">user_defined_measures</span><span class="p">,</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">compile_additional_information</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compile_additional_information</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">task</span><span class="p">:</span> <span class="s1">'OpenMLTask'</span><span class="p">,</span>
             <span class="n">additional_information</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
@@ -6943,7 +6944,7 @@ last_models = None</div>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="nb">dict</span><span class="p">()</span>
 
-    <span class="k">def</span> <span class="nf">obtain_parameter_values</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">obtain_parameter_values</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">flow</span><span class="p">:</span> <span class="s1">'OpenMLFlow'</span><span class="p">,</span>
             <span class="n">model</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -6972,13 +6973,13 @@ last_models = None</div>
 <span class="sd">        """</span>
         <span class="n">openml</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">_check_flow_for_server_id</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
 
-        <span class="k">def</span> <span class="nf">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="p">):</span>
             <span class="n">flow_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">_flow</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">_flow</span><span class="o">.</span><span class="n">flow_id</span><span class="p">}</span>
             <span class="k">for</span> <span class="n">subflow</span> <span class="ow">in</span> <span class="n">_flow</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
                 <span class="n">flow_map</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="n">subflow</span><span class="p">]))</span>
             <span class="k">return</span> <span class="n">flow_map</span>
 
-        <span class="k">def</span> <span class="nf">extract_parameters</span><span class="p">(</span><span class="n">_flow</span><span class="p">,</span> <span class="n">_flow_dict</span><span class="p">,</span> <span class="n">component_model</span><span class="p">,</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">extract_parameters</span><span class="p">(</span><span class="n">_flow</span><span class="p">,</span> <span class="n">_flow_dict</span><span class="p">,</span> <span class="n">component_model</span><span class="p">,</span>
                                <span class="n">_main_call</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">main_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
             <span class="c1"># _flow is openml flow object, _param dict maps from flow name to flow</span>
             <span class="c1"># id for the main call, the param dict can be overridden (useful for</span>
@@ -7035,7 +7036,7 @@ last_models = None</div>
 
         <span class="k">return</span> <span class="n">parameters</span>
 
-    <span class="k">def</span> <span class="nf">_openml_param_name_to_keras</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_openml_param_name_to_keras</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">openml_parameter</span><span class="p">:</span> <span class="n">openml</span><span class="o">.</span><span class="n">setups</span><span class="o">.</span><span class="n">OpenMLParameter</span><span class="p">,</span>
             <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">,</span>
@@ -7067,7 +7068,7 @@ last_models = None</div>
         <span class="n">name</span> <span class="o">=</span> <span class="n">openml_parameter</span><span class="o">.</span><span class="n">flow_name</span>  <span class="c1"># for PEP8</span>
         <span class="k">return</span> <span class="s1">'__'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">flow_structure</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">openml_parameter</span><span class="o">.</span><span class="n">parameter_name</span><span class="p">])</span>
 
-    <span class="k">def</span> <span class="nf">instantiate_model_from_hpo_class</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">instantiate_model_from_hpo_class</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span>
             <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
             <span class="n">trace_iteration</span><span class="p">:</span> <span class="n">OpenMLTraceIteration</span><span class="p">,</span>
@@ -7088,7 +7089,7 @@ last_models = None</div>
 <span class="sd">        """</span>
 
         <span class="k">return</span> <span class="n">model</span>
-    <span class="k">def</span> <span class="nf">check_if_model_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">check_if_model_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">"""Returns True/False denoting if the model has already been fitted/trained</span>
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -8189,7 +8190,7 @@ last_models = None</div>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2025</span>
   </span>
 
     
@@ -8199,7 +8200,7 @@ last_models = None</div>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2025</span>
   </span>
 
     

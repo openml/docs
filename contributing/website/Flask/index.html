@@ -5527,7 +5527,7 @@ it to your own <a href="../../backend/Local-Installation/">local OpenML setup</a
 <p>Out flask app follows <a href="https://flask.palletsprojects.com/en/1.1.x/patterns/appfactories/">Application factories design pattern</a>.
 A new app instance can be created by:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>    <span class="kn">from</span> <span class="nn">autoapp</span> <span class="kn">import</span> <span class="n">create_app</span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">autoapp</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_app</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">app</span> <span class="o">=</span> <span class="n">create_app</span><span class="p">(</span><span class="n">config_object</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 <p>The backend is designed in a modular fashion with flask <a href="https://flask.palletsprojects.com/en/1.0.x/blueprints/">Blueprints</a>. Currently,
@@ -5538,7 +5538,7 @@ the flask app consists of two blueprints public and user:</p>
 <p>New blueprints can be registered in `server/app.py` with register_blueprints function:</p>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>    <span class="k">def</span> <span class="nf">register_blueprints</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">register_blueprints</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>        <span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">new_blueprint</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="database-setup">Database setup<a class="headerlink" href="#database-setup" title="Permanent link">&para;</a></h3>

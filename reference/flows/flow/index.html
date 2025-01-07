@@ -6455,7 +6455,7 @@ machines.</p>
 <span class="normal"><a href="#__codelineno-0-528">528</a></span>
 <span class="normal"><a href="#__codelineno-0-529">529</a></span>
 <span class="normal"><a href="#__codelineno-0-530">530</a></span>
-<span class="normal"><a href="#__codelineno-0-531">531</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="k">class</span> <span class="nc">OpenMLFlow</span><span class="p">(</span><span class="n">OpenMLBase</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-0-531">531</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="k">class</span><span class="w"> </span><span class="nc">OpenMLFlow</span><span class="p">(</span><span class="n">OpenMLBase</span><span class="p">):</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;OpenML Flow. Stores machine learning models.</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a>
 <a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="sd">    Flows should not be generated manually, but by the function</span>
@@ -6530,7 +6530,7 @@ machines.</p>
 <a id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="sd">        OpenML version of the flow. Assigned by the server.</span>
 <a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-90" name="__codelineno-0-90"></a>
-<a id="__codelineno-0-91" name="__codelineno-0-91"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>  <span class="c1"># noqa: PLR0913</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>  <span class="c1"># noqa: PLR0913</span>
 <a id="__codelineno-0-92" name="__codelineno-0-92"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-93" name="__codelineno-0-93"></a>        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-94" name="__codelineno-0-94"></a>        <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -6607,12 +6607,12 @@ machines.</p>
 <a id="__codelineno-0-165" name="__codelineno-0-165"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_extension</span> <span class="o">=</span> <span class="n">extension</span>
 <a id="__codelineno-0-166" name="__codelineno-0-166"></a>
 <a id="__codelineno-0-167" name="__codelineno-0-167"></a>    <span class="nd">@property</span>
-<a id="__codelineno-0-168" name="__codelineno-0-168"></a>    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-168" name="__codelineno-0-168"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-0-169" name="__codelineno-0-169"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;The ID of the flow.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-170" name="__codelineno-0-170"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">flow_id</span>
 <a id="__codelineno-0-171" name="__codelineno-0-171"></a>
 <a id="__codelineno-0-172" name="__codelineno-0-172"></a>    <span class="nd">@property</span>
-<a id="__codelineno-0-173" name="__codelineno-0-173"></a>    <span class="k">def</span> <span class="nf">extension</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Extension</span><span class="p">:</span>
+<a id="__codelineno-0-173" name="__codelineno-0-173"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">extension</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Extension</span><span class="p">:</span>
 <a id="__codelineno-0-174" name="__codelineno-0-174"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;The extension of the flow (e.g., sklearn).&quot;&quot;&quot;</span>
 <a id="__codelineno-0-175" name="__codelineno-0-175"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extension</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-0-176" name="__codelineno-0-176"></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extension</span>
@@ -6621,7 +6621,7 @@ machines.</p>
 <a id="__codelineno-0-179" name="__codelineno-0-179"></a>            <span class="sa">f</span><span class="s2">&quot;No extension could be found for flow </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">flow_id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-180" name="__codelineno-0-180"></a>        <span class="p">)</span>
 <a id="__codelineno-0-181" name="__codelineno-0-181"></a>
-<a id="__codelineno-0-182" name="__codelineno-0-182"></a>    <span class="k">def</span> <span class="nf">_get_repr_body_fields</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]:</span>
+<a id="__codelineno-0-182" name="__codelineno-0-182"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_get_repr_body_fields</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]:</span>
 <a id="__codelineno-0-183" name="__codelineno-0-183"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Collect all information to display in the __repr__ body.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-184" name="__codelineno-0-184"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span>
 <a id="__codelineno-0-185" name="__codelineno-0-185"></a>            <span class="s2">&quot;Flow Name&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
@@ -6650,7 +6650,7 @@ machines.</p>
 <a id="__codelineno-0-208" name="__codelineno-0-208"></a>        <span class="p">]</span>
 <a id="__codelineno-0-209" name="__codelineno-0-209"></a>        <span class="k">return</span> <span class="p">[(</span><span class="n">key</span><span class="p">,</span> <span class="n">fields</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">order</span> <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">fields</span><span class="p">]</span>
 <a id="__codelineno-0-210" name="__codelineno-0-210"></a>
-<a id="__codelineno-0-211" name="__codelineno-0-211"></a>    <span class="k">def</span> <span class="nf">_to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]:</span>  <span class="c1"># noqa: C901, PLR0912</span>
+<a id="__codelineno-0-211" name="__codelineno-0-211"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]:</span>  <span class="c1"># noqa: C901, PLR0912</span>
 <a id="__codelineno-0-212" name="__codelineno-0-212"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates a dictionary representation of self.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-213" name="__codelineno-0-213"></a>        <span class="n">flow_container</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># type: &#39;dict[str, dict]&#39;</span>
 <a id="__codelineno-0-214" name="__codelineno-0-214"></a>        <span class="n">flow_dict</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span>
@@ -6740,7 +6740,7 @@ machines.</p>
 <a id="__codelineno-0-298" name="__codelineno-0-298"></a>        <span class="k">return</span> <span class="n">flow_container</span>
 <a id="__codelineno-0-299" name="__codelineno-0-299"></a>
 <a id="__codelineno-0-300" name="__codelineno-0-300"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-301" name="__codelineno-0-301"></a>    <span class="k">def</span> <span class="nf">_from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">xml_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+<a id="__codelineno-0-301" name="__codelineno-0-301"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">xml_dict</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <a id="__codelineno-0-302" name="__codelineno-0-302"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a flow from an xml description.</span>
 <a id="__codelineno-0-303" name="__codelineno-0-303"></a>
 <a id="__codelineno-0-304" name="__codelineno-0-304"></a><span class="sd">        Calls itself recursively to create :class:`OpenMLFlow` objects of</span>
@@ -6830,7 +6830,7 @@ machines.</p>
 <a id="__codelineno-0-388" name="__codelineno-0-388"></a>        <span class="n">arguments</span><span class="p">[</span><span class="s2">&quot;model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <a id="__codelineno-0-389" name="__codelineno-0-389"></a>        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">arguments</span><span class="p">)</span>
 <a id="__codelineno-0-390" name="__codelineno-0-390"></a>
-<a id="__codelineno-0-391" name="__codelineno-0-391"></a>    <span class="k">def</span> <span class="nf">to_filesystem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-391" name="__codelineno-0-391"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_filesystem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-0-392" name="__codelineno-0-392"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Write a flow to the filesystem as XML to output_directory.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-393" name="__codelineno-0-393"></a>        <span class="n">output_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">output_directory</span><span class="p">)</span>
 <a id="__codelineno-0-394" name="__codelineno-0-394"></a>        <span class="n">output_directory</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -6844,18 +6844,18 @@ machines.</p>
 <a id="__codelineno-0-402" name="__codelineno-0-402"></a>            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">run_xml</span><span class="p">)</span>
 <a id="__codelineno-0-403" name="__codelineno-0-403"></a>
 <a id="__codelineno-0-404" name="__codelineno-0-404"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-405" name="__codelineno-0-405"></a>    <span class="k">def</span> <span class="nf">from_filesystem</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">input_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+<a id="__codelineno-0-405" name="__codelineno-0-405"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">from_filesystem</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">input_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <a id="__codelineno-0-406" name="__codelineno-0-406"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Read a flow from an XML in input_directory on the filesystem.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-407" name="__codelineno-0-407"></a>        <span class="n">input_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">input_directory</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;flow.xml&quot;</span>
 <a id="__codelineno-0-408" name="__codelineno-0-408"></a>        <span class="k">with</span> <span class="n">input_directory</span><span class="o">.</span><span class="n">open</span><span class="p">()</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
 <a id="__codelineno-0-409" name="__codelineno-0-409"></a>            <span class="n">xml_string</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <a id="__codelineno-0-410" name="__codelineno-0-410"></a>        <span class="k">return</span> <span class="n">OpenMLFlow</span><span class="o">.</span><span class="n">_from_dict</span><span class="p">(</span><span class="n">xmltodict</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">xml_string</span><span class="p">))</span>
 <a id="__codelineno-0-411" name="__codelineno-0-411"></a>
-<a id="__codelineno-0-412" name="__codelineno-0-412"></a>    <span class="k">def</span> <span class="nf">_parse_publish_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_response</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-0-412" name="__codelineno-0-412"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_parse_publish_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xml_response</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-0-413" name="__codelineno-0-413"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Parse the id from the xml_response and assign it to self.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-414" name="__codelineno-0-414"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">flow_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">xml_response</span><span class="p">[</span><span class="s2">&quot;oml:upload_flow&quot;</span><span class="p">][</span><span class="s2">&quot;oml:id&quot;</span><span class="p">])</span>
 <a id="__codelineno-0-415" name="__codelineno-0-415"></a>
-<a id="__codelineno-0-416" name="__codelineno-0-416"></a>    <span class="k">def</span> <span class="nf">publish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raise_error_if_exists</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>  <span class="c1"># noqa: FBT001, FBT002</span>
+<a id="__codelineno-0-416" name="__codelineno-0-416"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">publish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raise_error_if_exists</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>  <span class="c1"># noqa: FBT001, FBT002</span>
 <a id="__codelineno-0-417" name="__codelineno-0-417"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Publish this flow to OpenML server.</span>
 <a id="__codelineno-0-418" name="__codelineno-0-418"></a>
 <a id="__codelineno-0-419" name="__codelineno-0-419"></a><span class="sd">        Raises a PyOpenMLError if the flow exists on the server, but</span>
@@ -6876,7 +6876,7 @@ machines.</p>
 <a id="__codelineno-0-434" name="__codelineno-0-434"></a>        <span class="c1"># particular, flow.py tries to import functions.py in order to call</span>
 <a id="__codelineno-0-435" name="__codelineno-0-435"></a>        <span class="c1"># get_flow(), while functions.py tries to import flow.py in order to</span>
 <a id="__codelineno-0-436" name="__codelineno-0-436"></a>        <span class="c1"># instantiate an OpenMLFlow.</span>
-<a id="__codelineno-0-437" name="__codelineno-0-437"></a>        <span class="kn">import</span> <span class="nn">openml.flows.functions</span>
+<a id="__codelineno-0-437" name="__codelineno-0-437"></a>        <span class="kn">import</span><span class="w"> </span><span class="nn">openml.flows.functions</span>
 <a id="__codelineno-0-438" name="__codelineno-0-438"></a>
 <a id="__codelineno-0-439" name="__codelineno-0-439"></a>        <span class="n">flow_id</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">flow_exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">external_version</span><span class="p">)</span>
 <a id="__codelineno-0-440" name="__codelineno-0-440"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">flow_id</span><span class="p">:</span>
@@ -6911,10 +6911,10 @@ machines.</p>
 <a id="__codelineno-0-469" name="__codelineno-0-469"></a>                <span class="s2">&quot;The flow on the server is inconsistent with the local flow. &quot;</span>
 <a id="__codelineno-0-470" name="__codelineno-0-470"></a>                <span class="sa">f</span><span class="s2">&quot;The server flow ID is </span><span class="si">{</span><span class="n">flow_id</span><span class="si">}</span><span class="s2">. Please check manually and remove &quot;</span>
 <a id="__codelineno-0-471" name="__codelineno-0-471"></a>                <span class="sa">f</span><span class="s2">&quot;the flow if necessary! Error is:</span><span class="se">\n</span><span class="s2">&#39;</span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-472" name="__codelineno-0-472"></a>            <span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+<a id="__codelineno-0-472" name="__codelineno-0-472"></a>            <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
 <a id="__codelineno-0-473" name="__codelineno-0-473"></a>        <span class="k">return</span> <span class="bp">self</span>
 <a id="__codelineno-0-474" name="__codelineno-0-474"></a>
-<a id="__codelineno-0-475" name="__codelineno-0-475"></a>    <span class="k">def</span> <span class="nf">get_structure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_item</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<a id="__codelineno-0-475" name="__codelineno-0-475"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_structure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_item</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
 <a id="__codelineno-0-476" name="__codelineno-0-476"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-477" name="__codelineno-0-477"></a><span class="sd">        Returns for each sub-component of the flow the path of identifiers</span>
 <a id="__codelineno-0-478" name="__codelineno-0-478"></a><span class="sd">        that should be traversed to reach this component. The resulting dict</span>
@@ -6942,7 +6942,7 @@ machines.</p>
 <a id="__codelineno-0-500" name="__codelineno-0-500"></a>        <span class="n">structure</span><span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_item</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[]</span>
 <a id="__codelineno-0-501" name="__codelineno-0-501"></a>        <span class="k">return</span> <span class="n">structure</span>
 <a id="__codelineno-0-502" name="__codelineno-0-502"></a>
-<a id="__codelineno-0-503" name="__codelineno-0-503"></a>    <span class="k">def</span> <span class="nf">get_subflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">structure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+<a id="__codelineno-0-503" name="__codelineno-0-503"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_subflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">structure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <a id="__codelineno-0-504" name="__codelineno-0-504"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-505" name="__codelineno-0-505"></a><span class="sd">        Returns a subflow from the tree of dependencies.</span>
 <a id="__codelineno-0-506" name="__codelineno-0-506"></a>
@@ -6989,7 +6989,7 @@ machines.</p>
 
 
 <h3 id="openml.flows.flow.OpenMLFlow.extension" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">extension</span><span class="p">:</span> <span class="n">Extension</span></code>
+            <code class="highlight language-python"><span class="n">extension</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
@@ -7010,7 +7010,7 @@ machines.</p>
 
 
 <h3 id="openml.flows.flow.OpenMLFlow.id" class="doc doc-heading">
-            <code class="highlight language-python"><span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span></code>
+            <code class="highlight language-python"><span class="nb">id</span></code>
 
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
@@ -7054,7 +7054,7 @@ machines.</p>
 <span class="normal"><a href="#__codelineno-0-408">408</a></span>
 <span class="normal"><a href="#__codelineno-0-409">409</a></span>
 <span class="normal"><a href="#__codelineno-0-410">410</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-404" name="__codelineno-0-404"></a><span class="nd">@classmethod</span>
-<a id="__codelineno-0-405" name="__codelineno-0-405"></a><span class="k">def</span> <span class="nf">from_filesystem</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">input_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+<a id="__codelineno-0-405" name="__codelineno-0-405"></a><span class="k">def</span><span class="w"> </span><span class="nf">from_filesystem</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">input_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <a id="__codelineno-0-406" name="__codelineno-0-406"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Read a flow from an XML in input_directory on the filesystem.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-407" name="__codelineno-0-407"></a>    <span class="n">input_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">input_directory</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;flow.xml&quot;</span>
 <a id="__codelineno-0-408" name="__codelineno-0-408"></a>    <span class="k">with</span> <span class="n">input_directory</span><span class="o">.</span><span class="n">open</span><span class="p">()</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -7165,7 +7165,7 @@ structure. Allowed values {flow_id, name}</p>
 <span class="normal"><a href="#__codelineno-0-498">498</a></span>
 <span class="normal"><a href="#__codelineno-0-499">499</a></span>
 <span class="normal"><a href="#__codelineno-0-500">500</a></span>
-<span class="normal"><a href="#__codelineno-0-501">501</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-475" name="__codelineno-0-475"></a><span class="k">def</span> <span class="nf">get_structure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_item</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="normal"><a href="#__codelineno-0-501">501</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-475" name="__codelineno-0-475"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_structure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_item</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
 <a id="__codelineno-0-476" name="__codelineno-0-476"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-477" name="__codelineno-0-477"></a><span class="sd">    Returns for each sub-component of the flow the path of identifiers</span>
 <a id="__codelineno-0-478" name="__codelineno-0-478"></a><span class="sd">    that should be traversed to reach this component. The resulting dict</span>
@@ -7295,7 +7295,7 @@ structure. Allowed values {flow_id, name}</p>
 <span class="normal"><a href="#__codelineno-0-528">528</a></span>
 <span class="normal"><a href="#__codelineno-0-529">529</a></span>
 <span class="normal"><a href="#__codelineno-0-530">530</a></span>
-<span class="normal"><a href="#__codelineno-0-531">531</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-503" name="__codelineno-0-503"></a><span class="k">def</span> <span class="nf">get_subflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">structure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-531">531</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-503" name="__codelineno-0-503"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_subflow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">structure</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <a id="__codelineno-0-504" name="__codelineno-0-504"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-505" name="__codelineno-0-505"></a><span class="sd">    Returns a subflow from the tree of dependencies.</span>
 <a id="__codelineno-0-506" name="__codelineno-0-506"></a>
@@ -7459,7 +7459,7 @@ If False, update the local flow to match the server flow.</p>
 <span class="normal"><a href="#__codelineno-0-470">470</a></span>
 <span class="normal"><a href="#__codelineno-0-471">471</a></span>
 <span class="normal"><a href="#__codelineno-0-472">472</a></span>
-<span class="normal"><a href="#__codelineno-0-473">473</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-416" name="__codelineno-0-416"></a><span class="k">def</span> <span class="nf">publish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raise_error_if_exists</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>  <span class="c1"># noqa: FBT001, FBT002</span>
+<span class="normal"><a href="#__codelineno-0-473">473</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-416" name="__codelineno-0-416"></a><span class="k">def</span><span class="w"> </span><span class="nf">publish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raise_error_if_exists</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>  <span class="c1"># noqa: FBT001, FBT002</span>
 <a id="__codelineno-0-417" name="__codelineno-0-417"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Publish this flow to OpenML server.</span>
 <a id="__codelineno-0-418" name="__codelineno-0-418"></a>
 <a id="__codelineno-0-419" name="__codelineno-0-419"></a><span class="sd">    Raises a PyOpenMLError if the flow exists on the server, but</span>
@@ -7480,7 +7480,7 @@ If False, update the local flow to match the server flow.</p>
 <a id="__codelineno-0-434" name="__codelineno-0-434"></a>    <span class="c1"># particular, flow.py tries to import functions.py in order to call</span>
 <a id="__codelineno-0-435" name="__codelineno-0-435"></a>    <span class="c1"># get_flow(), while functions.py tries to import flow.py in order to</span>
 <a id="__codelineno-0-436" name="__codelineno-0-436"></a>    <span class="c1"># instantiate an OpenMLFlow.</span>
-<a id="__codelineno-0-437" name="__codelineno-0-437"></a>    <span class="kn">import</span> <span class="nn">openml.flows.functions</span>
+<a id="__codelineno-0-437" name="__codelineno-0-437"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">openml.flows.functions</span>
 <a id="__codelineno-0-438" name="__codelineno-0-438"></a>
 <a id="__codelineno-0-439" name="__codelineno-0-439"></a>    <span class="n">flow_id</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">flow_exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">external_version</span><span class="p">)</span>
 <a id="__codelineno-0-440" name="__codelineno-0-440"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">flow_id</span><span class="p">:</span>
@@ -7515,7 +7515,7 @@ If False, update the local flow to match the server flow.</p>
 <a id="__codelineno-0-469" name="__codelineno-0-469"></a>            <span class="s2">&quot;The flow on the server is inconsistent with the local flow. &quot;</span>
 <a id="__codelineno-0-470" name="__codelineno-0-470"></a>            <span class="sa">f</span><span class="s2">&quot;The server flow ID is </span><span class="si">{</span><span class="n">flow_id</span><span class="si">}</span><span class="s2">. Please check manually and remove &quot;</span>
 <a id="__codelineno-0-471" name="__codelineno-0-471"></a>            <span class="sa">f</span><span class="s2">&quot;the flow if necessary! Error is:</span><span class="se">\n</span><span class="s2">&#39;</span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-472" name="__codelineno-0-472"></a>        <span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+<a id="__codelineno-0-472" name="__codelineno-0-472"></a>        <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
 <a id="__codelineno-0-473" name="__codelineno-0-473"></a>    <span class="k">return</span> <span class="bp">self</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -7549,7 +7549,7 @@ If False, update the local flow to match the server flow.</p>
 <span class="normal"><a href="#__codelineno-0-399">399</a></span>
 <span class="normal"><a href="#__codelineno-0-400">400</a></span>
 <span class="normal"><a href="#__codelineno-0-401">401</a></span>
-<span class="normal"><a href="#__codelineno-0-402">402</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-391" name="__codelineno-0-391"></a><span class="k">def</span> <span class="nf">to_filesystem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-402">402</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-391" name="__codelineno-0-391"></a><span class="k">def</span><span class="w"> </span><span class="nf">to_filesystem</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <a id="__codelineno-0-392" name="__codelineno-0-392"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Write a flow to the filesystem as XML to output_directory.&quot;&quot;&quot;</span>
 <a id="__codelineno-0-393" name="__codelineno-0-393"></a>    <span class="n">output_directory</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">output_directory</span><span class="p">)</span>
 <a id="__codelineno-0-394" name="__codelineno-0-394"></a>    <span class="n">output_directory</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7605,7 +7605,7 @@ If False, update the local flow to match the server flow.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2025</span>
   </span>
 
     
@@ -7615,7 +7615,7 @@ If False, update the local flow to match the server flow.</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2025</span>
   </span>
 
     

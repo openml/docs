@@ -7858,7 +7858,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <span class="normal"><a href="#__codelineno-0-2247">2247</a></span>
 <span class="normal"><a href="#__codelineno-0-2248">2248</a></span>
 <span class="normal"><a href="#__codelineno-0-2249">2249</a></span>
-<span class="normal"><a href="#__codelineno-0-2250">2250</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="k">class</span> <span class="nc">SklearnExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-0-2250">2250</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="k">class</span><span class="w"> </span><span class="nc">SklearnExtension</span><span class="p">(</span><span class="n">Extension</span><span class="p">):</span>
 <a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Connect scikit-learn to OpenML-Python.</span>
 <a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="sd">    The estimators which use this extension must be scikit-learn compatible,</span>
 <a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="sd">    i.e needs to be a subclass of sklearn.base.BaseEstimator&quot;.</span>
@@ -7868,7 +7868,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-72" name="__codelineno-0-72"></a>    <span class="c1"># General setup</span>
 <a id="__codelineno-0-73" name="__codelineno-0-73"></a>
 <a id="__codelineno-0-74" name="__codelineno-0-74"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a>    <span class="k">def</span> <span class="nf">can_handle_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">can_handle_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Check whether a given describes a scikit-learn estimator.</span>
 <a id="__codelineno-0-77" name="__codelineno-0-77"></a>
 <a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="sd">        This is done by parsing the ``external_version`` field.</span>
@@ -7884,7 +7884,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-88" name="__codelineno-0-88"></a>        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_is_sklearn_flow</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
 <a id="__codelineno-0-89" name="__codelineno-0-89"></a>
 <a id="__codelineno-0-90" name="__codelineno-0-90"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-91" name="__codelineno-0-91"></a>    <span class="k">def</span> <span class="nf">can_handle_model</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">can_handle_model</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Check whether a model is an instance of ``sklearn.base.BaseEstimator``.</span>
 <a id="__codelineno-0-93" name="__codelineno-0-93"></a>
 <a id="__codelineno-0-94" name="__codelineno-0-94"></a><span class="sd">        Parameters</span>
@@ -7898,7 +7898,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-102" name="__codelineno-0-102"></a>        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">base</span><span class="o">.</span><span class="n">BaseEstimator</span><span class="p">)</span>
 <a id="__codelineno-0-103" name="__codelineno-0-103"></a>
 <a id="__codelineno-0-104" name="__codelineno-0-104"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-105" name="__codelineno-0-105"></a>    <span class="k">def</span> <span class="nf">trim_flow_name</span><span class="p">(</span>  <span class="c1"># noqa: C901</span>
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">trim_flow_name</span><span class="p">(</span>  <span class="c1"># noqa: C901</span>
 <a id="__codelineno-0-106" name="__codelineno-0-106"></a>        <span class="bp">cls</span><span class="p">,</span>
 <a id="__codelineno-0-107" name="__codelineno-0-107"></a>        <span class="n">long_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-108" name="__codelineno-0-108"></a>        <span class="n">extra_trim_length</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
@@ -7945,7 +7945,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-149" name="__codelineno-0-149"></a>
 <a id="__codelineno-0-150" name="__codelineno-0-150"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-151" name="__codelineno-0-151"></a>
-<a id="__codelineno-0-152" name="__codelineno-0-152"></a>        <span class="k">def</span> <span class="nf">remove_all_in_parentheses</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-152" name="__codelineno-0-152"></a>        <span class="k">def</span><span class="w"> </span><span class="nf">remove_all_in_parentheses</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <a id="__codelineno-0-153" name="__codelineno-0-153"></a>            <span class="n">string</span><span class="p">,</span> <span class="n">removals</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">subn</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\([^()]*\)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
 <a id="__codelineno-0-154" name="__codelineno-0-154"></a>            <span class="k">while</span> <span class="n">removals</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 <a id="__codelineno-0-155" name="__codelineno-0-155"></a>                <span class="n">string</span><span class="p">,</span> <span class="n">removals</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">subn</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\([^()]*\)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
@@ -8021,7 +8021,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-225" name="__codelineno-0-225"></a>        <span class="k">return</span> <span class="n">short_name</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
 <a id="__codelineno-0-226" name="__codelineno-0-226"></a>
 <a id="__codelineno-0-227" name="__codelineno-0-227"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-228" name="__codelineno-0-228"></a>    <span class="k">def</span> <span class="nf">_min_dependency_str</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">sklearn_version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-228" name="__codelineno-0-228"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_min_dependency_str</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">sklearn_version</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <a id="__codelineno-0-229" name="__codelineno-0-229"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns a string containing the minimum dependencies for the sklearn version passed.</span>
 <a id="__codelineno-0-230" name="__codelineno-0-230"></a>
 <a id="__codelineno-0-231" name="__codelineno-0-231"></a><span class="sd">        Parameters</span>
@@ -8041,7 +8041,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-245" name="__codelineno-0-245"></a>            <span class="c1"># assumption: 0.24 onwards sklearn should contain a _min_dependencies.py file with</span>
 <a id="__codelineno-0-246" name="__codelineno-0-246"></a>            <span class="c1"># variables declared for extracting minimum dependency for that version</span>
 <a id="__codelineno-0-247" name="__codelineno-0-247"></a>            <span class="k">if</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="n">sklearn_version</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="s2">&quot;0.24&quot;</span><span class="p">:</span>
-<a id="__codelineno-0-248" name="__codelineno-0-248"></a>                <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">_min_dependencies</span> <span class="k">as</span> <span class="n">_mindep</span>
+<a id="__codelineno-0-248" name="__codelineno-0-248"></a>                <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">_min_dependencies</span> <span class="k">as</span> <span class="n">_mindep</span>
 <a id="__codelineno-0-249" name="__codelineno-0-249"></a>
 <a id="__codelineno-0-250" name="__codelineno-0-250"></a>                <span class="n">dependency_list</span> <span class="o">=</span> <span class="p">{</span>
 <a id="__codelineno-0-251" name="__codelineno-0-251"></a>                    <span class="s2">&quot;numpy&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">_mindep</span><span class="o">.</span><span class="n">NUMPY_MIN_VERSION</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
@@ -8078,7 +8078,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-282" name="__codelineno-0-282"></a>    <span class="c1">################################################################################################</span>
 <a id="__codelineno-0-283" name="__codelineno-0-283"></a>    <span class="c1"># Methods for flow serialization and de-serialization</span>
 <a id="__codelineno-0-284" name="__codelineno-0-284"></a>
-<a id="__codelineno-0-285" name="__codelineno-0-285"></a>    <span class="k">def</span> <span class="nf">flow_to_model</span><span class="p">(</span>
+<a id="__codelineno-0-285" name="__codelineno-0-285"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">flow_to_model</span><span class="p">(</span>
 <a id="__codelineno-0-286" name="__codelineno-0-286"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-287" name="__codelineno-0-287"></a>        <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">,</span>
 <a id="__codelineno-0-288" name="__codelineno-0-288"></a>        <span class="n">initialize_with_defaults</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>  <span class="c1"># noqa: FBT001, FBT002</span>
@@ -8109,7 +8109,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-313" name="__codelineno-0-313"></a>            <span class="n">strict_version</span><span class="o">=</span><span class="n">strict_version</span><span class="p">,</span>
 <a id="__codelineno-0-314" name="__codelineno-0-314"></a>        <span class="p">)</span>
 <a id="__codelineno-0-315" name="__codelineno-0-315"></a>
-<a id="__codelineno-0-316" name="__codelineno-0-316"></a>    <span class="k">def</span> <span class="nf">_deserialize_sklearn</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, C901, PLR0913, PLR0912</span>
+<a id="__codelineno-0-316" name="__codelineno-0-316"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_sklearn</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, C901, PLR0913, PLR0912</span>
 <a id="__codelineno-0-317" name="__codelineno-0-317"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-318" name="__codelineno-0-318"></a>        <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <a id="__codelineno-0-319" name="__codelineno-0-319"></a>        <span class="n">components</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -8269,7 +8269,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-473" name="__codelineno-0-473"></a>        <span class="p">)</span>
 <a id="__codelineno-0-474" name="__codelineno-0-474"></a>        <span class="k">return</span> <span class="n">rval</span>
 <a id="__codelineno-0-475" name="__codelineno-0-475"></a>
-<a id="__codelineno-0-476" name="__codelineno-0-476"></a>    <span class="k">def</span> <span class="nf">model_to_flow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+<a id="__codelineno-0-476" name="__codelineno-0-476"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">model_to_flow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <a id="__codelineno-0-477" name="__codelineno-0-477"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform a scikit-learn model to a flow for uploading it to OpenML.</span>
 <a id="__codelineno-0-478" name="__codelineno-0-478"></a>
 <a id="__codelineno-0-479" name="__codelineno-0-479"></a><span class="sd">        Parameters</span>
@@ -8283,7 +8283,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-487" name="__codelineno-0-487"></a>        <span class="c1"># Necessary to make pypy not complain about all the different possible return types</span>
 <a id="__codelineno-0-488" name="__codelineno-0-488"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_sklearn</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 <a id="__codelineno-0-489" name="__codelineno-0-489"></a>
-<a id="__codelineno-0-490" name="__codelineno-0-490"></a>    <span class="k">def</span> <span class="nf">_serialize_sklearn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">parent_model</span><span class="p">:</span> <span class="n">Any</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># noqa: PLR0912, C901</span>
+<a id="__codelineno-0-490" name="__codelineno-0-490"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_sklearn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">parent_model</span><span class="p">:</span> <span class="n">Any</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># noqa: PLR0912, C901</span>
 <a id="__codelineno-0-491" name="__codelineno-0-491"></a>        <span class="n">rval</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: Any</span>
 <a id="__codelineno-0-492" name="__codelineno-0-492"></a>
 <a id="__codelineno-0-493" name="__codelineno-0-493"></a>        <span class="c1"># TODO: assert that only on first recursion lvl `parent_model` can be None</span>
@@ -8340,7 +8340,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-544" name="__codelineno-0-544"></a>
 <a id="__codelineno-0-545" name="__codelineno-0-545"></a>        <span class="k">return</span> <span class="n">rval</span>
 <a id="__codelineno-0-546" name="__codelineno-0-546"></a>
-<a id="__codelineno-0-547" name="__codelineno-0-547"></a>    <span class="k">def</span> <span class="nf">get_version_information</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<a id="__codelineno-0-547" name="__codelineno-0-547"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_version_information</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <a id="__codelineno-0-548" name="__codelineno-0-548"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;List versions of libraries required by the flow.</span>
 <a id="__codelineno-0-549" name="__codelineno-0-549"></a>
 <a id="__codelineno-0-550" name="__codelineno-0-550"></a><span class="sd">        Libraries listed are ``Python``, ``scikit-learn``, ``numpy`` and ``scipy``.</span>
@@ -8351,9 +8351,9 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-555" name="__codelineno-0-555"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-556" name="__codelineno-0-556"></a>        <span class="c1"># This can possibly be done by a package such as pyxb, but I could not get</span>
 <a id="__codelineno-0-557" name="__codelineno-0-557"></a>        <span class="c1"># it to work properly.</span>
-<a id="__codelineno-0-558" name="__codelineno-0-558"></a>        <span class="kn">import</span> <span class="nn">numpy</span>
-<a id="__codelineno-0-559" name="__codelineno-0-559"></a>        <span class="kn">import</span> <span class="nn">scipy</span>
-<a id="__codelineno-0-560" name="__codelineno-0-560"></a>        <span class="kn">import</span> <span class="nn">sklearn</span>
+<a id="__codelineno-0-558" name="__codelineno-0-558"></a>        <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
+<a id="__codelineno-0-559" name="__codelineno-0-559"></a>        <span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<a id="__codelineno-0-560" name="__codelineno-0-560"></a>        <span class="kn">import</span><span class="w"> </span><span class="nn">sklearn</span>
 <a id="__codelineno-0-561" name="__codelineno-0-561"></a>
 <a id="__codelineno-0-562" name="__codelineno-0-562"></a>        <span class="n">major</span><span class="p">,</span> <span class="n">minor</span><span class="p">,</span> <span class="n">micro</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span>
 <a id="__codelineno-0-563" name="__codelineno-0-563"></a>        <span class="n">python_version</span> <span class="o">=</span> <span class="s2">&quot;Python_</span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">major</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">minor</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">micro</span><span class="p">)]))</span>
@@ -8363,7 +8363,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-567" name="__codelineno-0-567"></a>
 <a id="__codelineno-0-568" name="__codelineno-0-568"></a>        <span class="k">return</span> <span class="p">[</span><span class="n">python_version</span><span class="p">,</span> <span class="n">sklearn_version</span><span class="p">,</span> <span class="n">numpy_version</span><span class="p">,</span> <span class="n">scipy_version</span><span class="p">]</span>
 <a id="__codelineno-0-569" name="__codelineno-0-569"></a>
-<a id="__codelineno-0-570" name="__codelineno-0-570"></a>    <span class="k">def</span> <span class="nf">create_setup_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># noqa: ARG002</span>
+<a id="__codelineno-0-570" name="__codelineno-0-570"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">create_setup_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># noqa: ARG002</span>
 <a id="__codelineno-0-571" name="__codelineno-0-571"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a string which can be used to reinstantiate the given model.</span>
 <a id="__codelineno-0-572" name="__codelineno-0-572"></a>
 <a id="__codelineno-0-573" name="__codelineno-0-573"></a><span class="sd">        Parameters</span>
@@ -8376,18 +8376,18 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-580" name="__codelineno-0-580"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-581" name="__codelineno-0-581"></a>        <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_version_information</span><span class="p">())</span>
 <a id="__codelineno-0-582" name="__codelineno-0-582"></a>
-<a id="__codelineno-0-583" name="__codelineno-0-583"></a>    <span class="k">def</span> <span class="nf">_is_cross_validator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-583" name="__codelineno-0-583"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_is_cross_validator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-584" name="__codelineno-0-584"></a>        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="n">BaseCrossValidator</span><span class="p">)</span>
 <a id="__codelineno-0-585" name="__codelineno-0-585"></a>
 <a id="__codelineno-0-586" name="__codelineno-0-586"></a>    <span class="nd">@classmethod</span>
-<a id="__codelineno-0-587" name="__codelineno-0-587"></a>    <span class="k">def</span> <span class="nf">_is_sklearn_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-587" name="__codelineno-0-587"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_is_sklearn_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-588" name="__codelineno-0-588"></a>        <span class="n">sklearn_dependency</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">flow</span><span class="o">.</span><span class="n">dependencies</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="s2">&quot;sklearn&quot;</span> <span class="ow">in</span> <span class="n">flow</span><span class="o">.</span><span class="n">dependencies</span>
 <a id="__codelineno-0-589" name="__codelineno-0-589"></a>        <span class="n">sklearn_as_external</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">flow</span><span class="o">.</span><span class="n">external_version</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span>
 <a id="__codelineno-0-590" name="__codelineno-0-590"></a>            <span class="n">flow</span><span class="o">.</span><span class="n">external_version</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;sklearn==&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;,sklearn==&quot;</span> <span class="ow">in</span> <span class="n">flow</span><span class="o">.</span><span class="n">external_version</span>
 <a id="__codelineno-0-591" name="__codelineno-0-591"></a>        <span class="p">)</span>
 <a id="__codelineno-0-592" name="__codelineno-0-592"></a>        <span class="k">return</span> <span class="n">sklearn_dependency</span> <span class="ow">or</span> <span class="n">sklearn_as_external</span>
 <a id="__codelineno-0-593" name="__codelineno-0-593"></a>
-<a id="__codelineno-0-594" name="__codelineno-0-594"></a>    <span class="k">def</span> <span class="nf">_get_sklearn_description</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">char_lim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-594" name="__codelineno-0-594"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_get_sklearn_description</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">char_lim</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <a id="__codelineno-0-595" name="__codelineno-0-595"></a><span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fetches the sklearn function docstring for the flow description</span>
 <a id="__codelineno-0-596" name="__codelineno-0-596"></a>
 <a id="__codelineno-0-597" name="__codelineno-0-597"></a><span class="sd">        Retrieves the sklearn docstring available and does the following:</span>
@@ -8409,7 +8409,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-613" name="__codelineno-0-613"></a><span class="sd">        str</span>
 <a id="__codelineno-0-614" name="__codelineno-0-614"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-615" name="__codelineno-0-615"></a>
-<a id="__codelineno-0-616" name="__codelineno-0-616"></a>        <span class="k">def</span> <span class="nf">match_format</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-0-616" name="__codelineno-0-616"></a>        <span class="k">def</span><span class="w"> </span><span class="nf">match_format</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <a id="__codelineno-0-617" name="__codelineno-0-617"></a>            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">*</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-618" name="__codelineno-0-618"></a>
 <a id="__codelineno-0-619" name="__codelineno-0-619"></a>        <span class="n">s</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getdoc</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
@@ -8443,7 +8443,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-647" name="__codelineno-0-647"></a>            <span class="n">s</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s</span><span class="p">[:</span><span class="w"> </span><span class="n">char_lim</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span>
 <a id="__codelineno-0-648" name="__codelineno-0-648"></a>        <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 <a id="__codelineno-0-649" name="__codelineno-0-649"></a>
-<a id="__codelineno-0-650" name="__codelineno-0-650"></a>    <span class="k">def</span> <span class="nf">_extract_sklearn_parameter_docstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-650" name="__codelineno-0-650"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_sklearn_parameter_docstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span><span class="p">:</span>
 <a id="__codelineno-0-651" name="__codelineno-0-651"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Extracts the part of sklearn docstring containing parameter information</span>
 <a id="__codelineno-0-652" name="__codelineno-0-652"></a>
 <a id="__codelineno-0-653" name="__codelineno-0-653"></a><span class="sd">        Fetches the entire docstring and trims just the Parameter section.</span>
@@ -8461,7 +8461,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-665" name="__codelineno-0-665"></a><span class="sd">        str, or None</span>
 <a id="__codelineno-0-666" name="__codelineno-0-666"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-667" name="__codelineno-0-667"></a>
-<a id="__codelineno-0-668" name="__codelineno-0-668"></a>        <span class="k">def</span> <span class="nf">match_format</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<a id="__codelineno-0-668" name="__codelineno-0-668"></a>        <span class="k">def</span><span class="w"> </span><span class="nf">match_format</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <a id="__codelineno-0-669" name="__codelineno-0-669"></a>            <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="se">\n</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">*</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-670" name="__codelineno-0-670"></a>
 <a id="__codelineno-0-671" name="__codelineno-0-671"></a>        <span class="n">s</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getdoc</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
@@ -8489,7 +8489,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-693" name="__codelineno-0-693"></a>        <span class="n">s</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">index1</span><span class="p">:</span><span class="n">index2</span><span class="p">]</span>
 <a id="__codelineno-0-694" name="__codelineno-0-694"></a>        <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 <a id="__codelineno-0-695" name="__codelineno-0-695"></a>
-<a id="__codelineno-0-696" name="__codelineno-0-696"></a>    <span class="k">def</span> <span class="nf">_extract_sklearn_param_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">char_lim</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">:</span>
+<a id="__codelineno-0-696" name="__codelineno-0-696"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_sklearn_param_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">char_lim</span><span class="o">=</span><span class="mi">1024</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">:</span>
 <a id="__codelineno-0-697" name="__codelineno-0-697"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Parses parameter type and description from sklearn dosctring</span>
 <a id="__codelineno-0-698" name="__codelineno-0-698"></a>
 <a id="__codelineno-0-699" name="__codelineno-0-699"></a><span class="sd">        Parameters</span>
@@ -8552,7 +8552,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-756" name="__codelineno-0-756"></a>
 <a id="__codelineno-0-757" name="__codelineno-0-757"></a>        <span class="k">return</span> <span class="n">parameter_docs</span>
 <a id="__codelineno-0-758" name="__codelineno-0-758"></a>
-<a id="__codelineno-0-759" name="__codelineno-0-759"></a>    <span class="k">def</span> <span class="nf">_serialize_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+<a id="__codelineno-0-759" name="__codelineno-0-759"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <a id="__codelineno-0-760" name="__codelineno-0-760"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an OpenMLFlow.</span>
 <a id="__codelineno-0-761" name="__codelineno-0-761"></a>
 <a id="__codelineno-0-762" name="__codelineno-0-762"></a><span class="sd">        Calls `sklearn_to_flow` recursively to properly serialize the</span>
@@ -8629,10 +8629,10 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-833" name="__codelineno-0-833"></a>            <span class="n">dependencies</span><span class="o">=</span><span class="n">dependencies</span><span class="p">,</span>
 <a id="__codelineno-0-834" name="__codelineno-0-834"></a>        <span class="p">)</span>
 <a id="__codelineno-0-835" name="__codelineno-0-835"></a>
-<a id="__codelineno-0-836" name="__codelineno-0-836"></a>    <span class="k">def</span> <span class="nf">_get_dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-836" name="__codelineno-0-836"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_get_dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <a id="__codelineno-0-837" name="__codelineno-0-837"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_min_dependency_str</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
 <a id="__codelineno-0-838" name="__codelineno-0-838"></a>
-<a id="__codelineno-0-839" name="__codelineno-0-839"></a>    <span class="k">def</span> <span class="nf">_get_tags</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<a id="__codelineno-0-839" name="__codelineno-0-839"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_get_tags</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <a id="__codelineno-0-840" name="__codelineno-0-840"></a>        <span class="n">sklearn_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_format_external_version</span><span class="p">(</span><span class="s2">&quot;sklearn&quot;</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
 <a id="__codelineno-0-841" name="__codelineno-0-841"></a>        <span class="n">sklearn_version_formatted</span> <span class="o">=</span> <span class="n">sklearn_version</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;==&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-842" name="__codelineno-0-842"></a>        <span class="k">return</span> <span class="p">[</span>
@@ -8647,7 +8647,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-851" name="__codelineno-0-851"></a>            <span class="c1"># tag svm?</span>
 <a id="__codelineno-0-852" name="__codelineno-0-852"></a>        <span class="p">]</span>
 <a id="__codelineno-0-853" name="__codelineno-0-853"></a>
-<a id="__codelineno-0-854" name="__codelineno-0-854"></a>    <span class="k">def</span> <span class="nf">_get_external_version_string</span><span class="p">(</span>
+<a id="__codelineno-0-854" name="__codelineno-0-854"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_get_external_version_string</span><span class="p">(</span>
 <a id="__codelineno-0-855" name="__codelineno-0-855"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-856" name="__codelineno-0-856"></a>        <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <a id="__codelineno-0-857" name="__codelineno-0-857"></a>        <span class="n">sub_components</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">OpenMLFlow</span><span class="p">],</span>
@@ -8682,7 +8682,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-886" name="__codelineno-0-886"></a>                <span class="n">external_versions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">external_version</span><span class="p">)</span>
 <a id="__codelineno-0-887" name="__codelineno-0-887"></a>        <span class="k">return</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">external_versions</span><span class="p">))</span>
 <a id="__codelineno-0-888" name="__codelineno-0-888"></a>
-<a id="__codelineno-0-889" name="__codelineno-0-889"></a>    <span class="k">def</span> <span class="nf">_check_multiple_occurence_of_component_in_flow</span><span class="p">(</span>
+<a id="__codelineno-0-889" name="__codelineno-0-889"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_check_multiple_occurence_of_component_in_flow</span><span class="p">(</span>
 <a id="__codelineno-0-890" name="__codelineno-0-890"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-891" name="__codelineno-0-891"></a>        <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <a id="__codelineno-0-892" name="__codelineno-0-892"></a>        <span class="n">sub_components</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">OpenMLFlow</span><span class="p">],</span>
@@ -8704,7 +8704,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-908" name="__codelineno-0-908"></a>                <span class="n">known_sub_components</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">visitee</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 <a id="__codelineno-0-909" name="__codelineno-0-909"></a>                <span class="n">to_visit_stack</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">visitee</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 <a id="__codelineno-0-910" name="__codelineno-0-910"></a>
-<a id="__codelineno-0-911" name="__codelineno-0-911"></a>    <span class="k">def</span> <span class="nf">_extract_information_from_model</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, C901, PLR0912</span>
+<a id="__codelineno-0-911" name="__codelineno-0-911"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_information_from_model</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, C901, PLR0912</span>
 <a id="__codelineno-0-912" name="__codelineno-0-912"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-913" name="__codelineno-0-913"></a>        <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <a id="__codelineno-0-914" name="__codelineno-0-914"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span>
@@ -8731,7 +8731,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-935" name="__codelineno-0-935"></a>        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">model_parameters</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
 <a id="__codelineno-0-936" name="__codelineno-0-936"></a>            <span class="n">rval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_sklearn</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
 <a id="__codelineno-0-937" name="__codelineno-0-937"></a>
-<a id="__codelineno-0-938" name="__codelineno-0-938"></a>            <span class="k">def</span> <span class="nf">flatten_all</span><span class="p">(</span><span class="n">list_</span><span class="p">):</span>
+<a id="__codelineno-0-938" name="__codelineno-0-938"></a>            <span class="k">def</span><span class="w"> </span><span class="nf">flatten_all</span><span class="p">(</span><span class="n">list_</span><span class="p">):</span>
 <a id="__codelineno-0-939" name="__codelineno-0-939"></a><span class="w">                </span><span class="sd">&quot;&quot;&quot;Flattens arbitrary depth lists of lists (e.g. [[1,2],[3,[1]]] -&gt; [1,2,3,1]).&quot;&quot;&quot;</span>
 <a id="__codelineno-0-940" name="__codelineno-0-940"></a>                <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">list_</span><span class="p">:</span>
 <a id="__codelineno-0-941" name="__codelineno-0-941"></a>                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">el</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">el</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
@@ -8894,7 +8894,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1098" name="__codelineno-0-1098"></a>
 <a id="__codelineno-0-1099" name="__codelineno-0-1099"></a>        <span class="k">return</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">parameters_meta_info</span><span class="p">,</span> <span class="n">sub_components</span><span class="p">,</span> <span class="n">sub_components_explicit</span>
 <a id="__codelineno-0-1100" name="__codelineno-0-1100"></a>
-<a id="__codelineno-0-1101" name="__codelineno-0-1101"></a>    <span class="k">def</span> <span class="nf">_get_fn_arguments_with_defaults</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">set</span><span class="p">]:</span>
+<a id="__codelineno-0-1101" name="__codelineno-0-1101"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_get_fn_arguments_with_defaults</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fn_name</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">set</span><span class="p">]:</span>
 <a id="__codelineno-0-1102" name="__codelineno-0-1102"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-1103" name="__codelineno-0-1103"></a><span class="sd">        Returns</span>
 <a id="__codelineno-0-1104" name="__codelineno-0-1104"></a><span class="sd">        -------</span>
@@ -8926,7 +8926,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1130" name="__codelineno-0-1130"></a>                <span class="n">optional_params</span><span class="p">[</span><span class="n">param</span><span class="p">]</span> <span class="o">=</span> <span class="n">default_val</span>
 <a id="__codelineno-0-1131" name="__codelineno-0-1131"></a>        <span class="k">return</span> <span class="n">optional_params</span><span class="p">,</span> <span class="n">required_params</span>
 <a id="__codelineno-0-1132" name="__codelineno-0-1132"></a>
-<a id="__codelineno-0-1133" name="__codelineno-0-1133"></a>    <span class="k">def</span> <span class="nf">_deserialize_model</span><span class="p">(</span>
+<a id="__codelineno-0-1133" name="__codelineno-0-1133"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_model</span><span class="p">(</span>
 <a id="__codelineno-0-1134" name="__codelineno-0-1134"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-1135" name="__codelineno-0-1135"></a>        <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">,</span>
 <a id="__codelineno-0-1136" name="__codelineno-0-1136"></a>        <span class="n">keep_defaults</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>  <span class="c1"># noqa: FBT001</span>
@@ -9003,7 +9003,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1207" name="__codelineno-0-1207"></a>
 <a id="__codelineno-0-1208" name="__codelineno-0-1208"></a>        <span class="k">return</span> <span class="n">model_class</span><span class="p">(</span><span class="o">**</span><span class="n">parameter_dict</span><span class="p">)</span>
 <a id="__codelineno-0-1209" name="__codelineno-0-1209"></a>
-<a id="__codelineno-0-1210" name="__codelineno-0-1210"></a>    <span class="k">def</span> <span class="nf">_check_dependencies</span><span class="p">(</span>
+<a id="__codelineno-0-1210" name="__codelineno-0-1210"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_check_dependencies</span><span class="p">(</span>
 <a id="__codelineno-0-1211" name="__codelineno-0-1211"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-1212" name="__codelineno-0-1212"></a>        <span class="n">dependencies</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-1213" name="__codelineno-0-1213"></a>        <span class="n">strict_version</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>  <span class="c1"># noqa: FBT001, FBT002</span>
@@ -9045,7 +9045,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1249" name="__codelineno-0-1249"></a>
 <a id="__codelineno-0-1250" name="__codelineno-0-1250"></a>                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-0-1251" name="__codelineno-0-1251"></a>
-<a id="__codelineno-0-1252" name="__codelineno-0-1252"></a>    <span class="k">def</span> <span class="nf">_serialize_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<a id="__codelineno-0-1252" name="__codelineno-0-1252"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
 <a id="__codelineno-0-1253" name="__codelineno-0-1253"></a>        <span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span>
 <a id="__codelineno-0-1254" name="__codelineno-0-1254"></a>            <span class="nb">float</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-1255" name="__codelineno-0-1255"></a>            <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">:</span> <span class="s2">&quot;np.float32&quot;</span><span class="p">,</span>
@@ -9063,7 +9063,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1267" name="__codelineno-0-1267"></a>        <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">o</span><span class="p">]</span>
 <a id="__codelineno-0-1268" name="__codelineno-0-1268"></a>        <span class="k">return</span> <span class="n">ret</span>
 <a id="__codelineno-0-1269" name="__codelineno-0-1269"></a>
-<a id="__codelineno-0-1270" name="__codelineno-0-1270"></a>    <span class="k">def</span> <span class="nf">_deserialize_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<a id="__codelineno-0-1270" name="__codelineno-0-1270"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <a id="__codelineno-0-1271" name="__codelineno-0-1271"></a>        <span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span>
 <a id="__codelineno-0-1272" name="__codelineno-0-1272"></a>            <span class="s2">&quot;float&quot;</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
 <a id="__codelineno-0-1273" name="__codelineno-0-1273"></a>            <span class="s2">&quot;np.float32&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span>
@@ -9080,7 +9080,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1284" name="__codelineno-0-1284"></a>
 <a id="__codelineno-0-1285" name="__codelineno-0-1285"></a>        <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">o</span><span class="p">]</span>
 <a id="__codelineno-0-1286" name="__codelineno-0-1286"></a>
-<a id="__codelineno-0-1287" name="__codelineno-0-1287"></a>    <span class="k">def</span> <span class="nf">_serialize_rv_frozen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">]:</span>
+<a id="__codelineno-0-1287" name="__codelineno-0-1287"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_rv_frozen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">]:</span>
 <a id="__codelineno-0-1288" name="__codelineno-0-1288"></a>        <span class="n">args</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">args</span>
 <a id="__codelineno-0-1289" name="__codelineno-0-1289"></a>        <span class="n">kwds</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">kwds</span>
 <a id="__codelineno-0-1290" name="__codelineno-0-1290"></a>        <span class="n">a</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">a</span>
@@ -9093,7 +9093,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1297" name="__codelineno-0-1297"></a>        <span class="p">)</span>
 <a id="__codelineno-0-1298" name="__codelineno-0-1298"></a>        <span class="k">return</span> <span class="n">ret</span>
 <a id="__codelineno-0-1299" name="__codelineno-0-1299"></a>
-<a id="__codelineno-0-1300" name="__codelineno-0-1300"></a>    <span class="k">def</span> <span class="nf">_deserialize_rv_frozen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<a id="__codelineno-0-1300" name="__codelineno-0-1300"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_rv_frozen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
 <a id="__codelineno-0-1301" name="__codelineno-0-1301"></a>        <span class="n">args</span> <span class="o">=</span> <span class="n">o</span><span class="p">[</span><span class="s2">&quot;args&quot;</span><span class="p">]</span>
 <a id="__codelineno-0-1302" name="__codelineno-0-1302"></a>        <span class="n">kwds</span> <span class="o">=</span> <span class="n">o</span><span class="p">[</span><span class="s2">&quot;kwds&quot;</span><span class="p">]</span>
 <a id="__codelineno-0-1303" name="__codelineno-0-1303"></a>        <span class="n">a</span> <span class="o">=</span> <span class="n">o</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
@@ -9119,18 +9119,18 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1323" name="__codelineno-0-1323"></a>
 <a id="__codelineno-0-1324" name="__codelineno-0-1324"></a>        <span class="k">return</span> <span class="n">dist</span>
 <a id="__codelineno-0-1325" name="__codelineno-0-1325"></a>
-<a id="__codelineno-0-1326" name="__codelineno-0-1326"></a>    <span class="k">def</span> <span class="nf">_serialize_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<a id="__codelineno-0-1326" name="__codelineno-0-1326"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
 <a id="__codelineno-0-1327" name="__codelineno-0-1327"></a>        <span class="n">name</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="vm">__module__</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">o</span><span class="o">.</span><span class="vm">__name__</span>
 <a id="__codelineno-0-1328" name="__codelineno-0-1328"></a>        <span class="n">ret</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># type: &#39;OrderedDict[str, str]&#39;</span>
 <a id="__codelineno-0-1329" name="__codelineno-0-1329"></a>        <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;oml-python:serialized_object&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;function&quot;</span>
 <a id="__codelineno-0-1330" name="__codelineno-0-1330"></a>        <span class="n">ret</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
 <a id="__codelineno-0-1331" name="__codelineno-0-1331"></a>        <span class="k">return</span> <span class="n">ret</span>
 <a id="__codelineno-0-1332" name="__codelineno-0-1332"></a>
-<a id="__codelineno-0-1333" name="__codelineno-0-1333"></a>    <span class="k">def</span> <span class="nf">_deserialize_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<a id="__codelineno-0-1333" name="__codelineno-0-1333"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
 <a id="__codelineno-0-1334" name="__codelineno-0-1334"></a>        <span class="n">module_name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-0-1335" name="__codelineno-0-1335"></a>        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">module_name</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <a id="__codelineno-0-1336" name="__codelineno-0-1336"></a>
-<a id="__codelineno-0-1337" name="__codelineno-0-1337"></a>    <span class="k">def</span> <span class="nf">_serialize_cross_validator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">]:</span>
+<a id="__codelineno-0-1337" name="__codelineno-0-1337"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_serialize_cross_validator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">]:</span>
 <a id="__codelineno-0-1338" name="__codelineno-0-1338"></a>        <span class="n">ret</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
 <a id="__codelineno-0-1339" name="__codelineno-0-1339"></a>
 <a id="__codelineno-0-1340" name="__codelineno-0-1340"></a>        <span class="n">parameters</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># type: &#39;OrderedDict[str, Any]&#39;</span>
@@ -9177,7 +9177,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1381" name="__codelineno-0-1381"></a>
 <a id="__codelineno-0-1382" name="__codelineno-0-1382"></a>        <span class="k">return</span> <span class="n">ret</span>
 <a id="__codelineno-0-1383" name="__codelineno-0-1383"></a>
-<a id="__codelineno-0-1384" name="__codelineno-0-1384"></a>    <span class="k">def</span> <span class="nf">_deserialize_cross_validator</span><span class="p">(</span>
+<a id="__codelineno-0-1384" name="__codelineno-0-1384"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_deserialize_cross_validator</span><span class="p">(</span>
 <a id="__codelineno-0-1385" name="__codelineno-0-1385"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-1386" name="__codelineno-0-1386"></a>        <span class="n">value</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
 <a id="__codelineno-0-1387" name="__codelineno-0-1387"></a>        <span class="n">recursion_depth</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -9196,7 +9196,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1400" name="__codelineno-0-1400"></a>            <span class="p">)</span>
 <a id="__codelineno-0-1401" name="__codelineno-0-1401"></a>        <span class="k">return</span> <span class="n">model_class</span><span class="p">(</span><span class="o">**</span><span class="n">parameters</span><span class="p">)</span>
 <a id="__codelineno-0-1402" name="__codelineno-0-1402"></a>
-<a id="__codelineno-0-1403" name="__codelineno-0-1403"></a>    <span class="k">def</span> <span class="nf">_format_external_version</span><span class="p">(</span>
+<a id="__codelineno-0-1403" name="__codelineno-0-1403"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_format_external_version</span><span class="p">(</span>
 <a id="__codelineno-0-1404" name="__codelineno-0-1404"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-1405" name="__codelineno-0-1405"></a>        <span class="n">model_package_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-1406" name="__codelineno-0-1406"></a>        <span class="n">model_package_version_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -9204,7 +9204,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1408" name="__codelineno-0-1408"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model_package_name</span><span class="si">}</span><span class="s2">==</span><span class="si">{</span><span class="n">model_package_version_number</span><span class="si">}</span><span class="s2">&quot;</span>
 <a id="__codelineno-0-1409" name="__codelineno-0-1409"></a>
 <a id="__codelineno-0-1410" name="__codelineno-0-1410"></a>    <span class="nd">@staticmethod</span>
-<a id="__codelineno-0-1411" name="__codelineno-0-1411"></a>    <span class="k">def</span> <span class="nf">_get_parameter_values_recursive</span><span class="p">(</span>
+<a id="__codelineno-0-1411" name="__codelineno-0-1411"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_get_parameter_values_recursive</span><span class="p">(</span>
 <a id="__codelineno-0-1412" name="__codelineno-0-1412"></a>        <span class="n">param_grid</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
 <a id="__codelineno-0-1413" name="__codelineno-0-1413"></a>        <span class="n">parameter_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-1414" name="__codelineno-0-1414"></a>    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">]:</span>
@@ -9244,7 +9244,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1448" name="__codelineno-0-1448"></a>
 <a id="__codelineno-0-1449" name="__codelineno-0-1449"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Param_grid should either be a dict or list of dicts&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-1450" name="__codelineno-0-1450"></a>
-<a id="__codelineno-0-1451" name="__codelineno-0-1451"></a>    <span class="k">def</span> <span class="nf">_prevent_optimize_n_jobs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+<a id="__codelineno-0-1451" name="__codelineno-0-1451"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_prevent_optimize_n_jobs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
 <a id="__codelineno-0-1452" name="__codelineno-0-1452"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-1453" name="__codelineno-0-1453"></a><span class="sd">        Ensures that HPO classes will not optimize the n_jobs hyperparameter</span>
 <a id="__codelineno-0-1454" name="__codelineno-0-1454"></a>
@@ -9285,7 +9285,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1489" name="__codelineno-0-1489"></a>    <span class="c1">################################################################################################</span>
 <a id="__codelineno-0-1490" name="__codelineno-0-1490"></a>    <span class="c1"># Methods for performing runs with extension modules</span>
 <a id="__codelineno-0-1491" name="__codelineno-0-1491"></a>
-<a id="__codelineno-0-1492" name="__codelineno-0-1492"></a>    <span class="k">def</span> <span class="nf">is_estimator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-1492" name="__codelineno-0-1492"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">is_estimator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-1493" name="__codelineno-0-1493"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Check whether the given model is a scikit-learn estimator.</span>
 <a id="__codelineno-0-1494" name="__codelineno-0-1494"></a>
 <a id="__codelineno-0-1495" name="__codelineno-0-1495"></a><span class="sd">        This function is only required for backwards compatibility and will be removed in the</span>
@@ -9302,7 +9302,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1506" name="__codelineno-0-1506"></a>        <span class="n">o</span> <span class="o">=</span> <span class="n">model</span>
 <a id="__codelineno-0-1507" name="__codelineno-0-1507"></a>        <span class="k">return</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="s2">&quot;fit&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="s2">&quot;get_params&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="s2">&quot;set_params&quot;</span><span class="p">)</span>
 <a id="__codelineno-0-1508" name="__codelineno-0-1508"></a>
-<a id="__codelineno-0-1509" name="__codelineno-0-1509"></a>    <span class="k">def</span> <span class="nf">seed_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># noqa: C901</span>
+<a id="__codelineno-0-1509" name="__codelineno-0-1509"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">seed_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># noqa: C901</span>
 <a id="__codelineno-0-1510" name="__codelineno-0-1510"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Set the random state of all the unseeded components of a model and return the seeded</span>
 <a id="__codelineno-0-1511" name="__codelineno-0-1511"></a><span class="sd">        model.</span>
 <a id="__codelineno-0-1512" name="__codelineno-0-1512"></a>
@@ -9325,7 +9325,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1529" name="__codelineno-0-1529"></a><span class="sd">        Any</span>
 <a id="__codelineno-0-1530" name="__codelineno-0-1530"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-1531" name="__codelineno-0-1531"></a>
-<a id="__codelineno-0-1532" name="__codelineno-0-1532"></a>        <span class="k">def</span> <span class="nf">_seed_current_object</span><span class="p">(</span><span class="n">current_value</span><span class="p">):</span>
+<a id="__codelineno-0-1532" name="__codelineno-0-1532"></a>        <span class="k">def</span><span class="w"> </span><span class="nf">_seed_current_object</span><span class="p">(</span><span class="n">current_value</span><span class="p">):</span>
 <a id="__codelineno-0-1533" name="__codelineno-0-1533"></a>            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">current_value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>  <span class="c1"># acceptable behaviour</span>
 <a id="__codelineno-0-1534" name="__codelineno-0-1534"></a>                <span class="k">return</span> <span class="kc">False</span>
 <a id="__codelineno-0-1535" name="__codelineno-0-1535"></a>
@@ -9369,7 +9369,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1573" name="__codelineno-0-1573"></a>        <span class="n">model</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">random_states</span><span class="p">)</span>
 <a id="__codelineno-0-1574" name="__codelineno-0-1574"></a>        <span class="k">return</span> <span class="n">model</span>
 <a id="__codelineno-0-1575" name="__codelineno-0-1575"></a>
-<a id="__codelineno-0-1576" name="__codelineno-0-1576"></a>    <span class="k">def</span> <span class="nf">check_if_model_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-1576" name="__codelineno-0-1576"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">check_if_model_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-1577" name="__codelineno-0-1577"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns True/False denoting if the model has already been fitted/trained</span>
 <a id="__codelineno-0-1578" name="__codelineno-0-1578"></a>
 <a id="__codelineno-0-1579" name="__codelineno-0-1579"></a><span class="sd">        Parameters</span>
@@ -9380,8 +9380,8 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1584" name="__codelineno-0-1584"></a><span class="sd">        -------</span>
 <a id="__codelineno-0-1585" name="__codelineno-0-1585"></a><span class="sd">        bool</span>
 <a id="__codelineno-0-1586" name="__codelineno-0-1586"></a><span class="sd">        &quot;&quot;&quot;</span>
-<a id="__codelineno-0-1587" name="__codelineno-0-1587"></a>        <span class="kn">from</span> <span class="nn">sklearn.exceptions</span> <span class="kn">import</span> <span class="n">NotFittedError</span>
-<a id="__codelineno-0-1588" name="__codelineno-0-1588"></a>        <span class="kn">from</span> <span class="nn">sklearn.utils.validation</span> <span class="kn">import</span> <span class="n">check_is_fitted</span>
+<a id="__codelineno-0-1587" name="__codelineno-0-1587"></a>        <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">NotFittedError</span>
+<a id="__codelineno-0-1588" name="__codelineno-0-1588"></a>        <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_is_fitted</span>
 <a id="__codelineno-0-1589" name="__codelineno-0-1589"></a>
 <a id="__codelineno-0-1590" name="__codelineno-0-1590"></a>        <span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-0-1591" name="__codelineno-0-1591"></a>            <span class="c1"># check if model is fitted</span>
@@ -9403,7 +9403,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1607" name="__codelineno-0-1607"></a>            <span class="c1"># Will reach here if the model was fit on a dataset with more or less than 3 features</span>
 <a id="__codelineno-0-1608" name="__codelineno-0-1608"></a>            <span class="k">return</span> <span class="kc">True</span>
 <a id="__codelineno-0-1609" name="__codelineno-0-1609"></a>
-<a id="__codelineno-0-1610" name="__codelineno-0-1610"></a>    <span class="k">def</span> <span class="nf">_run_model_on_fold</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, PLR0913, C901, PLR0912</span>
+<a id="__codelineno-0-1610" name="__codelineno-0-1610"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_run_model_on_fold</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, PLR0913, C901, PLR0912</span>
 <a id="__codelineno-0-1611" name="__codelineno-0-1611"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-1612" name="__codelineno-0-1612"></a>        <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <a id="__codelineno-0-1613" name="__codelineno-0-1613"></a>        <span class="n">task</span><span class="p">:</span> <span class="n">OpenMLTask</span><span class="p">,</span>
@@ -9464,7 +9464,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1668" name="__codelineno-0-1668"></a><span class="sd">            repeatedly calling ``run_model_on_task``</span>
 <a id="__codelineno-0-1669" name="__codelineno-0-1669"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-1670" name="__codelineno-0-1670"></a>
-<a id="__codelineno-0-1671" name="__codelineno-0-1671"></a>        <span class="k">def</span> <span class="nf">_prediction_to_probabilities</span><span class="p">(</span>
+<a id="__codelineno-0-1671" name="__codelineno-0-1671"></a>        <span class="k">def</span><span class="w"> </span><span class="nf">_prediction_to_probabilities</span><span class="p">(</span>
 <a id="__codelineno-0-1672" name="__codelineno-0-1672"></a>            <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">|</span> <span class="nb">list</span><span class="p">,</span>
 <a id="__codelineno-0-1673" name="__codelineno-0-1673"></a>            <span class="n">model_classes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span>
 <a id="__codelineno-0-1674" name="__codelineno-0-1674"></a>            <span class="n">class_labels</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
@@ -9539,7 +9539,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1743" name="__codelineno-0-1743"></a>
 <a id="__codelineno-0-1744" name="__codelineno-0-1744"></a>        <span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
 <a id="__codelineno-0-1745" name="__codelineno-0-1745"></a>            <span class="c1"># typically happens when training a regressor on classification task</span>
-<a id="__codelineno-0-1746" name="__codelineno-0-1746"></a>            <span class="k">raise</span> <span class="n">PyOpenMLError</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span> <span class="kn">from</span> <span class="nn">e</span>
+<a id="__codelineno-0-1746" name="__codelineno-0-1746"></a>            <span class="k">raise</span> <span class="n">PyOpenMLError</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
 <a id="__codelineno-0-1747" name="__codelineno-0-1747"></a>
 <a id="__codelineno-0-1748" name="__codelineno-0-1748"></a>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">task</span><span class="p">,</span> <span class="p">(</span><span class="n">OpenMLClassificationTask</span><span class="p">,</span> <span class="n">OpenMLLearningCurveTask</span><span class="p">)):</span>
 <a id="__codelineno-0-1749" name="__codelineno-0-1749"></a>            <span class="c1"># search for model classes_ (might differ depending on modeltype)</span>
@@ -9645,7 +9645,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1849" name="__codelineno-0-1849"></a>
 <a id="__codelineno-0-1850" name="__codelineno-0-1850"></a>        <span class="k">return</span> <span class="n">pred_y</span><span class="p">,</span> <span class="n">proba_y</span><span class="p">,</span> <span class="n">user_defined_measures</span><span class="p">,</span> <span class="n">trace</span>
 <a id="__codelineno-0-1851" name="__codelineno-0-1851"></a>
-<a id="__codelineno-0-1852" name="__codelineno-0-1852"></a>    <span class="k">def</span> <span class="nf">obtain_parameter_values</span><span class="p">(</span>  <span class="c1"># noqa: C901, PLR0915</span>
+<a id="__codelineno-0-1852" name="__codelineno-0-1852"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">obtain_parameter_values</span><span class="p">(</span>  <span class="c1"># noqa: C901, PLR0915</span>
 <a id="__codelineno-0-1853" name="__codelineno-0-1853"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-1854" name="__codelineno-0-1854"></a>        <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">,</span>
 <a id="__codelineno-0-1855" name="__codelineno-0-1855"></a>        <span class="n">model</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -9674,20 +9674,20 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1878" name="__codelineno-0-1878"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-1879" name="__codelineno-0-1879"></a>        <span class="n">openml</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">_check_flow_for_server_id</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
 <a id="__codelineno-0-1880" name="__codelineno-0-1880"></a>
-<a id="__codelineno-0-1881" name="__codelineno-0-1881"></a>        <span class="k">def</span> <span class="nf">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="p">):</span>
+<a id="__codelineno-0-1881" name="__codelineno-0-1881"></a>        <span class="k">def</span><span class="w"> </span><span class="nf">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="p">):</span>
 <a id="__codelineno-0-1882" name="__codelineno-0-1882"></a>            <span class="n">flow_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">_flow</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">_flow</span><span class="o">.</span><span class="n">flow_id</span><span class="p">}</span>
 <a id="__codelineno-0-1883" name="__codelineno-0-1883"></a>            <span class="k">for</span> <span class="n">subflow</span> <span class="ow">in</span> <span class="n">_flow</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
 <a id="__codelineno-0-1884" name="__codelineno-0-1884"></a>                <span class="n">flow_map</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="n">subflow</span><span class="p">]))</span>
 <a id="__codelineno-0-1885" name="__codelineno-0-1885"></a>            <span class="k">return</span> <span class="n">flow_map</span>
 <a id="__codelineno-0-1886" name="__codelineno-0-1886"></a>
-<a id="__codelineno-0-1887" name="__codelineno-0-1887"></a>        <span class="k">def</span> <span class="nf">extract_parameters</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, PLR0912, C901</span>
+<a id="__codelineno-0-1887" name="__codelineno-0-1887"></a>        <span class="k">def</span><span class="w"> </span><span class="nf">extract_parameters</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, PLR0912, C901</span>
 <a id="__codelineno-0-1888" name="__codelineno-0-1888"></a>            <span class="n">_flow</span><span class="p">,</span>
 <a id="__codelineno-0-1889" name="__codelineno-0-1889"></a>            <span class="n">_flow_dict</span><span class="p">,</span>
 <a id="__codelineno-0-1890" name="__codelineno-0-1890"></a>            <span class="n">component_model</span><span class="p">,</span>
 <a id="__codelineno-0-1891" name="__codelineno-0-1891"></a>            <span class="n">_main_call</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># noqa: FBT002</span>
 <a id="__codelineno-0-1892" name="__codelineno-0-1892"></a>            <span class="n">main_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-1893" name="__codelineno-0-1893"></a>        <span class="p">):</span>
-<a id="__codelineno-0-1894" name="__codelineno-0-1894"></a>            <span class="k">def</span> <span class="nf">is_subcomponent_specification</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+<a id="__codelineno-0-1894" name="__codelineno-0-1894"></a>            <span class="k">def</span><span class="w"> </span><span class="nf">is_subcomponent_specification</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
 <a id="__codelineno-0-1895" name="__codelineno-0-1895"></a>                <span class="c1"># checks whether the current value can be a specification of</span>
 <a id="__codelineno-0-1896" name="__codelineno-0-1896"></a>                <span class="c1"># subcomponents, as for example the value for steps parameter</span>
 <a id="__codelineno-0-1897" name="__codelineno-0-1897"></a>                <span class="c1"># (in Pipeline) or transformers parameter (in</span>
@@ -9854,7 +9854,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-2058" name="__codelineno-0-2058"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">model</span> <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">flow</span><span class="o">.</span><span class="n">model</span>
 <a id="__codelineno-0-2059" name="__codelineno-0-2059"></a>        <span class="k">return</span> <span class="n">extract_parameters</span><span class="p">(</span><span class="n">flow</span><span class="p">,</span> <span class="n">flow_dict</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">_main_call</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">main_id</span><span class="o">=</span><span class="n">flow</span><span class="o">.</span><span class="n">flow_id</span><span class="p">)</span>
 <a id="__codelineno-0-2060" name="__codelineno-0-2060"></a>
-<a id="__codelineno-0-2061" name="__codelineno-0-2061"></a>    <span class="k">def</span> <span class="nf">_openml_param_name_to_sklearn</span><span class="p">(</span>
+<a id="__codelineno-0-2061" name="__codelineno-0-2061"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_openml_param_name_to_sklearn</span><span class="p">(</span>
 <a id="__codelineno-0-2062" name="__codelineno-0-2062"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-2063" name="__codelineno-0-2063"></a>        <span class="n">openml_parameter</span><span class="p">:</span> <span class="n">openml</span><span class="o">.</span><span class="n">setups</span><span class="o">.</span><span class="n">OpenMLParameter</span><span class="p">,</span>
 <a id="__codelineno-0-2064" name="__codelineno-0-2064"></a>        <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">,</span>
@@ -9889,7 +9889,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-2093" name="__codelineno-0-2093"></a>    <span class="c1">################################################################################################</span>
 <a id="__codelineno-0-2094" name="__codelineno-0-2094"></a>    <span class="c1"># Methods for hyperparameter optimization</span>
 <a id="__codelineno-0-2095" name="__codelineno-0-2095"></a>
-<a id="__codelineno-0-2096" name="__codelineno-0-2096"></a>    <span class="k">def</span> <span class="nf">_is_hpo_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-2096" name="__codelineno-0-2096"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_is_hpo_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-2097" name="__codelineno-0-2097"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Check whether the model performs hyperparameter optimization.</span>
 <a id="__codelineno-0-2098" name="__codelineno-0-2098"></a>
 <a id="__codelineno-0-2099" name="__codelineno-0-2099"></a><span class="sd">        Used to check whether an optimization trace can be extracted from the model after</span>
@@ -9905,7 +9905,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-2109" name="__codelineno-0-2109"></a><span class="sd">        &quot;&quot;&quot;</span>
 <a id="__codelineno-0-2110" name="__codelineno-0-2110"></a>        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="n">_search</span><span class="o">.</span><span class="n">BaseSearchCV</span><span class="p">)</span>
 <a id="__codelineno-0-2111" name="__codelineno-0-2111"></a>
-<a id="__codelineno-0-2112" name="__codelineno-0-2112"></a>    <span class="k">def</span> <span class="nf">instantiate_model_from_hpo_class</span><span class="p">(</span>
+<a id="__codelineno-0-2112" name="__codelineno-0-2112"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">instantiate_model_from_hpo_class</span><span class="p">(</span>
 <a id="__codelineno-0-2113" name="__codelineno-0-2113"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-2114" name="__codelineno-0-2114"></a>        <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <a id="__codelineno-0-2115" name="__codelineno-0-2115"></a>        <span class="n">trace_iteration</span><span class="p">:</span> <span class="n">OpenMLTraceIteration</span><span class="p">,</span>
@@ -9933,7 +9933,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-2137" name="__codelineno-0-2137"></a>        <span class="n">base_estimator</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">trace_iteration</span><span class="o">.</span><span class="n">get_parameters</span><span class="p">())</span>
 <a id="__codelineno-0-2138" name="__codelineno-0-2138"></a>        <span class="k">return</span> <span class="n">base_estimator</span>
 <a id="__codelineno-0-2139" name="__codelineno-0-2139"></a>
-<a id="__codelineno-0-2140" name="__codelineno-0-2140"></a>    <span class="k">def</span> <span class="nf">_extract_trace_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">rep_no</span><span class="p">,</span> <span class="n">fold_no</span><span class="p">):</span>
+<a id="__codelineno-0-2140" name="__codelineno-0-2140"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_trace_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">rep_no</span><span class="p">,</span> <span class="n">fold_no</span><span class="p">):</span>
 <a id="__codelineno-0-2141" name="__codelineno-0-2141"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Extracts data from a machine learning model&#39;s cross-validation results</span>
 <a id="__codelineno-0-2142" name="__codelineno-0-2142"></a><span class="sd">        and creates an ARFF (Attribute-Relation File Format) trace.</span>
 <a id="__codelineno-0-2143" name="__codelineno-0-2143"></a>
@@ -9972,7 +9972,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-2176" name="__codelineno-0-2176"></a>            <span class="n">arff_tracecontent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arff_line</span><span class="p">)</span>
 <a id="__codelineno-0-2177" name="__codelineno-0-2177"></a>        <span class="k">return</span> <span class="n">arff_tracecontent</span>
 <a id="__codelineno-0-2178" name="__codelineno-0-2178"></a>
-<a id="__codelineno-0-2179" name="__codelineno-0-2179"></a>    <span class="k">def</span> <span class="nf">_obtain_arff_trace</span><span class="p">(</span>
+<a id="__codelineno-0-2179" name="__codelineno-0-2179"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_obtain_arff_trace</span><span class="p">(</span>
 <a id="__codelineno-0-2180" name="__codelineno-0-2180"></a>        <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-2181" name="__codelineno-0-2181"></a>        <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <a id="__codelineno-0-2182" name="__codelineno-0-2182"></a>        <span class="n">trace_content</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
@@ -10148,7 +10148,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <span class="normal"><a href="#__codelineno-0-86">86</a></span>
 <span class="normal"><a href="#__codelineno-0-87">87</a></span>
 <span class="normal"><a href="#__codelineno-0-88">88</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="nd">@classmethod</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="k">def</span> <span class="nf">can_handle_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="k">def</span><span class="w"> </span><span class="nf">can_handle_flow</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Check whether a given describes a scikit-learn estimator.</span>
 <a id="__codelineno-0-77" name="__codelineno-0-77"></a>
 <a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="sd">    This is done by parsing the ``external_version`` field.</span>
@@ -10254,7 +10254,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <span class="normal"><a href="#__codelineno-0-100">100</a></span>
 <span class="normal"><a href="#__codelineno-0-101">101</a></span>
 <span class="normal"><a href="#__codelineno-0-102">102</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="nd">@classmethod</span>
-<a id="__codelineno-0-91" name="__codelineno-0-91"></a><span class="k">def</span> <span class="nf">can_handle_model</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a><span class="k">def</span><span class="w"> </span><span class="nf">can_handle_model</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Check whether a model is an instance of ``sklearn.base.BaseEstimator``.</span>
 <a id="__codelineno-0-93" name="__codelineno-0-93"></a>
 <a id="__codelineno-0-94" name="__codelineno-0-94"></a><span class="sd">    Parameters</span>
@@ -10373,7 +10373,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <span class="normal"><a href="#__codelineno-0-1605">1605</a></span>
 <span class="normal"><a href="#__codelineno-0-1606">1606</a></span>
 <span class="normal"><a href="#__codelineno-0-1607">1607</a></span>
-<span class="normal"><a href="#__codelineno-0-1608">1608</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1576" name="__codelineno-0-1576"></a><span class="k">def</span> <span class="nf">check_if_model_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-1608">1608</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1576" name="__codelineno-0-1576"></a><span class="k">def</span><span class="w"> </span><span class="nf">check_if_model_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-1577" name="__codelineno-0-1577"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns True/False denoting if the model has already been fitted/trained</span>
 <a id="__codelineno-0-1578" name="__codelineno-0-1578"></a>
 <a id="__codelineno-0-1579" name="__codelineno-0-1579"></a><span class="sd">    Parameters</span>
@@ -10384,8 +10384,8 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <a id="__codelineno-0-1584" name="__codelineno-0-1584"></a><span class="sd">    -------</span>
 <a id="__codelineno-0-1585" name="__codelineno-0-1585"></a><span class="sd">    bool</span>
 <a id="__codelineno-0-1586" name="__codelineno-0-1586"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-1587" name="__codelineno-0-1587"></a>    <span class="kn">from</span> <span class="nn">sklearn.exceptions</span> <span class="kn">import</span> <span class="n">NotFittedError</span>
-<a id="__codelineno-0-1588" name="__codelineno-0-1588"></a>    <span class="kn">from</span> <span class="nn">sklearn.utils.validation</span> <span class="kn">import</span> <span class="n">check_is_fitted</span>
+<a id="__codelineno-0-1587" name="__codelineno-0-1587"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">NotFittedError</span>
+<a id="__codelineno-0-1588" name="__codelineno-0-1588"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.utils.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_is_fitted</span>
 <a id="__codelineno-0-1589" name="__codelineno-0-1589"></a>
 <a id="__codelineno-0-1590" name="__codelineno-0-1590"></a>    <span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-0-1591" name="__codelineno-0-1591"></a>        <span class="c1"># check if model is fitted</span>
@@ -10492,7 +10492,7 @@ i.e needs to be a subclass of sklearn.base.BaseEstimator".</p>
 <span class="normal"><a href="#__codelineno-0-578">578</a></span>
 <span class="normal"><a href="#__codelineno-0-579">579</a></span>
 <span class="normal"><a href="#__codelineno-0-580">580</a></span>
-<span class="normal"><a href="#__codelineno-0-581">581</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-570" name="__codelineno-0-570"></a><span class="k">def</span> <span class="nf">create_setup_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># noqa: ARG002</span>
+<span class="normal"><a href="#__codelineno-0-581">581</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-570" name="__codelineno-0-570"></a><span class="k">def</span><span class="w"> </span><span class="nf">create_setup_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1"># noqa: ARG002</span>
 <a id="__codelineno-0-571" name="__codelineno-0-571"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a string which can be used to reinstantiate the given model.</span>
 <a id="__codelineno-0-572" name="__codelineno-0-572"></a>
 <a id="__codelineno-0-573" name="__codelineno-0-573"></a><span class="sd">    Parameters</span>
@@ -10642,7 +10642,7 @@ ignored and a flow with its defaults is returned.</p>
 <span class="normal"><a href="#__codelineno-0-311">311</a></span>
 <span class="normal"><a href="#__codelineno-0-312">312</a></span>
 <span class="normal"><a href="#__codelineno-0-313">313</a></span>
-<span class="normal"><a href="#__codelineno-0-314">314</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-285" name="__codelineno-0-285"></a><span class="k">def</span> <span class="nf">flow_to_model</span><span class="p">(</span>
+<span class="normal"><a href="#__codelineno-0-314">314</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-285" name="__codelineno-0-285"></a><span class="k">def</span><span class="w"> </span><span class="nf">flow_to_model</span><span class="p">(</span>
 <a id="__codelineno-0-286" name="__codelineno-0-286"></a>    <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-287" name="__codelineno-0-287"></a>    <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">,</span>
 <a id="__codelineno-0-288" name="__codelineno-0-288"></a>    <span class="n">initialize_with_defaults</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>  <span class="c1"># noqa: FBT001, FBT002</span>
@@ -10738,7 +10738,7 @@ ignored and a flow with its defaults is returned.</p>
 <span class="normal"><a href="#__codelineno-0-565">565</a></span>
 <span class="normal"><a href="#__codelineno-0-566">566</a></span>
 <span class="normal"><a href="#__codelineno-0-567">567</a></span>
-<span class="normal"><a href="#__codelineno-0-568">568</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-547" name="__codelineno-0-547"></a><span class="k">def</span> <span class="nf">get_version_information</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="normal"><a href="#__codelineno-0-568">568</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-547" name="__codelineno-0-547"></a><span class="k">def</span><span class="w"> </span><span class="nf">get_version_information</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <a id="__codelineno-0-548" name="__codelineno-0-548"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;List versions of libraries required by the flow.</span>
 <a id="__codelineno-0-549" name="__codelineno-0-549"></a>
 <a id="__codelineno-0-550" name="__codelineno-0-550"></a><span class="sd">    Libraries listed are ``Python``, ``scikit-learn``, ``numpy`` and ``scipy``.</span>
@@ -10749,9 +10749,9 @@ ignored and a flow with its defaults is returned.</p>
 <a id="__codelineno-0-555" name="__codelineno-0-555"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-556" name="__codelineno-0-556"></a>    <span class="c1"># This can possibly be done by a package such as pyxb, but I could not get</span>
 <a id="__codelineno-0-557" name="__codelineno-0-557"></a>    <span class="c1"># it to work properly.</span>
-<a id="__codelineno-0-558" name="__codelineno-0-558"></a>    <span class="kn">import</span> <span class="nn">numpy</span>
-<a id="__codelineno-0-559" name="__codelineno-0-559"></a>    <span class="kn">import</span> <span class="nn">scipy</span>
-<a id="__codelineno-0-560" name="__codelineno-0-560"></a>    <span class="kn">import</span> <span class="nn">sklearn</span>
+<a id="__codelineno-0-558" name="__codelineno-0-558"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
+<a id="__codelineno-0-559" name="__codelineno-0-559"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<a id="__codelineno-0-560" name="__codelineno-0-560"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">sklearn</span>
 <a id="__codelineno-0-561" name="__codelineno-0-561"></a>
 <a id="__codelineno-0-562" name="__codelineno-0-562"></a>    <span class="n">major</span><span class="p">,</span> <span class="n">minor</span><span class="p">,</span> <span class="n">micro</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span>
 <a id="__codelineno-0-563" name="__codelineno-0-563"></a>    <span class="n">python_version</span> <span class="o">=</span> <span class="s2">&quot;Python_</span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">major</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">minor</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">micro</span><span class="p">)]))</span>
@@ -10878,7 +10878,7 @@ optimization model.</p>
 <span class="normal"><a href="#__codelineno-0-2135">2135</a></span>
 <span class="normal"><a href="#__codelineno-0-2136">2136</a></span>
 <span class="normal"><a href="#__codelineno-0-2137">2137</a></span>
-<span class="normal"><a href="#__codelineno-0-2138">2138</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-2112" name="__codelineno-0-2112"></a><span class="k">def</span> <span class="nf">instantiate_model_from_hpo_class</span><span class="p">(</span>
+<span class="normal"><a href="#__codelineno-0-2138">2138</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-2112" name="__codelineno-0-2112"></a><span class="k">def</span><span class="w"> </span><span class="nf">instantiate_model_from_hpo_class</span><span class="p">(</span>
 <a id="__codelineno-0-2113" name="__codelineno-0-2113"></a>    <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-2114" name="__codelineno-0-2114"></a>    <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
 <a id="__codelineno-0-2115" name="__codelineno-0-2115"></a>    <span class="n">trace_iteration</span><span class="p">:</span> <span class="n">OpenMLTraceIteration</span><span class="p">,</span>
@@ -10997,7 +10997,7 @@ near future.</p>
 <span class="normal"><a href="#__codelineno-0-1504">1504</a></span>
 <span class="normal"><a href="#__codelineno-0-1505">1505</a></span>
 <span class="normal"><a href="#__codelineno-0-1506">1506</a></span>
-<span class="normal"><a href="#__codelineno-0-1507">1507</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1492" name="__codelineno-0-1492"></a><span class="k">def</span> <span class="nf">is_estimator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-1507">1507</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1492" name="__codelineno-0-1492"></a><span class="k">def</span><span class="w"> </span><span class="nf">is_estimator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <a id="__codelineno-0-1493" name="__codelineno-0-1493"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Check whether the given model is a scikit-learn estimator.</span>
 <a id="__codelineno-0-1494" name="__codelineno-0-1494"></a>
 <a id="__codelineno-0-1495" name="__codelineno-0-1495"></a><span class="sd">    This function is only required for backwards compatibility and will be removed in the</span>
@@ -11100,7 +11100,7 @@ near future.</p>
 <span class="normal"><a href="#__codelineno-0-485">485</a></span>
 <span class="normal"><a href="#__codelineno-0-486">486</a></span>
 <span class="normal"><a href="#__codelineno-0-487">487</a></span>
-<span class="normal"><a href="#__codelineno-0-488">488</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-476" name="__codelineno-0-476"></a><span class="k">def</span> <span class="nf">model_to_flow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-0-488">488</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-476" name="__codelineno-0-476"></a><span class="k">def</span><span class="w"> </span><span class="nf">model_to_flow</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OpenMLFlow</span><span class="p">:</span>
 <a id="__codelineno-0-477" name="__codelineno-0-477"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Transform a scikit-learn model to a flow for uploading it to OpenML.</span>
 <a id="__codelineno-0-478" name="__codelineno-0-478"></a>
 <a id="__codelineno-0-479" name="__codelineno-0-479"></a><span class="sd">    Parameters</span>
@@ -11417,7 +11417,7 @@ If None, use the model specified in <code>OpenMLFlow.model</code>.</p>
 <span class="normal"><a href="#__codelineno-0-2056">2056</a></span>
 <span class="normal"><a href="#__codelineno-0-2057">2057</a></span>
 <span class="normal"><a href="#__codelineno-0-2058">2058</a></span>
-<span class="normal"><a href="#__codelineno-0-2059">2059</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1852" name="__codelineno-0-1852"></a><span class="k">def</span> <span class="nf">obtain_parameter_values</span><span class="p">(</span>  <span class="c1"># noqa: C901, PLR0915</span>
+<span class="normal"><a href="#__codelineno-0-2059">2059</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1852" name="__codelineno-0-1852"></a><span class="k">def</span><span class="w"> </span><span class="nf">obtain_parameter_values</span><span class="p">(</span>  <span class="c1"># noqa: C901, PLR0915</span>
 <a id="__codelineno-0-1853" name="__codelineno-0-1853"></a>    <span class="bp">self</span><span class="p">,</span>
 <a id="__codelineno-0-1854" name="__codelineno-0-1854"></a>    <span class="n">flow</span><span class="p">:</span> <span class="n">OpenMLFlow</span><span class="p">,</span>
 <a id="__codelineno-0-1855" name="__codelineno-0-1855"></a>    <span class="n">model</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -11446,20 +11446,20 @@ If None, use the model specified in <code>OpenMLFlow.model</code>.</p>
 <a id="__codelineno-0-1878" name="__codelineno-0-1878"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-1879" name="__codelineno-0-1879"></a>    <span class="n">openml</span><span class="o">.</span><span class="n">flows</span><span class="o">.</span><span class="n">functions</span><span class="o">.</span><span class="n">_check_flow_for_server_id</span><span class="p">(</span><span class="n">flow</span><span class="p">)</span>
 <a id="__codelineno-0-1880" name="__codelineno-0-1880"></a>
-<a id="__codelineno-0-1881" name="__codelineno-0-1881"></a>    <span class="k">def</span> <span class="nf">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="p">):</span>
+<a id="__codelineno-0-1881" name="__codelineno-0-1881"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="p">):</span>
 <a id="__codelineno-0-1882" name="__codelineno-0-1882"></a>        <span class="n">flow_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">_flow</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">_flow</span><span class="o">.</span><span class="n">flow_id</span><span class="p">}</span>
 <a id="__codelineno-0-1883" name="__codelineno-0-1883"></a>        <span class="k">for</span> <span class="n">subflow</span> <span class="ow">in</span> <span class="n">_flow</span><span class="o">.</span><span class="n">components</span><span class="p">:</span>
 <a id="__codelineno-0-1884" name="__codelineno-0-1884"></a>            <span class="n">flow_map</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">get_flow_dict</span><span class="p">(</span><span class="n">_flow</span><span class="o">.</span><span class="n">components</span><span class="p">[</span><span class="n">subflow</span><span class="p">]))</span>
 <a id="__codelineno-0-1885" name="__codelineno-0-1885"></a>        <span class="k">return</span> <span class="n">flow_map</span>
 <a id="__codelineno-0-1886" name="__codelineno-0-1886"></a>
-<a id="__codelineno-0-1887" name="__codelineno-0-1887"></a>    <span class="k">def</span> <span class="nf">extract_parameters</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, PLR0912, C901</span>
+<a id="__codelineno-0-1887" name="__codelineno-0-1887"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">extract_parameters</span><span class="p">(</span>  <span class="c1"># noqa: PLR0915, PLR0912, C901</span>
 <a id="__codelineno-0-1888" name="__codelineno-0-1888"></a>        <span class="n">_flow</span><span class="p">,</span>
 <a id="__codelineno-0-1889" name="__codelineno-0-1889"></a>        <span class="n">_flow_dict</span><span class="p">,</span>
 <a id="__codelineno-0-1890" name="__codelineno-0-1890"></a>        <span class="n">component_model</span><span class="p">,</span>
 <a id="__codelineno-0-1891" name="__codelineno-0-1891"></a>        <span class="n">_main_call</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># noqa: FBT002</span>
 <a id="__codelineno-0-1892" name="__codelineno-0-1892"></a>        <span class="n">main_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-1893" name="__codelineno-0-1893"></a>    <span class="p">):</span>
-<a id="__codelineno-0-1894" name="__codelineno-0-1894"></a>        <span class="k">def</span> <span class="nf">is_subcomponent_specification</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+<a id="__codelineno-0-1894" name="__codelineno-0-1894"></a>        <span class="k">def</span><span class="w"> </span><span class="nf">is_subcomponent_specification</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
 <a id="__codelineno-0-1895" name="__codelineno-0-1895"></a>            <span class="c1"># checks whether the current value can be a specification of</span>
 <a id="__codelineno-0-1896" name="__codelineno-0-1896"></a>            <span class="c1"># subcomponents, as for example the value for steps parameter</span>
 <a id="__codelineno-0-1897" name="__codelineno-0-1897"></a>            <span class="c1"># (in Pipeline) or transformers parameter (in</span>
@@ -11787,7 +11787,7 @@ will be seeded with a random number from the RandomState.</p>
 <span class="normal"><a href="#__codelineno-0-1571">1571</a></span>
 <span class="normal"><a href="#__codelineno-0-1572">1572</a></span>
 <span class="normal"><a href="#__codelineno-0-1573">1573</a></span>
-<span class="normal"><a href="#__codelineno-0-1574">1574</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1509" name="__codelineno-0-1509"></a><span class="k">def</span> <span class="nf">seed_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># noqa: C901</span>
+<span class="normal"><a href="#__codelineno-0-1574">1574</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1509" name="__codelineno-0-1509"></a><span class="k">def</span><span class="w"> </span><span class="nf">seed_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># noqa: C901</span>
 <a id="__codelineno-0-1510" name="__codelineno-0-1510"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Set the random state of all the unseeded components of a model and return the seeded</span>
 <a id="__codelineno-0-1511" name="__codelineno-0-1511"></a><span class="sd">    model.</span>
 <a id="__codelineno-0-1512" name="__codelineno-0-1512"></a>
@@ -11810,7 +11810,7 @@ will be seeded with a random number from the RandomState.</p>
 <a id="__codelineno-0-1529" name="__codelineno-0-1529"></a><span class="sd">    Any</span>
 <a id="__codelineno-0-1530" name="__codelineno-0-1530"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-1531" name="__codelineno-0-1531"></a>
-<a id="__codelineno-0-1532" name="__codelineno-0-1532"></a>    <span class="k">def</span> <span class="nf">_seed_current_object</span><span class="p">(</span><span class="n">current_value</span><span class="p">):</span>
+<a id="__codelineno-0-1532" name="__codelineno-0-1532"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_seed_current_object</span><span class="p">(</span><span class="n">current_value</span><span class="p">):</span>
 <a id="__codelineno-0-1533" name="__codelineno-0-1533"></a>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">current_value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>  <span class="c1"># acceptable behaviour</span>
 <a id="__codelineno-0-1534" name="__codelineno-0-1534"></a>            <span class="k">return</span> <span class="kc">False</span>
 <a id="__codelineno-0-1535" name="__codelineno-0-1535"></a>
@@ -12108,7 +12108,7 @@ There is no guarantee the end result will not exceed <code>extra_trim_length</co
 <span class="normal"><a href="#__codelineno-0-223">223</a></span>
 <span class="normal"><a href="#__codelineno-0-224">224</a></span>
 <span class="normal"><a href="#__codelineno-0-225">225</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="nd">@classmethod</span>
-<a id="__codelineno-0-105" name="__codelineno-0-105"></a><span class="k">def</span> <span class="nf">trim_flow_name</span><span class="p">(</span>  <span class="c1"># noqa: C901</span>
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a><span class="k">def</span><span class="w"> </span><span class="nf">trim_flow_name</span><span class="p">(</span>  <span class="c1"># noqa: C901</span>
 <a id="__codelineno-0-106" name="__codelineno-0-106"></a>    <span class="bp">cls</span><span class="p">,</span>
 <a id="__codelineno-0-107" name="__codelineno-0-107"></a>    <span class="n">long_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-108" name="__codelineno-0-108"></a>    <span class="n">extra_trim_length</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
@@ -12155,7 +12155,7 @@ There is no guarantee the end result will not exceed <code>extra_trim_length</co
 <a id="__codelineno-0-149" name="__codelineno-0-149"></a>
 <a id="__codelineno-0-150" name="__codelineno-0-150"></a><span class="sd">    &quot;&quot;&quot;</span>
 <a id="__codelineno-0-151" name="__codelineno-0-151"></a>
-<a id="__codelineno-0-152" name="__codelineno-0-152"></a>    <span class="k">def</span> <span class="nf">remove_all_in_parentheses</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-0-152" name="__codelineno-0-152"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">remove_all_in_parentheses</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <a id="__codelineno-0-153" name="__codelineno-0-153"></a>        <span class="n">string</span><span class="p">,</span> <span class="n">removals</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">subn</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\([^()]*\)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
 <a id="__codelineno-0-154" name="__codelineno-0-154"></a>        <span class="k">while</span> <span class="n">removals</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 <a id="__codelineno-0-155" name="__codelineno-0-155"></a>            <span class="n">string</span><span class="p">,</span> <span class="n">removals</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">subn</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\([^()]*\)&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
@@ -12273,7 +12273,7 @@ There is no guarantee the end result will not exceed <code>extra_trim_length</co
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2025</span>
   </span>
 
     
@@ -12283,7 +12283,7 @@ There is no guarantee the end result will not exceed <code>extra_trim_length</co
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2025</span>
   </span>
 
     

@@ -5559,6 +5559,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -5787,14 +5788,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">torch.nn</span>
-<span class="kn">import</span> <span class="nn">torch.optim</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span>
 
-<span class="kn">import</span> <span class="nn">openml</span>
-<span class="kn">import</span> <span class="nn">openml_pytorch</span>
-<span class="kn">import</span> <span class="nn">openml_pytorch.layers</span>
-<span class="kn">import</span> <span class="nn">openml_pytorch.config</span>
-<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch.layers</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch.config</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 
 
 <span class="c1">############################################################################</span>
@@ -5843,9 +5844,9 @@ openml_pytorch.config.logger.setLevel(logging.DEBUG)
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">OpenMLTrainerModule</span>
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">OpenMLDataModule</span>
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">Callback</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLTrainerModule</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLDataModule</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callback</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">from openml_pytorch.trainer import OpenMLTrainerModule
 from openml_pytorch.trainer import OpenMLDataModule
@@ -5885,8 +5886,8 @@ from openml_pytorch.trainer import Callback</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span> <span class="nc">TabularClassificationmodel</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">):</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">TabularClassificationmodel</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">TabularClassificationmodel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
@@ -5894,7 +5895,7 @@ from openml_pytorch.trainer import Callback</div>
         <span class="bp">self</span><span class="o">.</span><span class="n">relu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">softmax</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Softmax</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>

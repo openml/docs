@@ -5759,6 +5759,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -5987,13 +5988,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">torch.nn</span>
-<span class="kn">import</span> <span class="nn">torch.optim</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span>
 
-<span class="kn">import</span> <span class="nn">openml_pytorch.config</span>
-<span class="kn">import</span> <span class="nn">openml</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch.config</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 
 <span class="c1"># Suppress FutureWarning messages</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
@@ -6005,12 +6006,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="c1">############################################################################</span>
 
 <span class="c1">############################################################################</span>
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">OpenMLTrainerModule</span>
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">OpenMLDataModule</span>
-<span class="kn">from</span> <span class="nn">torchvision.transforms</span> <span class="kn">import</span> <span class="n">Compose</span><span class="p">,</span> <span class="n">Resize</span><span class="p">,</span> <span class="n">ToPILImage</span><span class="p">,</span> <span class="n">ToTensor</span><span class="p">,</span> <span class="n">Lambda</span>
-<span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLTrainerModule</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLDataModule</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torchvision.transforms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Compose</span><span class="p">,</span> <span class="n">Resize</span><span class="p">,</span> <span class="n">ToPILImage</span><span class="p">,</span> <span class="n">ToTensor</span><span class="p">,</span> <span class="n">Lambda</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torchvision</span>
 
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">convert_to_rgb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_to_rgb</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">import torch.nn
 import torch.optim

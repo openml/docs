@@ -5671,6 +5671,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -5868,7 +5869,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6db51d1a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bb14b1f8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5892,7 +5893,7 @@ maps hyperparameter values to the area under curve score.</li>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=14663fe4">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=481a2d74">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5910,16 +5911,16 @@ maps hyperparameter values to the area under curve score.</li>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">openml</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
-<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
-<span class="kn">from</span> <span class="nn">sklearn.compose</span> <span class="kn">import</span> <span class="n">ColumnTransformer</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.impute</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">ColumnTransformer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">OneHotEncoder</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestRegressor</span>
 
 <span class="n">flow_type</span> <span class="o">=</span> <span class="s2">"svm"</span>  <span class="c1"># this example will use the smaller svm flow evaluations</span>
 </pre></div>
@@ -5941,7 +5942,7 @@ flow_type = "svm"  # this example will use the smaller svm flow evaluations</div
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ef54c885">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=23f49587">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5953,7 +5954,7 @@ a tabular format that can be used to build models.</p>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e24d7e5b">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=191ebc07">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -5971,7 +5972,7 @@ a tabular format that can be used to build models.</p>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">fetch_evaluations</span><span class="p">(</span><span class="n">run_full</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flow_type</span><span class="o">=</span><span class="s2">"svm"</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">"area_under_roc_curve"</span><span class="p">):</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fetch_evaluations</span><span class="p">(</span><span class="n">run_full</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">flow_type</span><span class="o">=</span><span class="s2">"svm"</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">"area_under_roc_curve"</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Fetch a list of evaluations based on the flows and tasks used in the experiments.</span>
 
@@ -6027,7 +6028,7 @@ a tabular format that can be used to build models.</p>
     <span class="k">return</span> <span class="n">eval_df</span><span class="p">,</span> <span class="n">task_ids</span><span class="p">,</span> <span class="n">flow_id</span>
 
 
-<span class="k">def</span> <span class="nf">create_table_from_evaluations</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_table_from_evaluations</span><span class="p">(</span>
     <span class="n">eval_df</span><span class="p">,</span> <span class="n">flow_type</span><span class="o">=</span><span class="s2">"svm"</span><span class="p">,</span> <span class="n">run_count</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">,</span> <span class="n">task_ids</span><span class="o">=</span><span class="kc">None</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -6075,7 +6076,7 @@ a tabular format that can be used to build models.</p>
     <span class="k">return</span> <span class="n">eval_table</span><span class="p">,</span> <span class="n">value</span>
 
 
-<span class="k">def</span> <span class="nf">list_categorical_attributes</span><span class="p">(</span><span class="n">flow_type</span><span class="o">=</span><span class="s2">"svm"</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">list_categorical_attributes</span><span class="p">(</span><span class="n">flow_type</span><span class="o">=</span><span class="s2">"svm"</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">flow_type</span> <span class="o">==</span> <span class="s2">"svm"</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[</span><span class="s2">"kernel"</span><span class="p">]</span>
     <span class="k">return</span> <span class="p">[</span><span class="s2">"booster"</span><span class="p">]</span>
@@ -6194,7 +6195,7 @@ def list_categorical_attributes(flow_type="svm"):
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4c141e9c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=85bb2956">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6209,7 +6210,7 @@ pre-processing all retrieved evaluations.</p>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ee5682cd">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2433efbe">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6242,7 +6243,7 @@ print("Y : ", y[:5])</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=28366979">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=384e7191">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6255,7 +6256,7 @@ using One-hot encoding prior to modelling.</p>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=978b29b6">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1637b70e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6312,7 +6313,7 @@ model = Pipeline(steps=[("preprocess", ct), ("surrogate", clf)])</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2ba55edd">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e7ace5e6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6325,7 +6326,7 @@ time simple and quick.</p>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6ffa14e6">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=007f0ec3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6368,7 +6369,7 @@ print("Training RMSE : {:.5}".format(mean_squared_error(y, y_pred)))</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fea9be59">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=925eb047">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6382,7 +6383,7 @@ of the area under curve (auc) we can obtain from the surrogate we've built.</p>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=7df66c52">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c12ba7cb">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6401,7 +6402,7 @@ of the area under curve (auc) we can obtain from the surrogate we've built.</p>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Sampling random configurations</span>
-<span class="k">def</span> <span class="nf">random_sample_configurations</span><span class="p">(</span><span class="n">num_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">random_sample_configurations</span><span class="p">(</span><span class="n">num_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
     <span class="n">colnames</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"cost"</span><span class="p">,</span> <span class="s2">"degree"</span><span class="p">,</span> <span class="s2">"gamma"</span><span class="p">,</span> <span class="s2">"kernel"</span><span class="p">]</span>
     <span class="n">ranges</span> <span class="o">=</span> <span class="p">[</span>
         <span class="p">(</span><span class="mf">0.000986</span><span class="p">,</span> <span class="mf">998.492437</span><span class="p">),</span>
@@ -6449,7 +6450,7 @@ print(configs)</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1d075085">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c55296d2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>

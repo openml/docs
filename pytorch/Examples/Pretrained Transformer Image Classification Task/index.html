@@ -5741,6 +5741,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     processEnvironments: true
                 },
                 displayAlign: 'center',
+                messageStyle: 'none',
                 CommonHTML: {
                     linebreaks: {
                     automatic: true
@@ -5969,18 +5970,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">torch.nn</span>
-<span class="kn">import</span> <span class="nn">torch.optim</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.optim</span>
 
-<span class="kn">import</span> <span class="nn">openml</span>
-<span class="kn">import</span> <span class="nn">openml_pytorch</span>
-<span class="kn">import</span> <span class="nn">openml_pytorch.layers</span>
-<span class="kn">import</span> <span class="nn">openml_pytorch.config</span>
-<span class="kn">from</span> <span class="nn">openml</span> <span class="kn">import</span> <span class="n">OpenMLTask</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">from</span> <span class="nn">torchvision.transforms</span> <span class="kn">import</span> <span class="n">Compose</span><span class="p">,</span> <span class="n">Resize</span><span class="p">,</span> <span class="n">ToPILImage</span><span class="p">,</span> <span class="n">ToTensor</span><span class="p">,</span> <span class="n">Lambda</span>
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">convert_to_rgb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch.layers</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch.config</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLTask</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torchvision.transforms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Compose</span><span class="p">,</span> <span class="n">Resize</span><span class="p">,</span> <span class="n">ToPILImage</span><span class="p">,</span> <span class="n">ToTensor</span><span class="p">,</span> <span class="n">Lambda</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_to_rgb</span>
 <span class="c1"># Suppress FutureWarning messages</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
 
@@ -5991,8 +5992,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="c1">############################################################################</span>
 
 <span class="c1">############################################################################</span>
-<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
-<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn.functional</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">F</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">import torch.nn
 import torch.optim
@@ -6043,9 +6044,9 @@ import torch.nn.functional as F</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># openml.config.apikey = 'key'</span>
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">OpenMLTrainerModule</span>
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">OpenMLDataModule</span>
-<span class="kn">from</span> <span class="nn">openml_pytorch.trainer</span> <span class="kn">import</span> <span class="n">Callback</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLTrainerModule</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLDataModule</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callback</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2"># openml.config.apikey = 'key'
 from openml_pytorch.trainer import OpenMLTrainerModule
@@ -6087,7 +6088,7 @@ from openml_pytorch.trainer import Callback</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Example model. You can do better :)</span>
-<span class="kn">import</span> <span class="nn">torchvision.models</span> <span class="k">as</span> <span class="nn">models</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torchvision.models</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">models</span>
 
 <span class="c1"># Load the pre-trained ResNet model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">efficientnet_b0</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -6256,7 +6257,7 @@ data_module = OpenMLDataModule(
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">custom_optimizer_gen</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">task</span><span class="p">:</span> <span class="n">OpenMLTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Optimizer</span><span class="p">:</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">custom_optimizer_gen</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">task</span><span class="p">:</span> <span class="n">OpenMLTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Optimizer</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">fc</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
 
 <span class="n">trainer</span> <span class="o">=</span> <span class="n">OpenMLTrainerModule</span><span class="p">(</span>
