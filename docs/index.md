@@ -1,10 +1,10 @@
 ---
-icon: material/dots-circle
+icon: material/creation
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-<h1>An <i>open, automated, and frictionless</i> machine learning environment.</h1>
+<h1>OpenML builds a seamless, open ecosytem of machine learning data, models, and benchmarks - advancing AI openly for the benefit all of humanity.</h1>
 
 :fontawesome-solid-layer-group: </i><a href="https://www.openml.org/search?type=data" target="_blank">&nbsp; 1000s of data sets</a>, uniformly formatted, easy to load, organized online
 

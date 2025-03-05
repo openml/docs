@@ -1,3 +1,6 @@
+# Short version of the docs (without any external doc imports) for faster editing and previewing
+# Run with `mkdocs serve -f mkdocs-local.yml`
+
 site_name: Open Machine Learning
 repo_url: https://github.com/openml/docs/
 repo_name: 'openml/docs'
@@ -77,30 +80,8 @@ markdown_extensions:
         linenums: true
 
 plugins:
-    - multirepo:    
-        cleanup: false
-        nav_repos:
-          - name: Python
-            import_url: https://github.com/openml/openml-python?branch=docs/mkdoc
-            imports: [
-                examples/*
-                openml/*
-                *.md
-                ]
-          - name: R
-            import_url: https://github.com/mlr-org/mlr3oml?branch=main
-            imports: [README.md]
-          - name: Services
-            import_url: https://github.com/openml/services?branch=main
-            imports: [README.md]
     - autorefs
     - section-index
-    - mkdocs-jupyter:
-        ignore: ['temp_dir/**/*']
-        theme: light
-        remove_tag_config:
-            remove_input_tags:
-                - hide_code
     - redirects:
         redirect_maps:
             'APIs.md': 'https://www.openml.org/apis'
@@ -109,20 +90,6 @@ plugins:
         separator: '[\s\-\.]+'
         lang:
             - en
-    - mkdocstrings:
-        default_handler: python
-        handlers:
-            python:
-                paths: [temp_dir/pytorch/openml_pytorch,./]
-                load_external_modules: true
-                show_source: true
-                options:
-                    docstring_section_style: table
-                    show_docstring_functions: true
-                    docstring_style: numpy
-    - gen-files:
-        scripts:
-            - scripts/gen_python_ref_pages.py
     - literate-nav:
         nav_file: SUMMARY.md
     - git-revision-date-localized:
@@ -194,20 +161,6 @@ nav:
         - Style guide : contributing/Style.md
         - Resources: contributing/resources.md
     - Questions: help/index.md
-    - Python:
-        - python/index.md
-        - Code Reference: reference/
-        - Examples: examples/
-        - Usage: python/usage.md
-        - Contributing: python/contributing.md
-        - Extensions: python/extensions.md
-        - Changelog: python/progress.md
-    - PyTorch: '!import https://github.com/openml/openml-pytorch?extra_imports=["openml_pytorch/*"]'
-    - TensorFlow: '!import https://github.com/openml/openml-tensorflow?extra_imports=["openml_tensorflow/*"]'
-    - Julia: '!import https://github.com/openml/OpenML.jl?branch=dev&docs_dir=docs/build'
-    - R: 
-        - r/README.md
-    - APIv2: '!import https://github.com/openml/server-api?branch=main'
 
 extra_css:
     - css/extra.css

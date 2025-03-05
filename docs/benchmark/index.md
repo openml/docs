@@ -1,10 +1,25 @@
 ---
 icon: fontawesome/solid/gauge-high
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+# Benchmarking
+
+![Frictionless data](../img/benchmark_cartoon.webp){ width="100%" style="max-height: 30vh; max-width: 700px;" }
+
+Progress in machine learning depends on objective, interpretable, comparable, and reproducible algorithm benchmarks. OpenML allows you to easily benchmark machine learning algorithm on hundreds of datasets at once, run reproducible experiments at scale, and share them online. To further improve benchmarking, we also created:
+
+<i class="fa fa-chart-simple fa-fw fa-lg" style="color: #FF8A80;"></i> &nbsp; [Benchmark suites](#benchmarking-suites) (<a href="https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/c7e1249ffc03eb9ded908c236bd1996d-Abstract-round2.html">paper</a>): curated multi-dataset benchmarks for comprehensive standardized evaluations.
+
+<i class="fa fa-rocket fa-fw fa-lg" style="color: #82B1FF;"></i> &nbsp; [AutoML benchmark](automl/AutoML-Benchmark) (<a href="https://jmlr.org/papers/volume25/22-0493/22-0493.pdf">paper</a>): an extensible framework to challenge and analyze AutoML algorithms.
+
+<i class="fa fa-images fa-fw fa-lg" style="color: #80E27E;"></i> &nbsp; Novel benchmark datasets, such as the <a href="https://meta-album.github.io/">Meta-Album</a>  (<a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/1585da86b5a3c4fb15520a2b3682051f-Abstract-Datasets_and_Benchmarks.html">paper</a>) for multi-domain computer vision.
+
+<p></br></p>
 
 # Benchmarking suites
 
-Machine learning research depends on objectively interpretable, comparable, and reproducible algorithm benchmarks. OpenML aims to facilitate the creation of curated, comprehensive _suites_ of machine learning tasks, covering precise sets of conditions.
+OpenML aims to facilitate the creation of curated, comprehensive _suites_ of machine learning tasks, covering precise sets of conditions.
 
 Seamlessly integrated into the OpenML platform, benchmark suites standardize the setup, execution, analysis, and reporting of benchmarks. Moreover, they make benchmarking a whole lot easier:  
 
