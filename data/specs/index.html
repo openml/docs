@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://docs.openml.org/data/specs/">
       
       
+        <link rel="prev" href="../use/">
+      
+      
+        <link rel="next" href="../../benchmark/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Technical specifications - Open Machine Learning</title>
+        <title>Technical specs - Open Machine Learning</title>
       
     
     
@@ -109,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Technical specifications
+              Technical specs
             
           </span>
         </div>
@@ -242,10 +246,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../" class="md-tabs__link">
           
   
@@ -919,6 +925,8 @@
       
   
   
+    
+  
   
   
     
@@ -928,17 +936,24 @@
           
         
       
-    
-    
+        
       
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
@@ -956,19 +971,137 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Datasets
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Technical specs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Technical specs
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data formatting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-id-and-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset ID and versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
               
             
           </ul>
@@ -5354,6 +5487,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data formatting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-id-and-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset ID and versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataset status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caching
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -5384,6 +5561,26 @@
 
 
 <h1 id="technical-specifications">Technical specifications<a class="headerlink" href="#technical-specifications" title="Permanent link">&para;</a></h1>
+<h2 id="data-formatting">Data formatting<a class="headerlink" href="#data-formatting" title="Permanent link">&para;</a></h2>
+<p>OpenML converts datasets to a uniform format based on Parquet. Read <a href="https://blog.openml.org/openml/data/2020/03/23/Finding-a-standard-dataset-format-for-machine-learning.html">this blog post</a> for a detailed explanation for this approach. You will usually never notice this since OpenML libraries will take care of transferring data from Parquet to your favorite data structures. See the <a href="../use/">using datasets</a> page for details.</p>
+<p>Datasets that depend on included files (e.g. a dataset of images) are defined by create a dataframe with all the dataset information, and columns with paths to local files, as well as a folder with all the local files (e.g. images, video, audio) according to the paths in main dataframe.</p>
+<p>In the backend, datasets are stored in an S3 object store, with one bucket per dataset. We currently allow datasets to be up to 200GB in size.</p>
+<h2 id="dataset-id-and-versions">Dataset ID and versions<a class="headerlink" href="#dataset-id-and-versions" title="Permanent link">&para;</a></h2>
+<p>A dataset can be uniquely identified by its dataset ID, which is shown on the website and returned by the API. It's <code>1596</code> in the <code>covertype</code> example above. They can also be referenced by name and ID. OpenML assigns incremental version numbers per upload with the same name. You can also add a free-form <code>version_label</code> with every upload.</p>
+<h2 id="dataset-status">Dataset status<a class="headerlink" href="#dataset-status" title="Permanent link">&para;</a></h2>
+<p>When you upload a dataset, it will be marked <code>in_preparation</code> until it is (automatically) verified. Once approved, the dataset will become <code>active</code> (or <code>verified</code>). If a severe issue has been found with a dataset, it can become <code>deactivated</code> (or <code>deprecated</code>) signaling that it should not be used. By default, dataset search only returns verified datasets, but you can access and download datasets with any status.</p>
+<h2 id="caching">Caching<a class="headerlink" href="#caching" title="Permanent link">&para;</a></h2>
+<p>When downloading datasets, tasks, runs and flows, OpenML will automatically cache them locally. By default, OpenML will use ~/.openml/cache as the cache directory</p>
+<p>The cache directory can be either specified through the OpenML config file. To do this, add the line <code>cachedir = ‘MYDIR’</code> to the config file, replacing ‘MYDIR’ with the path to the cache directory.</p>
+<p>You can also set the cache dir temporarily via the Python API:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">cache_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;YOURDIR&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -5406,7 +5603,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 5, 2025</span>
   </span>
 
     
@@ -5416,11 +5613,34 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 5, 2025</span>
   </span>
 
     
     
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/joaquinvanschoren" class="md-author" title="@joaquinvanschoren">
+          
+          <img src="https://avatars.githubusercontent.com/u/1724503?v=4&size=72" alt="joaquinvanschoren">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
     
   </aside>
 
@@ -5442,6 +5662,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../use/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using datasets">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Using datasets
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../benchmark/" class="md-footer__link md-footer__link--next" aria-label="Next: Benchmarking Suites">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Benchmarking Suites
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

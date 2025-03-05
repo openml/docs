@@ -14,7 +14,7 @@
         <link rel="prev" href="../intro/terms/">
       
       
-        <link rel="next" href="../benchmark/">
+        <link rel="next" href="use/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -936,6 +936,10 @@
           
         
       
+        
+      
+        
+      
     
     
       
@@ -980,6 +984,48 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="specs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technical specs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -5408,6 +5454,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#editing-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing datasets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forking-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forking datasets
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5419,6 +5483,30 @@
       Web UI
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Web UI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating datasets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-datasets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing datasets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5610,7 +5698,7 @@
 <p>Would you like to add support for your favourite language? Get it touch. We're happy to help you get started!</p>
 </details>
 <h3 id="complete-python-examples">Complete Python examples<a class="headerlink" href="#complete-python-examples" title="Permanent link">&para;</a></h3>
-<p>Our libraries support commonly used rich data structures. First load your data in the correct way (only you know how), add information as needed, then publish. 
+<p>Our libraries support commonly used rich data structures. First load your data in your preferred way, add information as needed, then publish. 
 For Python, here are some basic examples. For more examples, <a href="../examples/30_extended/create_upload_tutorial/">see the python API docs</a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Pandas</label><label for="__tabbed_2_2">Numpy</label><label for="__tabbed_2_3">Sparse data</label></div>
 <div class="tabbed-content">
@@ -5931,11 +6019,59 @@ Our libraries can then transfer and store it efficiently (e.g. in Parquet), and 
 <li>Upload the folder with all the local files using an appropriate data transfer tool. <a href="mailto:openmlhq@gmail.com">Contact us</a>, we're happy to help with this.</li>
 </ul>
 <div class="admonition languages">
-<p class="admonition-title">More support coming</p>
+<p class="admonition-title">More automation coming</p>
 <p>We're working on an automated procedure for the last step in our next API release. Watch this space :). For now, we'll gladly assist you with the manual step.</p>
 </div>
+<h3 id="editing-datasets">Editing datasets<a class="headerlink" href="#editing-datasets" title="Permanent link">&para;</a></h3>
+<p>You can edit any non-critical meta-data fields, such as the dataset description, creator, contributor, collection_date, language, citation, original_data_url, and paper_url. Previous versions of the metadata are stored and versioned.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span>
+<span class="normal"><a href="#__codelineno-6-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">data_id</span> <span class="o">=</span> <span class="n">edit_dataset</span><span class="p">(</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="mi">128</span><span class="p">,</span> <span class="c1"># dataset ID </span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A more complete dataset description&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="n">creator</span><span class="o">=</span><span class="s2">&quot;J.Appleseed&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="n">collection_date</span><span class="o">=</span><span class="s2">&quot;2017&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    <span class="n">citation</span><span class="o">=</span><span class="s2">&quot;On dataset creation. DMLR, 2017&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>    <span class="n">language</span><span class="o">=</span><span class="s2">&quot;English&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<details class="languages">
+<summary>Protected fields</summary>
+<p>Certain fields are protected (default_target_attribute, row_id_attribute, ignore_attribute) since changing them will affect models trained on the dataset. Changing these fields is allowed only for the dataset owner, and only if the dataset does not yet have any tasks associated with it.</p>
+</details>
+<h3 id="forking-datasets">Forking datasets<a class="headerlink" href="#forking-datasets" title="Permanent link">&para;</a></h3>
+<p>You can 'fork' an existing datasets, which creates a copy of the dataset with you as the owner. This can be useful, for instance, to correct critical mistakes or adopt orphaned datasets. Use this API only if you are unable to edit the original dataset. After the dataset is forked, you can edit the new version of the dataset as you like. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1"># Forks dataset with ID=1 and returns the forked dataset ID</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">data_id</span> <span class="o">=</span> <span class="n">fork_dataset</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1"># You can now edit the dataset</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">data_id</span> <span class="o">=</span> <span class="n">edit_dataset</span><span class="p">(</span><span class="n">data_id</span><span class="p">,</span> <span class="n">default_target_attribute</span><span class="o">=</span><span class="s2">&quot;shape&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
 <h2 id="web-ui">Web UI<a class="headerlink" href="#web-ui" title="Permanent link">&para;</a></h2>
-<p>Although we warmly recommend creating your data <a href="#frictionless-data-sharing">via code</a>, we also offer a <a href="https://www.openml.org/auth/upload-dataset" target="_blank">Web UI</a>. It works as follows:</p>
+<p>Although we warmly recommend creating your data <a href="#frictionless-data-sharing">via code</a>, we also offer a <a href="https://www.openml.org/auth/upload-dataset" target="_blank">Web UI</a>. </p>
+<h3 id="creating-datasets">Creating datasets<a class="headerlink" href="#creating-datasets" title="Permanent link">&para;</a></h3>
+<p>Creating datasets works as follows:</p>
 <ul>
 <li>Sign into the OpenML website. Sign up if you do not have an account yet.</li>
 <li>Click the 'plus' icon on the top right, and then 'New dataset'</li>
@@ -5954,6 +6090,20 @@ Our libraries can then transfer and store it efficiently (e.g. in Parquet), and 
 <summary>Limitations</summary>
 <p>Web UIs have natural limitations. We use pandas in the background and therefore only support any file format that pandas supports (csv, excel, sql, json, parquet). We also recommend not uploading datasets larger than 2GB via the web UI. If any of this is a problem, please upload your data <a href="#frictionless-data-sharing">via code</a> or <a href="mailto:openmlhq@gmail.com">contact us</a>!</p>
 </details>
+<h3 id="editing-datasets_1">Editing datasets<a class="headerlink" href="#editing-datasets_1" title="Permanent link">&para;</a></h3>
+<p>Editing datasets works as follows:</p>
+<ul>
+<li>Sign into the OpenML website. Sign up if you do not have an account yet.</li>
+<li>Navigate to the dataset of interest and click the 'edit' icon on the top right</li>
+</ul>
+<p><img alt="" src="../img/editdata.png" style="max-width: 700px;" width="100%" /></p>
+<ul>
+<li>Edit any field of the meta-data. Markdown and preview are supported for the dataset description.</li>
+</ul>
+<p><img alt="" src="../img/editdatagui.png" style="max-width: 700px;" width="100%" /></p>
+<ul>
+<li>Click 'Edit dataset'. This will store the new metadata description. Each edit is stored and versioned.</li>
+</ul>
 
 
 
@@ -5976,7 +6126,7 @@ Our libraries can then transfer and store it efficiently (e.g. in Parquet), and 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 5, 2025</span>
   </span>
 
     
@@ -5986,11 +6136,34 @@ Our libraries can then transfer and store it efficiently (e.g. in Parquet), and 
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 5, 2025</span>
   </span>
 
     
     
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/joaquinvanschoren" class="md-author" title="@joaquinvanschoren">
+          
+          <img src="https://avatars.githubusercontent.com/u/1724503?v=4&size=72" alt="joaquinvanschoren">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
     
   </aside>
 
@@ -6034,13 +6207,13 @@ Our libraries can then transfer and store it efficiently (e.g. in Parquet), and 
         
         
           
-          <a href="../benchmark/" class="md-footer__link md-footer__link--next" aria-label="Next: Benchmarking Suites">
+          <a href="use/" class="md-footer__link md-footer__link--next" aria-label="Next: Using datasets">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Benchmarking Suites
+                Using datasets
               </div>
             </div>
             <div class="md-footer__button md-icon">
