@@ -291,7 +291,11 @@ In the examples above, you can share any data supported by the data structure. T
     We're working on an automated procedure for the last step in our next API release. Watch this space :). For now, we'll gladly assist you with the manual step.
 
 ### Editing datasets
-You can edit any non-critical meta-data fields, such as the dataset description, creator, contributor, collection_date, language, citation, original_data_url, and paper_url. Previous versions of the metadata are stored and versioned.
+You can edit OpenML datasets in various ways.
+
+First, you can create a new version of a dataset by creating another dataset with the exact same name. OpenML will automatically create a new version of that dataset.
+
+You can also edit the metadata of existing dataset. You can only edit non-critical meta-data fields, such as the dataset description, creator, contributor, collection_date, language, citation, original_data_url, and paper_url. Previous versions of the metadata are stored and versioned. The best way do this is via the [Python Dataset Edit API](https://openml.github.io/openml-python/main/generated/openml.datasets.edit_dataset.html#openml.datasets.edit_dataset). You can also edit the metadata via the website by going to the webpage of that dataset and clicking the 'edit' button. This is most convenient for editing the dataset description in markdown, including previews.
 
 === "Python"
 
