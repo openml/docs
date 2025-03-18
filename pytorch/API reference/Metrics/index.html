@@ -4410,15 +4410,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#metrics.sigmoid" class="md-nav__link">
-    <span class="md-ellipsis">
-      sigmoid
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -4491,12 +4482,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
       
@@ -4534,6 +4519,56 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3_1" id="__nav_8_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Beginner
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Beginner
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../Examples/Create%20Dataset%20and%20Task/" class="md-nav__link">
         
@@ -4560,7 +4595,7 @@
         
   
   <span class="md-ellipsis">
-    Image classification task
+    Basic Image classification task
   </span>
   
 
@@ -4581,7 +4616,7 @@
         
   
   <span class="md-ellipsis">
-    Pretrained Image classification example - Transformer
+    Pretrained Transformer Image Classification Task
   </span>
   
 
@@ -4602,7 +4637,7 @@
         
   
   <span class="md-ellipsis">
-    Sequential classification
+    Sequential Classification Task
   </span>
   
 
@@ -4628,6 +4663,85 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3_2" id="__nav_8_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Examples/Choose%20a%20Custom%20Optimizer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Choose a custom Optimizer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5522,15 +5636,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#metrics.sigmoid" class="md-nav__link">
-    <span class="md-ellipsis">
-      sigmoid
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5665,8 +5770,7 @@ Tensor: The mean accuracy of the predictions, computed as a float tensor.</p>
 
             <details class="quote">
               <summary>Source code in <code>temp_dir/pytorch/openml_pytorch/metrics.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-24">24</a></span>
 <span class="normal"><a href="#__codelineno-0-25">25</a></span>
 <span class="normal"><a href="#__codelineno-0-26">26</a></span>
 <span class="normal"><a href="#__codelineno-0-27">27</a></span>
@@ -5680,82 +5784,23 @@ Tensor: The mean accuracy of the predictions, computed as a float tensor.</p>
 <span class="normal"><a href="#__codelineno-0-35">35</a></span>
 <span class="normal"><a href="#__codelineno-0-36">36</a></span>
 <span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="k">def</span><span class="w"> </span><span class="nf">accuracy_topk</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">yb</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="sd">    Computes the top-k accuracy of the given model outputs.</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="sd">    Args:</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="sd">        out (torch.Tensor): The output predictions of the model, of shape (batch_size, num_classes).</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="sd">        yb (torch.Tensor): The ground truth labels, of shape (batch_size,).</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="sd">        k (int, optional): The number of top predictions to consider. Default is 5.</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="sd">    Returns:</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">        float: The top-k accuracy as a float value.</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="sd">    The function calculates how often the true label is among the top-k predicted labels.</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a>    <span class="k">return</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">topk</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">yb</span><span class="o">.</span><span class="n">long</span><span class="p">()</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-            </details>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h2 id="metrics.sigmoid" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
-
-<a href="#metrics.sigmoid" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Computes the sigmoid function</p>
-<p>The sigmoid function is defined as 1 / (1 + exp(-x)). This function is used
-to map any real-valued number into the range (0, 1). It is widely used in
-machine learning, especially in logistic regression and neural networks.</p>
-<p>Args:
-    x (numpy.ndarray or float): The input value or array over which the
-    sigmoid function should be applied.</p>
-<p>Returns:
-    numpy.ndarray or float: The sigmoid of the input value or array.</p>
-
-            <details class="quote">
-              <summary>Source code in <code>temp_dir/pytorch/openml_pytorch/metrics.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span>
-<span class="normal"><a href="#__codelineno-0-42">42</a></span>
-<span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span>
-<span class="normal"><a href="#__codelineno-0-45">45</a></span>
-<span class="normal"><a href="#__codelineno-0-46">46</a></span>
-<span class="normal"><a href="#__codelineno-0-47">47</a></span>
-<span class="normal"><a href="#__codelineno-0-48">48</a></span>
-<span class="normal"><a href="#__codelineno-0-49">49</a></span>
-<span class="normal"><a href="#__codelineno-0-50">50</a></span>
-<span class="normal"><a href="#__codelineno-0-51">51</a></span>
-<span class="normal"><a href="#__codelineno-0-52">52</a></span>
-<span class="normal"><a href="#__codelineno-0-53">53</a></span>
-<span class="normal"><a href="#__codelineno-0-54">54</a></span>
-<span class="normal"><a href="#__codelineno-0-55">55</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="k">def</span><span class="w"> </span><span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="sd">    Computes the sigmoid function</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="sd">    The sigmoid function is defined as 1 / (1 + exp(-x)). This function is used</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="sd">    to map any real-valued number into the range (0, 1). It is widely used in</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="sd">    machine learning, especially in logistic regression and neural networks.</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="sd">    Args:</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="sd">        x (numpy.ndarray or float): The input value or array over which the</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="sd">        sigmoid function should be applied.</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="sd">    Returns:</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="sd">        numpy.ndarray or float: The sigmoid of the input value or array.</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a>    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="k">def</span><span class="w"> </span><span class="nf">accuracy_topk</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">yb</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="sd">    Computes the top-k accuracy of the given model outputs.</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="sd">    Args:</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="sd">        out (torch.Tensor): The output predictions of the model, of shape (batch_size, num_classes).</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="sd">        yb (torch.Tensor): The ground truth labels, of shape (batch_size,).</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="sd">        k (int, optional): The number of top predictions to consider. Default is 5.</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="sd">        float: The top-k accuracy as a float value.</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="sd">    The function calculates how often the true label is among the top-k predicted labels.</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a>    <span class="k">return</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">topk</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">yb</span><span class="o">.</span><span class="n">long</span><span class="p">()</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>

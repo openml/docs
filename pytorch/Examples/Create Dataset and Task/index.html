@@ -4415,12 +4415,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
       
@@ -4449,6 +4443,58 @@
           <label class="md-nav__title" for="__nav_8_3">
             <span class="md-nav__icon md-icon"></span>
             Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_3_1" id="__nav_8_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Beginner
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Beginner
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4494,7 +4540,7 @@
         
   
   <span class="md-ellipsis">
-    Image classification task
+    Basic Image classification task
   </span>
   
 
@@ -4515,7 +4561,7 @@
         
   
   <span class="md-ellipsis">
-    Pretrained Image classification example - Transformer
+    Pretrained Transformer Image Classification Task
   </span>
   
 
@@ -4536,7 +4582,7 @@
         
   
   <span class="md-ellipsis">
-    Sequential classification
+    Sequential Classification Task
   </span>
   
 
@@ -4562,6 +4608,85 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3_2" id="__nav_8_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Choose%20a%20Custom%20Optimizer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Choose a custom Optimizer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -5907,7 +6032,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -5922,9 +6047,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sklearn.datasets</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">openml.datasets.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">create_dataset</span>
@@ -5935,9 +6058,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">import openml
 
-import numpy as np
 import pandas as pd
-import sklearn.datasets
 
 import openml
 from openml.datasets.functions import create_dataset
@@ -5969,7 +6090,7 @@ import glob</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -6009,7 +6130,7 @@ import glob</div>
 
     <span class="c1">## encode types</span>
     <span class="n">df</span><span class="p">[</span><span class="s2">"image_path"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"image_path"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"string"</span><span class="p">)</span>
-    <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"string"</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"category"</span><span class="p">)</span>
 
 
     <span class="n">name</span> <span class="o">=</span> <span class="s2">"tiny-imagenet-200"</span>
@@ -6063,7 +6184,7 @@ import glob</div>
 
     ## encode types
     df["image_path"] = df["image_path"].astype("string")
-    df["label"] = df["label"].astype("string")
+    df["label"] = df["label"].astype("category")
 
 
     name = "tiny-imagenet-200"
@@ -6101,7 +6222,7 @@ import glob</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
@@ -6115,10 +6236,10 @@ import glob</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">create_tiny_imagenet</span><span class="p">()</span>
-<span class="c1"># https://www.openml.org/d/46346</span>
+<span class="c1"># https://www.openml.org/d/46577</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">create_tiny_imagenet()
-# https://www.openml.org/d/46346</div>
+# https://www.openml.org/d/46577</div>
 </div>
 </div>
 </div>
@@ -6143,7 +6264,7 @@ import glob</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -6181,7 +6302,7 @@ import glob</div>
     <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"image_path"</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">label_func</span><span class="p">)</span>
     <span class="c1">## encode types</span>
     <span class="n">df</span><span class="p">[</span><span class="s2">"image_path"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"image_path"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"string"</span><span class="p">)</span>
-    <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"string"</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">"category"</span><span class="p">)</span>
 
     <span class="c1"># keep only first 20 images for each label</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"label"</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -6236,7 +6357,7 @@ import glob</div>
     df["label"] = df["image_path"].apply(label_func)
     ## encode types
     df["image_path"] = df["image_path"].astype("string")
-    df["label"] = df["label"].astype("string")
+    df["label"] = df["label"].astype("category")
 
     # keep only first 20 images for each label
     df = df.groupby("label").head(20)
@@ -6271,13 +6392,13 @@ import glob</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
@@ -6291,23 +6412,10 @@ import glob</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">create_tiniest_imagenet</span><span class="p">()</span>
-<span class="c1"># https://www.openml.org/d/46347</span>
+<span class="c1"># https://www.openml.org/d/46578</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-5">create_tiniest_imagenet()
-# https://www.openml.org/d/46347</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>URL for dataset: https://www.openml.org/d/46347
-</pre>
+# https://www.openml.org/d/46578</div>
 </div>
 </div>
 </div>
@@ -6332,7 +6440,7 @@ import glob</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
@@ -6348,7 +6456,7 @@ import glob</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_task</span><span class="p">():</span>
     <span class="c1"># Define task parameters</span>
     <span class="n">task_type</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">TaskType</span><span class="o">.</span><span class="n">SUPERVISED_CLASSIFICATION</span>
-    <span class="n">dataset_id</span> <span class="o">=</span> <span class="mi">46347</span> <span class="c1"># Obtained from the dataset creation step</span>
+    <span class="n">dataset_id</span> <span class="o">=</span> <span class="mi">46578</span> <span class="c1"># Obtained from the dataset creation step</span>
     <span class="n">evaluation_measure</span> <span class="o">=</span> <span class="s1">'predictive_accuracy'</span>
     <span class="n">target_name</span> <span class="o">=</span> <span class="s1">'label'</span>
     <span class="n">class_labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"datasets/tiniest_imagenet.csv"</span><span class="p">)[</span><span class="s2">"label"</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
@@ -6371,7 +6479,7 @@ import glob</div>
 <div class="clipboard-copy-txt" id="cell-6">def create_task():
     # Define task parameters
     task_type = openml.tasks.TaskType.SUPERVISED_CLASSIFICATION
-    dataset_id = 46347 # Obtained from the dataset creation step
+    dataset_id = 46578 # Obtained from the dataset creation step
     evaluation_measure = 'predictive_accuracy'
     target_name = 'label'
     class_labels = list(pd.read_csv("datasets/tiniest_imagenet.csv")["label"].unique())
@@ -6395,13 +6503,13 @@ import glob</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
@@ -6415,23 +6523,10 @@ import glob</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">create_task</span><span class="p">()</span>
-<span class="c1"># https://www.openml.org/t/362128</span>
+<span class="c1"># https://www.openml.org/t/363295</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-7">create_task()
-# https://www.openml.org/t/362128</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>URL for task: https://www.openml.org/t/362128
-</pre>
+# https://www.openml.org/t/363295</div>
 </div>
 </div>
 </div>
@@ -6525,13 +6620,13 @@ import glob</div>
         
         
           
-          <a href="../Image%20Classification%20Task/" class="md-footer__link md-footer__link--next" aria-label="Next: Image classification task">
+          <a href="../Image%20Classification%20Task/" class="md-footer__link md-footer__link--next" aria-label="Next: Basic Image classification task">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Image classification task
+                Basic Image classification task
               </div>
             </div>
             <div class="md-footer__button md-icon">
