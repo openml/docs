@@ -54,7 +54,7 @@ For more advanced installation information, please see the
 
 -   [OpenML documentation](https://docs.openml.org/)
 -   [OpenML client APIs](https://docs.openml.org/APIs/)
--   [OpenML developer guide](https://docs.openml.org/Contributing/)
+-   [OpenML developer guide](https://docs.openml.org/contributing/)
 -   [Contact information](https://www.openml.org/contact)
 -   [Citation request](https://www.openml.org/cite)
 -   [OpenML blog](https://medium.com/open-machine-learning)
