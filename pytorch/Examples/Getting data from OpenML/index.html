@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://docs.openml.org/pytorch/Examples/Image%20Classification%20Task/">
+        <link rel="canonical" href="https://docs.openml.org/pytorch/Examples/Getting%20data%20from%20OpenML/">
       
       
-        <link rel="prev" href="../Create%20Dataset%20and%20Task/">
-      
-      
-        <link rel="next" href="../Pretrained%20Transformer%20Image%20Classification%20Task/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Basic Image classification task - Open Machine Learning</title>
+        <title>Get data and create dataloaders - Open Machine Learning</title>
       
     
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-image-classification-task" class="md-skip">
+        <a href="#getting-data-from-openml-and-then-using-your-own-training-pipeline" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Basic Image classification task
+              Get data and create dataloaders
             
           </span>
         </div>
@@ -225,17 +221,36 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
   
     
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 1-1.26 2.75L15 5l2.74 1.26L19 9l1.25-2.74L23 5l-2.75-1.25M9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5M19 15l-1.26 2.74L15 19l2.74 1.25L19 23l1.25-2.75L23 19l-2.75-1.26"/></svg>
     
   
   OpenML
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../intro/" class="md-tabs__link">
+          
+  
+    
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39S16.66.269 11 5.93c-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.55.56 1.37.74 2.12.46A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61m-7.07 7.07c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg>
+    
+  
+  Get Started
 
         </a>
       </li>
@@ -372,12 +387,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -524,6 +537,28 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 1-1.26 2.75L15 5l2.74 1.26L19 9l1.25-2.74L23 5l-2.75-1.25M9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5M19 15l-1.26 2.74L15 19l2.74 1.25L19 23l1.25-2.75L23 19l-2.75-1.26"/></svg>
+  
+  <span class="md-ellipsis">
+    OpenML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
       
@@ -551,34 +586,34 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../.." class="md-nav__link ">
+            <a href="../../../intro/" class="md-nav__link ">
               
   
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 1-1.26 2.75L15 5l2.74 1.26L19 9l1.25-2.74L23 5l-2.75-1.25M9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5M19 15l-1.26 2.74L15 19l2.74 1.25L19 23l1.25-2.75L23 19l-2.75-1.26"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39S16.66.269 11 5.93c-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.55.56 1.37.74 2.12.46A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61m-7.07 7.07c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg>
   
   <span class="md-ellipsis">
-    OpenML
+    Get Started
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            OpenML
+            Get Started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -595,7 +630,7 @@
         
   
   <span class="md-ellipsis">
-    Getting Started
+    OpenML in 10 minutes
   </span>
   
 
@@ -644,7 +679,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           
@@ -660,14 +695,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Concepts
           </label>
@@ -948,7 +983,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
@@ -966,14 +1001,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Datasets
           </label>
@@ -1055,7 +1090,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
@@ -1073,14 +1108,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Benchmarking
           </label>
@@ -1115,10 +1150,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1129,8 +1164,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             AutoML Benchmark
           </label>
@@ -1222,10 +1257,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1236,8 +1271,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
@@ -1345,7 +1380,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           
@@ -1363,14 +1398,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Ecosystem
           </label>
@@ -1424,7 +1459,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
         
           
           
@@ -1440,14 +1475,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             Scikit-learn
           </label>
@@ -1478,10 +1513,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_3_2" id="__nav_5_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1492,8 +1527,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_2">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
@@ -1704,7 +1739,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           
@@ -1722,14 +1757,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -1789,7 +1824,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
           
@@ -1805,14 +1840,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             Backend
           </label>
@@ -1939,10 +1974,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1953,8 +1988,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
             <span class="md-nav__icon md-icon"></span>
             Frontend
           </label>
@@ -2077,10 +2112,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
         
           
-          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2091,8 +2126,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
             <span class="md-nav__icon md-icon"></span>
             Clients
           </label>
@@ -2271,7 +2306,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           
@@ -2289,14 +2324,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Python
           </label>
@@ -2365,7 +2400,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
         
           
           
@@ -2381,14 +2416,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
             <span class="md-nav__icon md-icon"></span>
             Code Reference
           </label>
@@ -2482,7 +2517,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_5" >
         
           
           
@@ -2498,14 +2533,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1_5" id="__nav_7_1_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1_5" id="__nav_8_1_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_5">
             <span class="md-nav__icon md-icon"></span>
             evaluations
           </label>
@@ -2609,7 +2644,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_7" >
         
           
           
@@ -2625,14 +2660,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1_7" id="__nav_7_1_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1_7" id="__nav_8_1_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_7">
             <span class="md-nav__icon md-icon"></span>
             extensions
           </label>
@@ -2701,7 +2736,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_7_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_7_3" >
         
           
           
@@ -2717,14 +2752,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1_7_3" id="__nav_7_1_7_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1_7_3" id="__nav_8_1_7_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_1_7_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1_7_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_8_1_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_7_3">
             <span class="md-nav__icon md-icon"></span>
             sklearn
           </label>
@@ -2790,7 +2825,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_8" >
         
           
           
@@ -2806,14 +2841,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1_8" id="__nav_7_1_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1_8" id="__nav_8_1_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_8">
             <span class="md-nav__icon md-icon"></span>
             flows
           </label>
@@ -2894,7 +2929,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_9" >
         
           
           
@@ -2910,14 +2945,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1_9" id="__nav_7_1_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1_9" id="__nav_8_1_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1_9">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_9">
             <span class="md-nav__icon md-icon"></span>
             runs
           </label>
@@ -3017,7 +3052,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_10" >
         
           
           
@@ -3033,14 +3068,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1_10" id="__nav_7_1_10_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1_10" id="__nav_8_1_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1_10">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_10">
             <span class="md-nav__icon md-icon"></span>
             setups
           </label>
@@ -3119,7 +3154,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_11" >
         
           
           
@@ -3135,14 +3170,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1_11" id="__nav_7_1_11_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1_11" id="__nav_8_1_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1_11">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_11">
             <span class="md-nav__icon md-icon"></span>
             study
           </label>
@@ -3223,7 +3258,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_12" >
         
           
           
@@ -3239,14 +3274,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7_1_12" id="__nav_7_1_12_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_1_12" id="__nav_8_1_12_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_1_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1_12">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_12">
             <span class="md-nav__icon md-icon"></span>
             tasks
           </label>
@@ -3398,10 +3433,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
         
           
-          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3412,8 +3447,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -3446,10 +3481,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_1" >
         
           
-          <label class="md-nav__link" for="__nav_7_2_1" id="__nav_7_2_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2_1" id="__nav_8_2_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3460,8 +3495,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_1">
             <span class="md-nav__icon md-icon"></span>
             Basic
           </label>
@@ -3596,6 +3631,8 @@
       
         
       
+        
+      
     
     
       
@@ -3606,10 +3643,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_7_2_2" id="__nav_7_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2_2" id="__nav_8_2_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3620,12 +3657,33 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_2">
             <span class="md-nav__icon md-icon"></span>
             Extended
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../examples/30_extended/benchmark_with_optunahub/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prepare for preprocessors and an OpenML task
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -3956,10 +4014,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_7_2_3" id="__nav_7_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_2_3" id="__nav_8_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3970,8 +4028,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_2_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_3">
             <span class="md-nav__icon md-icon"></span>
             Paper
           </label>
@@ -4172,8 +4230,6 @@
       
   
   
-    
-  
   
   
     
@@ -4196,17 +4252,14 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           
@@ -4222,14 +4275,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             PyTorch
           </label>
@@ -4266,10 +4319,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
         
           
-          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4280,8 +4333,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
             <span class="md-nav__icon md-icon"></span>
             API Reference
           </label>
@@ -4404,10 +4457,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -4421,14 +4472,14 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
         
           
-          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4439,8 +4490,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -4450,10 +4501,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -4473,14 +4522,14 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_1" >
         
           
-          <label class="md-nav__link" for="__nav_8_3_1" id="__nav_8_3_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_3_1" id="__nav_9_3_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4491,8 +4540,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8_3_1">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3_1">
             <span class="md-nav__icon md-icon"></span>
             Beginner
           </label>
@@ -4523,184 +4572,18 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Basic Image classification task
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Image Classification Task.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Basic Image classification task
+    Image Classification Task
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-image-transformations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Define image transformations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-data-module-and-choose-a-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure the Data Module and Choose a Task
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#train-your-model-on-the-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Train your model on the data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view-information-about-your-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      View information about your run
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="View information about your run">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#learning-rate-and-loss-plot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learning rate and loss plot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-labels" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class labels
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-vizualization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model Vizualization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Model Vizualization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#netron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Netron
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensorboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tensorboard
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publish-your-model-to-openml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publish your model to OpenML
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4713,7 +4596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Pretrained%20Transformer%20Image%20Classification%20Task/" class="md-nav__link">
+      <a href="../Pretrained Transformer Image Classification Task.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4734,7 +4617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Sequential%20Classification%20Task/" class="md-nav__link">
+      <a href="../Sequential Classification Task.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4755,11 +4638,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tabular%20Classification/" class="md-nav__link">
+      <a href="../Tabular Classification.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Tabular classification
+    Tabular Classification
   </span>
   
 
@@ -4798,10 +4681,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_8_3_2" id="__nav_8_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9_3_2" id="__nav_9_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -4812,8 +4695,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_3_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_3_2">
             <span class="md-nav__icon md-icon"></span>
             Advanced
           </label>
@@ -4826,11 +4709,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Choose%20a%20Custom%20Optimizer/" class="md-nav__link">
+      <a href="../Choose a Custom Optimizer.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Choose a custom Optimizer
+    Choose a Custom Optimizer
   </span>
   
 
@@ -4909,7 +4792,7 @@
         
   
   <span class="md-ellipsis">
-    Philosphy behind the API Design
+    Philosophy behind the API Design
   </span>
   
 
@@ -4957,7 +4840,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
           
@@ -4973,14 +4856,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             TensorFlow
           </label>
@@ -5011,10 +4894,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
         
           
-          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5025,8 +4908,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_2">
             <span class="md-nav__icon md-icon"></span>
             API Reference
           </label>
@@ -5103,10 +4986,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_3" >
         
           
-          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_3" id="__nav_10_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5117,8 +5000,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_3">
             <span class="md-nav__icon md-icon"></span>
             Docker Reference
           </label>
@@ -5182,10 +5065,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_4" >
         
           
-          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10_4" id="__nav_10_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5196,8 +5079,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_4">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -5367,7 +5250,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
           
@@ -5383,14 +5266,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Julia
           </label>
@@ -5456,7 +5339,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
           
@@ -5472,14 +5355,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             APIv2
           </label>
@@ -5535,7 +5418,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_3" >
         
           
           
@@ -5551,14 +5434,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_12_3" id="__nav_12_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_13_3" id="__nav_13_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_13_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13_3">
             <span class="md-nav__icon md-icon"></span>
             Contributing
           </label>
@@ -5701,8 +5584,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -5711,126 +5592,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
+  <a href="#getting-data-from-openml-and-then-using-your-own-training-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      Data
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-image-transformations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Define image transformations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-data-module-and-choose-a-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure the Data Module and Choose a Task
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model
+      Getting Data from OpenML ... and then using your own training pipeline
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#train-your-model-on-the-data" class="md-nav__link">
+  <a href="#get-data-and-create-dataloaders" class="md-nav__link">
     <span class="md-ellipsis">
-      Train your model on the data
+      Get data and create dataloaders
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#view-information-about-your-run" class="md-nav__link">
+  <a href="#choose-your-model" class="md-nav__link">
     <span class="md-ellipsis">
-      View information about your run
+      Choose your model
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="View information about your run">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#learning-rate-and-loss-plot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learning rate and loss plot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-labels" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class labels
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#model-vizualization" class="md-nav__link">
+  <a href="#define-your-own-training-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      Model Vizualization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Model Vizualization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#netron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Netron
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensorboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tensorboard
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publish-your-model-to-openml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publish your model to OpenML
+      Define your own training pipeline
     </span>
   </a>
   
@@ -5851,7 +5642,7 @@
                   
 
   
-    <a href="https://github.com/openml/openml-pytorch/edit/master/Examples/Image Classification Task.ipynb" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/openml/openml-pytorch/edit/master/Examples/Getting data from OpenML.ipynb" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -5860,7 +5651,7 @@
     
       
     
-    <a href="https://github.com/openml/openml-pytorch/raw/master/Examples/Image Classification Task.ipynb" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/openml/openml-pytorch/raw/master/Examples/Getting data from OpenML.ipynb" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
@@ -6309,7 +6100,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="basic-image-classification-task">Basic Image classification task<a class="anchor-link" href="#basic-image-classification-task">¶</a></h1>
+<h2 id="getting-data-from-openml-and-then-using-your-own-training-pipeline">Getting Data from OpenML ... and then using your own training pipeline<a class="anchor-link" href="#getting-data-from-openml-and-then-using-your-own-training-pipeline">¶</a></h2><ul>
+<li>Just want the data and don't want to deal with anything else?</li>
+<li>Have some complicated idea you want to try? Don't want to be limited by this API? No problem!</li>
+<li>You can use your own training pipeline and still use data from OpenML ... but, you cannot upload your results back to OpenML this way as of now. ):</li>
+</ul>
 </div>
 </div>
 </div>
@@ -6332,47 +6127,25 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># openml imports</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># import libraries</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.callbacks</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestCallback</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenMLDataModule</span><span class="p">,</span> <span class="n">OpenMLTrainerModule</span><span class="p">,</span> <span class="n">convert_to_rgb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
 
-<span class="c1"># pytorch imports</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.tensorboard.writer</span><span class="w"> </span><span class="kn">import</span> <span class="n">SummaryWriter</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">torchvision.transforms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Compose</span><span class="p">,</span> <span class="n">Resize</span><span class="p">,</span> <span class="n">ToPILImage</span><span class="p">,</span> <span class="n">ToTensor</span><span class="p">,</span> <span class="n">Lambda</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">torchvision</span>
-
-<span class="c1"># other imports</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-
-<span class="c1"># set up logging</span>
-<span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
-<span class="n">openml_pytorch</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1"># openml imports
+<div class="clipboard-copy-txt" id="cell-1"># import libraries
 import openml
-import openml_pytorch
-from openml_pytorch.callbacks import TestCallback
-from openml_pytorch.metrics import accuracy
-from openml_pytorch.trainer import OpenMLDataModule, OpenMLTrainerModule, convert_to_rgb
+import torch
+import numpy as np
+from sklearn.model_selection import train_test_split
+from typing import Any
+from tqdm import tqdm
 
-# pytorch imports
-from torch.utils.tensorboard.writer import SummaryWriter
-from torchvision.transforms import Compose, Resize, ToPILImage, ToTensor, Lambda
-import torchvision
-
-# other imports
-import logging
-import warnings
-
-# set up logging
-openml.config.logger.setLevel(logging.DEBUG)
-openml_pytorch.config.logger.setLevel(logging.DEBUG)
-warnings.simplefilter(action='ignore')</div>
+import openml_pytorch as op</div>
 </div>
 </div>
 </div>
@@ -6385,18 +6158,25 @@ warnings.simplefilter(action='ignore')</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="data">Data<a class="anchor-link" href="#data">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="define-image-transformations">Define image transformations<a class="anchor-link" href="#define-image-transformations">¶</a></h3>
+<h1 id="get-data-and-create-dataloaders">Get data and create dataloaders<a class="anchor-link" href="#get-data-and-create-dataloaders">¶</a></h1><ul>
+<li>!!!! This is the ONLY required step. Everything else is completely up to you.</li>
+<li>You might be wondering what the GenericDataset is. It is just a simple dataset class</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GenericDataset</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Generic dataset that takes X,y as input and returns them as tensors"""</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>  <span class="c1"># Convert to tensors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">)</span>  <span class="c1"># Ensure labels are LongTensor</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -6419,24 +6199,40 @@ warnings.simplefilter(action='ignore')</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">transform</span> <span class="o">=</span> <span class="n">Compose</span><span class="p">(</span>
-    <span class="p">[</span>
-        <span class="n">ToPILImage</span><span class="p">(),</span>  <span class="c1"># Convert tensor to PIL Image to ensure PIL Image operations can be applied.</span>
-        <span class="n">Lambda</span><span class="p">(</span><span class="n">convert_to_rgb</span><span class="p">),</span>  <span class="c1"># Convert PIL Image to RGB if it's not already.</span>
-        <span class="n">Resize</span><span class="p">((</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)),</span>  <span class="c1"># Resize the image.</span>
-        <span class="n">ToTensor</span><span class="p">(),</span>  <span class="c1"># Convert the PIL Image back to a tensor.</span>
-    <span class="p">]</span>
-<span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Get dataset by ID</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Get the X, y data</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">default_target_attribute</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>  <span class="c1"># Ensure X is a NumPy array of float32</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>    <span class="c1"># Ensure y is a NumPy array of int64 (for classification)</span>
+
+<span class="c1"># Train-test split</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Dataloaders</span>
+<span class="n">ds_train</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GenericDataset</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">ds_test</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">GenericDataset</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="n">dataloader_train</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">ds_train</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dataloader_test</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">ds_test</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">
-transform = Compose(
-    [
-        ToPILImage(),  # Convert tensor to PIL Image to ensure PIL Image operations can be applied.
-        Lambda(convert_to_rgb),  # Convert PIL Image to RGB if it's not already.
-        Resize((64, 64)),  # Resize the image.
-        ToTensor(),  # Convert the PIL Image back to a tensor.
-    ]
-)
+# Get dataset by ID
+dataset = openml.datasets.get_dataset(20)
+
+# Get the X, y data
+X, y, _, _ = dataset.get_data(target=dataset.default_target_attribute)
+X = X.to_numpy(dtype=np.float32)  # Ensure X is a NumPy array of float32
+y = y.to_numpy(dtype=np.int64)    # Ensure y is a NumPy array of int64 (for classification)
+
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1, stratify=y)
+
+# Dataloaders
+ds_train = op.GenericDataset(X_train, y_train)
+ds_test = op.GenericDataset(X_test, y_test)
+dataloader_train = torch.utils.data.DataLoader(ds_train, batch_size=64, shuffle=True)
+dataloader_test = torch.utils.data.DataLoader(ds_test, batch_size=64, shuffle=False)
 </div>
 </div>
 </div>
@@ -6450,9 +6246,7 @@ transform = Compose(
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="configure-the-data-module-and-choose-a-task">Configure the Data Module and Choose a Task<a class="anchor-link" href="#configure-the-data-module-and-choose-a-task">¶</a></h3><ul>
-<li>Make sure the data is present in the <code>file_dir</code> directory, and the <code>filename_col</code> is correctly set along with this column correctly pointing to where your data is stored.</li>
-</ul>
+<h1 id="choose-your-model">Choose your model<a class="anchor-link" href="#choose-your-model">¶</a></h1>
 </div>
 </div>
 </div>
@@ -6475,31 +6269,43 @@ transform = Compose(
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data_module</span> <span class="o">=</span> <span class="n">OpenMLDataModule</span><span class="p">(</span>
-    <span class="n">type_of_data</span><span class="o">=</span><span class="s2">"image"</span><span class="p">,</span>
-    <span class="n">file_dir</span><span class="o">=</span><span class="s2">"datasets"</span><span class="p">,</span>
-    <span class="n">filename_col</span><span class="o">=</span><span class="s2">"image_path"</span><span class="p">,</span>
-    <span class="n">target_mode</span><span class="o">=</span><span class="s2">"categorical"</span><span class="p">,</span>
-    <span class="n">target_column</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span>
-    <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
-    <span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">,</span>
-<span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Model Definition</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TabularClassificationModel</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TabularClassificationModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">relu</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">softmax</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Softmax</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="c1"># Download the OpenML task for tiniest imagenet</span>
-<span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="mi">363295</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">data_module = OpenMLDataModule(
-    type_of_data="image",
-    file_dir="datasets",
-    filename_col="image_path",
-    target_mode="categorical",
-    target_column="label",
-    batch_size=64,
-    transform=transform,
-)
+<div class="clipboard-copy-txt" id="cell-3"># Model Definition
+class TabularClassificationModel(torch.nn.Module):
+    def __init__(self, input_size, output_size):
+        super(TabularClassificationModel, self).__init__()
+        self.fc1 = torch.nn.Linear(input_size, 128)
+        self.fc2 = torch.nn.Linear(128, 64)
+        self.fc3 = torch.nn.Linear(64, output_size)
+        self.relu = torch.nn.ReLU()
+        self.softmax = torch.nn.Softmax(dim=1)
 
-# Download the OpenML task for tiniest imagenet
-task = openml.tasks.get_task(363295)
+    def forward(self, x):
+        x = self.fc1(x)
+        x = self.relu(x)
+        x = self.fc2(x)
+        x = self.relu(x)
+        x = self.fc3(x)
+        x = self.softmax(x)
+        return x
 </div>
 </div>
 </div>
@@ -6513,7 +6319,7 @@ task = openml.tasks.get_task(363295)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="model">Model<a class="anchor-link" href="#model">¶</a></h2>
+<h1 id="define-your-own-training-pipeline">Define your own training pipeline<a class="anchor-link" href="#define-your-own-training-pipeline">¶</a></h1>
 </div>
 </div>
 </div>
@@ -6536,24 +6342,29 @@ task = openml.tasks.get_task(363295)
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">torchvision</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">resnet18</span><span class="p">(</span><span class="n">num_classes</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Train the model</span>
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">BasicTrainer</span><span class="p">(</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">TabularClassificationModel</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y_train</span><span class="p">))),</span>
+    <span class="n">loss_fn</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">(),</span>
+    <span class="n">opt</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">,</span>
+    <span class="n">dataloader_train</span> <span class="o">=</span> <span class="n">dataloader_train</span><span class="p">,</span>
+    <span class="n">dataloader_test</span> <span class="o">=</span> <span class="n">dataloader_test</span><span class="p">,</span>
+    <span class="n">device</span><span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">"mps"</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">model = torchvision.models.resnet18(num_classes=200)</div>
+<div class="clipboard-copy-txt" id="cell-4"># Train the model
+trainer = op.BasicTrainer(
+    model = TabularClassificationModel(X_train.shape[1], len(np.unique(y_train))),
+    loss_fn = torch.nn.CrossEntropyLoss(),
+    opt = torch.optim.Adam,
+    dataloader_train = dataloader_train,
+    dataloader_test = dataloader_test,
+    device= torch.device("mps")
+)
+trainer.fit(10)</div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="train-your-model-on-the-data">Train your model on the data<a class="anchor-link" href="#train-your-model-on-the-data">¶</a></h2><ul>
-<li>Note that by default, OpenML runs a 10 fold cross validation on the data. You cannot change this for now.</li>
-</ul>
 </div>
 </div>
 </div>
@@ -6576,259 +6387,9 @@ task = openml.tasks.get_task(363295)
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span> <span class="o">=</span> <span class="n">OpenMLTrainerModule</span><span class="p">(</span>
-    <span class="n">experiment_name</span><span class="o">=</span> <span class="s2">"Tiny ImageNet"</span><span class="p">,</span>
-    <span class="n">data_module</span><span class="o">=</span><span class="n">data_module</span><span class="p">,</span>
-    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">epoch_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">metrics</span><span class="o">=</span> <span class="p">[</span><span class="n">accuracy</span><span class="p">],</span>
-    <span class="c1"># remove the TestCallback when you are done testing your pipeline. Having it here will make the pipeline run for a very short time.</span>
-    <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">TestCallback</span><span class="p">,</span>
-    <span class="p">],</span>
-<span class="p">)</span>
-<span class="n">openml_pytorch</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">trainer</span> <span class="o">=</span> <span class="n">trainer</span>
-<span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">avoid_duplicate_runs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">
-
-trainer = OpenMLTrainerModule(
-    experiment_name= "Tiny ImageNet",
-    data_module=data_module,
-    verbose=True,
-    epoch_count=1,
-    metrics= [accuracy],
-    # remove the TestCallback when you are done testing your pipeline. Having it here will make the pipeline run for a very short time.
-    callbacks=[
-        TestCallback,
-    ],
-)
-openml_pytorch.config.trainer = trainer
-run = openml.runs.run_model_on_task(model, task, avoid_duplicate_runs=False)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="view-information-about-your-run">View information about your run<a class="anchor-link" href="#view-information-about-your-run">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="learning-rate-and-loss-plot">Learning rate and loss plot<a class="anchor-link" href="#learning-rate-and-loss-plot">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">plot_loss</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-6">trainer.plot_loss()</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">plot_lr</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-7">trainer.plot_lr()</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="class-labels">Class labels<a class="anchor-link" href="#class-labels">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">model_classes</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-8">trainer.model_classes</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="model-vizualization">Model Vizualization<a class="anchor-link" href="#model-vizualization">¶</a></h2><ul>
-<li>Sometimes you may want to visualize the model. You can either use netron or tensorboard for this purpose.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="netron">Netron<a class="anchor-link" href="#netron">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">export_to_netron</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-9">trainer.export_to_netron()</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="tensorboard">Tensorboard<a class="anchor-link" href="#tensorboard">¶</a></h3><ul>
-<li>By default, openml will log the tensorboard logs in the <code>tensorboard_logs</code> directory. You can view the logs by running <code>tensorboard --logdir tensorboard_logs</code> in the terminal.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="publish-your-model-to-openml">Publish your model to OpenML<a class="anchor-link" href="#publish-your-model-to-openml">¶</a></h2><ul>
-<li>This is Optional, but publishing your model to OpenML will allow you to track your experiments and compare them with others.</li>
-<li>Make sure to set your apikey first.<ul>
-<li>You can find your apikey on your OpenML account page.</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="s1">''</span>
-<span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-10">openml.config.apikey = ''
-run.publish()</div>
+<div class="clipboard-copy-txt" id="cell-5"></div>
 </div>
 </div>
 </div>
@@ -6864,7 +6425,7 @@ run.publish()</div>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 27, 2025</span>
   </span>
 
     
@@ -6874,7 +6435,7 @@ run.publish()</div>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 27, 2025</span>
   </span>
 
     
@@ -6900,44 +6461,6 @@ run.publish()</div>
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../Create%20Dataset%20and%20Task/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create dataset and task - tiniest imagenet">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Create dataset and task - tiniest imagenet
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../Pretrained%20Transformer%20Image%20Classification%20Task/" class="md-footer__link md-footer__link--next" aria-label="Next: Pretrained Transformer Image Classification Task">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Pretrained Transformer Image Classification Task
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -6968,6 +6491,8 @@ run.publish()</div>
       <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
         <script src="../../../js/extra.js"></script>
+      
+        <script src="../../../js/reset_nav.js"></script>
       
     
   </body>
