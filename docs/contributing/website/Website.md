@@ -1,3 +1,10 @@
+!!! info "Frontend Migration in Progress"
+    The OpenML frontend is being modernized to **Next.js 16+ with App Router, TypeScript, and Tailwind CSS**.
+
+    📖 **New developers should refer to the [Next.js (App Router)](NextJS.md) documentation.**
+
+    This page documents the legacy React (Pages Router) setup for reference and maintenance purposes only.
+
 ## Installation
 The OpenML website runs on [Flask](http://flask.pocoo.org/), [React](https://reactjs.org/), and [Dash](https://dash.plot.ly/). You need to install these first.
 

@@ -184,8 +184,9 @@ nav:
             - Evaluation Engine: contributing/backend/Java-App.md
         - Frontend:
             - Getting started: contributing/website/Website.md
+            - Next.js (App Router): contributing/website/NextJS.md
+            - React (Legacy): contributing/website/React.md
             - Flask backend: contributing/website/Flask.md
-            - React frontend: contributing/website/React.md
             - Dash visualizations: contributing/website/Dash.md
         - Clients:
             - Client development: contributing/clients/Client-API-Standards.md
