@@ -8,24 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://docs.openml.org/pytorch/Examples/Images/Pretrained%20Transformer%20Image%20Classification%20Task/">
+        <link rel="canonical" href="https://docs.openml.org/examples/30_extended/benchmark_with_optunahub/">
       
       
+        <link rel="prev" href="../../20_basic/simple_suites_tutorial/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+        <link rel="next" href="../configure_logging/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
-        <title>Pretrained Transformer Image Classification Task - Open Machine Learning</title>
+        <title>Prepare for preprocessors and an OpenML task - Open Machine Learning</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../css/extra.css">
+      <link rel="stylesheet" href="../../../css/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pretrained-transformer-image-classification-task" class="md-skip">
+        <a href="#prepare-for-preprocessors-and-an-openml-task" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +94,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Open Machine Learning" class="md-header__button md-logo" aria-label="Open Machine Learning" data-md-component="logo">
+    <a href="../../.." title="Open Machine Learning" class="md-header__button md-logo" aria-label="Open Machine Learning" data-md-component="logo">
       
-  <img src="../../../../img/openml.png" alt="logo">
+  <img src="../../../img/openml.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pretrained Transformer Image Classification Task
+              Prepare for preprocessors and an OpenML task
             
           </span>
         </div>
@@ -222,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -243,7 +247,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../intro/" class="md-tabs__link">
+        <a href="../../../intro/" class="md-tabs__link">
           
   
     
@@ -265,7 +269,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../data/" class="md-tabs__link">
+        <a href="../../../data/" class="md-tabs__link">
           
   
     
@@ -287,7 +291,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../benchmark/" class="md-tabs__link">
+        <a href="../../../benchmark/" class="md-tabs__link">
           
   
     
@@ -309,7 +313,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../ecosystem/" class="md-tabs__link">
+        <a href="../../../ecosystem/" class="md-tabs__link">
           
   
     
@@ -331,7 +335,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../contributing/" class="md-tabs__link">
+        <a href="../../../contributing/" class="md-tabs__link">
           
   
     
@@ -351,7 +355,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../help/" class="md-tabs__link">
+      <a href="../../../help/" class="md-tabs__link">
         
   
     
@@ -368,9 +372,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../../../python/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../../python/" class="md-tabs__link">
         
   
     
@@ -391,7 +397,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../../pytorch/" class="md-tabs__link">
           
   
     
@@ -411,7 +417,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../tensorflow/" class="md-tabs__link">
+        <a href="../../../tensorflow/" class="md-tabs__link">
           
   
     
@@ -431,7 +437,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../julia/" class="md-tabs__link">
+        <a href="../../../julia/" class="md-tabs__link">
           
   
     
@@ -449,7 +455,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../r/" class="md-tabs__link">
+      <a href="../../../r/" class="md-tabs__link">
         
   
     
@@ -468,7 +474,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../apiv2/" class="md-tabs__link">
+        <a href="../../../apiv2/" class="md-tabs__link">
           
   
     
@@ -509,9 +515,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Open Machine Learning" class="md-nav__button md-logo" aria-label="Open Machine Learning" data-md-component="logo">
+    <a href="../../.." title="Open Machine Learning" class="md-nav__button md-logo" aria-label="Open Machine Learning" data-md-component="logo">
       
-  <img src="../../../../img/openml.png" alt="logo">
+  <img src="../../../img/openml.png" alt="logo">
 
     </a>
     Open Machine Learning
@@ -538,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 1-1.26 2.75L15 5l2.74 1.26L19 9l1.25-2.74L23 5l-2.75-1.25M9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5M19 15l-1.26 2.74L15 19l2.74 1.25L19 23l1.25-2.75L23 19l-2.75-1.26"/></svg>
@@ -591,7 +597,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../intro/" class="md-nav__link ">
+            <a href="../../../intro/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39S16.66.269 11 5.93c-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.55.56 1.37.74 2.12.46A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61m-7.07 7.07c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg>
@@ -626,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../notebooks/getting_started/" class="md-nav__link">
+      <a href="../../../notebooks/getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,7 +690,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../concepts/" class="md-nav__link ">
+            <a href="../../../concepts/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -717,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../concepts/data/" class="md-nav__link">
+      <a href="../../../concepts/data/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -738,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../concepts/tasks/" class="md-nav__link">
+      <a href="../../../concepts/tasks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -759,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../concepts/flows/" class="md-nav__link">
+      <a href="../../../concepts/flows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -780,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../concepts/runs/" class="md-nav__link">
+      <a href="../../../concepts/runs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../concepts/benchmarking/" class="md-nav__link">
+      <a href="../../../concepts/benchmarking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../concepts/tagging/" class="md-nav__link">
+      <a href="../../../concepts/tagging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../concepts/authentication/" class="md-nav__link">
+      <a href="../../../concepts/authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../concepts/sharing/" class="md-nav__link">
+      <a href="../../../concepts/sharing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/showcase/" class="md-nav__link">
+      <a href="../../../intro/showcase/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/Governance/" class="md-nav__link">
+      <a href="../../../intro/Governance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -935,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../intro/terms/" class="md-nav__link">
+      <a href="../../../intro/terms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +994,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../data/" class="md-nav__link ">
+            <a href="../../../data/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg>
@@ -1023,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data/use/" class="md-nav__link">
+      <a href="../../../data/use/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../data/specs/" class="md-nav__link">
+      <a href="../../../data/specs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1095,7 +1101,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../benchmark/" class="md-nav__link ">
+            <a href="../../../benchmark/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 256a256 256 0 1 1 512 0 256 256 0 1 1-512 0M288 96a32 32 0 1 0-64 0 32 32 0 1 0 64 0m-32 320c35.3 0 64-28.7 64-64 0-17.4-6.9-33.1-18.1-44.6L366 161.7c5.3-12.1-.2-26.3-12.3-31.6s-26.3.2-31.6 12.3L257.9 288H256c-35.3 0-64 28.7-64 64s28.7 64 64 64m-80-272a32 32 0 1 0-64 0 32 32 0 1 0 64 0M96 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64m352-32a32 32 0 1 0-64 0 32 32 0 1 0 64 0"/></svg>
@@ -1178,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../benchmark/automl/AutoML-Benchmark/" class="md-nav__link">
+      <a href="../../../benchmark/automl/AutoML-Benchmark/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1199,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../benchmark/automl/important_params/" class="md-nav__link">
+      <a href="../../../benchmark/automl/important_params/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1220,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../benchmark/automl/benchmark_on_openml/" class="md-nav__link">
+      <a href="../../../benchmark/automl/benchmark_on_openml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../benchmark/automl/basic_example/" class="md-nav__link">
+      <a href="../../../benchmark/automl/basic_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1306,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../benchmark/automl/specific_task_fold_example/" class="md-nav__link">
+      <a href="../../../benchmark/automl/specific_task_fold_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1385,7 +1391,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../ecosystem/" class="md-nav__link ">
+            <a href="../../../ecosystem/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M512 32c0 113.6-84.6 207.5-194.2 222-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0h32c17.7 0 32 14.3 32 32M0 96c0-17.7 14.3-32 32-32h32c123.7 0 224 100.3 224 224v192c0 17.7-14.3 32-32 32s-32-14.3-32-32V320C100.3 320 0 219.7 0 96"/></svg>
@@ -1420,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ecosystem/Python_extensions/" class="md-nav__link">
+      <a href="../../../ecosystem/Python_extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1464,7 +1470,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../ecosystem/Scikit-learn/" class="md-nav__link ">
+            <a href="../../../ecosystem/Scikit-learn/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1541,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ecosystem/Scikit-learn/basic_tutorial/" class="md-nav__link">
+      <a href="../../../ecosystem/Scikit-learn/basic_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1562,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ecosystem/Scikit-learn/datasets_tutorial/" class="md-nav__link">
+      <a href="../../../ecosystem/Scikit-learn/datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1599,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ecosystem/mlr/" class="md-nav__link">
+      <a href="../../../ecosystem/mlr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1620,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ecosystem/Weka/" class="md-nav__link">
+      <a href="../../../ecosystem/Weka/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1641,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ecosystem/MOA/" class="md-nav__link">
+      <a href="../../../ecosystem/MOA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1662,7 +1668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ecosystem/Java/" class="md-nav__link">
+      <a href="../../../ecosystem/Java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1683,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../ecosystem/Rest/" class="md-nav__link">
+      <a href="../../../ecosystem/Rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1744,7 +1750,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../contributing/" class="md-nav__link ">
+            <a href="../../../contributing/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 96c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256h-64V96H128v256H64zM0 403.2C0 392.6 8.6 384 19.2 384h601.6c10.6 0 19.2 8.6 19.2 19.2 0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2M281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zm112-34 48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>
@@ -1779,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/OpenML-Docs/" class="md-nav__link">
+      <a href="../../../contributing/OpenML-Docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1829,7 +1835,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../services/" class="md-nav__link ">
+            <a href="../../../services/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1860,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/backend/Local-Installation/" class="md-nav__link">
+      <a href="../../../contributing/backend/Local-Installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1883,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/backend/Datasets/" class="md-nav__link">
+      <a href="../../../contributing/backend/Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1904,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/backend/API-development/" class="md-nav__link">
+      <a href="../../../contributing/backend/API-development/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1925,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/backend/Java-App/" class="md-nav__link">
+      <a href="../../../contributing/backend/Java-App/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2002,7 +2008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/website/Website/" class="md-nav__link">
+      <a href="../../../contributing/website/Website/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2023,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/website/Flask/" class="md-nav__link">
+      <a href="../../../contributing/website/Flask/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2044,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/website/React/" class="md-nav__link">
+      <a href="../../../contributing/website/React/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2065,7 +2071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/website/Dash/" class="md-nav__link">
+      <a href="../../../contributing/website/Dash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2140,7 +2146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/clients/Client-API-Standards/" class="md-nav__link">
+      <a href="../../../contributing/clients/Client-API-Standards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2161,7 +2167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/clients/metadata_definition/" class="md-nav__link">
+      <a href="../../../contributing/clients/metadata_definition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2182,7 +2188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/clients/Rest/" class="md-nav__link">
+      <a href="../../../contributing/clients/Rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2211,7 +2217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/Style/" class="md-nav__link">
+      <a href="../../../contributing/Style/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2232,7 +2238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../contributing/resources/" class="md-nav__link">
+      <a href="../../../contributing/resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2260,7 +2266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../help/" class="md-nav__link">
+      <a href="../../../help/" class="md-nav__link">
         
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></svg>
@@ -2279,8 +2285,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -2299,19 +2307,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../python/" class="md-nav__link ">
+            <a href="../../../python/" class="md-nav__link ">
               
   
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
@@ -2324,13 +2335,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -2405,7 +2416,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/datasets/" class="md-nav__link ">
+            <a href="../../../reference/datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2436,7 +2447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/base/" class="md-nav__link">
+      <a href="../../../reference/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2457,7 +2468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/cli/" class="md-nav__link">
+      <a href="../../../reference/cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2478,7 +2489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/config/" class="md-nav__link">
+      <a href="../../../reference/config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2522,7 +2533,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/evaluations/" class="md-nav__link ">
+            <a href="../../../reference/evaluations/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2553,7 +2564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/evaluations/evaluation/" class="md-nav__link">
+      <a href="../../../reference/evaluations/evaluation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2574,7 +2585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/evaluations/functions/" class="md-nav__link">
+      <a href="../../../reference/evaluations/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2603,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/exceptions/" class="md-nav__link">
+      <a href="../../../reference/exceptions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2649,7 +2660,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/extensions/" class="md-nav__link ">
+            <a href="../../../reference/extensions/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2680,7 +2691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/extensions/extension_interface/" class="md-nav__link">
+      <a href="../../../reference/extensions/extension_interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2701,7 +2712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/extensions/functions/" class="md-nav__link">
+      <a href="../../../reference/extensions/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2741,7 +2752,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/extensions/sklearn/" class="md-nav__link ">
+            <a href="../../../reference/extensions/sklearn/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2772,7 +2783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/extensions/sklearn/extension/" class="md-nav__link">
+      <a href="../../../reference/extensions/sklearn/extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2830,7 +2841,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/flows/" class="md-nav__link ">
+            <a href="../../../reference/flows/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2861,7 +2872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/flows/flow/" class="md-nav__link">
+      <a href="../../../reference/flows/flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2882,7 +2893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/flows/functions/" class="md-nav__link">
+      <a href="../../../reference/flows/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2934,7 +2945,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/runs/" class="md-nav__link ">
+            <a href="../../../reference/runs/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2965,7 +2976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/runs/functions/" class="md-nav__link">
+      <a href="../../../reference/runs/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2986,7 +2997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/runs/run/" class="md-nav__link">
+      <a href="../../../reference/runs/run/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3007,7 +3018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/runs/trace/" class="md-nav__link">
+      <a href="../../../reference/runs/trace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3057,7 +3068,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/setups/" class="md-nav__link ">
+            <a href="../../../reference/setups/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3088,7 +3099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/setups/functions/" class="md-nav__link">
+      <a href="../../../reference/setups/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3109,7 +3120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/setups/setup/" class="md-nav__link">
+      <a href="../../../reference/setups/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3159,7 +3170,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/study/" class="md-nav__link ">
+            <a href="../../../reference/study/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3190,7 +3201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/study/functions/" class="md-nav__link">
+      <a href="../../../reference/study/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3211,7 +3222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/study/study/" class="md-nav__link">
+      <a href="../../../reference/study/study/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3263,7 +3274,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/tasks/" class="md-nav__link ">
+            <a href="../../../reference/tasks/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3294,7 +3305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/tasks/functions/" class="md-nav__link">
+      <a href="../../../reference/tasks/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3315,7 +3326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/tasks/split/" class="md-nav__link">
+      <a href="../../../reference/tasks/split/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3336,7 +3347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/tasks/task/" class="md-nav__link">
+      <a href="../../../reference/tasks/task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3365,7 +3376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/testing/" class="md-nav__link">
+      <a href="../../../reference/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3386,7 +3397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/utils/" class="md-nav__link">
+      <a href="../../../reference/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3412,8 +3423,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -3429,11 +3442,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" checked>
         
           
           <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
@@ -3447,7 +3460,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_2">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -3509,7 +3522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/20_basic/introduction_tutorial/" class="md-nav__link">
+      <a href="../../20_basic/introduction_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3530,7 +3543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/20_basic/simple_datasets_tutorial/" class="md-nav__link">
+      <a href="../../20_basic/simple_datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3551,7 +3564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/20_basic/simple_flows_and_runs_tutorial/" class="md-nav__link">
+      <a href="../../20_basic/simple_flows_and_runs_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3572,7 +3585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/20_basic/simple_suites_tutorial/" class="md-nav__link">
+      <a href="../../20_basic/simple_suites_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3598,8 +3611,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -3639,11 +3654,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_8_2_2" id="__nav_8_2_2_label" tabindex="0">
@@ -3657,7 +3672,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_2_2">
             <span class="md-nav__icon md-icon"></span>
             Extended
@@ -3668,10 +3683,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/benchmark_with_optunahub/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -3680,6 +3704,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -3692,7 +3717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/configure_logging/" class="md-nav__link">
+      <a href="../configure_logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3713,7 +3738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/create_upload_tutorial/" class="md-nav__link">
+      <a href="../create_upload_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3734,7 +3759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/custom_flow_/" class="md-nav__link">
+      <a href="../custom_flow_/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3755,7 +3780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/datasets_tutorial/" class="md-nav__link">
+      <a href="../datasets_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3776,7 +3801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/fetch_evaluations_tutorial/" class="md-nav__link">
+      <a href="../fetch_evaluations_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3797,7 +3822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/fetch_runtimes_tutorial/" class="md-nav__link">
+      <a href="../fetch_runtimes_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3818,7 +3843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/flow_id_tutorial/" class="md-nav__link">
+      <a href="../flow_id_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3839,7 +3864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/flows_and_runs_tutorial/" class="md-nav__link">
+      <a href="../flows_and_runs_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3860,7 +3885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/plot_svm_hyperparameters_tutorial/" class="md-nav__link">
+      <a href="../plot_svm_hyperparameters_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3881,7 +3906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/run_setup_tutorial/" class="md-nav__link">
+      <a href="../run_setup_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3902,7 +3927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/study_tutorial/" class="md-nav__link">
+      <a href="../study_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3923,7 +3948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/suites_tutorial/" class="md-nav__link">
+      <a href="../suites_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3944,7 +3969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/task_manual_iteration_tutorial/" class="md-nav__link">
+      <a href="../task_manual_iteration_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3965,7 +3990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/30_extended/tasks_tutorial/" class="md-nav__link">
+      <a href="../tasks_tutorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4042,7 +4067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/40_paper/2015_neurips_feurer_example/" class="md-nav__link">
+      <a href="../../40_paper/2015_neurips_feurer_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4063,7 +4088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/40_paper/2018_ida_strang_example/" class="md-nav__link">
+      <a href="../../40_paper/2018_ida_strang_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4084,7 +4109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/40_paper/2018_kdd_rijn_example/" class="md-nav__link">
+      <a href="../../40_paper/2018_kdd_rijn_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4105,7 +4130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examples/40_paper/2018_neurips_perrone_example/" class="md-nav__link">
+      <a href="../../40_paper/2018_neurips_perrone_example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4142,7 +4167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/usage/" class="md-nav__link">
+      <a href="../../../python/usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4163,7 +4188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/contributing/" class="md-nav__link">
+      <a href="../../../python/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4184,7 +4209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/extensions/" class="md-nav__link">
+      <a href="../../../python/extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4205,7 +4230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/progress/" class="md-nav__link">
+      <a href="../../../python/progress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4264,7 +4289,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../pytorch/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4347,7 +4372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../API%20reference/Callbacks/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/Callbacks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4368,7 +4393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../API%20reference/Custom%20Datasets/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/Custom%20Datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4389,7 +4414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../API%20reference/Metrics/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/Metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4410,7 +4435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../API%20reference/OpenML%20Connection/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/OpenML%20Connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4431,7 +4456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../API%20reference/Trainer/" class="md-nav__link">
+      <a href="../../../pytorch/API%20reference/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4554,7 +4579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Create%20Dataset%20and%20Task/" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Create%20Dataset%20and%20Task/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4575,7 +4600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Image Classification Task.ipynb" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Image Classification Task.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4596,7 +4621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Pretrained Transformer Image Classification Task.ipynb" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Pretrained Transformer Image Classification Task.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4617,7 +4642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Sequential Classification Task.ipynb" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Sequential Classification Task.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4638,7 +4663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tabular Classification.ipynb" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Tabular Classification.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4709,7 +4734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Choose a Custom Optimizer.ipynb" class="md-nav__link">
+      <a href="../../../pytorch/Examples/Choose a Custom Optimizer.ipynb" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4746,7 +4771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Integrations%20of%20OpenML%20in%20PyTorch/" class="md-nav__link">
+      <a href="../../../pytorch/Integrations%20of%20OpenML%20in%20PyTorch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4767,7 +4792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Limitations%20of%20the%20API/" class="md-nav__link">
+      <a href="../../../pytorch/Limitations%20of%20the%20API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4788,7 +4813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Philosophy%20behind%20the%20API%20Design/" class="md-nav__link">
+      <a href="../../../pytorch/Philosophy%20behind%20the%20API%20Design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4845,7 +4870,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../tensorflow/" class="md-nav__link ">
+            <a href="../../../tensorflow/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -4922,7 +4947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/API%20reference/Config/" class="md-nav__link">
+      <a href="../../../tensorflow/API%20reference/Config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4943,7 +4968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/API%20reference/OpenML%20integration/" class="md-nav__link">
+      <a href="../../../tensorflow/API%20reference/OpenML%20integration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5014,7 +5039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/Docker%20reference/Docker/" class="md-nav__link">
+      <a href="../../../tensorflow/Docker%20reference/Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5093,7 +5118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/Examples/tf_image_classification/" class="md-nav__link">
+      <a href="../../../tensorflow/Examples/tf_image_classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5114,7 +5139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/Examples/tf_image_classification_sanity_check/" class="md-nav__link">
+      <a href="../../../tensorflow/Examples/tf_image_classification_sanity_check/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5135,7 +5160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/Examples/tf_image_classification_Indoorscenes_dataset/" class="md-nav__link">
+      <a href="../../../tensorflow/Examples/tf_image_classification_Indoorscenes_dataset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5156,7 +5181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/Examples/tf_pretrained_model_Indoorscenes_dataset/" class="md-nav__link">
+      <a href="../../../tensorflow/Examples/tf_pretrained_model_Indoorscenes_dataset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5177,7 +5202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/Examples/tf_transfer_learning/" class="md-nav__link">
+      <a href="../../../tensorflow/Examples/tf_transfer_learning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5206,7 +5231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../tensorflow/Limitations%20of%20the%20API/" class="md-nav__link">
+      <a href="../../../tensorflow/Limitations%20of%20the%20API/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5255,7 +5280,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../julia/" class="md-nav__link ">
+            <a href="../../../julia/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5295,7 +5320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../r/" class="md-nav__link">
+      <a href="../../../r/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5344,7 +5369,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../apiv2/" class="md-nav__link ">
+            <a href="../../../apiv2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5377,7 +5402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../apiv2/installation/" class="md-nav__link">
+      <a href="../../../apiv2/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5423,7 +5448,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../apiv2/contributing/" class="md-nav__link ">
+            <a href="../../../apiv2/contributing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -5454,7 +5479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../apiv2/contributing/contributing/" class="md-nav__link">
+      <a href="../../../apiv2/contributing/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5475,7 +5500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../apiv2/contributing/tests/" class="md-nav__link">
+      <a href="../../../apiv2/contributing/tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5496,7 +5521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../apiv2/contributing/documentation/" class="md-nav__link">
+      <a href="../../../apiv2/contributing/documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5517,7 +5542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../apiv2/contributing/project_overview/" class="md-nav__link">
+      <a href="../../../apiv2/contributing/project_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5546,7 +5571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../apiv2/migration/" class="md-nav__link">
+      <a href="../../../apiv2/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5587,140 +5612,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#define-image-transformations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Define image transformations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configure-the-data-module-and-choose-a-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure the Data Module and Choose a Task
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#train-your-model-on-the-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Train your model on the data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#view-information-about-your-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      View information about your run
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="View information about your run">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#learning-rate-and-loss-plot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learning rate and loss plot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-labels" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class labels
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-vizualization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Model Vizualization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Model Vizualization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#netron" class="md-nav__link">
-    <span class="md-ellipsis">
-      Netron
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensorboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tensorboard
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publish-your-model-to-openml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Publish your model to OpenML
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -5734,7 +5625,7 @@
                   
 
   
-    <a href="https://github.com/openml/openml-pytorch/edit/master/Examples/Images/Pretrained Transformer Image Classification Task.ipynb" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/openml/docs/edit/master/docs/examples/30_extended/benchmark_with_optunahub.py" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -5743,7 +5634,7 @@
     
       
     
-    <a href="https://github.com/openml/openml-pytorch/raw/master/Examples/Images/Pretrained Transformer Image Classification Task.ipynb" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/openml/docs/raw/master/docs/examples/30_extended/benchmark_with_optunahub.py" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
@@ -6186,18 +6077,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </style>
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="pretrained-transformer-image-classification-task">Pretrained Transformer Image Classification Task<a class="anchor-link" href="#pretrained-transformer-image-classification-task">¶</a></h1>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d8dc4f3a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6215,78 +6096,41 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># openml imports</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">openml_pytorch</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">op</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.callbacks</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestCallback</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">openml_pytorch.trainer</span><span class="w"> </span><span class="kn">import</span> <span class="n">convert_to_rgb</span>
-
-<span class="c1"># pytorch imports</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">torch.utils.tensorboard.writer</span><span class="w"> </span><span class="kn">import</span> <span class="n">SummaryWriter</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">torchvision.transforms</span><span class="w"> </span><span class="kn">import</span> <span class="n">Compose</span><span class="p">,</span> <span class="n">Resize</span><span class="p">,</span> <span class="n">ToPILImage</span><span class="p">,</span> <span class="n">ToTensor</span><span class="p">,</span> <span class="n">Lambda</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">torchvision</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-
-<span class="c1"># other imports</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
-
-<span class="c1"># set up logging</span>
-<span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
-<span class="n">openml_pytorch</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s1">'ignore'</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1"># openml imports
-import openml
-import openml_pytorch as op
-from openml_pytorch.callbacks import TestCallback
-from openml_pytorch.metrics import accuracy
-from openml_pytorch.trainer import convert_to_rgb
-
-# pytorch imports
-from torch.utils.tensorboard.writer import SummaryWriter
-from torchvision.transforms import Compose, Resize, ToPILImage, ToTensor, Lambda
-import torchvision
-import torch
-
-# other imports
-import logging
-import warnings
-
-# set up logging
-openml.config.logger.setLevel(logging.DEBUG)
-openml_pytorch.config.logger.setLevel(logging.DEBUG)
-warnings.simplefilter(action='ignore')</div>
+<div class="clipboard-copy-txt" id="cell-1">%matplotlib inline</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bfc62c75">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="data">Data<a class="anchor-link" href="#data">¶</a></h2>
+<h1 id="hyperparameter-optimization-benchmark-with-optunahub">====================================================
+Hyperparameter Optimization Benchmark with OptunaHub<a class="anchor-link" href="#hyperparameter-optimization-benchmark-with-optunahub">¶</a></h1><p>In this tutorial, we walk through how to conduct hyperparameter optimization experiments using OpenML and OptunaHub.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4aff5ff1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="define-image-transformations">Define image transformations<a class="anchor-link" href="#define-image-transformations">¶</a></h3>
+<p>Please make sure to install the dependencies with:
+<code>pip install "openml&gt;=0.15.1" plotly</code>
+Then we import all the necessary modules.</p>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b597ffae">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6304,45 +6148,73 @@ warnings.simplefilter(action='ignore')</div>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">transform</span> <span class="o">=</span> <span class="n">Compose</span><span class="p">(</span>
-    <span class="p">[</span>
-        <span class="n">ToPILImage</span><span class="p">(),</span>  <span class="c1"># Convert tensor to PIL Image to ensure PIL Image operations can be applied.</span>
-        <span class="n">Lambda</span><span class="p">(</span><span class="n">convert_to_rgb</span><span class="p">),</span>  <span class="c1"># Convert PIL Image to RGB if it's not already.</span>
-        <span class="n">Resize</span><span class="p">((</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)),</span>  <span class="c1"># Resize the image.</span>
-        <span class="n">ToTensor</span><span class="p">(),</span>  <span class="c1"># Convert the PIL Image back to a tensor.</span>
-    <span class="p">]</span>
-<span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># License: BSD 3-Clause</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">optuna</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">openml</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml.extensions.sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">cat</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openml.extensions.sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">cont</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.compose</span><span class="w"> </span><span class="kn">import</span> <span class="n">ColumnTransformer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.impute</span><span class="w"> </span><span class="kn">import</span> <span class="n">SimpleImputer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.pipeline</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">OneHotEncoder</span>
+
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">Logger</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"Experiment Logger"</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Set your openml api key if you want to upload your results to OpenML (eg:</span>
+<span class="c1"># https://openml.org/search?type=run&amp;sort=date) . To get one, simply make an</span>
+<span class="c1"># account (you don't need one for anything else, just to upload your results),</span>
+<span class="c1"># go to your profile and select the API-KEY.</span>
+<span class="c1"># Or log in, and navigate to https://www.openml.org/auth/api-key</span>
+<span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="s2">""</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2">
-transform = Compose(
-    [
-        ToPILImage(),  # Convert tensor to PIL Image to ensure PIL Image operations can be applied.
-        Lambda(convert_to_rgb),  # Convert PIL Image to RGB if it's not already.
-        Resize((64, 64)),  # Resize the image.
-        ToTensor(),  # Convert the PIL Image back to a tensor.
-    ]
-)
+<div class="clipboard-copy-txt" id="cell-2"># License: BSD 3-Clause
+
+import logging
+
+import optuna
+
+import openml
+from openml.extensions.sklearn import cat
+from openml.extensions.sklearn import cont
+from sklearn.compose import ColumnTransformer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder
+
+
+logger = logging.Logger(name="Experiment Logger", level=1)
+
+# Set your openml api key if you want to upload your results to OpenML (eg:
+# https://openml.org/search?type=run&amp;sort=date) . To get one, simply make an
+# account (you don't need one for anything else, just to upload your results),
+# go to your profile and select the API-KEY.
+# Or log in, and navigate to https://www.openml.org/auth/api-key
+openml.config.apikey = ""</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c5006bad">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="configure-the-data-module-and-choose-a-task">Configure the Data Module and Choose a Task<a class="anchor-link" href="#configure-the-data-module-and-choose-a-task">¶</a></h3><ul>
-<li>Make sure the data is present in the <code>file_dir</code> directory, and the <code>filename_col</code> is correctly set along with this column correctly pointing to where your data is stored.</li>
-</ul>
+<h1 id="prepare-for-preprocessors-and-an-openml-task">Prepare for preprocessors and an OpenML task<a class="anchor-link" href="#prepare-for-preprocessors-and-an-openml-task">¶</a></h1>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9e9a44bc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6360,50 +6232,61 @@ transform = Compose(
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">data_module</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">OpenMLDataModule</span><span class="p">(</span>
-    <span class="n">type_of_data</span><span class="o">=</span><span class="s2">"image"</span><span class="p">,</span>
-    <span class="n">file_dir</span><span class="o">=</span><span class="s2">"datasets"</span><span class="p">,</span>
-    <span class="n">filename_col</span><span class="o">=</span><span class="s2">"image_path"</span><span class="p">,</span>
-    <span class="n">target_mode</span><span class="o">=</span><span class="s2">"categorical"</span><span class="p">,</span>
-    <span class="n">target_column</span><span class="o">=</span><span class="s2">"label"</span><span class="p">,</span>
-    <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span>
-    <span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">,</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># OpenML contains several key concepts which it needs to make machine learning research shareable.</span>
+<span class="c1"># A machine learning experiment consists of one or several runs, which describe the performance of</span>
+<span class="c1"># an algorithm (called a flow in OpenML), its hyperparameter settings (called a setup) on a task.</span>
+<span class="c1"># A Task is the combination of a dataset, a split and an evaluation metric We choose a dataset from</span>
+<span class="c1"># OpenML, (https://www.openml.org/d/1464) and a subsequent task (https://www.openml.org/t/10101) To</span>
+<span class="c1"># make your own dataset and task, please refer to</span>
+<span class="c1"># https://openml.github.io/openml-python/main/examples/30_extended/create_upload_tutorial.html</span>
+
+<span class="c1"># https://www.openml.org/search?type=study&amp;study_type=task&amp;id=218</span>
+<span class="n">task_id</span> <span class="o">=</span> <span class="mi">10101</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">categorical_preproc</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">"categorical"</span><span class="p">,</span>
+    <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s2">"ignore"</span><span class="p">),</span>
+    <span class="n">cat</span><span class="p">,</span>
 <span class="p">)</span>
-
-<span class="c1"># Download the OpenML task for tiniest imagenet</span>
-<span class="n">task</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="mi">363295</span><span class="p">)</span>
+<span class="n">numerical_preproc</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"numerical"</span><span class="p">,</span> <span class="n">SimpleImputer</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">"median"</span><span class="p">),</span> <span class="n">cont</span><span class="p">)</span>
+<span class="n">preproc</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">([</span><span class="n">categorical_preproc</span><span class="p">,</span> <span class="n">numerical_preproc</span><span class="p">])</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">data_module = op.OpenMLDataModule(
-    type_of_data="image",
-    file_dir="datasets",
-    filename_col="image_path",
-    target_mode="categorical",
-    target_column="label",
-    batch_size=64,
-    transform=transform,
-)
+<div class="clipboard-copy-txt" id="cell-3"># OpenML contains several key concepts which it needs to make machine learning research shareable.
+# A machine learning experiment consists of one or several runs, which describe the performance of
+# an algorithm (called a flow in OpenML), its hyperparameter settings (called a setup) on a task.
+# A Task is the combination of a dataset, a split and an evaluation metric We choose a dataset from
+# OpenML, (https://www.openml.org/d/1464) and a subsequent task (https://www.openml.org/t/10101) To
+# make your own dataset and task, please refer to
+# https://openml.github.io/openml-python/main/examples/30_extended/create_upload_tutorial.html
 
-# Download the OpenML task for tiniest imagenet
-task = openml.tasks.get_task(363295)
+# https://www.openml.org/search?type=study&amp;study_type=task&amp;id=218
+task_id = 10101
+seed = 42
+categorical_preproc = (
+    "categorical",
+    OneHotEncoder(sparse_output=False, handle_unknown="ignore"),
+    cat,
+)
+numerical_preproc = ("numerical", SimpleImputer(strategy="median"), cont)
+preproc = ColumnTransformer([categorical_preproc, numerical_preproc])</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=49d01706">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="model">Model<a class="anchor-link" href="#model">¶</a></h2>
+<h1 id="define-a-pipeline-for-the-hyperparameter-optimization-this-is-standark-for-optuna">Define a pipeline for the hyperparameter optimization (this is standark for Optuna)<a class="anchor-link" href="#define-a-pipeline-for-the-hyperparameter-optimization-this-is-standark-for-optuna">¶</a></h1>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1569f2fd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6421,71 +6304,104 @@ task = openml.tasks.get_task(363295)
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Example model. You can do better :)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">torchvision.models</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">models</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Optuna explanation</span>
+<span class="c1"># we follow the `Optuna &lt;https://github.com/optuna/optuna/&gt;`__ search space design.</span>
 
-<span class="c1"># Load the pre-trained model</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">efficientnet_b0</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># OpenML runs</span>
+<span class="c1"># We can simply pass the parametrized classifier to `run_model_on_task` to obtain the performance</span>
+<span class="c1"># of the pipeline</span>
+<span class="c1"># on the specified OpenML task.</span>
+<span class="c1"># Do you want to share your results along with an easily reproducible pipeline, you can set an API</span>
+<span class="c1"># key and just upload your results.</span>
+<span class="c1"># You can find more examples on https://www.openml.org/</span>
 
-<span class="c1"># Modify the last fully connected layer to the required number of classes</span>
-<span class="n">num_classes</span> <span class="o">=</span> <span class="mi">200</span>
-<span class="n">in_features</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">classifier</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">in_features</span>
-<span class="n">model</span><span class="o">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
-    <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">in_features</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">),</span>
-<span class="p">)</span>
 
-<span class="c1"># Optional: If you're fine-tuning, you may want to freeze the pre-trained layers</span>
-<span class="c1"># for param in model.parameters():</span>
-<span class="c1">#     param.requires_grad = False</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">objective</span><span class="p">(</span><span class="n">trial</span><span class="p">:</span> <span class="n">optuna</span><span class="o">.</span><span class="n">Trial</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pipeline</span><span class="p">:</span>
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span>
+        <span class="n">max_depth</span><span class="o">=</span><span class="n">trial</span><span class="o">.</span><span class="n">suggest_int</span><span class="p">(</span><span class="s2">"max_depth"</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+        <span class="n">min_samples_leaf</span><span class="o">=</span><span class="n">trial</span><span class="o">.</span><span class="n">suggest_float</span><span class="p">(</span><span class="s2">"min_samples_leaf"</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+        <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">pipe</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s2">"preproc"</span><span class="p">,</span> <span class="n">preproc</span><span class="p">),</span> <span class="p">(</span><span class="s2">"model"</span><span class="p">,</span> <span class="n">clf</span><span class="p">)])</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Running pipeline - </span><span class="si">{</span><span class="n">pipe</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">pipe</span><span class="p">,</span> <span class="n">task</span><span class="o">=</span><span class="n">task_id</span><span class="p">,</span> <span class="n">avoid_duplicate_runs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-<span class="c1"># # If you want to train the last layer only (the newly added layer)</span>
-<span class="c1"># for param in model.fc.parameters():</span>
-<span class="c1">#     param.requires_grad = True</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Model has been trained - </span><span class="si">{</span><span class="n">run</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Run was uploaded to - </span><span class="si">{</span><span class="n">run</span><span class="o">.</span><span class="n">openml_url</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Could not publish run - </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span>
+            <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">"If you want to publish your results to OpenML, please set an apikey"</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="n">accuracy</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">run</span><span class="o">.</span><span class="n">fold_evaluations</span><span class="p">[</span><span class="s2">"predictive_accuracy"</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Accuracy </span><span class="si">{</span><span class="n">accuracy</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">accuracy</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4"># Example model. You can do better :)
-import torchvision.models as models
-import torch.nn as nn
+<div class="clipboard-copy-txt" id="cell-4"># Optuna explanation
+# we follow the `Optuna <https: github.com="" optuna=""></https:>`__ search space design.
 
-# Load the pre-trained model
-model = models.efficientnet_b0(pretrained=True)
+# OpenML runs
+# We can simply pass the parametrized classifier to `run_model_on_task` to obtain the performance
+# of the pipeline
+# on the specified OpenML task.
+# Do you want to share your results along with an easily reproducible pipeline, you can set an API
+# key and just upload your results.
+# You can find more examples on https://www.openml.org/
 
-# Modify the last fully connected layer to the required number of classes
-num_classes = 200
-in_features = model.classifier[-1].in_features
-model.classifier = nn.Sequential(
-    nn.Dropout(p=0.2, inplace=True),
-    nn.Linear(in_features, num_classes),
-)
 
-# Optional: If you're fine-tuning, you may want to freeze the pre-trained layers
-# for param in model.parameters():
-#     param.requires_grad = False
+def objective(trial: optuna.Trial) -&gt; Pipeline:
+    clf = RandomForestClassifier(
+        max_depth=trial.suggest_int("max_depth", 2, 32, log=True),
+        min_samples_leaf=trial.suggest_float("min_samples_leaf", 0.0, 1.0),
+        random_state=seed,
+    )
+    pipe = Pipeline(steps=[("preproc", preproc), ("model", clf)])
+    logger.log(1, f"Running pipeline - {pipe}")
+    run = openml.runs.run_model_on_task(pipe, task=task_id, avoid_duplicate_runs=False)
 
-# # If you want to train the last layer only (the newly added layer)
-# for param in model.fc.parameters():
-#     param.requires_grad = True</div>
+    logger.log(1, f"Model has been trained - {run}")
+    if openml.config.apikey != "":
+        try:
+            run.publish()
+
+            logger.log(1, f"Run was uploaded to - {run.openml_url}")
+        except Exception as e:
+            logger.log(1, f"Could not publish run - {e}")
+    else:
+        logger.log(
+            0,
+            "If you want to publish your results to OpenML, please set an apikey",
+        )
+    accuracy = max(run.fold_evaluations["predictive_accuracy"][0].values())
+    logger.log(0, f"Accuracy {accuracy}")
+
+    return accuracy
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e14f104">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="train-your-model-on-the-data">Train your model on the data<a class="anchor-link" href="#train-your-model-on-the-data">¶</a></h2><ul>
-<li>Note that by default, OpenML runs a 10 fold cross validation on the data. You cannot change this for now.</li>
-</ul>
+<h1 id="optimize-the-pipeline">Optimize the pipeline<a class="anchor-link" href="#optimize-the-pipeline">¶</a></h1>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4898cdbe">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6503,66 +6419,31 @@ model.classifier = nn.Sequential(
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">OpenMLTrainerModule</span><span class="p">(</span>
-    <span class="n">experiment_name</span><span class="o">=</span> <span class="s2">"Tiny ImageNet"</span><span class="p">,</span>
-    <span class="n">data_module</span><span class="o">=</span><span class="n">data_module</span><span class="p">,</span>
-    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">epoch_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">metrics</span><span class="o">=</span> <span class="p">[</span><span class="n">accuracy</span><span class="p">],</span>
-    <span class="c1"># remove the TestCallback when you are done testing your pipeline. Having it here will make the pipeline run for a very short time.</span>
-    <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span>
-        <span class="n">TestCallback</span><span class="p">,</span>
-    <span class="p">],</span>
-    <span class="n">opt</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">op</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">trainer</span> <span class="o">=</span> <span class="n">trainer</span>
-<span class="n">run</span> <span class="o">=</span> <span class="n">openml</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">avoid_duplicate_runs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s2">"maximize"</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Study </span><span class="si">{</span><span class="n">study</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">
-
-trainer = op.OpenMLTrainerModule(
-    experiment_name= "Tiny ImageNet",
-    data_module=data_module,
-    verbose=True,
-    epoch_count=1,
-    metrics= [accuracy],
-    # remove the TestCallback when you are done testing your pipeline. Having it here will make the pipeline run for a very short time.
-    callbacks=[
-        TestCallback,
-    ],
-    opt=torch.optim.Adam,
-)
-op.config.trainer = trainer
-run = openml.runs.run_model_on_task(model, task, avoid_duplicate_runs=False)</div>
+<div class="clipboard-copy-txt" id="cell-5">study = optuna.create_study(direction="maximize")
+logger.log(0, f"Study {study}")
+study.optimize(objective, n_trials=15)</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d3bd4f11">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="view-information-about-your-run">View information about your run<a class="anchor-link" href="#view-information-about-your-run">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="learning-rate-and-loss-plot">Learning rate and loss plot<a class="anchor-link" href="#learning-rate-and-loss-plot">¶</a></h3>
+<h1 id="visualize-the-optimization-history">Visualize the optimization history<a class="anchor-link" href="#visualize-the-optimization-history">¶</a></h1>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9718dddf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -6580,186 +6461,11 @@ run = openml.runs.run_model_on_task(model, task, avoid_duplicate_runs=False)</di
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">plot_loss</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">plot_optimization_history</span><span class="p">(</span><span class="n">study</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">trainer.plot_loss()</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">plot_lr</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-7">trainer.plot_lr()</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="class-labels">Class labels<a class="anchor-link" href="#class-labels">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">model_classes</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-8">trainer.model_classes</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="model-vizualization">Model Vizualization<a class="anchor-link" href="#model-vizualization">¶</a></h2><ul>
-<li>Sometimes you may want to visualize the model. You can either use netron or tensorboard for this purpose.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="netron">Netron<a class="anchor-link" href="#netron">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">export_to_netron</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-9">trainer.export_to_netron()</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="tensorboard">Tensorboard<a class="anchor-link" href="#tensorboard">¶</a></h3><ul>
-<li>By default, openml will log the tensorboard logs in the <code>tensorboard_logs</code> directory. You can view the logs by running <code>tensorboard --logdir tensorboard_logs</code> in the terminal.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="publish-your-model-to-openml">Publish your model to OpenML<a class="anchor-link" href="#publish-your-model-to-openml">¶</a></h2><ul>
-<li>This is Optional, but publishing your model to OpenML will allow you to track your experiments and compare them with others.</li>
-<li>Make sure to set your apikey first.<ul>
-<li>You can find your apikey on your OpenML account page.</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="CodeMirror cm-s-jupyter">
-<div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
-<div>
-<span class="notice" hidden="">Copied!</span>
-<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
-<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-</clipboard-copy>
-</div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="s1">''</span>
-<span class="n">run</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">add_experiment_info_to_run</span><span class="p">(</span><span class="n">run</span><span class="o">=</span><span class="n">run</span><span class="p">,</span> <span class="n">trainer</span><span class="o">=</span><span class="n">trainer</span><span class="p">)</span> 
-<span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
-</pre></div>
-<div class="clipboard-copy-txt" id="cell-10">openml.config.apikey = ''
-run = op.add_experiment_info_to_run(run=run, trainer=trainer) 
-run.publish()</div>
+<div class="clipboard-copy-txt" id="cell-6">fig = optuna.visualization.plot_optimization_history(study)
+fig.show()</div>
 </div>
 </div>
 </div>
@@ -6769,10 +6475,6 @@ run.publish()</div>
 </div> <!-- jp-Notebook -->
 </div> <!-- jupyter-wrapper -->
 
-        <style>
-        ['pre { line-height: 125%; }\ntd.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }\nspan.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }\ntd.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }\nspan.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }\n.highlight-ipynb .hll { background-color: var(--jp-cell-editor-active-background) }\n.highlight-ipynb { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }\n.highlight-ipynb .c { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment */\n.highlight-ipynb .err { color: var(--jp-mirror-editor-error-color) } /* Error */\n.highlight-ipynb .k { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword */\n.highlight-ipynb .o { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator */\n.highlight-ipynb .p { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation */\n.highlight-ipynb .ch { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Hashbang */\n.highlight-ipynb .cm { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Multiline */\n.highlight-ipynb .cp { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Preproc */\n.highlight-ipynb .cpf { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.PreprocFile */\n.highlight-ipynb .c1 { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Single */\n.highlight-ipynb .cs { color: var(--jp-mirror-editor-comment-color); font-style: italic } /* Comment.Special */\n.highlight-ipynb .kc { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Constant */\n.highlight-ipynb .kd { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Declaration */\n.highlight-ipynb .kn { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Namespace */\n.highlight-ipynb .kp { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Pseudo */\n.highlight-ipynb .kr { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Reserved */\n.highlight-ipynb .kt { color: var(--jp-mirror-editor-keyword-color); font-weight: bold } /* Keyword.Type */\n.highlight-ipynb .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */\n.highlight-ipynb .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */\n.highlight-ipynb .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */\n.highlight-ipynb .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */\n.highlight-ipynb .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */\n.highlight-ipynb .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */\n.highlight-ipynb .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */\n.highlight-ipynb .mh { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Hex */\n.highlight-ipynb .mi { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer */\n.highlight-ipynb .mo { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Oct */\n.highlight-ipynb .sa { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Affix */\n.highlight-ipynb .sb { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Backtick */\n.highlight-ipynb .sc { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Char */\n.highlight-ipynb .dl { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Delimiter */\n.highlight-ipynb .sd { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Doc */\n.highlight-ipynb .s2 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Double */\n.highlight-ipynb .se { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Escape */\n.highlight-ipynb .sh { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Heredoc */\n.highlight-ipynb .si { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Interpol */\n.highlight-ipynb .sx { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Other */\n.highlight-ipynb .sr { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Regex */\n.highlight-ipynb .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */\n.highlight-ipynb .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */\n.highlight-ipynb .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */']
-        </style>
-        
 
 
 
@@ -6832,6 +6534,44 @@ run.publish()</div>
         <footer class="md-footer">
   
     
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../20_basic/simple_suites_tutorial/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Benchmark suites">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Benchmark suites
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../configure_logging/" class="md-footer__link md-footer__link--next" aria-label="Next: Logging">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Logging
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -6855,14 +6595,14 @@ run.publish()</div>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.action.edit", "content.action.view", "content.tabs.link", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "search.highlight", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "content.action.view", "content.tabs.link", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "search.highlight", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
-        <script src="../../../../js/extra.js"></script>
+        <script src="../../../js/extra.js"></script>
       
-        <script src="../../../../js/reset_nav.js"></script>
+        <script src="../../../js/reset_nav.js"></script>
       
     
   </body>
