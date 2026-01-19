@@ -229,10 +229,6 @@
          <lastmod>2026-01-19</lastmod>
     </url>
     <url>
-         <loc>https://docs.openml.org/examples/30_extended/benchmark_with_optunahub/</loc>
-         <lastmod>2026-01-19</lastmod>
-    </url>
-    <url>
          <loc>https://docs.openml.org/examples/30_extended/configure_logging/</loc>
          <lastmod>2026-01-19</lastmod>
     </url>
@@ -306,6 +302,10 @@
     </url>
     <url>
          <loc>https://docs.openml.org/help/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.openml.org/intro/</loc>
          <lastmod>2026-01-19</lastmod>
     </url>
     <url>
