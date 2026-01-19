@@ -13,7 +13,10 @@ combined into these documentation pages using [MkDocs multirepo](https://github.
     git clone https://github.com/openml/docs.git
     pip install -r requirements.txt
     ```
-    To build the documentation, run `mkdocs serve` in the top directory (with the `mkdocs.yml` file). Any changes made after that will be hot-loaded.
+
+    To build the documentation locally, run `mkdocs serve -f mkdocs-local.yml` in the top directory (with the `mkdocs.yml` file). Any changes made after that will be hot-loaded.
+
+    To build the full documentation, including importing the documentation from other repositories, run `mkdocs serve` in the top directory (with the `mkdocs.yml` file). This can take a while to compile, so only use this when needed.
 
     The documentation will be auto-deployed with every push or merge with the master branch of `https://www.github.com/openml/docs/`. In the background, a CI job
     will run `mkdocs gh-deploy`, which will build the HTML files and push them to the gh-pages branch of openml/docs. `https://docs.openml.org` is just a reverse proxy for `https://openml.github.io/docs/`.

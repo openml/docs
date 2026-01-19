@@ -120,6 +120,8 @@ plugins:
                     docstring_section_style: table
                     show_docstring_functions: true
                     docstring_style: numpy
+                    follow_imports: false
+                    show_submodules: false
     - gen-files:
         scripts:
             - scripts/gen_python_ref_pages.py
@@ -131,9 +133,10 @@ plugins:
     - git-committers:
         repository: openml/docs
 nav:
-    - OpenML:
-        - Introduction: index.md
-        - Getting Started: notebooks/getting_started.ipynb
+    - OpenML: index.md
+    - Get Started:
+        - OpenML: intro/index.md
+        - 10 Minute Tutorial: notebooks/getting_started.ipynb
         - Concepts:
             - Main concepts: concepts/index.md
             - Data: concepts/data.md
@@ -213,6 +216,7 @@ extra_css:
     - css/extra.css
 extra_javascript:
     - js/extra.js
+    - js/reset_nav.js
 exclude_docs: |
     scripts/
     old/

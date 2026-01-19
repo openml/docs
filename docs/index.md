@@ -15,56 +15,15 @@ icon: material/creation
 <p><i class="fa fa-graduation-cap fa-fw fa-lg"></i>&nbsp; Make your work more visible and reusable</p>
 <p><i class="fa fa-bolt fa-fw fa-lg"></i>&nbsp; Built for automation: streamline your experiments and model building</p>
 
-## Installation
+## How to use OpenML
 
-The OpenML package is available in many languages and across libraries. For more information about them, see the [Integrations](./ecosystem/index.md) page.<br><br>
+OpenML is accessible to a wide range of people:  
 
-=== "Python/sklearn"
+:computer: <a href="https://www.openml.org" target='blank_'>Explore the OpenML website</a> to discover, download and upload ML resources.
 
-    - [Python/sklearn repository](https://github.com/openml/openml-python)
-    -  `pip install openml`
+:robot: [Install an OpenML library](intro/index.md) to access and share resources programmatically through our APIs. Select one of the detailed guides in the top menu.
 
-=== "Pytorch"
-
-    -  [Pytorch repository](https://github.com/openml/openml-pytorch)
-    -  `pip install openml-pytorch`
-
-=== "Keras"
-
-    - [Keras repository](https://github.com/openml/openml-keras)
-    - `pip install openml-keras`
-
-=== "TensorFlow"
-    
-    - [TensorFlow repository](https://github.com/openml/openml-tensorflow)
-    - `pip install openml-tensorflow`
-  
-=== "R"
-        
-    - [R repository](https://github.com/openml/openml-R)
-    - `install.packages("mlr3oml")`
-=== "Julia"
-        
-    - [Julia repository](https://github.com/JuliaAI/OpenML.jl/tree/master)
-    - `using Pkg;Pkg.add("OpenML")`
-
-=== "RUST"
-        
-    - [RUST repository](https://github.com/mbillingr/openml-rust)
-    - Install from source
-
-=== ".Net"
-        
-    - [.Net repository](https://github.com/openml/openml-dotnet)
-    - `Install-Package openMl`
-
-
-You might also need to set up the API key. For more information, see [Authentication](http://localhost:8000/concepts/openness/).
-
-## Learning OpenML
-
-Aside from the individual package documentations, you can learn more about OpenML through the following resources:<br>
-The core concepts of OpenML are explained in the [Concepts](./concepts/index.md) page. These concepts include the principle behind using Datasets, Runs, Tasks, Flows, Benchmarking and much more. Going through them will help you leverage OpenML even better in your work.<br>
+:mortar_board: [Get started](./concepts/index.md) by learning more about the structure and concepts behind OpenML, such as Datasets, Tasks, Flows, Runs, Benchmarking and much more. This will help you leverage OpenML even better in your work.
 
 ## Contributing to OpenML
 
