@@ -4,7 +4,7 @@ Flows are machine learning pipelines, models, or scripts that can transform data
 They often have a number of hyperparameters which may be configured (e.g., a Random Forest's "number of trees" hyperparameter).
 Flows are, for example, scikit-learn's `RandomForestClassifier`, mlr3's `"classif.rpart"`, or WEKA's `J48`, but can also be "AutoML Benchmark's autosklearn integration" or any other script.
 The metadata of a flow describes, if provided, the configurable hyperparameters, their default values, and recommended ranges.
-They _do not_ describe a specific configuration ([setups](./runs.md#setups) log the configuration of a flow used in a [run](./runs.md)).
+They _do not_ describe a specific configuration (Setups log the configuration of a flow used in a [run](./runs.md)).
 
 They are typically uploaded directly from machine learning libraries (e.g. scikit-learn, pyTorch, TensorFlow, MLR, WEKA,...) via the corresponding [APIs](https://www.openml.org/apis), but is possible to define them manually too (see also [this example of openml-python](http://openml.github.io/openml-python/latest/examples/Basics/simple_flows_and_runs_tutorial/) or the REST API documentation). Associated code (e.g., on GitHub) can be referenced by URL.
 
