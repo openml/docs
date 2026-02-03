@@ -5,8 +5,6 @@ icon: fontawesome/solid/gauge-high
 
 # Benchmarking
 
-![Frictionless data](../img/benchmark_cartoon.webp){ width="100%" style="max-height: 30vh; max-width: 700px;" }
-
 Progress in machine learning depends on objective, interpretable, comparable, and reproducible algorithm benchmarks. OpenML allows you to easily benchmark machine learning algorithm on hundreds of datasets at once, run reproducible experiments at scale, and share them online. To further improve benchmarking, we also created:
 
 <i class="fa fa-chart-simple fa-fw fa-lg" style="color: #FF8A80;"></i> &nbsp; [Benchmark suites](#benchmarking-suites) (<a href="https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/c7e1249ffc03eb9ded908c236bd1996d-Abstract-round2.html">paper</a>): curated multi-dataset benchmarks for comprehensive standardized evaluations.
