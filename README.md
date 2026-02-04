@@ -12,10 +12,7 @@ Documentation can be edited by simply editing the markdown files in the `docs` f
 
 End users can edit the docs by simply clicking the edit button (the pencil icon) on the top of every documentation page. It will open up an editing page on [GitHub](https://github.com/) (you do need to be logged in on GitHub). When you are done, add a small message explaining the change and click 'commit changes'. On the next page, just launch the pull request. We will then review it and approve the changes, or discuss them if necessary. 
 
-## Developing
-To build the documentation locally, run `mkdocs serve -f mkdocs-local.yml` in the top directory (with the `mkdocs.yml` file). Any changes made after that will be hot-loaded.
-
-To build the full documentation, including importing the documentation from other repositories, run `mkdocs serve` in the top directory (with the `mkdocs.yml` file). This can take a while to compile, so only use this when needed. You might also need to set `export NUMPY_EXPERIMENTAL_DTYPE_API=1` (or `set NUMPY_EXPERIMENTAL_DTYPE_API=1` on Windows).
+For other information on how to write and build documentation locally, see our [contributing](./contributing/OpenML-Docs.md#General-Documentation) page.
 
 ## Deployment
 The documentation is hosted on GitHub pages.
