@@ -82,6 +82,12 @@ markdown_extensions:
 plugins:
     - autorefs
     - section-index
+    - mkdocs-jupyter:
+        ignore: ['temp_dir/**/*','docs/examples/**/*']
+        theme: light
+        remove_tag_config:
+            remove_input_tags:
+                - hide_code
     - redirects:
         redirect_maps:
             'APIs.md': 'https://www.openml.org/apis'
@@ -98,9 +104,10 @@ plugins:
     - git-committers:
         repository: openml/docs
 nav:
-    - OpenML:
-        - Introduction: index.md
-        - Getting Started: notebooks/getting_started.ipynb
+    - OpenML: index.md
+    - Get Started:
+        - OpenML: intro/index.md
+        - 10 Minute Tutorial: notebooks/getting_started.ipynb
         - Concepts:
             - Main concepts: concepts/index.md
             - Data: concepts/data.md

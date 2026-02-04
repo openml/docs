@@ -12,43 +12,42 @@ import mkdocs_gen_files
 import os
 import shutil
 
-# Move the python code and example folders into the root folder. This is necessary because the literate-nav has very strong
-# opinions on where the files should be located. It refuses to work from the temp_dir directory.
-def copy_folders_to_destinations(source_folders:list[str], destination_folders:list[str]):
-    """
-    Copies folders from source to specified destinations and overwrites if they already exist.
+# Clean a folder completely
+def clean_folder(folder: Path):
+    if folder.exists() and folder.is_dir():
+        shutil.rmtree(folder)
 
-    Parameters:
-    - source_folders (list of str): List of paths to the source folders.
-    - destination_folders (list of str): List of full paths to the target directories, including the new folder names.
-    """
-    if len(source_folders) != len(destination_folders):
-        return
+root = Path(__file__).parent.parent
+temp_dir = root / "temp_dir" / "python"
 
-    # Copy each folder to its specified destination
-    for src, dest in zip(source_folders, destination_folders):
-        # Ensure the parent directory of the destination path exists
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
-        
-        # Remove the folder if it already exists
-        if os.path.exists(dest):
-            shutil.rmtree(dest)
-        
-        # Copy the folder
-        shutil.copytree(src, dest)
+# Destination folders
+destination_folders = [
+    root / "docs" / "python",
+    root / "docs" / "examples",
+    root / "openml",
+]
 
-temp_dir = Path(__file__).parent.parent / "temp_dir" / "python"
+# Clean all destination folders
+for folder in destination_folders:
+    clean_folder(folder)
+
+# Source folders
 source_folders = [
     temp_dir / "docs",
-    temp_dir / "openml",
     temp_dir / "examples",
+    temp_dir / "openml",
 ]
-destination_folders = [
-    Path(__file__).parent.parent / "docs" / "python",
-    Path(__file__).parent.parent / "openml",
-    Path(__file__).parent.parent / "docs" / "examples" # Move them straight here to avoid duplication. mkdocs-jupyter will handle them.
-]
-copy_folders_to_destinations(source_folders, destination_folders)
+
+# Copy source to destination
+def copy_folders(source_folders: list[Path], destination_folders: list[Path]):
+    if len(source_folders) != len(destination_folders):
+        raise ValueError("Source and destination lists must have the same length.")
+
+    for src, dest in zip(source_folders, destination_folders):
+        if src.exists():
+            shutil.copytree(src, dest)
+
+copy_folders(source_folders, destination_folders)
 
 # Generate the reference page docs
 nav = mkdocs_gen_files.Nav()
