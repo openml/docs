@@ -115,8 +115,8 @@ plugins:
             python:
                 paths: [temp_dir/pytorch/openml_pytorch,./]
                 load_external_modules: true
-                show_source: true
                 options:
+                    show_source: true
                     docstring_section_style: table
                     show_docstring_functions: true
                     docstring_style: numpy
@@ -187,8 +187,9 @@ nav:
             - Evaluation Engine: contributing/backend/Java-App.md
         - Frontend:
             - Getting started: contributing/website/Website.md
+            - Next.js (App Router): contributing/website/NextJS.md
+            - React (Legacy): contributing/website/React.md
             - Flask backend: contributing/website/Flask.md
-            - React frontend: contributing/website/React.md
             - Dash visualizations: contributing/website/Dash.md
         - Clients:
             - Client development: contributing/clients/Client-API-Standards.md
