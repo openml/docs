@@ -5,6 +5,15 @@ They contain at least a description of the hyperparameter configuration of the F
 Users may also provide additional metadata related to the experiment, such as the time it took to train or evaluate the model, or their predictive performance.
 The OpenML server will also compute several common metrics on the provided predictions as appropriate for the task, such as accuracy for a classification task or root mean squared error for regression tasks.
 
+For example, [this run](https://www.openml.org/search?type=run&id=10452858&run_flow.flow_id=17691&sort=date) describes an experiment that:
+
+ - evaluates a Random Forest pipeline ([flow 17650](https://www.openml.org/f/17650) linked to the task)
+ - with the configuration `min_samples_leaf=1, n_estimators=500, ...` ([setup 8261828](https://www.openml.org/api/v1/json/setup/8261928) linked to the task)
+ - in a 10-fold CV experiment ([task 3481](https://www.openml.org/t/3481) linked to the run)
+ - on dataset "isolet" ([dataset 300](https://www.openml.org/d/300) as described by the task)
+ - produced predictions in arff format ([predictions.arff](https://www.openml.org/data/download/21829039/predictions.arff))
+ - several metadata (e.g., metric evaluations) as seen on the run page
+
 ## Automated reproducible evaluations
 While the REST API and the OpenML connectors allow you to manually submit Run data, openml-python and mlr3oml also support automated running of experiments and data collection.
 The openml-python example below will evaluate the `RandomForestClassifier` on a given task and automatically track information such as the duration of the experiment, the hyperparameter configuration of the model, and version information about the software used in the experiment, and bundle it for convenient upload to OpenML.
