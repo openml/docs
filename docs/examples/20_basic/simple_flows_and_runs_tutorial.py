@@ -6,6 +6,18 @@
 import openml
 from sklearn import ensemble, neighbors
 
+"""
+Simple Flows and Runs Tutorial
+
+This example demonstrates how to:
+- Retrieve machine learning flows from OpenML
+- Run models on tasks
+- Upload experiment results
+
+It helps users understand how OpenML tracks
+and manages machine learning experiments.
+"""
+
 
 # %% [markdown]
 # .. warning::

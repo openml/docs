@@ -11,6 +11,19 @@
 
 import openml
 
+"""
+Simple Datasets Tutorial
+
+This example demonstrates how to:
+- Fetch datasets from OpenML
+- Explore dataset metadata
+- Load data into a usable format
+
+It is intended as a beginner-friendly introduction to
+working with OpenML datasets.
+"""
+
+
 # %% [markdown]
 # ## List datasets
 
