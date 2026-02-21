@@ -34,14 +34,35 @@ Seamlessly integrated into the OpenML platform, benchmark suites standardize the
 - results from other users can be easily downloaded and reused
 
 
-## Software interfaces
-To use OpenML Benchmark suites, you can use bindings in several programming languages. These all interface with the OpenML REST API. The default endpoint for this is `https://www.openml.org/api/v1/`, but this can change when later versions of the API are released. To use the code examples below, you only need a recent version of one of the following libraries:
-  
-* [OpenML Java ApiConnector](https://mvnrepository.com/artifact/org.openml/apiconnector) (version `1.0.22` and up).
-* [OpenML Weka](https://search.maven.org/search?q=a:openmlweka) (version `0.9.6` and up). This package adds a Weka Integration.
-* [OpenML Python](https://pypi.org/project/openml/) (version `0.9.0` and up)
-* [OpenML R](https://cran.r-project.org/web/packages/OpenML/index.html) (version `1.8` and up)
+## We speak your language!
 
+Whether you're a Python wizard, an R enthusiast, or building enterprise systems in Java, OpenML fits right into your workflow. No complicated setups—just install and start exploring.
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-brands-python: **Python**
+    ---
+    **For Modern ML.** The gold standard for `scikit-learn` and `PyTorch` users. Built for researchers who want to automate everything.
+    [:octicons-arrow-right-24: Get started with Python](https://openml.github.io/openml-python/)
+
+-   :fontawesome-brands-r-project: **R Language**
+    ---
+    **For Data Science.** A dream for statisticians. Access thousands of datasets and tasks directly from your R console.
+    [:octicons-arrow-right-24: Get started with R](https://openml.github.io/openml-r/)
+
+-   :fontawesome-brands-java: **Java & Weka**
+    ---
+    **For Production.** Solid, reliable connectors for Java and native Weka support. Perfect for big data and enterprise apps.
+    [:octicons-arrow-right-24: Browse Java Docs](https://github.com/openml/openml-java)
+
+-   :material-api: **REST API**
+    ---
+    **For Creators.** Building a new client or a custom dashboard? Our REST API gives you raw power and total control.
+    [:octicons-arrow-right-24: Explore the API](https://www.openml.org/api_docs/)
+
+</div>
+
+---
 
 ## Using OpenML Benchmark Suites
 Below are walk-through instructions for common use cases, as well as code examples. These illustrations use the reference [OpenML-CC18](https://docs.openml.org/benchmark/#openml-cc18) benchmark suite, but you can replace it with any other benchmark suite. Note that a benchmark suite is a set of OpenML `tasks`, which envelop not only a specific dataset, but also the train-test splits and (for predictive tasks) the target feature.
