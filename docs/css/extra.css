@@ -123,3 +123,36 @@ table {
 .pink{
   color: #4caf50
 }
+
+
+.grid.cards {
+    background-color: #f5f7f9 !important; 
+    padding: 40px 20px !important;
+    border-radius: 20px;
+}
+
+
+.grid.cards > ul > li {
+    background-color: #ffffff !important; 
+    border-radius: 16px !important;
+    padding: 24px !important;
+    border: 1px solid rgba(0,0,0,0.05) !important; 
+    
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important; 
+    
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+
+.grid.cards > ul > li:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important; 
+    border-color: #2196f3 !important; 
+}
+
+
+.grid.cards p {
+    color: #586069 !important; 
+    line-height: 1.6;
+}
