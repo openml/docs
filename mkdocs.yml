@@ -115,8 +115,8 @@ plugins:
             python:
                 paths: [temp_dir/pytorch/openml_pytorch,./]
                 load_external_modules: true
-                show_source: true
                 options:
+                    show_source: true
                     docstring_section_style: table
                     show_docstring_functions: true
                     docstring_style: numpy
