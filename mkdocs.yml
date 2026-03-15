@@ -199,7 +199,7 @@ nav:
     - Questions: help/index.md
     - Python:
         - python/index.md
-        - Code Reference: reference/
+        - Code Reference: python/reference/
         - Examples: examples/
         - Usage: python/usage.md
         - Contributing: python/contributing.md
